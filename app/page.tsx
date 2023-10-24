@@ -39,9 +39,12 @@ export default function Home() {
         </div>
 
         <div className='py-4'>
-          <h2 className="mb-2 text-lg font-semibold text-gray-900">OPEN TIBET - это совместный туристический проект</h2>
-          <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside ">
-            <li>
+          <h2 className="mb-2 text-lg font-semibold text-gray-900">OPEN TIBET – это совместный туристический проект</h2>
+          <ul className="py-4 max-w-md space-y-2 list-inside">
+            <li className="flex items-center">
+              <svg className="w-3.5 h-3.5 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
+                <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
+              </svg>
               Тибетского туристического офиса (правительство Тибета)
             </li>
             <li>
@@ -52,35 +55,27 @@ export default function Home() {
             </li>
           </ul>
 
-          <p className='py-6'>
-            Ключевая цель проекта - сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:.
-            <ul className='py-4 max-w-md space-y-1 list-inside'>
-              <li className="flex items-center">
-                <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-                размещение в хороших отелях
-              </li>
-              <li className="flex items-center">
-                <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-                качественный транспорт
-              </li>
-              <li className="flex items-center">
-                <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-                квалифицированных гидов
-              </li>
-              <li className="flex items-center">
-                <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                </svg>
-                по самым низким ценам
-              </li>
-            </ul>
+          <p className='pt-6 leading-7'>
+            Ключевая цель проекта - сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:
           </p>
+          <ul className='py-4 max-w-md space-y-2 list-inside'>
+            <li className="flex items-center">
+              <IconMark />
+              Размещение в хороших отелях
+            </li>
+            <li className="flex items-center">
+              <IconMark />
+              Качественный транспорт
+            </li>
+            <li className="flex items-center">
+              <IconMark />
+              Квалифицированных гидов
+            </li>
+            <li className="flex items-center">
+              <IconMark />
+              По самым низким ценам
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -109,7 +104,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='p-4'>
+        <div className='p-4 leading-7'>
           Автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма “Тибет, место которое меняет жизнь”. Докладчик многочисленных международных конференции, посвященных Кайласу. Автор статьи “ Спиральная Кора”, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
         </div>
         <div className="grid grid-cols-2 gap-1">
@@ -136,7 +131,7 @@ export default function Home() {
             <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Алексеем Перчуковым</a>
           </div>
 
-          <p className='py-4 pb-0'>
+          <p className='py-4 pb-0 leading-7'>
             Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме “Тибет, место которое меняет жизнь”, снятом в одном из таких туров:
           </p>
         </div>
@@ -159,48 +154,13 @@ export default function Home() {
 
       </div>
 
-      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl py-10'>
+      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl pt-10 pb-5'>
         Отзывы участников
       </div>
-      <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 md:grid-cols-2">
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
-          <figcaption className="flex items-center justify-center space-x-3">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium text-left">
-              <div>Людмила К.</div>
-              <div className="text-sm text-gray-500">Участница экспедиции 2021</div>
-            </div>
-          </figcaption>
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
-            <p className="my-4">Спасибо за возможность познакомиться с Тибетом так близко и интимно. Это было невероятное путешествие в мире медитаций и красоты природы. Ваша компания сделала это возможным, и я вам очень благодарна.</p>
-          </blockquote>
-        </figure>
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
-          <figcaption className="flex items-center justify-center space-x-3">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium text-left">
-              <div>Марк и Сара</div>
-              <div className="text-sm text-gray-500">Участники экспедиции 2019</div>
-            </div>
-          </figcaption>
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
-            <p className="my-4">Это было наше первое путешествие в Тибет, и мы в восторге! Опыт был духовно поднимающим и вдохновляющим. Организация маршрута и качество услуг были выше всяких похвал. Мы обязательно вернемся снова!</p>
-          </blockquote>
-
-        </figure>
-        <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
-          <figcaption className="flex items-center justify-center space-x-3">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium text-left">
-              <div>Джон С</div>
-              <div className="text-sm text-gray-500">Экспедиция 2022</div>
-            </div>
-          </figcaption>
-          <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8">
-            <p className="my-4">Моя поездка в Тибет с этой компанией оказалась невероятным приключением! Горы, монастыри и доброжелательные люди сделали это путешествие незабываемым. Организация была на высшем уровне, и я чувствовал себя в надежных руках на протяжении всей поездки.</p>
-          </blockquote>
-
-        </figure>
+      <div className="grid mb-8 border border-gray-200 rounded-lg md:mb-12 md:grid-cols-2">
+        <Review name="Людмила К." subtitle='Участница экспедиции 2021' text='Спасибо за возможность познакомиться с Тибетом так близко и интимно. Это было невероятное путешествие в мире медитаций и красоты природы. Ваша компания сделала это возможным, и я вам очень благодарна.' />
+        <Review name="Марк и Сара" subtitle='Участники экспедиции 2019' text='Это было наше первое путешествие в Тибет, и мы в восторге! Опыт был духовно поднимающим и вдохновляющим. Организация маршрута и качество услуг были выше всяких похвал. Мы обязательно вернемся снова!' />
+        <Review name="Джон С" subtitle='Экспедиция 2022' text='Моя поездка в Тибет с этой компанией оказалась невероятным приключением! Горы, монастыри и доброжелательные люди сделали это путешествие незабываемым. Организация была на высшем уровне, и я чувствовал себя в надежных руках на протяжении всей поездки.' />
       </div>
 
       <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl py-2'>
@@ -226,6 +186,35 @@ export default function Home() {
       </div>
       <Copyright />
     </main>
+  )
+}
+
+const Review: React.FC<{
+  name: string;
+  subtitle: string;
+  text: string
+}> = ({ name, subtitle, text }) => {
+  return (
+    <figure className="flex flex-col p-8 bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
+      <figcaption className="flex items-center space-x-3">
+        <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
+        <div className="space-y-0.5 font-medium text-left">
+          <div>{name}</div>
+          <div className="text-sm text-gray-500">{subtitle}</div>
+        </div>
+      </figcaption>
+      <blockquote className="max-w-2xl mx-auto text-gray-800 lg:mb-8">
+        <p className="my-4">{text}</p>
+      </blockquote>
+    </figure>
+  )
+}
+
+const IconMark = () => {
+  return (
+    <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+    </svg>
   )
 }
 

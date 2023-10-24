@@ -69,18 +69,38 @@ export const PhotoGallery = () => {
   const photo1src = 'https://storage.googleapis.com/opentibet/chiu.jpg'
   const photo2src = 'https://storage.googleapis.com/opentibet/raduga.jpg'
   const photo3src = 'https://storage.googleapis.com/opentibet/topor.jpg'
+  const photo4src = 'https://storage.googleapis.com/opentibet/background-7.jpg' // replace with actual photos
+  const photo5src = 'https://storage.googleapis.com/opentibet/background-8.jpg'
+  const photo6src = 'https://storage.googleapis.com/opentibet/background-1.jpg'
 
   return (
     <PhotoProvider>
-      <PhotoView src={photo1src}>
-        <img src={photo1src} alt="" />
+
+      <div className="grid grid-cols-2 gap-1">
+        <PhotoView src={photo1src}>
+          <img src={photo1src} alt="" className="col-start-1 col-end-3 rounded-sm cursor-pointer" />
+        </PhotoView>
+        <PhotoView src={photo2src}>
+          <img src={photo2src} alt="" className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
+        </PhotoView>
+        <PhotoView src={photo3src}>
+          <img src={photo3src} alt="" className="col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer" />
+        </PhotoView>
+        <PhotoView src={photo4src}>
+          <img src={photo4src} alt="" className="col-start-2 col-end-3 rounded-sm cursor-pointer" />
+        </PhotoView>
+        <img src="https://storage.googleapis.com/opentibet/alex-4.jpg" />
+      </div>
+      <PhotoView src={photo5src}>
+        <img src={photo5src} alt="" />
       </PhotoView>
-      <PhotoView src={photo2src}>
-        <img src={photo2src} alt="" />
+      <PhotoView src={photo6src}>
+        <img src={photo6src} alt="" />
       </PhotoView>
-      <PhotoView src={photo3src}>
-        <img src={photo3src} alt="" />
-      </PhotoView>
+
+
+
+
     </PhotoProvider>
   )
 }
