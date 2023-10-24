@@ -3,13 +3,12 @@ import Image from 'next/image'
 
 import { BackgroundSlider, Arrow, PhotoGallery, FAQ } from '../components/components'
 
-
 export default function Home() {
 
   // const backgroundImageUrl = 'https://downloader.disk.yandex.ru/preview/7c934c34aeb3afccf224c723f98841ce270e22cb26e7c0a8d9f002c3e5b8a3dd/65293fe3/L1sEtzb6m2fyknzu_fd_YnrYpZEqDsNpW6nAFt2plIsrgbMBIr7R9wmjRk2sv0JgkDL4dWbgZgAB2B9raCXXnQ%3D%3D?uid=0&filename=39f89fbd0aea0779c5a622aa8e221ec9.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1466x1782'
   return (
     <main className="flex min-h-screen flex-col items-center justify-between max-w-2xl">
-      <div className='w-full h-[92vh] relative'>
+      <div className='w-full h-[80vh] relative'>
         <BackgroundSlider />
         {/* <div className='absolute inset-0 bg-black opacity-20'></div> */}
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
@@ -38,24 +37,49 @@ export default function Home() {
           <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} />
         </div>
 
-        <div className='py-4'>
-          <h2 className="mb-2 text-lg font-semibold text-gray-900">OPEN TIBET – это совместный туристический проект</h2>
-          <ul className="py-4 max-w-md space-y-2 list-inside">
+
+
+        <div className='pt-10'>
+          <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET – это совместный туристический проект</h2>
+          <ul className="py-8 max-w-md space-y-6 list-inside">
             <li className="flex items-center">
-              <svg className="w-3.5 h-3.5 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
-                <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
-              </svg>
-              Тибетского туристического офиса (правительство Тибета)
+              <IconBookmark />
+              <div>
+                <span className='font-semibold'>Тибетского туристического офиса</span>{' '}<span>правительство Тибета</span>
+              </div>
+
             </li>
-            <li>
-              Tash Delek travel agency, Тибет, Лхаса (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>)
+            <li className="flex flex-wrap items-center">
+              <IconBookmark />
+              <div>
+                <span className='font-semibold'>Tash Delek travel agency</span><br /> Тибет, Лхаса
+              </div>
+
+              {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
             </li>
-            <li>
-              Kailash-explorer agency, Россия, Санкт Петербург
+            <li className="flex items-center">
+              <IconBookmark />
+              <div>
+                <span className='font-semibold'>
+                  Kailash-explorer agency
+                </span><br /> Россия, Санкт Петербург
+              </div>
+
             </li>
           </ul>
+          <div className='flex pt-4'>
+            <div className="w-[33%] flex items-center justify-center">
+              <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+            </div>
+            <div className="w-[33%] flex items-center justify-center">
+              <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+            </div>
+            <div className="w-[33%] flex items-center justify-center">
+              <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
+            </div>
+          </div>
 
-          <p className='pt-6 leading-7'>
+          <p className='pt-10 leading-7'>
             Ключевая цель проекта - сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:
           </p>
           <ul className='py-4 max-w-md space-y-2 list-inside'>
@@ -87,7 +111,41 @@ export default function Home() {
         <li className="mb-2">Природная красота: Высокогорные озера, такие как Намтсо и Манасаровар, являются жемчужинами Тибета. Здесь вы можете наслаждаться кристально чистой водой и окружающей красотой.</li>
       </ul> */}
 
-      <div >
+      <div className='w-full'>
+        <div className='text-gray-900 font-semibold text-lg md:text-4xl lg:text-5xl py-2 px-4'>
+          Почему стоит ехать в Тибет с нами?
+        </div>
+
+
+      </div>
+
+
+      <div className='w-full pt-8'>
+        <div className='px-4 py-2'>
+          <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl'>
+            Посмотрите фильм о Тибете
+          </div>
+          <div className='text-gray-600 pr-6 text-base md:text-xl'>
+            снятый{' '}
+            <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Алексеем Перчуковым</a>
+          </div>
+
+          <p className='py-4 pb-0 leading-7'>
+            Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме “Тибет, место которое меняет жизнь”, снятом в одном из таких туров:
+          </p>
+        </div>
+        <div className='w-full'>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/OhtIDb8ioT0?si=rnbXixWvQlm4pVIA"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen />
+        </div>
+      </div>
+      <div className="pt-10">
         <div className='flex px-4'>
           <div className="w-32 h-32">
             <img
@@ -121,38 +179,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='w-full'>
-        <div className='px-4 py-2'>
-          <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl'>
-            Посмотрите фильм о Тибете
-          </div>
-          <div className='text-gray-600 pr-6 text-base md:text-xl'>
-            снятый{' '}
-            <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Алексеем Перчуковым</a>
-          </div>
-
-          <p className='py-4 pb-0 leading-7'>
-            Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме “Тибет, место которое меняет жизнь”, снятом в одном из таких туров:
-          </p>
-        </div>
-        <div className='w-full'>
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/OhtIDb8ioT0?si=rnbXixWvQlm4pVIA"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen />
-        </div>
-      </div>
-
-      <div>
-        <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl py-10 text-center'>
-          Почему стоит ехать<br /> в Тибет с нами?
-        </div>
-
-      </div>
 
       <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl pt-10 pb-5'>
         Отзывы участников
@@ -168,10 +194,15 @@ export default function Home() {
       </div>
       <FAQ />
 
-      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl py-2'>
+      <div className='pt-10' />
+      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl pt-2'>
         Фото с прошлых туров
       </div>
-      <PhotoGallery />
+      <div className="text-xs text-gray-400 pb-6">нажмите на фото, чтобы открыть галерею</div>
+      <div>
+        <PhotoGallery />
+      </div>
+
 
       <div className='relative'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
@@ -182,7 +213,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <video src='https://storage.googleapis.com/opentibet/doors.mp4' autoPlay muted loop></video>
+        <video src='https://storage.googleapis.com/opentibet/doors.mp4' autoPlay muted loop playsInline></video>
       </div>
       <Copyright />
     </main>
@@ -195,15 +226,15 @@ const Review: React.FC<{
   text: string
 }> = ({ name, subtitle, text }) => {
   return (
-    <figure className="flex flex-col p-8 bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
+    <figure className="flex flex-col p-4 bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r">
       <figcaption className="flex items-center space-x-3">
-        <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
+        <img className="rounded-full w-12 h-12" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
         <div className="space-y-0.5 font-medium text-left">
           <div>{name}</div>
-          <div className="text-sm text-gray-500">{subtitle}</div>
+          <div className="text-xs text-gray-700">{subtitle}</div>
         </div>
       </figcaption>
-      <blockquote className="max-w-2xl mx-auto text-gray-800 lg:mb-8">
+      <blockquote className="max-w-2xl mx-auto text-gray-800 lg:mb-8 leading-7">
         <p className="my-4">{text}</p>
       </blockquote>
     </figure>
@@ -214,6 +245,14 @@ const IconMark = () => {
   return (
     <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
       <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+    </svg>
+  )
+}
+
+const IconBookmark = () => {
+  return (
+    <svg className="w-4 h-4 text-gray-300 mr-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
+      <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
     </svg>
   )
 }

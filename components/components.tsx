@@ -33,16 +33,27 @@ export const BackgroundSlider = () => {
 
   const currentImageUrl = images[currentImageIndex];
   // style={{ backgroundImage: `url('${backgroundImageUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+
+  // for cache
+  const renderImagesList = () => {
+    return images.map((url, index) => {
+      return <img src={url} key={index} style={{ display: 'none' }} />
+    })
+  }
   return (
-    <div
-      className='w-full h-full absolute'
-      style={{
-        backgroundImage: `url(${currentImageUrl})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        transition: 'background-image 1s ease-in-out',
-      }}
-    />
+    <>
+      <div
+        className='w-full h-full absolute'
+        style={{
+          backgroundImage: `url(${currentImageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'background-image 1s ease-in-out',
+        }}
+      />
+      {renderImagesList()}
+    </>
+
   );
 }
 
@@ -89,14 +100,13 @@ export const PhotoGallery = () => {
         <PhotoView src={photo4src}>
           <img src={photo4src} alt="" className="col-start-2 col-end-3 rounded-sm cursor-pointer" />
         </PhotoView>
-        <img src="https://storage.googleapis.com/opentibet/alex-4.jpg" />
       </div>
-      <PhotoView src={photo5src}>
+      {/* <PhotoView src={photo5src}>
         <img src={photo5src} alt="" />
       </PhotoView>
       <PhotoView src={photo6src}>
         <img src={photo6src} alt="" />
-      </PhotoView>
+      </PhotoView> */}
 
 
 
