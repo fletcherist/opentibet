@@ -36,9 +36,6 @@ export default function Home() {
         <div className='flex justify-center'>
           <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} />
         </div>
-
-
-
         <div className='pt-10'>
           <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET – это совместный туристический проект</h2>
           <ul className="py-8 max-w-md space-y-6 list-inside">
@@ -111,13 +108,7 @@ export default function Home() {
         <li className="mb-2">Природная красота: Высокогорные озера, такие как Намтсо и Манасаровар, являются жемчужинами Тибета. Здесь вы можете наслаждаться кристально чистой водой и окружающей красотой.</li>
       </ul> */}
 
-      <div className='w-full'>
-        <div className='text-gray-900 font-semibold text-lg md:text-4xl lg:text-5xl py-2 px-4'>
-          Почему стоит ехать в Тибет с нами?
-        </div>
-
-
-      </div>
+      <WhyGoTibetWithUs />
 
 
       <div className='w-full pt-8'>
@@ -125,9 +116,9 @@ export default function Home() {
           <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl'>
             Посмотрите фильм о Тибете
           </div>
-          <div className='text-gray-600 pr-6 text-base md:text-xl'>
+          <div className='pt-1 pr-6 md:text-xl'>
             снятый{' '}
-            <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Алексеем Перчуковым</a>
+            <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-600 hover:text-blue-700 font-semibold' target='_blank'>Алексеем Перчуковым</a>
           </div>
 
           <p className='py-4 pb-0 leading-7'>
@@ -180,22 +171,22 @@ export default function Home() {
       </div>
 
 
-      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl pt-10 pb-5'>
+      <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl pt-10 pb-5'>
         Отзывы участников
       </div>
-      <div className="grid mb-8 border border-gray-200 rounded-lg md:mb-12 md:grid-cols-2">
+      <div className="grid mb-8 rounded-lg md:mb-12 md:grid-cols-2">
         <Review name="Людмила К." subtitle='Участница экспедиции 2021' text='Спасибо за возможность познакомиться с Тибетом так близко и интимно. Это было невероятное путешествие в мире медитаций и красоты природы. Ваша компания сделала это возможным, и я вам очень благодарна.' />
         <Review name="Марк и Сара" subtitle='Участники экспедиции 2019' text='Это было наше первое путешествие в Тибет, и мы в восторге! Опыт был духовно поднимающим и вдохновляющим. Организация маршрута и качество услуг были выше всяких похвал. Мы обязательно вернемся снова!' />
         <Review name="Джон С" subtitle='Экспедиция 2022' text='Моя поездка в Тибет с этой компанией оказалась невероятным приключением! Горы, монастыри и доброжелательные люди сделали это путешествие незабываемым. Организация была на высшем уровне, и я чувствовал себя в надежных руках на протяжении всей поездки.' />
       </div>
 
-      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl py-2'>
+      <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl py-2'>
         Часто задаваемые вопросы
       </div>
       <FAQ />
 
       <div className='pt-10' />
-      <div className='text-gray-900 font-semibold text-2xl md:text-4xl lg:text-5xl pt-2'>
+      <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl pt-2'>
         Фото с прошлых туров
       </div>
       <div className="text-xs text-gray-400 pb-6">нажмите на фото, чтобы открыть галерею</div>
@@ -203,8 +194,7 @@ export default function Home() {
         <PhotoGallery />
       </div>
 
-
-      <div className='relative'>
+      <div className='relative pt-1'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
         <div className='absolute h-full w-full'>
           <div className='flex h-full items-center justify-center'>
@@ -215,6 +205,22 @@ export default function Home() {
         </div>
         <video src='https://storage.googleapis.com/opentibet/doors.mp4' autoPlay muted loop playsInline></video>
       </div>
+
+      <div className='max-w-[30vh]'>
+        <div className='flex pt-8'>
+          <div className="w-[33%] flex items-center justify-center">
+            <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+          </div>
+          <div className="w-[33%] flex items-center justify-center">
+            <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+          </div>
+          <div className="w-[33%] flex items-center justify-center">
+            <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+          </div>
+        </div>
+      </div>
+
+
       <Copyright />
     </main>
   )
@@ -234,8 +240,8 @@ const Review: React.FC<{
           <div className="text-xs text-gray-700">{subtitle}</div>
         </div>
       </figcaption>
-      <blockquote className="max-w-2xl mx-auto text-gray-800 lg:mb-8 leading-7">
-        <p className="my-4">{text}</p>
+      <blockquote className="max-w-2xl mx-auto text-gray-800 text-sm lg:mb-8 leading-6">
+        <p className="my-3">{text}</p>
       </blockquote>
     </figure>
   )
@@ -257,11 +263,78 @@ const IconBookmark = () => {
   )
 }
 
+const WhyGoTibetWithUs = () => {
+
+  return (
+    <div className='w-full'>
+      <div className='text-gray-900 font-semibold text-lg md:text-4xl lg:text-5xl py-2 px-4'>
+        Почему стоит ехать в Тибет с нами?
+      </div>
+      <WhyGoTibetWithUsStatement
+        title='Глубокое знание Тибета'
+        image='https://storage.googleapis.com/opentibet/background-1.jpg'
+      >
+        Мы имеем богатый опыт и глубокое понимание Тибета. Наши гиды - местные эксперты, которые помогут вам раскрыть все тайны и красоту этой уникальной земли
+      </WhyGoTibetWithUsStatement>
+      <WhyGoTibetWithUsStatement
+        title='Эксклюзивные маршруты'
+      >
+        Мы предлагаем эксклюзивные маршруты, которые не доступны большинству туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.
+      </WhyGoTibetWithUsStatement>
+      <WhyGoTibetWithUsStatement
+        title='Персонализированный опыт'
+        image='https://storage.googleapis.com/opentibet/background-8.jpg'
+      >
+        Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который соответствует вашим интересам и пожеланиям, обеспечивая максимальный комфорт и удовлетворение.
+      </WhyGoTibetWithUsStatement>
+      <WhyGoTibetWithUsStatement
+        title='Высокое качество услуг'
+      >
+        Мы гарантируем высокое качество услуг, начиная с разработки маршрута и заканчивая качеством проживания и питания. Ваше удовольствие и безопасность для нас приоритет
+      </WhyGoTibetWithUsStatement>
+
+      <div className='flex w-full justify-center pt-8 pb-4'>
+        <ActionButton />
+      </div>
+    </div>
+  )
+}
+
+const WhyGoTibetWithUsStatement: React.FC<{
+  title: string;
+  children: React.ReactNode;
+  image?: string;
+}> = ({ title, children, image }) => {
+  return (
+    <div className=''>
+      <div className='py-4'>
+        <div className='flex items-center px-4'>
+          <div className='w-2 h-2 rounded-full bg-blue-500 mr-2' />
+          <div className='font-semibold'>
+            {title}
+          </div>
+        </div>
+        <div className='leading-7 pt-1 px-4'>
+          {children}
+        </div>
+        {image && (
+          <div className='pt-2'>
+            <img src={image} className='rounded-sm' />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
 
 const ActionButton = () => {
   return (
     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center">
       Смотреть программу на 2024
+      <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+      </svg>
     </button>
   )
 }
@@ -274,6 +347,4 @@ const Copyright: React.FC = () => {
     </div>
   );
 };
-
-
 

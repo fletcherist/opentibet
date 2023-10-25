@@ -11,14 +11,13 @@ export const BackgroundSlider = () => {
     // 'https://storage.googleapis.com/opentibet/chiu.jpg',
     // 'https://storage.googleapis.com/opentibet/raduga.jpg',
     // 'https://storage.googleapis.com/opentibet/topor.jpg',
+    'https://storage.googleapis.com/opentibet/background-7.jpg',
     'https://storage.googleapis.com/opentibet/background-6.jpg',
 
     'https://storage.googleapis.com/opentibet/background-2.jpg',
     // 'https://storage.googleapis.com/opentibet/background-3.jpg',
     'https://storage.googleapis.com/opentibet/background-4.jpg',
     'https://storage.googleapis.com/opentibet/background-5.jpg',
-
-    'https://storage.googleapis.com/opentibet/background-7.jpg',
     'https://storage.googleapis.com/opentibet/background-8.jpg',
     'https://storage.googleapis.com/opentibet/background-1.jpg',
   ];
@@ -98,7 +97,10 @@ export const PhotoGallery = () => {
           <img src={photo3src} alt="" className="col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer" />
         </PhotoView>
         <PhotoView src={photo4src}>
-          <img src={photo4src} alt="" className="col-start-2 col-end-3 rounded-sm cursor-pointer" />
+          <img src={photo4src} alt="" className="col-start-1 col-end-2 row-start-3 row-end-4 rounded-sm cursor-pointer" />
+        </PhotoView>
+        <PhotoView src={photo5src}>
+          <img src={photo5src} alt="" className="col-start-2 col-end-3 row-start-3 row-end-4 rounded-sm cursor-pointer" />
         </PhotoView>
       </div>
       {/* <PhotoView src={photo5src}>
@@ -123,13 +125,13 @@ const Accordion: React.FC<{ title: string, content: string }> = ({ title, conten
   return (
     <div className="border-b border-gray-200">
       <button
-        className="flex justify-between items-center w-full py-4 px-6 text-lg font-medium text-left text-gray-900 focus:outline-none"
+        className="flex justify-between items-center w-full py-6 px-6 text-base font-medium text-left text-gray-900 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{title}</span>
         <span className="ml-6">
           {isOpen ? (
-            <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <svg className="w-3.5 h-3.5 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
             </svg>
           ) : (
@@ -140,7 +142,7 @@ const Accordion: React.FC<{ title: string, content: string }> = ({ title, conten
         </span>
       </button>
       {isOpen && (
-        <div className="px-6 py-6 pt-0 text-gray-700">{content}</div>
+        <div className="px-6 py-6 pt-0 text-gray-700 leading-7">{content}</div>
       )}
     </div>
   );
