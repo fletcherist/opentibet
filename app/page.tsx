@@ -12,15 +12,17 @@ export default function Home() {
         <BackgroundSlider />
         {/* <div className='absolute inset-0 bg-black opacity-20'></div> */}
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
-        <div className='h-full flex flex-col justify-center px-4 md:px-20 relative z-10'>
-          <div className='text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl'>
-            Откройте для себя Тибет
-          </div>
-          <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
-            Эксклюзивные маршруты по доступным ценам
-          </div>
-          <div className='py-4'>
-            <ActionButton />
+        <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-10'>
+          <div className='max-w-4xl w-full'>
+            <div className='text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl'>
+              Откройте для себя Тибет
+            </div>
+            <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
+              Эксклюзивные маршруты по доступным ценам
+            </div>
+            <div className='py-4'>
+              <ActionButton />
+            </div>
           </div>
         </div>
         <div className='absolute bottom-0 z-10 w-full'>
@@ -47,7 +49,6 @@ export default function Home() {
                 <div>
                   <span className='font-semibold'>Tash Delek travel agency</span><br /> Тибет, Лхаса
                 </div>
-
                 {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
               </li>
               <li className="flex items-center">
@@ -57,18 +58,19 @@ export default function Home() {
                     Kailash-explorer agency
                   </span><br /> Россия, Санкт Петербург
                 </div>
-
               </li>
             </ul>
-            <div className='flex pt-4'>
-              <div className="w-[33%] flex items-center justify-center">
-                <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
-              </div>
-              <div className="w-[33%] flex items-center justify-center">
-                <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" />
-              </div>
-              <div className="w-[33%] flex items-center justify-center">
-                <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
+            <div className='flex pt-4 justify-center'>
+              <div className='flex max-w-xl'>
+                <div className="w-[33%] flex items-center justify-center">
+                  <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+                </div>
+                <div className="w-[33%] flex items-center justify-center">
+                  <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+                </div>
+                <div className="w-[33%] flex items-center justify-center">
+                  <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
+                </div>
               </div>
             </div>
           </div>
@@ -221,16 +223,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='relative pt-1'>
+      <div className='relative pt-1 w-full max-w-4xl'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
         <div className='absolute h-full w-full'>
           <div className='flex h-full items-center justify-center'>
-            <div className='text-gray-200 font-bold text-3xl md:text-4xl lg:text-5xl p-8'>
+            <div className='text-gray-200 font-bold text-3xl md:text-4xl p-8'>
               До втречи в Тибете.
             </div>
           </div>
         </div>
-        <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline></video>
+        <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full'></video>
       </div>
 
       <div className='max-w-[30vh]'>
@@ -246,8 +248,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
       <Copyright />
     </main>
   )
@@ -264,7 +264,7 @@ const Review: React.FC<{
         <img className="rounded-full w-12 h-12" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
         <div className="space-y-0.5 font-medium text-left">
           <div>{name}</div>
-          <div className="text-xs text-gray-700">{subtitle}</div>
+          <div className="text-xs text-gray-400">{subtitle}</div>
         </div>
       </figcaption>
       <blockquote className="max-w-2xl mx-auto text-gray-800 text-sm lg:mb-8 leading-6">
@@ -356,7 +356,7 @@ const WhyGoTibetWithUsStatement: React.FC<{
 
 const ActionButton = () => {
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center">
+    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center md:py-3 md:px-6 md:text-lg">
       Смотреть программы на 2024
       <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
