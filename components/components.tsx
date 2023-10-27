@@ -85,7 +85,6 @@ export const PhotoGallery = () => {
 
   return (
     <PhotoProvider>
-
       <div className="grid grid-cols-2 gap-1">
         <PhotoView src={photo1src}>
           <img src={photo1src} alt="" className="col-start-1 col-end-3 rounded-sm cursor-pointer" />
@@ -109,10 +108,6 @@ export const PhotoGallery = () => {
       <PhotoView src={photo6src}>
         <img src={photo6src} alt="" />
       </PhotoView> */}
-
-
-
-
     </PhotoProvider>
   )
 }
