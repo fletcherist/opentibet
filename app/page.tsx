@@ -75,16 +75,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <div>
-              <img className='mb-1 rounded' src="https://storage.googleapis.com/opentibet/common-2.jpg" />
-            </div>
-            <div className='flex'>
-              <div className='flex max-w-[60%] flex-col'>
-                <img src="https://storage.googleapis.com/opentibet/common-1.jpg" />
+          <div className='flex justify-center'>
+            <div className='max-w-xl'>
+              <div>
+                <Image src="https://storage.googleapis.com/opentibet/common-2.jpg" alt="" width={375} height={250} quality={75} className='w-full mb-1 rounded-sm' />
               </div>
-              <div className='flex max-w-[40%] flex-col'>
-                <img className='ml-1' src="https://storage.googleapis.com/opentibet/common-3.jpg" />
+              <div className='flex'>
+                <div className='flex max-w-[60%] flex-col'>
+                  <Image src="https://storage.googleapis.com/opentibet/common-1.jpg" alt="" width={375} height={250} quality={75} className='w-full rounded-sm' />
+                </div>
+                <div className='flex max-w-[40%] flex-col'>
+                  <Image src="https://storage.googleapis.com/opentibet/common-3.jpg" alt="" width={375} height={250} quality={75} className='w-full ml-1 rounded-sm' />
+                </div>
               </div>
             </div>
           </div>
@@ -172,11 +174,14 @@ export default function Home() {
           <div className='p-4 leading-7'>
             Автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма “Тибет, место которое меняет жизнь”. Докладчик многочисленных международных конференции, посвященных Кайласу. Автор статьи “ Спиральная Кора”, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
           </div>
-          <div className="grid grid-cols-2 gap-1">
-            <img src="https://storage.googleapis.com/opentibet/alex-1.jpg" className="col-start-1 col-end-3 rounded-sm cursor-pointer" />
-            <img src="https://storage.googleapis.com/opentibet/alex-6.jpg" className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
-            <img src="https://storage.googleapis.com/opentibet/alex-2.jpg" className="col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer" />
-            <img src="https://storage.googleapis.com/opentibet/alex-4.jpg" className="col-start-2 col-end-3 rounded-sm cursor-pointer" />
+          <div className='flex justify-center'>
+            <div className="grid grid-cols-2 gap-1 max-w-xl">
+              {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
+              <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-3 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alex-6.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alex-2.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alex-4.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 rounded-sm cursor-pointer" />
+            </div>
           </div>
 
           <div className='text-center p-4'>

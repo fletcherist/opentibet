@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image'
+
 import { useState, useEffect } from 'react';
 import { useRef } from 'react';
 
@@ -87,6 +89,7 @@ export const PhotoGallery = () => {
     <PhotoProvider>
       <div className="grid grid-cols-2 gap-1">
         <PhotoView src={photo1src}>
+          {/* <Image src={photo1src} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
           <img src={photo1src} alt="" className="col-start-1 col-end-3 rounded-sm cursor-pointer" />
         </PhotoView>
         <PhotoView src={photo2src}>
