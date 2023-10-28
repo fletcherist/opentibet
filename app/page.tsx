@@ -235,6 +235,124 @@ export default function Home() {
       <div className='pt-10' />
       <div className='max-w-4xl w-full'>
         <Header
+          title='Программы'
+          subtitle='по центральному и северному Тибету'
+        />
+        <div className='p-4'>
+          <div className='py-2'>
+            <div>Центральный тибет</div>
+            <div>
+              <div>
+                1. Лхаса
+              </div>
+              <div>
+                2. Потала
+              </div>
+              <div>
+                3. Джоканг
+              </div>
+              <div>
+                4. Ганден
+              </div>
+              <div>
+                5. Драк Йерпа
+              </div>
+            </div>
+          </div>
+          <div className='py-2'>
+            <div>Северный Тибет</div>
+            <div>
+              <div>
+                1. Цурпу
+              </div>
+              <div>
+                2. Нам цо
+              </div>
+              <div>
+                3. Округ Шигадзе
+              </div>
+              <div>
+                4. Ташилунпо
+              </div>
+              <div>
+                5. Гяндзе
+              </div>
+              <div>
+                6. Шалу
+              </div>
+              <div>
+                7. Нгор
+              </div>
+              <div>
+                8. Ямдрок
+              </div>
+              <div>
+                9. Базовый лагерь Эвереста
+              </div>
+              <div>
+                10. Гирьенг
+              </div>
+              <div>
+                11. Шашимпангма
+              </div>
+              <div>
+                12. Пелку Цо
+              </div>
+              <div>
+                13. Рождение Милы
+              </div>
+              <div>
+                14. Чакра Дамцо
+              </div>
+              <div>
+                15. Озеро Лангцо
+              </div>
+              <div>
+                16. Королевство Гуге
+              </div>
+              <div>
+                17. Цапаранг
+              </div>
+              <div>
+                18. Дунгар
+              </div>
+              <div>
+                19. Пиянг
+              </div>
+              <div>
+                20. Парка Зада
+              </div>
+              <div>
+                21. Пуранг
+              </div>
+              <div>
+                21. Корчаг
+              </div>
+              <div>
+                22. Маносаровар кора
+              </div>
+              <div>
+                23. Кайлас
+              </div>
+              <div>
+                24. Внешняя кора
+              </div>
+              <div>
+                25. Внутренняя кора
+              </div>
+              <div>
+                26. Нанди кора
+              </div>
+              <div>
+                27. Трон Будды кора
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='max-w-4xl w-full'>
+        <Header
           title='Контакты'
           subtitle='связаться с нами'
         />
@@ -249,6 +367,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
 
       {/* <div className='relative pt-1 w-full max-w-4xl'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
@@ -371,8 +491,10 @@ const WhyGoTibetWithUsStatement: React.FC<{
           {children}
         </div>
         {image && (
-          <div className='pt-2'>
-            <img src={image} className='rounded-sm' />
+          <div className='py-5 md:py-10 flex justify-center'>
+            <div className='max-w-xl'>
+              <img src={image} className='rounded-sm' />
+            </div>
           </div>
         )}
       </div>
