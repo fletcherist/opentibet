@@ -18,7 +18,7 @@ export default function Home() {
               Откройте для себя Тибет
             </div>
             <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
-              Эксклюзивные маршруты по доступным ценам
+              Маршруты по доступным ценам
             </div>
             <div className='py-4'>
               <ActionButton />
@@ -76,16 +76,19 @@ export default function Home() {
           </div>
 
           <div className='flex justify-center'>
-            <div className='max-w-xl'>
-              <div>
-                <Image src="https://storage.googleapis.com/opentibet/common-2.jpg" alt="" width={375} height={250} quality={75} className='w-full mb-1 rounded-sm' />
-              </div>
+            <div className='max-w-3xl'>
               <div className='flex'>
-                <div className='flex max-w-[60%] flex-col'>
+                {/* <div className='flex max-w-[60%] flex-col'>
                   <Image src="https://storage.googleapis.com/opentibet/common-1.jpg" alt="" width={375} height={250} quality={75} className='w-full rounded-sm' />
-                </div>
-                <div className='flex max-w-[40%] flex-col'>
+                </div> */}
+                {/* <div className='flex max-w-[40%] flex-col'>
                   <Image src="https://storage.googleapis.com/opentibet/common-3.jpg" alt="" width={375} height={250} quality={75} className='w-full ml-1 rounded-sm' />
+                </div> */}
+                <div className='flex max-w-[50%] flex-col'>
+                  <Image src="https://storage.googleapis.com/opentibet/common-2.jpg" alt="" width={375} height={250} quality={75} className='h-full w-full rounded-sm' style={{ objectFit: 'cover' }} />
+                </div>
+                <div className='flex max-w-[50%] flex-col'>
+                  <Image src="https://storage.googleapis.com/opentibet/common-5.jpg" alt="" width={375} height={250} quality={75} className='h-full w-full ml-1 rounded-sm' style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>

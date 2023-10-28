@@ -13,15 +13,16 @@ export const BackgroundSlider = () => {
     // 'https://storage.googleapis.com/opentibet/chiu.jpg',
     // 'https://storage.googleapis.com/opentibet/raduga.jpg',
     // 'https://storage.googleapis.com/opentibet/topor.jpg',
-    'https://storage.googleapis.com/opentibet/background-7.jpg',
-    'https://storage.googleapis.com/opentibet/background-6.jpg',
+    'https://storage.googleapis.com/opentibet/background-6.jpg', // padmasambhava
 
-    'https://storage.googleapis.com/opentibet/background-2.jpg',
+    'https://storage.googleapis.com/opentibet/background-2.jpg', // drak yerpa ok
     // 'https://storage.googleapis.com/opentibet/background-3.jpg',
     'https://storage.googleapis.com/opentibet/background-4.jpg',
-    'https://storage.googleapis.com/opentibet/background-5.jpg',
-    'https://storage.googleapis.com/opentibet/background-8.jpg',
-    'https://storage.googleapis.com/opentibet/background-1.jpg',
+    'https://storage.googleapis.com/opentibet/background-5.jpg', // monah ok
+    // 'https://storage.googleapis.com/opentibet/background-8.jpg',
+    'https://storage.googleapis.com/opentibet/background-1.jpg', // devochka ok
+
+    // одну с маносраваром
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
