@@ -4,16 +4,18 @@ import Image from 'next/image'
 import { BackgroundSlider, Arrow, PhotoGallery, FAQ } from '../components/components'
 
 export default function Home() {
-
-  // const backgroundImageUrl = 'https://downloader.disk.yandex.ru/preview/7c934c34aeb3afccf224c723f98841ce270e22cb26e7c0a8d9f002c3e5b8a3dd/65293fe3/L1sEtzb6m2fyknzu_fd_YnrYpZEqDsNpW6nAFt2plIsrgbMBIr7R9wmjRk2sv0JgkDL4dWbgZgAB2B9raCXXnQ%3D%3D?uid=0&filename=39f89fbd0aea0779c5a622aa8e221ec9.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1466x1782'
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className='w-full h-[80vh] relative'>
         {/* <BackgroundSlider /> */}
-        <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full h-full absolute object-cover'></video>
+        <video id='background-video' className='absolute w-full h-full object-cover' autoPlay muted loop poster='https://storage.googleapis.com/opentibet/doors-3-preview.jpg'>
+          <source src='https://storage.googleapis.com/opentibet/doors-3-compressed.mp4' type='video/mp4' />
+          <source src='https://storage.googleapis.com/opentibet/doors-3.webm' type='video/webm' />
+        </video>
+        {/* <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full h-full absolute object-cover'></video> */}
         {/* <div className='absolute inset-0 bg-black opacity-20'></div> */}
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
-        <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-10'>
+        <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-100'>
           <div className='max-w-4xl w-full'>
             <div className='text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl'>
               Откройте для себя Тибет
@@ -235,8 +237,8 @@ export default function Home() {
       <div className='pt-10' />
       <div className='max-w-4xl w-full'>
         <Header
-          title='Программы'
-          subtitle='по центральному и северному Тибету'
+          title='Информация о Тибете'
+          subtitle='регулярные заезды и эксклюзивные туры'
         />
         <div className='p-4'>
           <div className='py-2'>
@@ -269,19 +271,19 @@ export default function Home() {
                 2. Нам цо
               </div>
               <div>
-                3. Округ Шигадзе
+                Округ Шигадзе
               </div>
               <div>
-                4. Ташилунпо
+                1. Ташилунпо
               </div>
               <div>
-                5. Гяндзе
+                2. Гяндзе
               </div>
               <div>
-                6. Шалу
+                3. Шалу
               </div>
               <div>
-                7. Нгор
+                4. Нгор
               </div>
               <div>
                 8. Ямдрок
@@ -290,61 +292,61 @@ export default function Home() {
                 9. Базовый лагерь Эвереста
               </div>
               <div>
-                10. Гирьенг
+                Гирьенг
               </div>
               <div>
-                11. Шашимпангма
+                1. Шашимпангма
               </div>
               <div>
-                12. Пелку Цо
+                2. Пелку Цо
               </div>
               <div>
-                13. Рождение Милы
+                3. Рождение Милы
               </div>
               <div>
-                14. Чакра Дамцо
+                4. Чакра Дамцо
               </div>
               <div>
-                15. Озеро Лангцо
+                5. Озеро Лангцо
               </div>
               <div>
-                16. Королевство Гуге
+                Королевство Гуге
               </div>
               <div>
-                17. Цапаранг
+                1. Цапаранг
               </div>
               <div>
-                18. Дунгар
+                2. Дунгар
               </div>
               <div>
-                19. Пиянг
+                3. Пиянг
               </div>
               <div>
-                20. Парка Зада
+                4. Парка Зада
               </div>
               <div>
-                21. Пуранг
+                1. Пуранг
               </div>
               <div>
-                21. Корчаг
+                2. Корчаг
               </div>
               <div>
-                22. Маносаровар кора
+                Маносаровар кора
               </div>
               <div>
-                23. Кайлас
+                Мандала Кайласа
               </div>
               <div>
-                24. Внешняя кора
+                1. Внешняя кора
               </div>
               <div>
-                25. Внутренняя кора
+                2. Внутренняя кора
               </div>
               <div>
-                26. Нанди кора
+                3. Нанди кора
               </div>
               <div>
-                27. Трон Будды кора
+                4. Трон Будды кора
               </div>
             </div>
           </div>
