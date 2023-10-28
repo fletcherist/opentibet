@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className='w-full h-[80vh] relative'>
-        <BackgroundSlider />
+        {/* <BackgroundSlider /> */}
+        <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full h-full absolute object-cover'></video>
         {/* <div className='absolute inset-0 bg-black opacity-20'></div> */}
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
         <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-10'>
@@ -231,7 +232,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='relative pt-1 w-full max-w-4xl'>
+      {/* <div className='relative pt-1 w-full max-w-4xl'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
         <div className='absolute h-full w-full'>
           <div className='flex h-full items-center justify-center'>
@@ -241,7 +242,7 @@ export default function Home() {
           </div>
         </div>
         <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full'></video>
-      </div>
+      </div> */}
 
       <div className='max-w-[30vh]'>
         <div className='flex pt-8'>
