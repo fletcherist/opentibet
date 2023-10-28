@@ -222,13 +222,31 @@ export default function Home() {
       </div>
 
       <div className='pt-10' />
-      <div className='max-w-4xl'>
+      <div className='max-w-4xl w-full'>
         <Header
           title='Фото с прошлых туров'
           subtitle='нажмите на фото, чтобы открыть галерею'
         />
         <div className='pt-6'>
           <PhotoGallery />
+        </div>
+      </div>
+
+      <div className='pt-10' />
+      <div className='max-w-4xl w-full'>
+        <Header
+          title='Контакты'
+          subtitle='связаться с нами'
+        />
+        <div className='p-4'>
+          <div className='py-2'>
+            <div>Россия, Алексей</div>
+            <input type="tel" value="+7 911 927 41 14" className='text-3xl' />
+          </div>
+          <div className='py-2'>
+            <div>Китай, Алексей</div>
+            <input type="tel" value="+86 173 8999 5190" className='text-3xl' />
+          </div>
         </div>
       </div>
 
