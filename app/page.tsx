@@ -1,16 +1,14 @@
 import Image from 'next/image'
 
-
-import { BackgroundSlider, Arrow, PhotoGallery, FAQ } from '../components/components'
+import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, TimetableButton, BackgroundSlider } from '../components/components'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className='w-full h-[80vh] relative'>
-        {/* <BackgroundSlider /> */}
-        <video id='background-video' className='absolute w-full h-full object-cover' autoPlay muted loop poster='https://storage.googleapis.com/opentibet/doors-3-preview.jpg'>
-          <source src='https://storage.googleapis.com/opentibet/doors-3-compressed.mp4' type='video/mp4' />
-          <source src='https://storage.googleapis.com/opentibet/doors-3.webm' type='video/webm' />
+        <video id='background-video' className='absolute w-full h-full object-cover' autoPlay playsInline muted poster='https://storage.googleapis.com/opentibet/doors-4-preview.jpg'>
+          <source src='https://storage.googleapis.com/opentibet/doors-4-compressed.mp4' type='video/mp4' />
+          <source src='https://storage.googleapis.com/opentibet/doors-4.webm' type='video/webm' />
         </video>
         {/* <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full h-full absolute object-cover'></video> */}
         {/* <div className='absolute inset-0 bg-black opacity-20'></div> */}
@@ -40,14 +38,20 @@ export default function Home() {
         <div className='pt-10'>
           <div className='p-4'>
             <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET – это совместный туристический проект</h2>
-            <ul className="py-8 max-w-md space-y-6 list-inside">
+            <ul className="py-8 space-y-6 list-inside">
               <li className="flex items-center">
+                <div className="w-32 flex items-center justify-center">
+                  <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+                </div>
                 <IconBookmark />
                 <div>
-                  <span className='font-semibold'>Тибетского туристического офиса</span>{' '}<span>правительство Тибета</span>
+                  <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
                 </div>
               </li>
-              <li className="flex flex-wrap items-center">
+              <li className="flex items-center">
+                <div className="w-32 flex items-center justify-center">
+                  <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[70%] rounded-sm cursor-pointer" />
+                </div>
                 <IconBookmark />
                 <div>
                   <span className='font-semibold'>Tash Delek travel agency</span><br /> Тибет, Лхаса
@@ -55,6 +59,9 @@ export default function Home() {
                 {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
               </li>
               <li className="flex items-center">
+                <div className="w-32 flex items-center justify-center ">
+                  <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
+                </div>
                 <IconBookmark />
                 <div>
                   <span className='font-semibold'>
@@ -65,15 +72,7 @@ export default function Home() {
             </ul>
             <div className='flex pt-4 justify-center'>
               <div className='flex max-w-xl'>
-                <div className="w-[33%] flex items-center justify-center">
-                  <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
-                </div>
-                <div className="w-[33%] flex items-center justify-center">
-                  <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" />
-                </div>
-                <div className="w-[33%] flex items-center justify-center">
-                  <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
-                </div>
+
               </div>
             </div>
           </div>
@@ -189,7 +188,6 @@ export default function Home() {
               <Image src="https://storage.googleapis.com/opentibet/alex-4.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 rounded-sm cursor-pointer" />
             </div>
           </div>
-
           <div className='text-center p-4'>
             <p className='text-gray-400 text-sm'>
               Больше фото в <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Instagram</a>
@@ -198,6 +196,53 @@ export default function Home() {
         </div>
       </div>
 
+
+      <div className='w-full h-[40vh] relative'>
+        <BackgroundSlider />
+        <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
+        <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-100'>
+          <div className='max-w-4xl w-full'>
+            <div className='text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl'>
+              Посмотрите программы на 2024 год
+            </div>
+            <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
+              Регулярные и эксклюзивные маршруты
+            </div>
+            <div className='py-4'>
+              <ActionButton />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='pt-5' />
+      <div className='max-w-4xl w-full'>
+        <Header
+          title='Программы'
+          subtitle='расписание на 2024 год'
+          id="timetable"
+        />
+        <TimetableButton
+          title='Программа на май'
+          subtitle='2 – 21 мая 2024, 19 дней'
+        />
+        <TimetableButton
+          title='Программа на июнь'
+          subtitle='6 – 19 июня 2024, 13 дней'
+        />
+        <TimetableButton
+          title='Программа на июль'
+          subtitle='1 – 23 июля 2024, 22 дня'
+        />
+        <TimetableButton
+          title='Программа на август'
+          subtitle='2 – 19 августа 2024, 17 дней'
+        />
+        <TimetableButton
+          title='Программа на сентябрь'
+          subtitle='2 – 21 сентября 2024, 19 дней'
+        />
+      </div>
+      <div className='pt-10' />
       <div className='max-w-4xl'>
         <div className='pb-5'>
           <Header
@@ -361,16 +406,14 @@ export default function Home() {
         <div className='p-4'>
           <div className='py-2'>
             <div>Россия, Алексей</div>
-            <input type="tel" value="+7 911 927 41 14" className='text-3xl' />
+            <input type="tel" value="+7 911 927 41 14" className='text-3xl' readOnly />
           </div>
           <div className='py-2'>
             <div>Китай, Алексей</div>
-            <input type="tel" value="+86 173 8999 5190" className='text-3xl' />
+            <input type="tel" value="+86 173 8999 5190" className='text-3xl' readOnly />
           </div>
         </div>
       </div>
-
-
 
       {/* <div className='relative pt-1 w-full max-w-4xl'>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
@@ -458,7 +501,7 @@ const WhyGoTibetWithUs = () => {
       </WhyGoTibetWithUsStatement>
       <WhyGoTibetWithUsStatement
         title='Персонализированный опыт'
-        image='https://storage.googleapis.com/opentibet/background-8.jpg'
+        image='https://storage.googleapis.com/opentibet/background-kailas.jpg'
       >
         Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который соответствует вашим интересам и пожеланиям, обеспечивая максимальный комфорт и удовлетворение.
       </WhyGoTibetWithUsStatement>
@@ -505,16 +548,7 @@ const WhyGoTibetWithUsStatement: React.FC<{
 }
 
 
-const ActionButton = () => {
-  return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center md:py-3 md:px-6 md:text-lg">
-      Смотреть программы на 2024
-      <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
-      </svg>
-    </button>
-  )
-}
+
 
 const Copyright: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -529,9 +563,10 @@ const Copyright: React.FC = () => {
 const Header: React.FC<{
   title: string;
   subtitle: string;
-}> = ({ title, subtitle }) => {
+  id?: string;
+}> = ({ title, subtitle, id = undefined }) => {
   return (
-    <div className='px-4'>
+    <div className='px-4' id={id}>
       <div className='text-gray-900 font-semibold text-xl md:text-3xl pt-2'>
         {title}
       </div>
@@ -539,3 +574,4 @@ const Header: React.FC<{
     </div>
   )
 }
+
