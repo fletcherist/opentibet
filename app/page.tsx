@@ -196,14 +196,13 @@ export default function Home() {
         </div>
       </div>
 
-
-      <div className='w-full h-[40vh] relative'>
+      <div className='w-full h-[40vh] md:h-[60vh]  relative'>
         <BackgroundSlider />
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
         <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-100'>
           <div className='max-w-4xl w-full'>
             <div className='text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl'>
-              Посмотрите программы на 2024 год
+              Посмотрите программы<br /> на 2024 год
             </div>
             <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
               Регулярные и эксклюзивные маршруты
