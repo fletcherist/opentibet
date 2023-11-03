@@ -464,7 +464,98 @@ export const TimetableButton: React.FC<{
             )}
           </div>
         </div>
-        {isOpened && <TimetableList />}
+        {isOpened && <>
+          <TimetableList />
+          <div className='py-4' />
+          <ApplyForm />
+        </>}
       </div>
     )
   }
+
+
+export const ButtonWithContent: React.FC<{
+  title: string;
+  subtitle: string;
+  children: React.ReactNode
+}> = ({
+  title, subtitle, children
+}) => {
+    const [isOpened, setIsOpened] = useState<boolean>(false);
+
+    return (
+      <div className='border rounded p-4 m-4 my-2 hover:bg-gray-100'>
+        <div className='flex cursor-pointer justify-between' onClick={() => {
+          setIsOpened(!isOpened)
+        }}>
+          <div>
+            <div className='font-semibold'>
+              {title}
+            </div>
+            <div className='text-sm text-gray-500'>
+              {subtitle}
+            </div>
+          </div>
+          <div className='p-4'>
+            {isOpened ? (
+              <IconArrowDown />
+            ) : (
+              <IconArrowClose />
+            )}
+          </div>
+        </div>
+        {isOpened && <>{children}</>}
+      </div>
+    )
+  }
+
+export const ApplyForm: React.FC = () => {
+  return (
+    <div>
+      <div className='flex items-center flex-wrap'>
+        <div className='max-w-[50%]'>
+          <Header
+            title='Заявка на участие'
+            subtitle='заполните заявку и мы свяжемся с вами в ближайшее время'
+          />
+        </div>
+        <div className='max-w-[50%] w-full p-4'>
+          <form>
+            <div className='py-2'>
+              <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900">Имя  <span className='text-blue-700'>*</span></label>
+              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="" required />
+            </div>
+            <div className='py-2'>
+              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email <span className='text-blue-700'>*</span></label>
+              <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="example@gmail.com" required />
+            </div>
+            <div className='py-2'>
+              <label htmlFor="tel" className="block mb-2 text-sm font-medium text-gray-900">Телефон  <span className='text-blue-700'>*</span></label>
+              <input type="tel" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="+7 (999) 123 45 67" required />
+            </div>
+            <div className='flex justify-end py-4'>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const Header: React.FC<{
+  title: string;
+  subtitle: string;
+  id?: string;
+}> = ({ title, subtitle, id = undefined }) => {
+  return (
+    <div className='px-4' id={id}>
+      <div className='text-gray-900 font-semibold text-xl md:text-3xl pt-2'>
+        {title}
+      </div>
+      <div className="text-xs md:text-sm md:py-1 text-gray-400">{subtitle}</div>
+    </div>
+  )
+}
