@@ -513,13 +513,13 @@ export const ApplyForm: React.FC = () => {
   return (
     <div>
       <div className='flex items-center flex-wrap'>
-        <div className='max-w-[50%]'>
+        <div className='w-full md:max-w-[50%]'>
           <Header
             title='Заявка на участие'
             subtitle='заполните заявку и мы свяжемся с вами в ближайшее время'
           />
         </div>
-        <div className='max-w-[50%] w-full p-4'>
+        <div className='w-full md:max-w-[50%] p-4'>
           <form>
             <div className='py-2'>
               <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900">Имя  <span className='text-blue-700'>*</span></label>
