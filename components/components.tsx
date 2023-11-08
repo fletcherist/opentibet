@@ -658,7 +658,7 @@ export const TibetInfo: React.FC<{
     </TibetInfoCard>
   )
   const contentJokang = (
-    <TibetInfoCard imageSrc="http://newwaytravel.ru/images/sights/jokhang/dzhokang6.JPG">
+    <TibetInfoCard imageSrc="https://ic.pics.livejournal.com/vlade_mir/25001231/1603650/1603650_original.jpg">
       <TibetInfoCardTitle>Джоканг</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Джоканг - это буддийский храм и монастырь, расположенный в центре Старого города Лхасы, Тибет. Он был построен в 7 веке и является одним из самых важных религиозных сооружений в Тибете.
