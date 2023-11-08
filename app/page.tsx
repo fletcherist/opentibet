@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm } from '../components/components'
+import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, IconArrowClose, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm, TibetInfo } from '../components/components'
 
 export default function Home() {
   return (
@@ -241,6 +241,19 @@ export default function Home() {
           title='Программа на сентябрь'
           subtitle='2 – 21 сентября 2024, 19 дней'
         />
+        <TimetableButton
+          title='Программа на октябрь'
+          subtitle='2 – 23 октября 2024, 21 день'
+        />
+      </div>
+      <div className='pt-5' />
+      <div className='max-w-4xl w-full'>
+        <Header
+          title='Информация о Тибете'
+          subtitle='что посмотреть?'
+          id="timetable"
+        />
+        <TibetInfo />
       </div>
       <div className='pt-10' />
       <div className='max-w-4xl w-full'>
@@ -254,9 +267,7 @@ export default function Home() {
           <ButtonWithContent title='Что взять с собой?' subtitle='Список необходимых вещей для поездки в Тибет'>
             <div className='p-4'>
               <ul className='space-y-1'>
-                <li>
-                  1. Термобельё.
-                </li>
+                <li>1. Термобельё.</li>
                 <li>2. Спальник для температур до минус 10оС.</li>
                 <li>3. Тёплый вкладыш в спальник, если собираетесь брать спальник напрокат.</li>
                 <li>4. Тёплые вещи для сна (в том числе шапку, шерстяные перчатки и носки).</li>
@@ -366,125 +377,6 @@ export default function Home() {
           <PhotoGallery />
         </div>
       </div>
-
-      {/* <div className='pt-10' />
-      <div className='max-w-4xl w-full'>
-        <Header
-          title='Информация о Тибете'
-          subtitle='регулярные заезды и эксклюзивные туры'
-        />
-        <div className='p-4'>
-          <div className='py-2'>
-            <div>Центральный тибет</div>
-            <div>
-              <div>
-                1. Лхаса
-              </div>
-              <div>
-                2. Потала
-              </div>
-              <div>
-                3. Джоканг
-              </div>
-              <div>
-                4. Ганден
-              </div>
-              <div>
-                5. Драк Йерпа
-              </div>
-            </div>
-          </div>
-          <div className='py-2'>
-            <div>Северный Тибет</div>
-            <div>
-              <div>
-                1. Цурпу
-              </div>
-              <div>
-                2. Нам цо
-              </div>
-              <div>
-                Округ Шигадзе
-              </div>
-              <div>
-                1. Ташилунпо
-              </div>
-              <div>
-                2. Гяндзе
-              </div>
-              <div>
-                3. Шалу
-              </div>
-              <div>
-                4. Нгор
-              </div>
-              <div>
-                8. Ямдрок
-              </div>
-              <div>
-                9. Базовый лагерь Эвереста
-              </div>
-              <div>
-                Гирьенг
-              </div>
-              <div>
-                1. Шашимпангма
-              </div>
-              <div>
-                2. Пелку Цо
-              </div>
-              <div>
-                3. Рождение Милы
-              </div>
-              <div>
-                4. Чакра Дамцо
-              </div>
-              <div>
-                5. Озеро Лангцо
-              </div>
-              <div>
-                Королевство Гуге
-              </div>
-              <div>
-                1. Цапаранг
-              </div>
-              <div>
-                2. Дунгар
-              </div>
-              <div>
-                3. Пиянг
-              </div>
-              <div>
-                4. Парка Зада
-              </div>
-              <div>
-                1. Пуранг
-              </div>
-              <div>
-                2. Корчаг
-              </div>
-              <div>
-                Маносаровар кора
-              </div>
-              <div>
-                Мандала Кайласа
-              </div>
-              <div>
-                1. Внешняя кора
-              </div>
-              <div>
-                2. Внутренняя кора
-              </div>
-              <div>
-                3. Нанди кора
-              </div>
-              <div>
-                4. Трон Будды кора
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div className='pt-10' />
       <div className='max-w-4xl w-full'>
@@ -637,9 +529,6 @@ const WhyGoTibetWithUsStatement: React.FC<{
   )
 }
 
-
-
-
 const Copyright: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -648,5 +537,8 @@ const Copyright: React.FC = () => {
     </div>
   );
 };
+
+
+
 
 
