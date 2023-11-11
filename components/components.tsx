@@ -445,31 +445,33 @@ export const TimetableButton: React.FC<{
     const [isOpened, setIsOpened] = useState<boolean>(false);
 
     return (
-      <div className='border rounded p-4 m-4 my-2 hover:bg-gray-100'>
-        <div className='flex cursor-pointer justify-between' onClick={() => {
-          setIsOpened(!isOpened)
-        }}>
-          <div>
-            <div className='font-semibold'>
-              {title}
+      <div className={`border rounded m-4 my-2 hover:bg-gray-100 relative ${isOpened ? 'bg-gray-100' : ''}`}>
+        <div className={`p-4 sticky top-0 hover:bg-gray-100 ${isOpened ? 'bg-gray-100' : ''}`}>
+          <div className='flex cursor-pointer justify-between' onClick={() => {
+            setIsOpened(!isOpened)
+          }}>
+            <div>
+              <div className='font-semibold'>
+                {title}
+              </div>
+              <div className='text-sm text-gray-500'>
+                {subtitle}
+              </div>
             </div>
-            <div className='text-sm text-gray-500'>
-              {subtitle}
+            <div className='p-4'>
+              {isOpened ? (
+                <IconArrowClose />
+              ) : (
+                <IconArrowDown />
+              )}
             </div>
-          </div>
-          <div className='p-4'>
-            {isOpened ? (
-              <IconArrowClose />
-            ) : (
-              <IconArrowDown />
-            )}
           </div>
         </div>
-        {isOpened && <>
+        {isOpened && <div className='px-4'>
           <TimetableList />
           <div className='py-4' />
           <ApplyForm />
-        </>}
+        </div>}
       </div>
     )
   }
