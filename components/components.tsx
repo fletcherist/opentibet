@@ -459,9 +459,9 @@ export const TimetableButton: React.FC<{
           </div>
           <div className='p-4'>
             {isOpened ? (
-              <IconArrowDown />
-            ) : (
               <IconArrowClose />
+            ) : (
+              <IconArrowDown />
             )}
           </div>
         </div>
@@ -499,9 +499,9 @@ export const ButtonWithContent: React.FC<{
           </div>
           <div className='p-4'>
             {isOpened ? (
-              <IconArrowDown />
-            ) : (
               <IconArrowClose />
+            ) : (
+              <IconArrowDown />
             )}
           </div>
         </div>
@@ -566,7 +566,7 @@ export const TibetInfoCard: React.FC<{
   imageSrc: string
   children: React.ReactNode
   defaultHeight?: number
-}> = ({ children, imageSrc, defaultHeight = 300 }) => {
+}> = ({ children, imageSrc, defaultHeight = 150 }) => {
   const [isExpanded, setIsExpanded] = useState(false)
   return (
     <div className='border-2 border-rounded rounded-xl border-gray-200 mb-4 relative hover:shadow-md transition duration-300 ease-in-out'>
@@ -574,10 +574,9 @@ export const TibetInfoCard: React.FC<{
         src={imageSrc}
         width={300}
         height={200}
-        alt='Lhasa'
         className='rounded-t-xl'
       />
-      <div style={isExpanded ? {
+      <div className='text-sm' style={isExpanded ? {
         height: 'auto'
       } :
         { height: `${defaultHeight}px`, overflow: 'hidden' }}>
@@ -610,7 +609,7 @@ const TibetInfoCardTitle: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <div className='text-gray-900 font-semibold text-center text-lg pt-4'>
+    <div className='text-gray-900 font-semibold text-center text-base pt-4'>
       {children}
     </div>
   )
@@ -711,7 +710,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentDrakYerpa = (
-    <TibetInfoCard defaultHeight={600} imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard defaultHeight={300} imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
       <TibetInfoCardTitle>Драк Йерпа</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Драк Йерпа - это буддийский монастырский комплекс, расположенный в 30 км к северо-востоку от Лхасы, Тибет. Он был основан в 8 веке и является одним из самых важных религиозных сооружений в Тибете.
@@ -741,7 +740,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentTsurphu = (
-    <TibetInfoCard defaultHeight={200} imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg">
+    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg">
       <TibetInfoCardTitle>Цурпу</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Цурпу - это буддийский монастырь, расположенный в 70 км к западу от Лхасы, Тибет. Он был основан в 12 веке и является родиной школы карма кагью тибетского буддизма.
@@ -772,7 +771,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentNamTso = (
-    <TibetInfoCard defaultHeight={250} imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE-%D0%9D%D0%B0%D0%BC%D1%86%D0%BE-%D0%A2%D0%90%D0%A0-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D1%81%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B7%D0%B5%D1%80%D0%B0-%D0%B1%D1%83%D0%B4%D0%B4%D0%B8%D0%B7%D0%BC-768x512.jpg">
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE-%D0%9D%D0%B0%D0%BC%D1%86%D0%BE-%D0%A2%D0%90%D0%A0-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D1%81%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B7%D0%B5%D1%80%D0%B0-%D0%B1%D1%83%D0%B4%D0%B4%D0%B8%D0%B7%D0%BC-768x512.jpg">
       <TibetInfoCardTitle>Озеро Намцо</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Озеро Намцо — это большое солёное озеро, расположенное на Тибетском нагорье, на высоте 4718 метров над уровнем моря. Оно является одним из самых высоких озёр в мире и вторым по величине озёром в Тибете.
@@ -893,7 +892,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentNgor = (
-    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2020/03/View-on-Tidrum-nunnery-400x300.jpg">
+    <TibetInfoCard defaultHeight={400} imageSrc="https://wondersoftibet.com/wp-content/uploads/2020/03/View-on-Tidrum-nunnery-400x300.jpg">
       <TibetInfoCardTitle>Деревня Нгор</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Нгор — это деревня в Тибетском автономном районе Китая, расположенная на высоте 4410 метров над уровнем моря. Она находится в долине реки Янгце, в 100 км к югу от города Шигадзе.
@@ -924,7 +923,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentYamdrok = (
-    <TibetInfoCard defaultHeight={500} imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
+    <TibetInfoCard defaultHeight={200} imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
       <TibetInfoCardTitle>Озеро Ямдрок Юмцо</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Ямдрок-Цо, или Ямдрок Юмцо, — это высокогорное озеро в Тибете, расположенное на высоте 4488 метров над уровнем моря. Оно является одним из четырех священных озер в Тибете, наряду с озерами Лхамо Лацо, Намцо и Мансаровар.
@@ -987,48 +986,241 @@ export const TibetInfo: React.FC<{
     </TibetInfoCard>
   )
 
+  const contentShashibangma = (
+    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/3/3f/Shishapangma3.jpg">
+      <TibetInfoCardTitle>Шишабангма</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Шишабангма — это гора, расположенная в Тибете. Это самая высокая гора в мире, расположенная полностью в пределах одной страны. Высота горы составляет 8048 метров над уровнем моря.
+        <br />
+        <br />
+        Шишабангма считается священной горой в тибетском буддизме. Считается, что гора является домом для богини Мать Шиша. Паломники совершают паломничество к горе, чтобы получить духовное очищение и просветление.
+        <br />
+        <br />
+        Паломничество к Шишабангма может быть опасным и сложным. Гора расположена на высоте более 8000 метров, и погода может быть очень суровой. Паломникам необходимо быть хорошо подготовленными к условиям высокогорья.
+        <br />
+        <br />
+        Паломничество к Шишабангма обычно начинается в деревне Тагланг, расположенной у подножия горы. Паломники совершают восхождение на гору, останавливаясь на пути в небольших монастырях и лачугах.
+        <br />
+        <br />
+        Восхождение на Шишабангма занимает несколько дней, и паломники должны быть готовы к трудностям. Они должны быть готовы к высоте, холоду, ветру и другим опасностям.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentPelkuTso = (
+    <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/10/Peiku-Tso-Lake-in-Tibet-1024x462.jpg">
+      <TibetInfoCardTitle>Озеро Пелку Цо</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Пелку Цо — это большое озеро в Тибете, расположенное на высоте 5200 метров над уровнем моря. Оно является популярным туристическим направлением и прекрасным местом для пеших прогулок, рыбалки и других видов активного отдыха.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentMilarepaBirthplace = (
+    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/6/6d/Gompa_at_Milarepa%27s_cave.JPG">
+      <TibetInfoCardTitle>Место рождения Миларепы</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Место рождения Миларепы — это деревня Га в Тибете, где он родился в 1052 году. Деревня является важным местом паломничества для буддистов со всего мира.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  // const contentChakraDamtso = (
+  //   <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Everest_Base_Camp_on_a_Stormy_Day.jpg/600px-Everest_Base_Camp_on_a_Stormy_Day.jpg">
+  //     <TibetInfoCardTitle>Пещера Чакра Дамцо</TibetInfoCardTitle>
+  //     <TibetInfoCardContent>
+  //       Пещера Чакра Дамцо — это пещера в Тибете, где, согласно легенде, медитировала богиня Чакра Дамцо. Пещера является важным местом паломничества для буддистов со всего мира.
+  //     </TibetInfoCardContent>
+  //   </TibetInfoCard>
+  // )
+
+  const contentLangatsoLake = (
+    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Rakshas_Tal_06.jpg/400px-Rakshas_Tal_06.jpg">
+      <TibetInfoCardTitle>Озеро Ланга Цо</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Озеро Ланга Цо — это большое озеро в Тибете, расположенное на высоте 4400 метров над уровнем моря. Оно является популярным туристическим направлением и прекрасным местом для пеших прогулок, рыбалки и других видов активного отдыха.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentTsaparang = (
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2019/06/%D0%93%D1%83%D0%B3%D0%B5-%D0%A6%D0%B0%D0%BF%D0%B0%D1%80%D0%B0%D0%BD%D0%B3-%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81-%D0%BA%D0%BE%D1%80%D0%B0.jpg">
+      <TibetInfoCardTitle>Цапаранг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Цапаранг — это разрушенная столица древнего царства Гуге, расположенная в долине реки Нгарцо, в провинции Нгари Западного Тибета. Город был основан в 14 веке и был важным торговым центром на Великом шёлковом пути. В 16 веке Цапаранг был разрушен в результате нападения войск Ладакха. С тех пор город лежит в руинах. Сегодня Цапаранг является популярным туристическим направлением. Город является напоминанием о богатой истории и культуре Тибета.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentDungar = (
+    <TibetInfoCard imageSrc="https://img.tourister.ru/files/4/1/0/9/4/1/0/original.jpg">
+      <TibetInfoCardTitle>Дунгар</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Дунгар — это город в Тибете, основанный в 17 веке. Город является важным центром дунганской культуры и известен своими мечетями.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentPiyang = (
+    <TibetInfoCard imageSrc="https://snowliontours.com/wp-content/uploads/2019/05/Dungkar-Piyang-Tibet-4.jpg">
+      <TibetInfoCardTitle>Пиянг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Пиянг — это деревня в Тибете, известная своими пещерными храмами, построенными в 10-11 веках. Фрески в пещерах изображают сцены из буддийской мифологии.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentPurang = (
+    <TibetInfoCard imageSrc="https://www.ncpedia.org/sites/default/files//styles/anchor_images/public/nepal_190.jpg?itok=wZhNt3BT">
+      <TibetInfoCardTitle>Пуранг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Пуранг — это город в Тибете, основанный в 15 веке. Город был важным торговым центром на Великом шёлковом пути, но в 16 веке был разрушен войсками Ладакха. Сегодня Пуранг является популярным туристическим направлением, где можно познакомиться с историей и культурой Тибета.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentKorchag = (
+    <TibetInfoCard imageSrc="https://forum.awd.ru/gallery/images/upload/eee/17b/eee17beee4096c4f05c2e59bda24580f.jpg">
+      <TibetInfoCardTitle>Корчаг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Корчаг — это деревня в Тибете, основанная в 16 веке. Деревня является важным центром тибетского буддизма и является домом для множества храмов и монастырей. Сегодня Корчаг является популярным туристическим направлением, где можно познакомиться с историей и культурой Тибета.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentManosarovarKora = (
+    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/03/Manasarovar-lake-1024x683.jpg">
+      <TibetInfoCardTitle>Маносаровар Кора</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Манасаровар кора — это паломнический маршрут вокруг священного озера Манасаровар в Тибете. Маршрут имеет длину около 50 километров и занимает около 2-3 дней.
+        <br />
+        <br />
+        Манасаровар считается священным озером в индуизме и буддизме. Паломничество вокруг Манасаровара является одним из самых важных религиозных ритуалов для индуистов и буддистов. Маршрут проходит по пересеченной местности, включая горы, долины и леса.
+        <br />
+        <br />
+        Манасаровар кора — это сложный и физический, но и духовно обогащающий опыт. Паломничество вокруг этого священного озера — это возможность познакомиться с историей и культурой Тибета.
+        <br />
+        <br />
+        Вот некоторые интересные факты о Манасаровар коре:
+        <br />
+        <br />
+        Озеро является одним из самых высокогорных пресноводных озер в мире.
+        Озеро окружено горами высотой более 6000 метров.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentKailasKora = (
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2020/02/%D0%A2%D0%B8%D0%B1%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5-%D0%BF%D0%B0%D0%BB%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA%D0%B8-%D1%83-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81%D0%B0-%D0%BD%D0%B0-%D1%82%D1%80%D0%BE%D0%BF%D0%B5-%D0%BA%D0%BE%D1%80%D1%8B-%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81%D0%B0-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%88-%D0%BA%D0%BE%D1%80%D0%B0-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%BF%D0%B0%D0%BB%D0%BE%D0%BC%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D0%BA-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81%D1%83.jpg">
+      <TibetInfoCardTitle>Внешняя Кора</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+        Паломничество вокруг Кайлас является одним из самых важных религиозных ритуалов для индуистов, буддистов и джайнистов. Паломники считают, что прохождение коры приносит им духовное очищение и просветление.
+        <br />
+        <br />
+        Маршрут коры начинается и заканчивается в деревне Дарчен, расположенной у подножия горы Кайлас. Маршрут проходит по пересеченной местности, включая горы, долины и леса.
+        <br />
+        <br />
+        Паломники, совершающие кору, обычно носят традиционные тибетские одежды и носят рюкзаки с необходимыми вещами. Они также часто носят молитвенные флаги, которые развешивают вдоль маршрута коры.
+        <br />
+        <br />
+        Внешняя кора мандалы Кайлас — это сложный и физический, но и духовно обогащающий опыт. Паломничество вокруг этой священной горы — это возможность познакомиться с историей и культурой Тибета, а также получить духовное очищение.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentKailasInnerKora = (
+    <TibetInfoCard imageSrc="https://farm8.staticflickr.com/7459/11837763826_5f13758997_o.jpg">
+      <TibetInfoCardTitle>Внутренняя кора</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внутренняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас в Тибете. Маршрут имеет длину около 14 километров и занимает около 1-2 дней. Паломники совершают внутреннюю кору, чтобы получить духовное очищение.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentNandiKora = (
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2015/11/45.-%D0%AE%D0%B6%D0%BD%D1%8B%D0%B9-%D1%81%D0%BA%D0%BB%D0%BE%D0%BD-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81%D0%B0-%D0%B8-%D0%9D%D0%B0%D0%BD%D0%B4%D0%B8.jpg">
+      <TibetInfoCardTitle>Нанди кора</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Нанди кора — это паломнический маршрут вокруг горы Нанди в Тибете. Маршрут имеет длину около 14 километров и занимает около 1-2 дней. Паломники совершают Нанди кору, чтобы получить духовное очищение и просветление.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentBuddhaThrone = (
+    <TibetInfoCard imageSrc="https://www.mt-kailash.ru/wp-content/gallery/kaylas-2010-voshozhdenie-na-g-tron-buddyi/budha_thron_01.jpg">
+      <TibetInfoCardTitle>Трон Будды</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Трон Будды кора — это паломнический маршрут вокруг горы Трон Будды в Тибете. Маршрут имеет длину около 10 километров и занимает около 1 дня.
+        <br />
+        <br />
+        Гора Трон Будды считается священной в индуизме и буддизме. В индуизме гора считается местом обитания бога Шивы. В буддизме гора считается местом обитания Будды Шакьямуни.
+        <br />
+        <br />
+        Паломники совершают Трон Будды кору, чтобы получить духовное очищение и просветление. Они считают, что прохождение коры приносит им гармонию и умиротворение.
+        <br />
+        <br />
+        Маршрут коры проходит по живописной местности, включая горы, долины и леса. Паломники, совершающие кору, обычно носят традиционные тибетские одежды и носят рюкзаки с необходимыми вещами. Они также часто носят молитвенные флаги, которые развешивают вдоль маршрута коры.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+
+
+
+
+
   const groupTitle = (text: string) => {
     return (
       <div className='py-4 font-semibold text-xl'>{text}</div>
     )
   }
+  const defaultSize = `max-w-[48%]`
+  const mdSize = `md:max-w-[23%]`
   return (
     <div>
       <div className='p-4'>
         <div className='py-2'>
           {groupTitle('Центральный тибет')}
           <div className='flex flex-wrap gap-4'>
-            <div className='max-w-[48%] md:max-w-[32%]'>
+            <div className={`${defaultSize} ${mdSize}`}>
               <div>
                 {contentLhasa}
+              </div>
+            </div>
+            <div className={`${defaultSize} ${mdSize}`}>
+              <div>
+                {contentPotala}
               </div>
               <div>
                 {contentJokang}
               </div>
             </div>
-            <div className='max-w-[48%] md:max-w-[32%]'>
-              <div>
-                {contentPotala}
-              </div>
-              <div>
-                {contentGanden}
-              </div>
-            </div>
-            <div className='max-w-[48%] md:max-w-[32%]'>
+            <div className={`${defaultSize} ${mdSize}`}>
               <div>
                 {contentDrakYerpa}
+              </div>
+            </div>
+            <div className={`${defaultSize} ${mdSize}`}>
+              <div>
+                {contentGanden}
               </div>
             </div>
           </div>
         </div>
         {groupTitle('Северный Тибет')}
         <div className='flex flex-wrap gap-4'>
-          <div className='max-w-[48%] md:max-w-[32%]'>
+          <div className={`${defaultSize} ${mdSize}`}>
             <div>
               {contentTsurphu}
             </div>
           </div>
-          <div className='max-w-[48%] md:max-w-[32%]'>
+          <div className={`${defaultSize} ${mdSize}`}>
             <div>
               {contentNamTso}
             </div>
@@ -1036,89 +1228,116 @@ export const TibetInfo: React.FC<{
         </div>
         {groupTitle('Округ Шигадзе')}
         <div className='flex flex-wrap gap-4'>
-          <div className='max-w-[48%] md:max-w-[32%]'>
+          <div className={`${defaultSize} ${mdSize}`}>
             <div>
               {contentTashilhunpo}
             </div>
-            <div>
-              {contentShalu}
-            </div>
           </div>
-          <div className='max-w-[48%] md:max-w-[32%]'>
+          <div className={`${defaultSize} ${mdSize}`}>
             <div>
               {contentGyandze}
+            </div>
+            <div>
+              {contentEverestBasecamp}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentNgor}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentShalu}
             </div>
             <div>
               {contentYamdrok}
             </div>
           </div>
-          <div className='max-w-[48%] md:max-w-[32%]'>
+        </div>
+        {groupTitle('Гирьенг')}
+        <div className='flex flex-wrap gap-4'>
+          <div className={`${defaultSize} ${mdSize}`}>
             <div>
-              {contentNgor}
+              {contentShashibangma}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentMilarepaBirthplace}
+            </div>
+            {/* <div>
+              {contentChakraDamtso}
+            </div> */}
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentLangatsoLake}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentPelkuTso}
+            </div>
+          </div>
+        </div>
+        {groupTitle('Королевство Гуге')}
+        <div className='flex flex-wrap gap-4'>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentDungar}
             </div>
             <div>
-              {contentEverestBasecamp}
+              {contentTsaparang}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentPiyang}
+            </div>
+            <div>
+              {contentManosarovarKora}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentKorchag}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentPurang}
+            </div>
+          </div>
+        </div>
+
+        {groupTitle('Мандала Кайласа')}
+        <div className='flex flex-wrap gap-4'>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentKailasKora}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentKailasInnerKora}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentNandiKora}
+            </div>
+          </div>
+          <div className={`${defaultSize} ${mdSize}`}>
+            <div>
+              {contentBuddhaThrone}
             </div>
           </div>
         </div>
         {/* <div className='py-2'>
           <div>
             <div>
-              Гирьенг
-            </div>
-            <div>
-              1. Шашимпангма
-            </div>
-            <div>
-              2. Пелку Цо
-            </div>
-            <div>
-              3. Рождение Милы
-            </div>
-            <div>
-              4. Чакра Дамцо
-            </div>
-            <div>
-              5. Озеро Лангцо
-            </div>
-            <div>
-              Королевство Гуге
-            </div>
-            <div>
-              1. Цапаранг
-            </div>
-            <div>
-              2. Дунгар
-            </div>
-            <div>
-              3. Пиянг
-            </div>
-            <div>
               4. Парка Зада
-            </div>
-            <div>
-              1. Пуранг
-            </div>
-            <div>
-              2. Корчаг
-            </div>
-            <div>
-              Маносаровар кора
-            </div>
-            <div>
-              Мандала Кайласа
-            </div>
-            <div>
-              1. Внешняя кора
-            </div>
-            <div>
-              2. Внутренняя кора
-            </div>
-            <div>
-              3. Нанди кора
-            </div>
-            <div>
-              4. Трон Будды кора
             </div>
           </div>
         </div> */}

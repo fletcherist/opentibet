@@ -246,15 +246,6 @@ export default function Home() {
           subtitle='2 – 23 октября 2024, 21 день'
         />
       </div>
-      <div className='pt-5' />
-      <div className='max-w-4xl w-full'>
-        <Header
-          title='Информация о Тибете'
-          subtitle='что посмотреть?'
-          id="timetable"
-        />
-        <TibetInfo />
-      </div>
       <div className='pt-10' />
       <div className='max-w-4xl w-full'>
         <div className='pb-5'>
@@ -340,6 +331,15 @@ export default function Home() {
             </div>
           </ButtonWithContent>
         </div>
+      </div>
+      <div className='pt-5' />
+      <div className='max-w-4xl w-full'>
+        <Header
+          title='Информация о Тибете'
+          subtitle='что посмотреть?'
+          id="timetable"
+        />
+        <TibetInfo />
       </div>
       <div className='pt-10' />
       <div className='max-w-4xl'>
