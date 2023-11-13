@@ -1217,89 +1217,65 @@ export const TibetInfo: React.FC<{
           </div>
         </div>
         {groupTitle('Округ Шигадзе')}
-        <div className='flex flex-wrap gap-4'>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentTashilhunpo}
-            </div>
+        <Slick step={cardWidth}>
+          <div style={{ width: cardWidth }}>
+            {contentTashilhunpo}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentGyandze}
-            </div>
-            <div>
-              {contentEverestBasecamp}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentGyandze}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentNgor}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentEverestBasecamp}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentShalu}
-            </div>
-            <div>
-              {contentYamdrok}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentNgor}
           </div>
-        </div>
+          <div style={{ width: cardWidth }}>
+            {contentShalu}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentYamdrok}
+          </div>
+        </Slick>
         {groupTitle('Гирьенг')}
-        <div className='flex flex-wrap gap-4'>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentShashibangma}
-            </div>
+        <Slick step={cardWidth}>
+          <div style={{ width: cardWidth }}>
+            {contentShashibangma}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentMilarepaBirthplace}
-            </div>
-            {/* <div>
-              {contentChakraDamtso}
-            </div> */}
+          <div style={{ width: cardWidth }}>
+            {contentMilarepaBirthplace}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentLangatsoLake}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentEverestBasecamp}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentPelkuTso}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentLangatsoLake}
           </div>
-        </div>
+          <div style={{ width: cardWidth }}>
+            {contentPelkuTso}
+          </div>
+        </Slick>
         {groupTitle('Королевство Гуге')}
-        <div className='flex flex-wrap gap-4'>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentDungar}
-            </div>
-            <div>
-              {contentTsaparang}
-            </div>
+        <Slick step={cardWidth}>
+          <div style={{ width: cardWidth }}>
+            {contentDungar}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentPiyang}
-            </div>
-            <div>
-              {contentManosarovarKora}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentTsaparang}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentKorchag}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentPiyang}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentPurang}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentManosarovarKora}
           </div>
-        </div>
+          <div style={{ width: cardWidth }}>
+            {contentKorchag}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentPurang}
+          </div>
+        </Slick>
 
         {groupTitle('Мандала Кайласа')}
         <div className='flex flex-wrap gap-4'>
