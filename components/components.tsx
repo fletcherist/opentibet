@@ -8,6 +8,8 @@ import { useRef } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
+import { Slick } from './Slick'
+
 export const BackgroundSlider = () => {
   const images = [
     // 'https://storage.googleapis.com/opentibet/chiu.jpg',
@@ -567,8 +569,9 @@ export const Header: React.FC<{
 export const TibetInfoCard: React.FC<{
   imageSrc: string
   children: React.ReactNode
-  defaultHeight?: number
-}> = ({ children, imageSrc, defaultHeight = 150 }) => {
+  // defaultHeight?: number
+}> = ({ children, imageSrc }) => {
+  const defaultHeight = 150
   const [isExpanded, setIsExpanded] = useState(false)
   return (
     <div className='border-2 border-rounded rounded-xl border-gray-200 mb-4 relative hover:shadow-md transition duration-300 ease-in-out'>
@@ -631,7 +634,7 @@ export const TibetInfo: React.FC<{
 
 }> = ({ }) => {
   const contentLhasa = (
-    <TibetInfoCard defaultHeight={400} imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/fa/a9/photo0jpg.jpg?w=2400&h=-1&s=1">
+    <TibetInfoCard imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/fa/a9/photo0jpg.jpg?w=2400&h=-1&s=1">
       <TibetInfoCardTitle>Лхаса</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Лхаса - столица Тибета, автономного района Китая. Город расположен на высоте 3650 метров над уровнем моря и является важным центром тибетского буддизма.
@@ -712,7 +715,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentDrakYerpa = (
-    <TibetInfoCard defaultHeight={300} imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
       <TibetInfoCardTitle>Драк Йерпа</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Драк Йерпа - это буддийский монастырский комплекс, расположенный в 30 км к северо-востоку от Лхасы, Тибет. Он был основан в 8 веке и является одним из самых важных религиозных сооружений в Тибете.
@@ -802,7 +805,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentTashilhunpo = (
-    <TibetInfoCard defaultHeight={400} imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
       <TibetInfoCardTitle>Ташилунпо</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Ташилунпо — это буддийский монастырь, расположенный в городе Шигадзе, Тибет. Он был основан в 1447 году Гендун Друпом, первым Далай-ламой. Монастырь является резиденцией Панчен-ламы, второго по значимости ламы в тибетском буддизме.
@@ -894,7 +897,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentNgor = (
-    <TibetInfoCard defaultHeight={400} imageSrc="https://wondersoftibet.com/wp-content/uploads/2020/03/View-on-Tidrum-nunnery-400x300.jpg">
+    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2020/03/View-on-Tidrum-nunnery-400x300.jpg">
       <TibetInfoCardTitle>Деревня Нгор</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Нгор — это деревня в Тибетском автономном районе Китая, расположенная на высоте 4410 метров над уровнем моря. Она находится в долине реки Янгце, в 100 км к югу от города Шигадзе.
@@ -925,7 +928,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentYamdrok = (
-    <TibetInfoCard defaultHeight={200} imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
+    <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
       <TibetInfoCardTitle>Озеро Ямдрок Юмцо</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Ямдрок-Цо, или Ямдрок Юмцо, — это высокогорное озеро в Тибете, расположенное на высоте 4488 метров над уровнем моря. Оно является одним из четырех священных озер в Тибете, наряду с озерами Лхамо Лацо, Намцо и Мансаровар.
@@ -1172,11 +1175,6 @@ export const TibetInfo: React.FC<{
     </TibetInfoCard>
   )
 
-
-
-
-
-
   const groupTitle = (text: string) => {
     return (
       <div className='py-4 font-semibold text-xl'>{text}</div>
@@ -1184,48 +1182,38 @@ export const TibetInfo: React.FC<{
   }
   const defaultSize = `max-w-[48%]`
   const mdSize = `md:max-w-[23%]`
+
+  const cardWidth = 200
   return (
     <div>
       <div className='p-4'>
         <div className='py-2'>
           {groupTitle('Центральный тибет')}
-          <div className='flex flex-wrap gap-4'>
-            <div className={`${defaultSize} ${mdSize}`}>
-              <div>
-                {contentLhasa}
-              </div>
+          <Slick step={cardWidth}>
+            <div style={{ width: cardWidth }}>
+              {contentLhasa}
             </div>
-            <div className={`${defaultSize} ${mdSize}`}>
-              <div>
-                {contentPotala}
-              </div>
-              <div>
-                {contentJokang}
-              </div>
+            <div style={{ width: cardWidth }}>
+              {contentPotala}
             </div>
-            <div className={`${defaultSize} ${mdSize}`}>
-              <div>
-                {contentDrakYerpa}
-              </div>
+            <div style={{ width: cardWidth }}>
+              {contentJokang}
             </div>
-            <div className={`${defaultSize} ${mdSize}`}>
-              <div>
-                {contentGanden}
-              </div>
+            <div style={{ width: cardWidth }}>
+              {contentDrakYerpa}
             </div>
-          </div>
+            <div style={{ width: cardWidth }}>
+              {contentGanden}
+            </div>
+          </Slick>
         </div>
         {groupTitle('Северный Тибет')}
         <div className='flex flex-wrap gap-4'>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentTsurphu}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentTsurphu}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentNamTso}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentNamTso}
           </div>
         </div>
         {groupTitle('Округ Шигадзе')}
@@ -1344,6 +1332,6 @@ export const TibetInfo: React.FC<{
           </div>
         </div> */}
       </div>
-    </div>
+    </div >
   )
 }
