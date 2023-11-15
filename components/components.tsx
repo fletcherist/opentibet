@@ -222,8 +222,8 @@ const TimetableDay: React.FC<{
         <div className='w-0.5 bg-gray-300 h-full' />
       </div>
       <div className='pr-10'>
-        <div className='font-bold text-base text-gray-800 pt-2.5 pb-4 md:pt-2 md:pb-4'>{title}</div>
-        <div className='leading-7 text-sm md:text-base'>
+        <div className='font-bold text-xl text-gray-800 pt-2 pb-4'>{title}</div>
+        <div className='leading-9 text-sm md:text-base'>
           {children}
         </div>
       </div>
@@ -440,28 +440,69 @@ const TimetableList = () => {
   )
 }
 
+export const TimetableFactoid: React.FC<{
+  fact: string;
+  value: string;
+}> = ({
+  fact, value
+}) => {
+  return (
+    <div className="self-center">
+      <div className='text-2xl tabular-nums leading-5 font-light'>
+        {value}
+      </div>
+      <div className="text-xs">
+        {fact}
+      </div>
+    </div>  
+  )
+}
+
+const getNoun = (n: number, one: string, two: string, five: string) => {
+  let abs = Math.abs(n);
+  abs %= 100;
+  if (abs >= 5 && abs <= 20) {
+    return five;
+  }
+  abs %= 10;
+  if (abs === 1) {
+    return one;
+  }
+  if (abs >= 2 && abs <= 4) {
+    return two;
+  }
+  return five;
+}
+
 export const TimetableButton: React.FC<{
   title: string;
   subtitle: string;
+  days: number;
+  price: number;
 }> = ({
-  title, subtitle
+  title, subtitle, days, price
 }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
 
+    const days_label = getNoun(days, 'день', 'дня', 'дней')
+
     return (
-      <div className={`border rounded m-4 my-2 hover:bg-gray-100 relative ${isOpened ? 'bg-gray-100' : ''}`}>
-        <div className={`p-4 sticky top-0 hover:bg-gray-100 ${isOpened ? 'bg-gray-100' : ''}`}>
+      <div className={`m-4 my-2 relative bg-gray-100`}>
+        <div className={`py-3 px-4 sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}>
           <div className='flex cursor-pointer justify-between' onClick={() => {
             setIsOpened(!isOpened)
           }}>
-            <div>
-              <div className='font-semibold'>
-                {title}
+            <div className="flex items-center">
+              <div className='mr-4 w-[11ch]'>
+                <div className='font-semibold text-2xl leading-5'>{title}</div>
+                <div className='text-yellow-500 text-xs'>{subtitle}</div>
               </div>
-              <div className='text-sm text-gray-500'>
-                {subtitle}
+              <div className="flex space-x-4 text-white/80">
+                <TimetableFactoid fact={days_label} value={days} />
+                <TimetableFactoid fact="цена, $" value={`${price}`} />
               </div>
             </div>
+            
             <div className='p-4'>
               {isOpened ? (
                 <IconArrowClose />
@@ -559,10 +600,10 @@ export const Header: React.FC<{
 }> = ({ title, subtitle, id = undefined }) => {
   return (
     <div className='px-4' id={id}>
-      <div className='text-gray-900 font-semibold text-xl md:text-3xl pt-2'>
+      <div className='text-blue-500 font-semibold text-3xl pt-2'>
         {title}
       </div>
-      <div className="text-xs md:text-sm md:py-1 text-gray-400">{subtitle}</div>
+      <div className="py-1 text-red-500 font-semibold">{subtitle}</div>
     </div>
   )
 }

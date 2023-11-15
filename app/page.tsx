@@ -34,42 +34,46 @@ export default function Home() {
       </div>
 
       <div className='max-w-4xl'>
-        <div className='flex flex-col justify-center p-4'>
+        
+        <div className='flex justify-center p-4'>
           <Image src="opentibet-logo-v.svg" width={200} height={100} alt='Open Tibet Logo' />
           {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
         </div>
-        <div className='pt-10'>
-          <div className='p-4'>
-            <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET — это совместный туристический проект</h2>
-            <ul className="py-8 space-y-6 flex">
-              <li className="flex items-center">
-                <div className="w-32 flex items-center justify-center">
-                  <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
+        <div className=''>
+          <div className=''>
+
+            <h2 className="text-2xl font-semibold text-red-500 text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
+
+            <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
+              <li className="flex items-center my-2">
+                <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
+                  <Image src="/ctt.png" height={80} width={80} className="object-contain w-28 h-16 h-[68px] rounded-sm cursor-pointer" />
                 </div>
-                <div>
+                <div className="text-lg leading-5">
                   <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
                 </div>
               </li>
-              <li className="flex flex-col items-center">
-                <div className="w-32 flex items-center justify-center">
-                  <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[70%] rounded-sm cursor-pointer" />
+              <li className="flex items-center my-2">
+                <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
+                  <Image src="/kailash.png" height={309} width={551} className="object-contain w-28 h-16 rounded-sm cursor-pointer" />
                 </div>
-                <div>
-                  <span className='font-semibold'>Tash Delek travel agency</span><br /> Тибет, Лхаса
-                </div>
-                {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
-              </li>
-              <li className="flex flex-col items-center">
-                <div className="w-32 flex items-center justify-center ">
-                  <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
-                </div>
-                <div>
+                <div className="text-lg leading-5">
                   <span className='font-semibold'>
                     Kailash-explorer agency
                   </span><br /> Россия, Санкт Петербург
                 </div>
               </li>
+              <li className="flex items-center my-2">
+                <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
+                  <Image src="/tashidelek.png" height={100} width={100} className="object-contain w-28 h-16 brightness-75 -hue-rotate-15 rounded-sm cursor-pointer" />
+                </div>
+                <div className="text-lg leading-5">
+                  <span className='font-semibold'>Tashi Delek Travel Agency</span><br /> Тибет, Лхаса
+                </div>
+                {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
+              </li>
             </ul>
+
             <div className='flex pt-4 justify-center'>
               <div className='flex max-w-xl'>
 
@@ -99,11 +103,11 @@ export default function Home() {
           {/* <div className='grid grid-cols-2 gap-2'>
             <img src="https://storage.googleapis.com/opentibet/common-1.jpg" />
           </div> */}
-          <div className='p-4'>
-            <p className='pt-10 leading-7'>
-              Ключевая цель проекта — сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:
+          <div className='p-6'>
+            <p className='pt-10 text-lg leading-7'>
+              Ключевая цель проекта — сделать Тибет <b>доступнее</b>. Мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать паломникам:
             </p>
-            <ul className='py-4 max-w-md space-y-2 list-inside'>
+            <ul className='py-4 text-lg max-w-md w-fit mx-auto space-y-2 list-inside'>
               <li className="flex items-center">
                 <IconMark />
                 Размещение в хороших отелях
@@ -125,17 +129,17 @@ export default function Home() {
 
         </div>
       </div>
-      <div className='max-w-4xl w-full'>
+      <div className='max-w-4xl mt-4 w-full'>
         <WhyGoTibetWithUs />
       </div>
-      <div className='max-w-4xl'>
+      <div className='max-w-4xl mt-6'>
         <div className='w-full pt-8'>
           <Header
-            title='Посмотрите фильм о Тибете'
+            title='Посмотрите фильм о Тибете,'
             subtitle='снятый Виктором Щербаковым и Алексеем Перчуковым'
           />
           <div className='px-4 py-2'>
-            {/* <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl'>
+            {/* <div className='text-black font-semibold text-xl md:text-4xl lg:text-5xl'>
               Посмотрите фильм о Тибете
             </div>
             <div className='pt-1 pr-6 md:text-xl'>
@@ -143,11 +147,11 @@ export default function Home() {
               Виктором Щербаковым{' '} и{' '}
               <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-600 hover:text-blue-700 font-semibold' target='_blank'>Алексеем Перчуковым</a>
             </div> */}
-            <p className='py-4 pb-0 leading-7'>
-              Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме “Тибет, место которое меняет жизнь”, снятом в одном из таких туров:
+            <p className='py-4 pb-0 leading-7 hyphens-auto'>
+              Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме «Тибет, место которое меняет жизнь», снятом в одном из таких туров:
             </p>
           </div>
-          <div className='w-full h-[315px] md:h-96'>
+          <div className='w-full h-[315px] mt-5 mb-2 md:h-96'>
             <iframe
               width="100%"
               // height="315"
@@ -160,7 +164,7 @@ export default function Home() {
           </div>
         </div>
         <div className="pt-10">
-          <div className='flex px-4'>
+          <div className='flex px-4 w-fit mb-4 mx-auto'>
             <div className="w-32 h-32">
               <img
                 className="object-cover rounded-full w-full h-full"
@@ -170,17 +174,17 @@ export default function Home() {
             </div>
             <div className='flex items-center flex-1 pl-4'>
               <div>
-                <div className='text-xl font-bold text-gray-800'>Алексей Перчуков</div>
-                <div className='text-sm text-gray-400 pt-1'>Координатор проекта</div>
-                <a href='https://www.instagram.com/kailash_explorer/' className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>@kailash_explorer</a>
+                <div className='text-xl'>Алексей Перчуков</div>
+                <div className='text-sm font-semibold'>Координатор проекта OPEN TIBET</div>
+                <a href='https://www.instagram.com/kailash_explorer/' className='text-sm text-blue-500 hover:text-blue-700' target='_blank'>@kailash_explorer</a>
               </div>
             </div>
           </div>
-          <div className='p-4 leading-7'>
-            Автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма <a className='text-blue-600' href="https://www.youtube.com/watch?v=OhtIDb8ioT0" target='_blank'>“Тибет, место которое меняет жизнь”</a>. Докладчик многочисленных международных конференции, посвященных Кайласу.
-            Автор статьи <a className='text-blue-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">“Спиральная Кора”</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
+          <div className='p-4 leading-7 hyphens-auto'>
+            Алексей &mdash; автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма <a className='text-blue-600' href="https://www.youtube.com/watch?v=OhtIDb8ioT0" target='_blank'>«Тибет, место которое меняет жизнь»</a>. Докладчик многочисленных международных конференции, посвященных Кайласу.
+            Автор статьи <a className='text-blue-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">«Спиральная Кора»</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
           </div>
-          <div className='flex justify-center'>
+          <div className='pt-10 flex justify-center'>
             <div className="grid grid-cols-2 gap-1 max-w-xl">
               {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
               <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-3 rounded-sm cursor-pointer" />
@@ -222,28 +226,40 @@ export default function Home() {
           id={LINK_TOURS}
         />
         <TimetableButton
-          title='Программа на май'
-          subtitle='2 – 21 мая 2024, 19 дней'
+          title='Май'
+          subtitle='2—21 мая'
+          days={19}
+          price={2000}
         />
         <TimetableButton
-          title='Программа на июнь'
-          subtitle='6 – 19 июня 2024, 13 дней'
+          title='Июнь'
+          subtitle='6—19 июня'
+          days={13}
+          price={2000}
         />
         <TimetableButton
-          title='Программа на июль'
-          subtitle='1 – 23 июля 2024, 22 дня'
+          title='Июль'
+          subtitle='1—23 июля'
+          days={22}
+          price={1500}
         />
         <TimetableButton
-          title='Программа на август'
-          subtitle='2 – 19 августа 2024, 17 дней'
+          title='Август'
+          subtitle='2—19 августа'
+          days={17}
+          price={2500}
         />
         <TimetableButton
-          title='Программа на сентябрь'
-          subtitle='2 – 21 сентября 2024, 19 дней'
+          title='Сентябрь'
+          subtitle='2—21 сентября'
+          days={19}
+          price={2650}
         />
         <TimetableButton
-          title='Программа на октябрь'
-          subtitle='2 – 23 октября 2024, 21 день'
+          title='Октябрь'
+          subtitle='2—23 октября'
+          days={21}
+          price={2800}
         />
       </div>
       <div className='pt-10' />
@@ -277,7 +293,7 @@ export default function Home() {
                 <li> 17. Пластиковый контейнер (миска).</li>
                 <li> 18. Кипятильник.</li>
                 <li> 19. Термос (1 л).</li>
-                <li> 20. Альпинистские «кошки» (желательно – для тех, кто пойдёт к северному склону).</li>
+                <li> 20. Альпинистские «кошки» (желательно — для тех, кто пойдёт к северному склону).</li>
                 <li> 22. Полотенце туристическое (быстросохнущее).</li>
                 <li> 23. Две палки для треккинга.</li>
                 <li> 24. Налобный фонарик и батарейки.</li>
@@ -463,7 +479,7 @@ const IconBookmark = () => {
 const WhyGoTibetWithUs = () => {
   return (
     <>
-      <div className='text-gray-900 font-semibold text-lg md:text-3xl py-2 px-4'>
+      <div className='text-black font-semibold text-3xl py-2 px-4'>
         Почему стоит ехать в Тибет с нами?
       </div>
       <WhyGoTibetWithUsStatement
@@ -489,7 +505,8 @@ const WhyGoTibetWithUs = () => {
         Мы гарантируем высокое качество услуг, начиная с разработки маршрута и заканчивая качеством проживания и питания. Ваше удовольствие и безопасность для нас приоритет
       </WhyGoTibetWithUsStatement>
 
-      <div className='flex w-full justify-center pt-8 pb-4'>
+      <div className='flex w-full items-center flex-wrap justify-around pt-8 pb-4'>
+        <h2 className="text-red-500 text-3xl font-light mb-3">от 2000 $ за 13 дней</h2>
         <ActionButton />
       </div>
     </>
@@ -506,7 +523,7 @@ const WhyGoTibetWithUsStatement: React.FC<{
       <div className='py-4'>
         <div className='flex items-center px-4'>
           <div className='w-2 h-2 rounded-full bg-blue-500 mr-2' />
-          <div className='font-semibold'>
+          <div className='font-semibold text-lg'>
             {title}
           </div>
         </div>
