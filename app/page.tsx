@@ -1,10 +1,13 @@
 import Image from 'next/image'
 
-import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, IconArrowClose, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm, TibetInfo } from '../components/components'
+import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, IconArrowClose, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm, TibetInfo, Navbar } from '../components/components'
+import { LINK_CONTACTS, LINK_PHOTO_GALLERY, LINK_TOURS } from '@/utils/constants';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
+      <Navbar />
+      <div className='pt-16' />
       <div className='w-full h-[80vh] relative'>
         <video id='background-video' className='absolute w-full h-full object-cover' autoPlay playsInline muted poster='https://storage.googleapis.com/opentibet/doors-4-preview.jpg'>
           <source src='https://storage.googleapis.com/opentibet/doors-4-compressed.mp4' type='video/mp4' />
@@ -32,8 +35,9 @@ export default function Home() {
       </div>
 
       <div className='max-w-4xl'>
-        <div className='flex justify-center'>
-          <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} />
+        <div className='flex justify-center p-4'>
+          <Image src="logo.svg" width={200} height={100} alt='Logo' />
+          {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
         </div>
         <div className='pt-10'>
           <div className='p-4'>
@@ -219,7 +223,7 @@ export default function Home() {
         <Header
           title='Программы'
           subtitle='расписание на 2024 год'
-          id="timetable"
+          id={LINK_TOURS}
         />
         <TimetableButton
           title='Программа на май'
@@ -337,7 +341,6 @@ export default function Home() {
         <Header
           title='Информация о Тибете'
           subtitle='что посмотреть?'
-          id="timetable"
         />
         <TibetInfo />
       </div>
@@ -361,9 +364,6 @@ export default function Home() {
           title='Часто задаваемые вопросы'
           subtitle='вот, что спрашивают больше всего'
         />
-        {/* <div className='text-gray-900 font-semibold text-xl md:text-4xl lg:text-5xl py-2'>
-          Часто задаваемые вопросы
-        </div> */}
         <FAQ />
       </div>
 
@@ -372,6 +372,7 @@ export default function Home() {
         <Header
           title='Фото с прошлых туров'
           subtitle='нажмите на фото, чтобы открыть галерею'
+          id={LINK_PHOTO_GALLERY}
         />
         <div className='pt-6'>
           <PhotoGallery />
@@ -384,6 +385,7 @@ export default function Home() {
         <Header
           title='Контакты'
           subtitle='связаться с нами'
+          id={LINK_CONTACTS}
         />
         <div className='p-4'>
           <div className='py-2'>
