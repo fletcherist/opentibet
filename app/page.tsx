@@ -47,7 +47,7 @@ export default function Home() {
             <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
               <li className="flex items-center my-2">
                 <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
-                  <Image src="/ctt.png" height={80} width={80} className="object-contain w-28 h-16 h-[68px] rounded-sm cursor-pointer" />
+                  <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-16 h-[68px] rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
                   <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
@@ -55,7 +55,7 @@ export default function Home() {
               </li>
               <li className="flex items-center my-2">
                 <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
-                  <Image src="/kailash.png" height={309} width={551} className="object-contain w-28 h-16 rounded-sm cursor-pointer" />
+                  <Image src="/kailash.png" alt="Kailash Explorer" height={309} width={551} className="object-contain w-28 h-16 rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
                   <span className='font-semibold'>
@@ -65,7 +65,7 @@ export default function Home() {
               </li>
               <li className="flex items-center my-2">
                 <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
-                  <Image src="/tashidelek.png" height={100} width={100} className="object-contain w-28 h-16 brightness-75 -hue-rotate-15 rounded-sm cursor-pointer" />
+                  <Image src="/tashidelek.png" alt="Tashi Delek Travel Agency" height={100} width={100} className="object-contain w-28 h-16 brightness-75 -hue-rotate-15 rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
                   <span className='font-semibold'>Tashi Delek Travel Agency</span><br /> Тибет, Лхаса
