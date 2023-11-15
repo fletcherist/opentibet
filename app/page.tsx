@@ -5,10 +5,9 @@ import { LINK_CONTACTS, LINK_PHOTO_GALLERY, LINK_TOURS } from '@/utils/constants
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main lang="ru" className="flex min-h-screen flex-col items-center justify-between">
       <Navbar />
-      <div className='pt-16' />
-      <div className='w-full h-[80vh] relative'>
+      <div className='w-full h-[100vh] mt-[-5vh] relative'>
         <video id='background-video' className='absolute w-full h-full object-cover' autoPlay playsInline muted poster='https://storage.googleapis.com/opentibet/doors-4-preview.jpg'>
           <source src='https://storage.googleapis.com/opentibet/doors-4-compressed.mp4' type='video/mp4' />
           <source src='https://storage.googleapis.com/opentibet/doors-4.webm' type='video/webm' />
@@ -35,38 +34,35 @@ export default function Home() {
       </div>
 
       <div className='max-w-4xl'>
-        <div className='flex justify-center p-4'>
-          <Image src="logo.svg" width={200} height={100} alt='Logo' />
+        <div className='flex flex-col justify-center p-4'>
+          <Image src="opentibet-logo-v.svg" width={200} height={100} alt='Open Tibet Logo' />
           {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
         </div>
         <div className='pt-10'>
           <div className='p-4'>
-            <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET – это совместный туристический проект</h2>
-            <ul className="py-8 space-y-6 list-inside">
+            <h2 className="text-lg font-semibold text-gray-900 text-center">OPEN TIBET — это совместный туристический проект</h2>
+            <ul className="py-8 space-y-6 flex">
               <li className="flex items-center">
                 <div className="w-32 flex items-center justify-center">
                   <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" />
                 </div>
-                <IconBookmark />
                 <div>
                   <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
                 </div>
               </li>
-              <li className="flex items-center">
+              <li className="flex flex-col items-center">
                 <div className="w-32 flex items-center justify-center">
                   <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[70%] rounded-sm cursor-pointer" />
                 </div>
-                <IconBookmark />
                 <div>
                   <span className='font-semibold'>Tash Delek travel agency</span><br /> Тибет, Лхаса
                 </div>
                 {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
               </li>
-              <li className="flex items-center">
+              <li className="flex flex-col items-center">
                 <div className="w-32 flex items-center justify-center ">
                   <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" />
                 </div>
-                <IconBookmark />
                 <div>
                   <span className='font-semibold'>
                     Kailash-explorer agency
@@ -105,7 +101,7 @@ export default function Home() {
           </div> */}
           <div className='p-4'>
             <p className='pt-10 leading-7'>
-              Ключевая цель проекта - сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:
+              Ключевая цель проекта — сделать Тибет <b>доступнее для всех желающих</b>. Поэтому в рамках данного проекта мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать поломникам:
             </p>
             <ul className='py-4 max-w-md space-y-2 list-inside'>
               <li className="flex items-center">
@@ -452,9 +448,7 @@ const Review: React.FC<{
 
 const IconMark = () => {
   return (
-    <svg className="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-    </svg>
+    <div className='w-2 h-2 rounded-full bg-red-500 mr-2' />
   )
 }
 
@@ -476,7 +470,7 @@ const WhyGoTibetWithUs = () => {
         title='Глубокое знание Тибета'
         image='https://storage.googleapis.com/opentibet/background-1.jpg'
       >
-        Мы имеем богатый опыт и глубокое понимание Тибета. Наши гиды - местные эксперты, которые помогут вам раскрыть все тайны и красоту этой уникальной земли
+        Мы имеем богатый опыт и глубокое понимание Тибета. Наши гиды — местные эксперты, которые помогут вам раскрыть все тайны и красоту этой уникальной земли
       </WhyGoTibetWithUsStatement>
       <WhyGoTibetWithUsStatement
         title='Эксклюзивные маршруты'

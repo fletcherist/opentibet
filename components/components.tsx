@@ -75,7 +75,7 @@ export const Arrow = () => {
     <div className="flex justify-center items-center h-16 w-full">
       <div className="text-gray-300 hover:text-gray-600 cursor-pointer" onClick={scrollToNextSection}>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </div>
     </div>
@@ -184,7 +184,7 @@ export const FAQ: React.FC = () => {
       />
       <Accordion
         title="Какое лучшее время года для посещения Тибета?"
-        content="Лучшее время для посещения Тибета - с мая по сентябрь, когда погода наиболее благоприятна. Однако, в зависимости от выбранного маршрута, есть возможность посещения Тибета в течение всего года. Мы поможем вам выбрать наилучшее время для вашей поездки."
+        content="Лучшее время для посещения Тибета — с мая по сентябрь, когда погода наиболее благоприятна. Однако, в зависимости от выбранного маршрута, есть возможность посещения Тибета в течение всего года. Мы поможем вам выбрать наилучшее время для вашей поездки."
       />
     </>
   );
@@ -193,7 +193,7 @@ export const FAQ: React.FC = () => {
 export const ActionButton = () => {
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center md:py-3 md:px-6 md:text-lg"
+      className="bg-red-700 hover:bg-red-600 text-white font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg"
       onClick={() => {
         const timetableElementRef = document.getElementById(LINK_TOURS);
         if (timetableElementRef) {
@@ -203,7 +203,7 @@ export const ActionButton = () => {
     >
       Смотреть программы на 2024
       <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
+        <path stroke="currentColor" strokeWidth="2" d="m1 13 5.7-5.326a 0 0 0 0 0 0-1.348L1 1" />
       </svg>
     </button>
   )
@@ -270,7 +270,7 @@ const TimetableList = () => {
         <br />
         Дворец Потала – буддистский храмовый комплекс, сегодня – музей. Возведённый в характерном для тибетской архитектуры эклектичном стиле дворец-храм занимает площадь свыше 360 тыс. м2 и насчитывает свыше 1000 помещений. Многие из них – часовни со скульптурами Далай-лам, тронные и медитационные залы, а также спальные покои, где бережно хранятся предметы личного быта духовных правителей Тибета. Стены многих комнат украшены фресками.
         <TimetablePhoto />
-        Монастырь Джоканг - это самый почитаемый в Тибете храм (Jokhang), входит в список Всемирного наследия ЮНЕСКО. По преданию его построил Сонгцэн Гампо в 647 г. для своей жены, непальской принцессы Бхрикути. Внутри 4-этажного храма, в многочисленных часовнях, сейчас хранятся свыше 3 тыс. изображений (скульптуры, фрески) Будды, буддистских божеств и тибетских буддистских святых. Основным объектом поклонения является установленная в главном зале нижнего этажа статуя Джово Шакьямуни, изображающая Будду в 12 лет.
+        Монастырь Джоканг — это самый почитаемый в Тибете храм (Jokhang), входит в список Всемирного наследия ЮНЕСКО. По преданию его построил Сонгцэн Гампо в 647 г. для своей жены, непальской принцессы Бхрикути. Внутри 4-этажного храма, в многочисленных часовнях, сейчас хранятся свыше 3 тыс. изображений (скульптуры, фрески) Будды, буддистских божеств и тибетских буддистских святых. Основным объектом поклонения является установленная в главном зале нижнего этажа статуя Джово Шакьямуни, изображающая Будду в 12 лет.
       </TimetableDay>
       <TimetableDay title='3 день'>
         Экскурсии в монастыри Ганден(4300м) и Драк Йерпа(4400м) в окрестностях Лхасы.
@@ -279,7 +279,7 @@ const TimetableList = () => {
         Ганден (тиб. དགའ་ལྡན, Вайли dga' ldan) — монастырь на горе Вангбур, один из самых крупных буддийских монастырей и знаменитый университет школы гелуг тибетского буддизма. Ганден был одним из трёх государственных монастырей. Название «Ганден» — это тибетский перевод санскритского «Тушита», легендарной обители Будды Майтреи. Находится на высоте 4300 м.
         <br />
         <br />
-        Медитационные пещеры Драк Йерпа - одно из самых святых мест центрального Тибета, расположенное на склонах гор в примерно двух часах езды от Лхасы. Начиная с VII века в пещерах медитировали, царь Сонгцен Гампо, индийский буддийский мыслитель Атиша, великий махасиддха Гуру Падмасамбхава, просветлённая йогини и дакини Еше Цогъял. В этих пещерах проживали, изучали буддизм и уходили в затворничество отшельники, монахи и монахини на протяжении десяти веков.
+        Медитационные пещеры Драк Йерпа — одно из самых святых мест центрального Тибета, расположенное на склонах гор в примерно двух часах езды от Лхасы. Начиная с VII века в пещерах медитировали, царь Сонгцен Гампо, индийский буддийский мыслитель Атиша, великий махасиддха Гуру Падмасамбхава, просветлённая йогини и дакини Еше Цогъял. В этих пещерах проживали, изучали буддизм и уходили в затворничество отшельники, монахи и монахини на протяжении десяти веков.
         <br />
         <br />
         Ночь в Лхасе. Ночь в Tibet hotel.
@@ -290,13 +290,13 @@ const TimetableList = () => {
         Переезд Шигадзе-Сакья 2 часа
         <br />
         <br />
-        Монастырь Сакья – главный монастырь загадочной и самой закрытой школы Сакья тибетского буддизма. Школа Сакья переживала расцвет в XIII и XIV веках при покровительстве юаньской империи (монгольских правителей Китая). В это время школа Сакья была главной школой тибетского буддизма, а город Сакья - административным центром всего Тибета.
+        Монастырь Сакья – главный монастырь загадочной и самой закрытой школы Сакья тибетского буддизма. Школа Сакья переживала расцвет в XIII и XIV веках при покровительстве юаньской империи (монгольских правителей Китая). В это время школа Сакья была главной школой тибетского буддизма, а город Сакья — административным центром всего Тибета.
       </TimetableDay>
       <TimetableDay title='5 день'>
         Выезд в 7 утра. Прибытие в Ронгбук в 10.00
         <br />
         <br />
-        Посещение самого высокогорного в мире монастыря Ронгбук - это реконструированный тибетский буддийский монастырь, когда-то самый крупный в регионе, где проживало более 500 монахов и монахинь. Сейчас их осталось около 30. Ронгбук был основан в 1902 году Нгвангом Тензином Норбу, ламой школы Ньингма. Один из основных храмов монастыря называется Зарум (Zarum).  В нескольких километрах находятся руины старого монастыря, на этом месте ещё с XVIII века были хижины и пещеры, которые использовались женской монашеской общиной для медитаций. Стоит обратить внимание на пещеру Падмасабхавы (8 век).
+        Посещение самого высокогорного в мире монастыря Ронгбук — это реконструированный тибетский буддийский монастырь, когда-то самый крупный в регионе, где проживало более 500 монахов и монахинь. Сейчас их осталось около 30. Ронгбук был основан в 1902 году Нгвангом Тензином Норбу, ламой школы Ньингма. Один из основных храмов монастыря называется Зарум (Zarum).  В нескольких километрах находятся руины старого монастыря, на этом месте ещё с XVIII века были хижины и пещеры, которые использовались женской монашеской общиной для медитаций. Стоит обратить внимание на пещеру Падмасабхавы (8 век).
       </TimetableDay>
       <TimetableDay title='6 день'>
         Нью Тингри- Percu Tso (озеро ) – Сага -Парьянг
@@ -323,7 +323,7 @@ const TimetableList = () => {
         <br />
         <br />
         Посещение монастыря Тхолинг.
-        Полуразрушенный монастырь Тхолинг - один из древнейших в Тибете. Он был основан в начале 10-го века вторым правителем королевства Гуге Йеше О. На его территории можно увидеть многие шедевры архитектуры, выполненные в индийском стиле, явно отличающемся от традиционного тибетского. Особенную известность приобрели фрески монастыря.
+        Полуразрушенный монастырь Тхолинг — один из древнейших в Тибете. Он был основан в начале 10-го века вторым правителем королевства Гуге Йеше О. На его территории можно увидеть многие шедевры архитектуры, выполненные в индийском стиле, явно отличающемся от традиционного тибетского. Особенную известность приобрели фрески монастыря.
       </TimetableDay>
       <TimetableDay title='9 день'>
         Цапаранг – древняя столица королевства Гуге, располагавшегося  в западном Тибете. Цапаранг пережил период расцвета в IX и был заброшен в XVII веке.
@@ -573,37 +573,36 @@ export const TibetInfoCard: React.FC<{
   children: React.ReactNode
   // defaultHeight?: number
 }> = ({ children, imageSrc }) => {
-  const defaultHeight = 150
+  const defaultHeight = 100
   const [isExpanded, setIsExpanded] = useState(false)
   return (
-    <div className='border-2 border-rounded rounded-xl border-gray-200 mb-4 relative hover:shadow-md transition duration-300 ease-in-out'>
+    <div className='mb-4 relative bg-blue-500 text-white'>
       <img
         src={imageSrc}
         width={300}
         height={200}
-        className='rounded-t-xl'
+        className='object-cover h-[190px]'
       />
-      <div className='text-sm' style={isExpanded ? {
+      <div className='text-sm leading-6 hyphens-auto' style={isExpanded ? {
         height: 'auto'
       } :
         { height: `${defaultHeight}px`, overflow: 'hidden' }}>
         {children}
       </div>
-      <div className='h-12' />
-      <div className={`absolute w-full h-48 bottom-0 left-0 right-0 rounded-b-lg ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-gray-50'}`}
+      <div className='h-10' />
+      <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-blue-500'}`}
       // style={isExpanded ? {} : { backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1))' }}
       >
         <div className='flex items-end h-full'>
-          <div className='text-center text-blue-500 flex w-full justify-center items-center cursor-pointer bg-gray-50 hover:bg-gray-100 p-2 rounded-b-lg ' onClick={() => {
+          <div className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2' onClick={() => {
             setIsExpanded(!isExpanded)
           }}>
-            <div className='p-1 font-semibold text-sm'>
+            <div className='p-1 font-bold text-sm'>
               {isExpanded ? 'свернуть' : 'развернуть'}
             </div>
             <div style={isExpanded ? {
               transform: 'rotate(180deg)'
             } : {}}>
-              <IconArrowDown />
             </div>
           </div>
         </div>
@@ -616,7 +615,7 @@ const TibetInfoCardTitle: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <div className='text-gray-900 font-semibold text-center text-base pt-4'>
+    <div className='text-white-500 font-semibold text-base ml-3 pt-3'>
       {children}
     </div>
   )
@@ -626,7 +625,7 @@ const TibetInfoCardContent: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <div className='px-4 py-2' style={{ zIndex: -1 }}>
+    <div className='px-3 py-2' style={{ zIndex: -1 }}>
       {children}
     </div>
   )
@@ -639,13 +638,13 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/fa/a9/photo0jpg.jpg?w=2400&h=-1&s=1">
       <TibetInfoCardTitle>Лхаса</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Лхаса - столица Тибета, автономного района Китая. Город расположен на высоте 3650 метров над уровнем моря и является важным центром тибетского буддизма.
+        Лхаса — столица Тибета, автономного района Китая. Город расположен на высоте 3650 метров над уровнем моря и является важным центром тибетского буддизма.
         <br />
         <br />
-        Лхаса - это духовный центр Тибета, и в нем находится множество важных религиозных сооружений, в том числе дворец Потала, резиденция Далай-ламы, и Джоканг, первый буддийский храм в Тибете. Город также известен своими традиционными тибетскими рынками, где можно купить все, от одежды и сувениров до продуктов питания и лекарств.
+        Лхаса — это духовный центр Тибета, и в нем находится множество важных религиозных сооружений, в том числе дворец Потала, резиденция Далай-ламы, и Джоканг, первый буддийский храм в Тибете. Город также известен своими традиционными тибетскими рынками, где можно купить все, от одежды и сувениров до продуктов питания и лекарств.
         <br />
         <br />
-        Лхаса - это захватывающий город, который предлагает посетителям возможность познакомиться с богатой культурой и историей Тибета.
+        Лхаса — это захватывающий город, который предлагает посетителям возможность познакомиться с богатой культурой и историей Тибета.
       </TibetInfoCardContent>
     </TibetInfoCard>
   )
@@ -653,7 +652,7 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Potala.jpg/548px-Potala.jpg">
       <TibetInfoCardTitle>Дворец Потала</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Дворец Потала - это величественный буддийский храмовый комплекс, расположенный на вершине холма Марпори в Лхасе, Тибет. Он был построен в 7 веке и является резиденцией Далай-ламы, духовного лидера тибетского буддизма.
+        Дворец Потала — это величественный буддийский храмовый комплекс, расположенный на вершине холма Марпори в Лхасе, Тибет. Он был построен в 7 веке и является резиденцией Далай-ламы, духовного лидера тибетского буддизма.
         <br />
         <br />
         Дворец Потала состоит из двух частей: Белого дворца и Красного дворца. Белый дворец был построен в 17 веке и использовался в качестве официальной резиденции Далай-ламы. Красный дворец был построен в 16 веке и содержит множество религиозных сооружений, в том числе храм Джоканг.
@@ -667,7 +666,7 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://ic.pics.livejournal.com/vlade_mir/25001231/1603650/1603650_original.jpg">
       <TibetInfoCardTitle>Джоканг</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Джоканг - это буддийский храм и монастырь, расположенный в центре Старого города Лхасы, Тибет. Он был построен в 7 веке и является одним из самых важных религиозных сооружений в Тибете.
+        Джоканг — это буддийский храм и монастырь, расположенный в центре Старого города Лхасы, Тибет. Он был построен в 7 веке и является одним из самых важных религиозных сооружений в Тибете.
         <br />
         <br />
         Джоканг является домом для статуи Будды Шакьямуни, привезенной в Тибет в 7 веке принцессой Вэньчэн, женой тибетского царя Сонгцен Гампо. Статуя является одной из самых почитаемых статуй Будды в мире и считается символом единства тибетского народа.
@@ -694,7 +693,7 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2019/01/%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%93%D0%B0%D0%BD%D0%B4%D0%B5%D0%BD-%D0%9B%D1%85%D0%B0%D1%81%D0%B0-%D1%82%D1%83%D1%80%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
       <TibetInfoCardTitle>Ганден</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Ганден - это буддийский монастырь, расположенный в 47 км к востоку от Лхасы, Тибет. Он был основан в 14 веке Цонкапой, основателем школы гелуг тибетского буддизма.
+        Ганден — это буддийский монастырь, расположенный в 47 км к востоку от Лхасы, Тибет. Он был основан в 14 веке Цонкапой, основателем школы гелуг тибетского буддизма.
         <br />
         <br />
         Монастырь является одним из шести главных монастырей школы гелуг и является важным местом паломничества для буддистов со всего мира. В монастыре хранятся множество ценных реликвий, в том числе статуя Будды Майтреи, будущего Будды.
@@ -720,7 +719,7 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
       <TibetInfoCardTitle>Драк Йерпа</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Драк Йерпа - это буддийский монастырский комплекс, расположенный в 30 км к северо-востоку от Лхасы, Тибет. Он был основан в 8 веке и является одним из самых важных религиозных сооружений в Тибете.
+        Драк Йерпа — это буддийский монастырский комплекс, расположенный в 30 км к северо-востоку от Лхасы, Тибет. Он был основан в 8 веке и является одним из самых важных религиозных сооружений в Тибете.
         <br />
         <br />
         Монастырь включает в себя множество пещер для медитации, в которых в свое время медитировали многие известные буддийские учителя, в том числе Гуру Ринпоче и Атиша. Драк Йерпа также является домом для статуи Будды Майтреи, будущего Будды.
@@ -750,7 +749,7 @@ export const TibetInfo: React.FC<{
     <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg">
       <TibetInfoCardTitle>Цурпу</TibetInfoCardTitle>
       <TibetInfoCardContent>
-        Цурпу - это буддийский монастырь, расположенный в 70 км к западу от Лхасы, Тибет. Он был основан в 12 веке и является родиной школы карма кагью тибетского буддизма.
+        Цурпу — это буддийский монастырь, расположенный в 70 км к западу от Лхасы, Тибет. Он был основан в 12 веке и является родиной школы карма кагью тибетского буддизма.
         <br />
         <br
         />
@@ -1185,12 +1184,12 @@ export const TibetInfo: React.FC<{
   const defaultSize = `max-w-[48%]`
   const mdSize = `md:max-w-[23%]`
 
-  const cardWidth = 200
+  const cardWidth = 300
   return (
     <div>
       <div className='p-4'>
         <div className='py-2'>
-          {groupTitle('Центральный тибет')}
+          {groupTitle('Центральный Тибет')}
           <Slick step={cardWidth}>
             <div style={{ width: cardWidth }}>
               {contentLhasa}
@@ -1324,22 +1323,22 @@ export const Navbar = () => {
     window.history.pushState({}, '', `#${elementId}`);
   }
   return (
-    <nav className="bg-white border-gray-200 border-b w-full fixed z-10">
+    <nav className="bg-white/60 backdrop-blur-md w-full fixed z-10">
       <div className='flex justify-center'>
-        <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4 w-full">
+        <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 w-full">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
-            <Image src="logo.svg" width={100} height={50} alt='Logo' className="h-8" />
+            <Image src="opentibet-logo-h.svg" width={150} height={80} alt='OpenTibet Logo' className="h-8 mr-3" />
             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
             {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span> */}
           </a>
           <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+              <path stroke="currentColor" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
               {/* <li>
               <a href="#" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
             </li> */}
@@ -1348,21 +1347,21 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_TOURS)
                   }}
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Программы</a>
+                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0">Программы</a>
               </li>
               <li>
                 <a href={`#${LINK_PHOTO_GALLERY}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_PHOTO_GALLERY)
                   }}
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Фото</a>
+                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0 ">Фото</a>
               </li>
               <li>
                 <a href={`#${LINK_CONTACTS}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_CONTACTS)
                   }}
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Контакты</a>
+                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0 ">Контакты</a>
               </li>
             </ul>
           </div>
