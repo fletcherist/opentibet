@@ -21,7 +21,8 @@ export default function Home() {
               Откройте для себя Тибет
             </div>
             <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
-              Маршруты по доступным ценам
+              Маршруты по доступным ценам<br />
+              Пакетные туры от 2000$
             </div>
             <div className='py-4'>
               <ActionButton />
@@ -135,7 +136,7 @@ export default function Home() {
       <div className='max-w-4xl mt-6'>
         <div className='w-full pt-8'>
           <Header
-            title='Посмотрите фильм о Тибете,'
+            title='Посмотрите фильм о Тибете'
             subtitle='снятый Виктором Щербаковым и Алексеем Перчуковым'
           />
           <div className='px-4 py-2'>
