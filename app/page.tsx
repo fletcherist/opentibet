@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       <div className='max-w-4xl'>
-        
+
         <div className='flex justify-center p-4'>
           <Image src="opentibet-logo-v.svg" width={200} height={100} alt='Open Tibet Logo' />
           {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
@@ -184,6 +184,13 @@ export default function Home() {
             Алексей &mdash; автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма <a className='text-blue-600' href="https://www.youtube.com/watch?v=OhtIDb8ioT0" target='_blank'>«Тибет, место которое меняет жизнь»</a>. Докладчик многочисленных международных конференции, посвященных Кайласу.
             Автор статьи <a className='text-blue-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">«Спиральная Кора»</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
           </div>
+          <div className='flex justify-center'>
+            <div className='flex max-w-lg gap-10'>
+              <Image src="/putevoditel-india.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
+              <Image src="/putevoditel-tibet.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
+            </div>
+          </div>
+
           <div className='pt-10 flex justify-center'>
             <div className="grid grid-cols-2 gap-1 max-w-xl">
               {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
