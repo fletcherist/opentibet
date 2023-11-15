@@ -1388,21 +1388,21 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_TOURS)
                   }}
-                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0">Программы</a>
+                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Программы</a>
               </li>
               <li>
                 <a href={`#${LINK_PHOTO_GALLERY}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_PHOTO_GALLERY)
                   }}
-                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0 ">Фото</a>
+                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Фото</a>
               </li>
               <li>
                 <a href={`#${LINK_CONTACTS}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_CONTACTS)
                   }}
-                  className="text-black block py-2 px-3 rounded md:border-0 md:hover:text-red-500 md:p-0 ">Контакты</a>
+                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Контакты</a>
               </li>
             </ul>
           </div>
