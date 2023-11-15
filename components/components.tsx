@@ -446,17 +446,17 @@ export const TimetableFactoid: React.FC<{
 }> = ({
   fact, value
 }) => {
-  return (
-    <div className="self-center">
-      <div className='text-2xl tabular-nums leading-5 font-light'>
-        {value}
+    return (
+      <div className="self-center">
+        <div className='text-2xl tabular-nums leading-5 font-light'>
+          {value}
+        </div>
+        <div className="text-xs">
+          {fact}
+        </div>
       </div>
-      <div className="text-xs">
-        {fact}
-      </div>
-    </div>  
-  )
-}
+    )
+  }
 
 const getNoun = (n: number, one: string, two: string, five: string) => {
   let abs = Math.abs(n);
@@ -484,7 +484,7 @@ export const TimetableButton: React.FC<{
 }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
 
-    const days_label = getNoun(days, 'день', 'дня', 'дней')
+    const daysLabel = getNoun(days, 'день', 'дня', 'дней')
 
     return (
       <div className={`m-4 my-2 relative bg-gray-100`}>
@@ -498,11 +498,11 @@ export const TimetableButton: React.FC<{
                 <div className='text-yellow-500 text-xs'>{subtitle}</div>
               </div>
               <div className="flex space-x-4 text-white/80">
-                <TimetableFactoid fact={days_label} value={days} />
+                <TimetableFactoid fact={daysLabel} value={String(days)} />
                 <TimetableFactoid fact="цена, $" value={`${price}`} />
               </div>
             </div>
-            
+
             <div className='p-4'>
               {isOpened ? (
                 <IconArrowClose />
