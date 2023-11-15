@@ -43,7 +43,7 @@ export default function Home() {
         <div className=''>
           <div className=''>
 
-            <h2 className="text-2xl font-semibold text-red-500 text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
+            <h2 className="text-2xl font-semibold text-blue-500 text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
 
             <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
               <li className="flex items-center my-2">
