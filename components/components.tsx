@@ -193,7 +193,7 @@ export const FAQ: React.FC = () => {
 export const ActionButton = () => {
   return (
     <button
-      className="bg-red-700 hover:bg-red-600 text-white font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg"
+      className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg"
       onClick={() => {
         const timetableElementRef = document.getElementById(LINK_TOURS);
         if (timetableElementRef) {
@@ -600,10 +600,10 @@ export const Header: React.FC<{
 }> = ({ title, subtitle, id = undefined }) => {
   return (
     <div className='px-4' id={id}>
-      <div className='text-blue-500 font-semibold text-3xl pt-2'>
+      <div className='text-black-500 font-semibold text-3xl pt-2'>
         {title}
       </div>
-      <div className="py-1 text-red-500 font-semibold">{subtitle}</div>
+      <div className="py-1 text-black-500 font-bold">{subtitle}</div>
     </div>
   )
 }
@@ -1364,11 +1364,11 @@ export const Navbar = () => {
     window.history.pushState({}, '', `#${elementId}`);
   }
   return (
-    <nav className="bg-white/60 backdrop-blur-md w-full fixed z-10">
+    <nav className="bg-black/60 text-white backdrop-blur-md w-full fixed z-10">
       <div className='flex justify-center'>
         <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 w-full">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
-            <Image src="opentibet-logo-h.svg" width={150} height={80} alt='OpenTibet Logo' className="h-8 mr-3" />
+            <Image src="opentibet-logo-hb.svg" width={150} height={80} alt='OpenTibet Logo' className="h-8 mr-3" />
             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
             {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span> */}
           </a>
@@ -1388,21 +1388,21 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_TOURS)
                   }}
-                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Программы</a>
+                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Программы</a>
               </li>
               <li>
                 <a href={`#${LINK_PHOTO_GALLERY}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_PHOTO_GALLERY)
                   }}
-                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Фото</a>
+                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Фото</a>
               </li>
               <li>
                 <a href={`#${LINK_CONTACTS}`}
                   onClick={(event) => {
                     smoothScroll(event, LINK_CONTACTS)
                   }}
-                  className="text-black block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Контакты</a>
+                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0">Контакты</a>
               </li>
             </ul>
           </div>

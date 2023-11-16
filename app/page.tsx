@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div className='text-gray-300 py-2 pr-6 text-base md:text-xl'>
               Маршруты по доступным ценам<br />
-              Пакетные туры от 2000$
+              Пакетные туры от 2000 $
             </div>
             <div className='py-4'>
               <ActionButton />
@@ -43,7 +43,7 @@ export default function Home() {
         <div className=''>
           <div className=''>
 
-            <h2 className="text-2xl font-semibold text-blue-500 text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
+            <h2 className="text-2xl font-semibold text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
 
             <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
               <li className="flex items-center my-2">
@@ -472,7 +472,7 @@ const Review: React.FC<{
 
 const IconMark = () => {
   return (
-    <div className='w-2 h-2 rounded-full bg-red-500 mr-2' />
+    <div className='w-2 h-2 rounded-full bg-yellow-600 mr-2' />
   )
 }
 
@@ -513,8 +513,8 @@ const WhyGoTibetWithUs = () => {
         Мы гарантируем высокое качество услуг, начиная с разработки маршрута и заканчивая качеством проживания и питания. Ваше удовольствие и безопасность для нас приоритет
       </WhyGoTibetWithUsStatement>
 
-      <div className='flex w-full items-center flex-wrap justify-around pt-8 pb-4'>
-        <h2 className="text-red-500 text-3xl font-light mb-3">от 2000 $ за 13 дней</h2>
+      <div className='flex w-full items-baseline flex-wrap justify-around pt-8 pb-4'>
+        <h2 className="text-blue-500 text-3xl font-light mb-3 leading-8">от 2000 $ за 13 дней</h2>
         <ActionButton />
       </div>
     </>
@@ -530,7 +530,7 @@ const WhyGoTibetWithUsStatement: React.FC<{
     <div className=''>
       <div className='py-4'>
         <div className='flex items-center px-4'>
-          <div className='w-2 h-2 rounded-full bg-blue-500 mr-2' />
+          <div className='w-2 h-2 rounded-full bg-yellow-600 mr-2' />
           <div className='font-semibold text-lg'>
             {title}
           </div>
