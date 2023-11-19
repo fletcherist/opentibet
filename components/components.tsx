@@ -617,7 +617,7 @@ export const TibetInfoCard: React.FC<{
   const defaultHeight = 100
   const [isExpanded, setIsExpanded] = useState(false)
   return (
-    <div className='mb-4 relative bg-blue-500 text-white'>
+    <div className='mb-4 relative bg-white text-black'>
       <img
         src={imageSrc}
         width={300}
@@ -631,7 +631,7 @@ export const TibetInfoCard: React.FC<{
         {children}
       </div>
       <div className='h-10' />
-      <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-blue-500'}`}
+      <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}
       // style={isExpanded ? {} : { backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1))' }}
       >
         <div className='flex items-end h-full'>
@@ -1434,7 +1434,7 @@ export const TibetInfo: React.FC<{
           </Slick>
         </div>
         {groupTitle('Северный Тибет')}
-        <div className='flex flex-wrap gap-4'>
+        <div className='flex flex-wrap gap-1'>
           <div style={{ width: cardWidth }}>
             {contentTsurphu}
           </div>

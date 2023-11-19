@@ -114,14 +114,15 @@ export default function Home() {
       <div className='max-w-4xl mt-4 w-full'>
         <WhyGoTibetWithUs />
       </div>
-      <div className='max-w-4xl mt-6'>
-        <div className='w-full pt-8'>
-          <Header
-            title='Посмотрите фильм о Тибете'
-            subtitle='снятый Виктором Щербаковым и Алексеем Перчуковым'
-          />
-          <div className='px-4 py-2'>
-            {/* <div className='text-black font-semibold text-xl md:text-4xl lg:text-5xl'>
+      <div className='w-full bg-gray-800 text-white pb-12'>
+        <div className='max-w-4xl mt-6 mx-auto'>
+          <div className='w-full pt-8'>
+            <Header
+              title='Посмотрите фильм о Тибете'
+              subtitle='снятый Виктором Щербаковым и Алексеем Перчуковым'
+            />
+            <div className='px-4 py-2'>
+              {/* <div className='text-black font-semibold text-xl md:text-4xl lg:text-5xl'>
               Посмотрите фильм о Тибете
             </div>
             <div className='pt-1 pr-6 md:text-xl'>
@@ -129,64 +130,65 @@ export default function Home() {
               Виктором Щербаковым{' '} и{' '}
               <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-600 hover:text-blue-700 font-semibold' target='_blank'>Алексеем Перчуковым</a>
             </div> */}
-            <p className='py-4 pb-0 leading-7 hyphens-auto'>
-              Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме «Тибет, место которое меняет жизнь», снятом в одном из таких туров:
-            </p>
-          </div>
-          <div className='w-full h-[315px] mt-5 mb-2 md:h-96'>
-            <iframe
-              width="100%"
-              // height="315"
-              height="100%"
-              src="https://www.youtube.com/embed/OhtIDb8ioT0?si=rnbXixWvQlm4pVIA"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen />
-          </div>
-        </div>
-        <div className="pt-10">
-          <div className='flex px-4 w-fit mb-4 mx-auto'>
-            <div className="w-32 h-32">
-              <img
-                className="object-cover rounded-full w-full h-full"
-                src="https://storage.googleapis.com/opentibet/alexey-portrait.jpeg"
-                alt="profile picture"
-              />
+              <p className='py-4 pb-0 leading-7 hyphens-auto'>
+                Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме «Тибет, место которое меняет жизнь», снятом в одном из таких туров:
+              </p>
             </div>
-            <div className='flex items-center flex-1 pl-4'>
-              <div>
-                <div className='text-xl'>Алексей Перчуков</div>
-                <div className='text-sm font-semibold'>Координатор проекта OPEN TIBET</div>
-                <a href='https://www.instagram.com/kailash_explorer/' className='text-sm text-blue-500 hover:text-blue-700' target='_blank'>@kailash_explorer</a>
+            <div className='w-full h-[315px] mt-5 mb-2 md:h-96'>
+              <iframe
+                width="100%"
+                // height="315"
+                height="100%"
+                src="https://www.youtube.com/embed/OhtIDb8ioT0?si=rnbXixWvQlm4pVIA"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen />
+            </div>
+          </div>
+          <div className="pt-10">
+            <div className='flex px-4 w-fit mb-4 mx-auto'>
+              <div className="w-32 h-32">
+                <img
+                  className="object-cover rounded-full w-full h-full"
+                  src="https://storage.googleapis.com/opentibet/alexey-portrait.jpeg"
+                  alt="profile picture"
+                />
+              </div>
+              <div className='flex items-center flex-1 pl-4'>
+                <div>
+                  <div className='text-xl'>Алексей Перчуков</div>
+                  <div className='text-sm font-semibold'>Координатор проекта OPEN TIBET</div>
+                  <a href='https://www.instagram.com/kailash_explorer/' className='text-sm text-yellow-500 hover:text-yellow-700' target='_blank'>@kailash_explorer</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='p-4 leading-7 hyphens-auto'>
-            Алексей &mdash; автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма <a className='text-blue-600' href="https://www.youtube.com/watch?v=OhtIDb8ioT0" target='_blank'>«Тибет, место которое меняет жизнь»</a>. Докладчик многочисленных международных конференции, посвященных Кайласу.
-            Автор статьи <a className='text-blue-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">«Спиральная Кора»</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
-          </div>
-          <div className='flex justify-center'>
-            <div className='flex max-w-lg gap-10'>
-              <Image src="/putevoditel-india.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
-              <Image src="/putevoditel-tibet.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
+            <div className='p-4 leading-7 hyphens-auto'>
+              Алексей &mdash; автор нескольких профессиональных путеводителей по Тибету на русском языке, со-автор фильма <a className='text-yellow-600' href="https://www.youtube.com/watch?v=OhtIDb8ioT0" target='_blank'>«Тибет, место которое меняет жизнь»</a>. Докладчик многочисленных международных конференции, посвященных Кайласу.
+              Автор статьи <a className='text-yellow-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">«Спиральная Кора»</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
             </div>
-          </div>
+            <div className='flex justify-center'>
+              <div className='flex max-w-lg gap-10'>
+                <Image src="/putevoditel-india.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
+                <Image src="/putevoditel-tibet.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
+              </div>
+            </div>
 
-          <div className='pt-10 flex justify-center'>
-            <div className="grid grid-cols-3 gap-1 max-w-2xl">
-              {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
-              <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-4  rounded-sm cursor-pointer" />
-              <Image src="https://storage.googleapis.com/opentibet/alex-6.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
-              <Image src="https://storage.googleapis.com/opentibet/alexey-7.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-4 row-start-2 row-end-4 rounded-sm cursor-pointer" />
-              <Image src="https://storage.googleapis.com/opentibet/alex-4.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 rounded-sm cursor-pointer" />
-              <Image src="https://storage.googleapis.com/opentibet/alex-2.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-3 col-end-3 row-start-4 row-end-5 rounded-sm cursor-pointer" />
+            <div className='pt-10 flex justify-center'>
+              <div className="grid grid-cols-3 gap-1 max-w-2xl">
+                {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
+                <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-4  rounded-sm cursor-pointer" />
+                <Image src="https://storage.googleapis.com/opentibet/alex-6.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
+                <Image src="https://storage.googleapis.com/opentibet/alexey-7.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-4 row-start-2 row-end-4 rounded-sm cursor-pointer" />
+                <Image src="https://storage.googleapis.com/opentibet/alex-4.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 rounded-sm cursor-pointer" />
+                <Image src="https://storage.googleapis.com/opentibet/alex-2.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-3 col-end-3 row-start-4 row-end-5 rounded-sm cursor-pointer" />
+              </div>
             </div>
-          </div>
-          <div className='text-center p-4'>
-            <p className='text-gray-400 text-sm'>
-              Больше фото в <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-500 hover:text-blue-700' target='_blank'>Instagram</a>
-            </p>
+            <div className='text-center p-4'>
+              <p className='text-gray-400 text-sm'>
+                Больше фото в <a href='https://www.instagram.com/kailash_explorer/' className='text-yellow-500 hover:text-yellow-700' target='_blank'>Instagram</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -339,12 +341,14 @@ export default function Home() {
         </div>
       </div>
       <div className='pt-5' />
-      <div className='max-w-4xl w-full'>
-        <Header
-          title='Информация о Тибете'
-          subtitle='что посмотреть?'
-        />
-        <TibetInfo />
+      <div className='w-full bg-blue-500 text-white py-12'>
+        <div className='max-w-4xl w-full mx-auto'>
+          <Header
+            title='Информация о Тибете'
+            subtitle='что посмотреть?'
+          />
+          <TibetInfo />
+        </div>
       </div>
       <div className='pt-10' />
       <div className='max-w-4xl'>
