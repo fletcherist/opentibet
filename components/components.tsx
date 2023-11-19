@@ -908,7 +908,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentShalu = (
-    <TibetInfoCard imageSrc="https://saletur.ru/cache/crop_sights/23535.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/shalu.jpg">
       <TibetInfoCardTitle>Монастырь Шалу</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Шалу — это буддийский монастырь, расположенный в 22 км к югу от Шигадзе в Тибете. Он был основан в 1040 году Четсуном Шерабом Джунгнаем, и на протяжении веков был известен как центр научных исследований и экстрасенсорного обучения. Его настенные росписи считаются одними из самых древних и красивых в Тибете.
@@ -939,7 +939,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentNgor = (
-    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2020/03/View-on-Tidrum-nunnery-400x300.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/ngor.jpg">
       <TibetInfoCardTitle>Деревня Нгор</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Нгор — это деревня в Тибетском автономном районе Китая, расположенная на высоте 4410 метров над уровнем моря. Она находится в долине реки Янгце, в 100 км к югу от города Шигадзе.
@@ -1033,6 +1033,39 @@ export const TibetInfo: React.FC<{
     </TibetInfoCard>
   )
 
+  const contentSakya = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sakya.jpg">
+      <TibetInfoCardTitle>Сакья</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Базовый лагерь Эвереста в Тибете, также известный как Базовый лагерь Эвереста на Северном склоне, расположен на высоте 5150 метров над уровнем моря. Он находится в долине реки Нгарцо, примерно в 60 км к северо-востоку от города Шигадзе.
+        <br />
+        <br />
+        Базовый лагерь Эвереста в Тибете является отправной точкой для альпинистов, которые планируют восхождение на Эверест с северного склона. Он также является популярным туристическим направлением.
+        <br />
+        <br />
+        В базовом лагере Эвереста в Тибете есть множество палаток, кафе, магазинов и других объектов инфраструктуры, необходимых альпинистам и туристам. Здесь также есть небольшой буддийский храм, посвященный богине Авалокитешваре.
+        <br />
+        <br />
+        Добраться до базового лагеря Эвереста в Тибете можно на автомобиле или автобусе из города Шигадзе. Путешествие занимает около 6-8 часов.
+        <br />
+        <br />
+        Вот несколько интересных фактов о базовом лагере Эвереста в Тибете:
+        <ul>
+          <li>
+            Базовый лагерь был построен в 1956 году китайскими альпинистами.
+          </li>
+          <li>
+            Базовый лагерь является одним из самых высокогорных базовых лагерей в мире.
+          </li>
+          <li>
+            В базовом лагере Эвереста в Тибете ежегодно бывает около 10 000 альпинистов и туристов.
+          </li>
+        </ul>
+        Базовый лагерь Эвереста в Тибете — это впечатляющее место, которое предлагает посетителям возможность познакомиться с одной из самых высоких и сложных гор в мире.
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
   const contentShashibangma = (
     <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/3/3f/Shishapangma3.jpg">
       <TibetInfoCardTitle>Шишабангма</TibetInfoCardTitle>
@@ -1064,7 +1097,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentMilarepaBirthplace = (
-    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/6/6d/Gompa_at_Milarepa%27s_cave.JPG">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/milarepa-birthplace.jpg">
       <TibetInfoCardTitle>Место рождения Миларепы</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Место рождения Миларепы — это деревня Га в Тибете, где он родился в 1052 году. Деревня является важным местом паломничества для буддистов со всего мира.
@@ -1091,7 +1124,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentTsaparang = (
-    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2019/06/%D0%93%D1%83%D0%B3%D0%B5-%D0%A6%D0%B0%D0%BF%D0%B0%D1%80%D0%B0%D0%BD%D0%B3-%D0%BF%D0%BE%D0%B5%D0%B7%D0%B4%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%9A%D0%B0%D0%B9%D0%BB%D0%B0%D1%81-%D0%BA%D0%BE%D1%80%D0%B0.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsaparang.jpg">
       <TibetInfoCardTitle>Цапаранг</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Цапаранг — это разрушенная столица древнего царства Гуге, расположенная в долине реки Нгарцо, в провинции Нгари Западного Тибета. Город был основан в 14 веке и был важным торговым центром на Великом шёлковом пути. В 16 веке Цапаранг был разрушен в результате нападения войск Ладакха. С тех пор город лежит в руинах. Сегодня Цапаранг является популярным туристическим направлением. Город является напоминанием о богатой истории и культуре Тибета.
@@ -1100,7 +1133,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentDungar = (
-    <TibetInfoCard imageSrc="https://img.tourister.ru/files/4/1/0/9/4/1/0/original.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dungar.jpg">
       <TibetInfoCardTitle>Дунгар</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Дунгар — это город в Тибете, основанный в 17 веке. Город является важным центром дунганской культуры и известен своими мечетями.
@@ -1109,7 +1142,7 @@ export const TibetInfo: React.FC<{
   )
 
   const contentPiyang = (
-    <TibetInfoCard imageSrc="https://snowliontours.com/wp-content/uploads/2019/05/Dungkar-Piyang-Tibet-4.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/piyang.jpg">
       <TibetInfoCardTitle>Пиянг</TibetInfoCardTitle>
       <TibetInfoCardContent>
         Пиянг — это деревня в Тибете, известная своими пещерными храмами, построенными в 10-11 веках. Фрески в пещерах изображают сцены из буддийской мифологии.
@@ -1217,6 +1250,161 @@ export const TibetInfo: React.FC<{
     </TibetInfoCard>
   )
 
+  const contentTsedang = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsedang.jpg">
+      <TibetInfoCardTitle>Цеданг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentLamaling = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/lamaling.jpg">
+      <TibetInfoCardTitle>Ламалинг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentBuchu = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/buchu.jpg">
+      <TibetInfoCardTitle>Бучу</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentBatsumTso = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/batsum-tso.jpg">
+      <TibetInfoCardTitle>Бацум цо</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentSamye = (
+    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/A_grand_view_of_Samye.jpg/560px-A_grand_view_of_Samye.jpg">
+      <TibetInfoCardTitle>Монастырь Самье</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentDorjeDrak = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dorje-drag.jpg">
+      <TibetInfoCardTitle>Дордже Драг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentMidroling = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/midroling.jpg">
+      <TibetInfoCardTitle>Мидролинг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentYumbulakhang = (
+    <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/View-on-Yumbulakhang-from-the-hill.jpg">
+      <TibetInfoCardTitle>Ямбулаканг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentChongye = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chongye.jpg">
+      <TibetInfoCardTitle>Чонгье</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentBonri = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri.jpg">
+      <TibetInfoCardTitle>Гора Бонри</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+  const contentKading = (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/kading.jpg">
+      <TibetInfoCardTitle>Долина Кадинг</TibetInfoCardTitle>
+      <TibetInfoCardContent>
+        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+        <br />
+        <br />
+        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
+        <br />
+        <br />
+      </TibetInfoCardContent>
+    </TibetInfoCard>
+  )
+
+
   const groupTitle = (text: string) => {
     return (
       <div className='py-4 font-semibold text-xl'>{text}</div>
@@ -1267,6 +1455,9 @@ export const TibetInfo: React.FC<{
             {contentGyandze}
           </div>
           <div style={{ width: cardWidth }}>
+            {contentSakya}
+          </div>
+          <div style={{ width: cardWidth }}>
             {contentEverestBasecamp}
           </div>
           <div style={{ width: cardWidth }}>
@@ -1286,9 +1477,6 @@ export const TibetInfo: React.FC<{
           </div>
           <div style={{ width: cardWidth }}>
             {contentMilarepaBirthplace}
-          </div>
-          <div style={{ width: cardWidth }}>
-            {contentEverestBasecamp}
           </div>
           <div style={{ width: cardWidth }}>
             {contentLangatsoLake}
@@ -1319,35 +1507,59 @@ export const TibetInfo: React.FC<{
           </div>
         </Slick>
         {groupTitle('Мандала Кайласа')}
-        <div className='flex flex-wrap gap-4'>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentKailasKora}
-            </div>
+        <Slick step={cardWidth}>
+          <div style={{ width: cardWidth }}>
+            {contentKailasKora}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentKailasInnerKora}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentKailasInnerKora}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentNandiKora}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentNandiKora}
           </div>
-          <div className={`${defaultSize} ${mdSize}`}>
-            <div>
-              {contentBuddhaThrone}
-            </div>
+          <div style={{ width: cardWidth }}>
+            {contentBuddhaThrone}
           </div>
-        </div>
-        {/* <div className='py-2'>
-          <div>
-            <div>
-              4. Парка Зада
-            </div>
+        </Slick>
+        {groupTitle('Восточный Тибет')}
+        <Slick step={cardWidth}>
+          <div style={{ width: cardWidth }}>
+            {contentTsedang}
           </div>
-        </div> */}
+          <div style={{ width: cardWidth }}>
+            {contentLamaling}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentBuchu}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentBatsumTso}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentSamye}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentDorjeDrak}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentMidroling}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentYumbulakhang}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentChongye}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentBonri}
+          </div>
+          <div style={{ width: cardWidth }}>
+            {contentKading}
+          </div>
+        </Slick>
+        {/* Над Сакьей фото Шашипангма
+        Озеро Ланга Цо заменить фото
+        Ганг гю цо */}
       </div>
     </div >
   )
@@ -1369,20 +1581,15 @@ export const Navbar = () => {
         <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 w-full">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
             <Image src="opentibet-logo-hb.svg" width={150} height={80} alt='OpenTibet Logo' className="h-8 mr-3" />
-            {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
-            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span> */}
           </a>
           <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+              <path stroke="currentColor" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
-              {/* <li>
-              <a href="#" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-            </li> */}
               <li>
                 <a href={`#${LINK_TOURS}`}
                   onClick={(event) => {

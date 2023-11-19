@@ -33,9 +33,7 @@ export default function Home() {
           <Arrow />
         </div>
       </div>
-
       <div className='max-w-4xl'>
-
         <div className='flex justify-center p-4'>
           <Image src="opentibet-logo-v.svg" width={200} height={100} alt='Open Tibet Logo' />
           {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
@@ -48,7 +46,7 @@ export default function Home() {
             <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
               <li className="flex items-center my-2">
                 <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
-                  <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-16 h-[68px] rounded-sm cursor-pointer" />
+                  <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-[68px] rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
                   <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
@@ -74,36 +72,19 @@ export default function Home() {
                 {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
               </li>
             </ul>
-
-            <div className='flex pt-4 justify-center'>
-              <div className='flex max-w-xl'>
-
-              </div>
-            </div>
           </div>
-
           <div className='flex justify-center'>
             <div className='max-w-3xl'>
               <div className='flex'>
-                {/* <div className='flex max-w-[60%] flex-col'>
-                  <Image src="https://storage.googleapis.com/opentibet/common-1.jpg" alt="" width={375} height={250} quality={75} className='w-full rounded-sm' />
-                </div> */}
-                {/* <div className='flex max-w-[40%] flex-col'>
-                  <Image src="https://storage.googleapis.com/opentibet/common-3.jpg" alt="" width={375} height={250} quality={75} className='w-full ml-1 rounded-sm' />
-                </div> */}
                 <div className='flex max-w-[50%] flex-col'>
                   <Image src="https://storage.googleapis.com/opentibet/common-2.jpg" alt="" width={375} height={250} quality={75} className='h-full w-full rounded-sm' style={{ objectFit: 'cover' }} />
                 </div>
                 <div className='flex max-w-[50%] flex-col'>
-                  <Image src="https://storage.googleapis.com/opentibet/common-5.jpg" alt="" width={375} height={250} quality={75} className='h-full w-full ml-1 rounded-sm' style={{ objectFit: 'cover' }} />
+                  <Image src="https://storage.googleapis.com/opentibet/alexey-company.jpg" alt="" width={375} height={250} quality={75} className='h-full w-full ml-1 rounded-sm' style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>
           </div>
-
-          {/* <div className='grid grid-cols-2 gap-2'>
-            <img src="https://storage.googleapis.com/opentibet/common-1.jpg" />
-          </div> */}
           <div className='p-6'>
             <p className='pt-10 text-lg leading-7'>
               Ключевая цель проекта — сделать Тибет <b>доступнее</b>. Мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать паломникам:
