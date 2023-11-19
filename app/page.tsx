@@ -174,12 +174,13 @@ export default function Home() {
           </div>
 
           <div className='pt-10 flex justify-center'>
-            <div className="grid grid-cols-2 gap-1 max-w-xl">
+            <div className="grid grid-cols-3 gap-1 max-w-2xl">
               {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
-              <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-3 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alex-1.jpg" alt="" width={750} height={500} quality={90} className="w-full col-start-1 col-end-4  rounded-sm cursor-pointer" />
               <Image src="https://storage.googleapis.com/opentibet/alex-6.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" />
-              <Image src="https://storage.googleapis.com/opentibet/alex-2.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alexey-7.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-4 row-start-2 row-end-4 rounded-sm cursor-pointer" />
               <Image src="https://storage.googleapis.com/opentibet/alex-4.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-2 col-end-3 rounded-sm cursor-pointer" />
+              <Image src="https://storage.googleapis.com/opentibet/alex-2.jpg" alt="" width={375} height={250} quality={75} className="w-full col-start-3 col-end-3 row-start-4 row-end-5 rounded-sm cursor-pointer" />
             </div>
           </div>
           <div className='text-center p-4'>
