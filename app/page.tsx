@@ -474,7 +474,8 @@ const WhyGoTibetWithUs = () => {
       </div>
       <WhyGoTibetWithUsStatement
         title='Глубокое знание Тибета'
-        image='https://storage.googleapis.com/opentibet/background-1.jpg'
+        image='https://storage.googleapis.com/opentibet/alexey-8.jpg'
+        imgSize={400}
       >
         Мы имеем богатый опыт и глубокое понимание Тибета. Наши гиды — местные эксперты, которые помогут вам раскрыть все тайны и красоту этой уникальной земли
       </WhyGoTibetWithUsStatement>
@@ -507,7 +508,8 @@ const WhyGoTibetWithUsStatement: React.FC<{
   title: string;
   children: React.ReactNode;
   image?: string;
-}> = ({ title, children, image }) => {
+  imgSize?: number;
+}> = ({ title, children, image, imgSize }) => {
   return (
     <div className=''>
       <div className='py-4'>
@@ -523,7 +525,7 @@ const WhyGoTibetWithUsStatement: React.FC<{
         {image && (
           <div className='py-5 md:py-10 flex justify-center'>
             <div className='max-w-xl'>
-              <img src={image} className='rounded-sm' />
+              <img src={image} className='rounded-sm' style={imgSize ? { maxWidth: imgSize } : undefined} />
             </div>
           </div>
         )}
@@ -536,7 +538,7 @@ const Copyright: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
     <div className="text-center text-gray-500 text-sm py-4">
-      &copy; {currentYear} All rights reserved.
+      &copy; {currentYear} Все права защищены.
     </div>
   );
 };
