@@ -34,22 +34,24 @@ export default function Home() {
         </div>
       </div>
       <div className='max-w-4xl'>
-        <div className='flex justify-center p-4'>
+        <div className='flex justify-center p-4 mt-7'>
           <Image src="opentibet-logo-v.svg" width={200} height={100} alt='Open Tibet Logo' />
           {/* <img src="https://storage.googleapis.com/opentibet/logo-1.jpg" width={200} /> */}
         </div>
         <div className=''>
           <div className=''>
 
-            <h2 className="text-2xl font-semibold text-center w-12/12 mx-auto">OPEN TIBET&nbsp;— это совместный туристический проект</h2>
+            <h2 className="text-2xl font-semibold text-center w-9/12 mx-auto mb-8 mt-2">OPEN TIBET&nbsp;— главный проект развития туризма в Тибете</h2>
 
-            <ul className="mt-5 mx-auto w-fit mb-4 flex-col flex justify-center">
+            <h3 className="text-xl font-semibold text-center w-12/12 mx-auto mb-1">Организаторы</h3>
+
+            <ul className="mx-auto w-fit mb-4 flex-col flex justify-center">
               <li className="flex items-center my-2">
                 <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
                   <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-[68px] rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
-                  <span className='font-semibold'>Тибетского туристического офиса</span><br />{' '}<span>правительство Тибета</span>
+                  <span className='font-semibold'>Тибетский туристический офис</span><br />{' '}<span>правительство Тибета</span>
                 </div>
               </li>
               <li className="flex items-center my-2">
@@ -58,7 +60,7 @@ export default function Home() {
                 </div>
                 <div className="text-lg leading-5">
                   <span className='font-semibold'>
-                    Kailash-explorer agency
+                    Турагентство Kailash Explorer
                   </span><br /> Россия, Санкт Петербург
                 </div>
               </li>
@@ -67,7 +69,7 @@ export default function Home() {
                   <Image src="/tashidelek.png" alt="Tashi Delek Travel Agency" height={100} width={100} className="object-contain w-28 h-16 brightness-75 -hue-rotate-15 rounded-sm cursor-pointer" />
                 </div>
                 <div className="text-lg leading-5">
-                  <span className='font-semibold'>Tashi Delek Travel Agency</span><br /> Тибет, Лхаса
+                  <span className='font-semibold'>Турагентство Tashi Delek</span><br /> Тибет, Лхаса
                 </div>
                 {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
               </li>
@@ -87,7 +89,7 @@ export default function Home() {
           </div>
           <div className='p-6'>
             <p className='pt-10 text-lg leading-7'>
-              Ключевая цель проекта — сделать Тибет <b>доступнее</b>. Мы заключили эксклюзивные контракты и смогли добиться наилучших предложений чтобы гарантировать паломникам:
+            Миссия нашего проекта — сделать Тибет доступнее для вас.  Мы много трудились над каждым элементом путешествий и получили всестороннюю поддержку правительства Тибета, чтобы гарантировать паломникам:
             </p>
             <ul className='py-4 text-lg max-w-md w-fit mx-auto space-y-2 list-inside'>
               <li className="flex items-center">
@@ -104,16 +106,44 @@ export default function Home() {
               </li>
               <li className="flex items-center">
                 <IconMark />
-                По самым низким ценам
+                Самые доступные цены
               </li>
             </ul>
           </div>
 
         </div>
       </div>
+
+      <Image src='https://storage.googleapis.com/opentibet/alexey-8.jpg' width={960} height={1280} alt='Tibet'
+             className='max-w-xl rounded-sm mt-3 mb-10 max-h-[700px] object-cover'/>
+
       <div className='max-w-4xl mt-4 w-full'>
         <WhyGoTibetWithUs />
       </div>
+
+      <div className='w-full text-white relative mt-8' style={{ 
+          backgroundImage: 'url("https://storage.googleapis.com/opentibet/background-kailas.jpg")', 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
+        <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
+        <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100'>
+          <div className='max-w-5xl w-full'>
+            <div className='text-3xl font-semibold text-center w-full px-4 mt-5 mb-5'>
+              Тибет меняет жизнь. Проверьте и вы
+            </div>
+            <div className='text-xl font-light w-9/12 mx-auto text-center leading-7'>
+              Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей открывали для себя эту священную землю.<br/><br/> 
+            </div>
+            <div className='flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12'>
+              <ActionButton/>
+              <h2 className="text-2xl font-light mt-3 leading-8">от 2000 $ за 13 дней</h2> 
+            </div>
+          </div>
+        </div>
+      </div>  
+
       <div className='w-full bg-gray-800 text-white pb-12'>
         <div className='max-w-4xl mt-6 mx-auto'>
           <div className='w-full pt-8'>
@@ -131,7 +161,7 @@ export default function Home() {
               <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-600 hover:text-blue-700 font-semibold' target='_blank'>Алексеем Перчуковым</a>
             </div> */}
               <p className='py-4 pb-0 leading-7 hyphens-auto'>
-                Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. Пример программы можно посмотреть в фильме «Тибет, место которое меняет жизнь», снятом в одном из таких туров:
+                Мы организуем регулярные ежемесячные туры в Тибет по уникальной программе. В фильме показана одна из наших программ. Оцените красоты местных монастырей и природы, силу и энергию тибетской земли:
               </p>
             </div>
             <div className='w-full h-[315px] mt-5 mb-2 md:h-96'>
@@ -168,7 +198,7 @@ export default function Home() {
               Автор статьи <a className='text-yellow-600' href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/">«Спиральная Кора»</a>, исследователь , который поднялся на все плечи Кайласа и посетил все священные долины Мандалы Кайласа.
             </div>
             <div className='flex justify-center'>
-              <div className='flex max-w-lg gap-10'>
+              <div className='flex max-w-lg gap-5 mb-4 mt-3'>
                 <Image src="/putevoditel-india.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
                 <Image src="/putevoditel-tibet.jpg" alt="" width={120} height={90} quality={90} className="w-full cursor-pointer" />
               </div>
@@ -418,15 +448,15 @@ export default function Home() {
       </div> */}
 
       <div className='max-w-[30vh]'>
-        <div className='flex pt-8'>
+        <div className='flex pt-8 opacity-80'>
           <div className="w-[33%] flex items-center justify-center">
-            <img src="https://storage.googleapis.com/opentibet/china-tibet-tour.jpg" className="w-[80%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+            <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-[68px] saturate-0 contrast-125" />
           </div>
           <div className="w-[33%] flex items-center justify-center">
-            <img src="https://storage.googleapis.com/opentibet/tashidelek-logo.jpg" className="w-[80%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+            <Image src="/kailash.png" alt="Kailash Explorer" height={309} width={551} className="object-contain w-28 h-16 saturate-0 contrast-150" />
           </div>
           <div className="w-[33%] flex items-center justify-center">
-            <img src="https://storage.googleapis.com/opentibet/kailash-explorer-logo.jpg" className="w-[90%] rounded-sm cursor-pointer" style={{ filter: 'grayscale(100%) opacity(60%)' }} />
+            <Image src="/tashidelek.png" alt="Tashi Delek Travel Agency" height={100} width={100} className="object-contain w-28 h-16 brightness-0 saturate-0 rounded-sm" />
           </div>
         </div>
       </div>
@@ -476,34 +506,27 @@ const WhyGoTibetWithUs = () => {
       <div className='text-black font-semibold text-3xl py-2 px-4'>
         Почему стоит ехать в Тибет с нами?
       </div>
+
       <WhyGoTibetWithUsStatement
         title='Глубокое знание Тибета'
-        image='https://storage.googleapis.com/opentibet/alexey-8.jpg'
-        imgSize={400}
       >
-        Мы имеем богатый опыт и глубокое понимание Тибета. Наши гиды — местные эксперты, которые помогут вам раскрыть все тайны и красоту этой уникальной земли
+        Приезжая в место исключительной силы, хочется узнать как можно больше обо всех его традициях, истоках. Мы действительно понимаем Тибет. Наши гиды — местные эксперты с огромным опытом, и они  помогут вам раскрыть все тайны и красоту этой уникальной земли.
       </WhyGoTibetWithUsStatement>
       <WhyGoTibetWithUsStatement
         title='Эксклюзивные маршруты'
       >
-        Мы предлагаем эксклюзивные маршруты, которые не доступны большинству туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.
+        Мы предлагаем эксклюзивные маршруты, которые недоступны большинству туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.
       </WhyGoTibetWithUsStatement>
       <WhyGoTibetWithUsStatement
-        title='Персонализированный опыт'
-        image='https://storage.googleapis.com/opentibet/background-kailas.jpg'
+        title='Индивидуальный подход'
       >
         Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который соответствует вашим интересам и пожеланиям, обеспечивая максимальный комфорт и удовлетворение.
       </WhyGoTibetWithUsStatement>
       <WhyGoTibetWithUsStatement
         title='Высокое качество услуг'
       >
-        Мы гарантируем высокое качество услуг, начиная с разработки маршрута и заканчивая качеством проживания и питания. Ваше удовольствие и безопасность для нас приоритет
+        Мы позаботимся обо всем, чтобы вы получили незабываемые впечатления, не переплачивая. Авторские маршруты, достойные отели, заботливые и компетентные гиды, хороший сервис. Ваше удовольствие и безопасность &emdash; наша главная задача.
       </WhyGoTibetWithUsStatement>
-
-      <div className='flex w-full items-baseline flex-wrap justify-around pt-8 pb-4'>
-        <h2 className="text-blue-500 text-3xl font-light mb-3 leading-8">от 2000 $ за 13 дней</h2>
-        <ActionButton />
-      </div>
     </>
   )
 }
