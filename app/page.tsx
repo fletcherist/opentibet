@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, IconArrowClose, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm, TibetInfo, Navbar } from '../components/components'
+import { Arrow, PhotoGallery, FAQ, ActionButton, IconArrowDown, IconArrowClose, TimetableButton, BackgroundSlider, ButtonWithContent, Header, ApplyForm, Navbar } from '../components/components'
+import { TibetInfo } from '@/components/TibetInfo';
 import { LINK_CONTACTS, LINK_PHOTO_GALLERY, LINK_TOURS } from '@/utils/constants';
 
 export default function Home() {
@@ -89,7 +90,7 @@ export default function Home() {
           </div>
           <div className='p-6'>
             <p className='pt-10 text-lg leading-7'>
-            Миссия нашего проекта — сделать Тибет доступнее для вас.  Мы много трудились над каждым элементом путешествий и получили всестороннюю поддержку правительства Тибета, чтобы гарантировать паломникам:
+              Миссия нашего проекта — сделать Тибет доступнее для вас.  Мы много трудились над каждым элементом путешествий и получили всестороннюю поддержку правительства Тибета, чтобы гарантировать паломникам:
             </p>
             <ul className='py-4 text-lg max-w-md w-fit mx-auto space-y-2 list-inside'>
               <li className="flex items-center">
@@ -115,18 +116,18 @@ export default function Home() {
       </div>
 
       <Image src='https://storage.googleapis.com/opentibet/alexey-8.jpg' width={960} height={1280} alt='Tibet'
-             className='max-w-xl rounded-sm mt-3 mb-10 max-h-[700px] object-cover'/>
+        className='max-w-xl rounded-sm mt-3 mb-10 max-h-[700px] object-cover' />
 
       <div className='max-w-4xl mt-4 w-full'>
         <WhyGoTibetWithUs />
       </div>
 
-      <div className='w-full text-white relative mt-8' style={{ 
-          backgroundImage: 'url("https://storage.googleapis.com/opentibet/background-kailas.jpg")', 
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}>
+      <div className='w-full text-white relative mt-8' style={{
+        backgroundImage: 'url("https://storage.googleapis.com/opentibet/background-kailas.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))' }} />
         <div className='h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100'>
           <div className='max-w-5xl w-full'>
@@ -134,15 +135,15 @@ export default function Home() {
               Тибет меняет жизнь. Проверьте и вы
             </div>
             <div className='text-xl font-light w-9/12 mx-auto text-center leading-7'>
-              Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей открывали для себя эту священную землю.<br/><br/> 
+              Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей открывали для себя эту священную землю.<br /><br />
             </div>
             <div className='flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12'>
-              <ActionButton/>
-              <h2 className="text-2xl font-light mt-3 leading-8">от 2000 $ за 13 дней</h2> 
+              <ActionButton />
+              <h2 className="text-2xl font-light mt-3 leading-8">от 2000 $ за 13 дней</h2>
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
       <div className='w-full bg-gray-800 text-white pb-12'>
         <div className='max-w-4xl mt-6 mx-auto'>
