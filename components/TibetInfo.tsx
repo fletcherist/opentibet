@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Slick } from "./Slick";
+import React from 'react'
 
 import {
     Accordion,
@@ -8,6 +9,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+
+const cardWidth = 300;
 
 export const TibetInfo: React.FC<{}> = ({ }) => {
     const groupTitle = (text: string) => {
@@ -21,7 +24,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
     const defaultSize = `max-w-[48%]`;
     const mdSize = `md:max-w-[23%]`;
 
-    const cardWidth = 300;
+
     return (
         <div>
             <div className='p-4'>
@@ -30,27 +33,13 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Центральный Тибет')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentLhasa />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentPotala />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentJokang />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentDrakYerpa />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentGanden />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentDrepung />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentSera />
-                                </div>
+                                <ContentLhasa />
+                                <ContentPotala />
+                                <ContentJokang />
+                                <ContentDrakYerpa />
+                                <ContentGanden />
+                                <ContentDrepung />
+                                <ContentSera />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -58,18 +47,10 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Северный Тибет')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTsurphu />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentNamTso />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentReting />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTaklung />
-                                </div>
+                                <ContentTsurphu />
+                                <ContentNamTso />
+                                <ContentReting />
+                                <ContentTaklung />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -77,27 +58,15 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Округ Шигадзе')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTashilhunpo />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentGyandze />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentSakya />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentEverestBasecamp />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentNgor />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentShalu />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentYamdrok />
-                                </div>
+                                <ContentTashilhunpo />
+                                <ContentGyandze />
+                                <ContentSakya />
+                                <ContentEverestBasecamp />
+                                <ContentNgor />
+                                <ContentNartang />
+                                <ContentShalu />
+                                <ContentYamdrok />
+                                <ContentPelkhor />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -105,18 +74,12 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Гирьонг')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentShashibangma />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentMilarepaBirthplace />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentLangatsoLake />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentPelkuTso />
-                                </div>
+                                <ContentGirjong />
+                                <ContentShashibangma />
+                                <ContentMilarepaBirthplace />
+                                <ContentLangatsoLake />
+                                <ContentPelkuTso />
+                                <ContentChakraDaktso />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -124,24 +87,23 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Королевство Гуге')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentDungar />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTsaparang />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentPiyang />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentManosarovarKora />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentKorchag />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentPurang />
-                                </div>
+                                <ContentDungar />
+                                <ContentTsaparang />
+                                <ContentPiyang />
+                                <ContentTholing />
+                                <ContentTrithapuri />
+                                <ContentZanda />
+                                <ContentGaruda />
+                                <ContentGurugjam />
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-9">
+                        <AccordionTrigger>{groupTitle('Пуранг')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <ContentPurang />
+                                <ContentKorchag />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -149,58 +111,10 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Мандала Кайласа')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentKailasKora />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentKailasInnerKora />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentNandiKora />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentBuddhaThrone />
-                                </div>
-                            </Slick>
-                        </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="item-7">
-                        <AccordionTrigger>{groupTitle('Восточный Тибет')}</AccordionTrigger>
-                        <AccordionContent>
-                            <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTsedang />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentLamaling />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentBuchu />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentBatsumTso />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentSamye />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentDorjeDrak />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentMidroling />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentYumbulakhang />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentChongye />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentKading />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentGangutso />
-                                </div>
+                                <ContentKailasKora />
+                                <ContentKailasInnerKora />
+                                <ContentNandiKora />
+                                <ContentBuddhaThrone />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -208,36 +122,34 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Маносаровар Кора')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentBonriTemple />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentGosul />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentLangpona />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentManosarovar />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentNjego />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentRakshastal />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentSeralung />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentTrugo />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentCherkip />
-                                </div>
-                                <div style={{ width: cardWidth }}>
-                                    <ContentChiu />
-                                </div>
+                                <ContentBonriTemple />
+                                <ContentGosul />
+                                <ContentLangpona />
+                                <ContentManosarovar />
+                                <ContentNjego />
+                                <ContentRakshastal />
+                                <ContentSeralung />
+                                <ContentTrugo />
+                                <ContentCherkip />
+                                <ContentChiu />
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-7">
+                        <AccordionTrigger>{groupTitle('Восточный Тибет')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <ContentTsedang />
+                                <ContentLamaling />
+                                <ContentBuchu />
+                                <ContentBatsumTso />
+                                <ContentSamye />
+                                <ContentDorjeDrak />
+                                <ContentMidroling />
+                                <ContentYumbulakhang />
+                                <ContentChongye />
+                                <ContentKading />
+                                <ContentGangutso />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -255,36 +167,39 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
     const defaultHeight = 100
     const [isExpanded, setIsExpanded] = useState(false)
     return (
-        <div className='mb-4 relative bg-white text-black'>
-            <img
-                src={imageSrc}
-                width={300}
-                height={200}
-                className='object-cover h-[190px]' />
-            <div className='text-sm leading-6 hyphens-auto' style={isExpanded ? {
-                height: 'auto'
-            } :
-                { height: `${defaultHeight}px`, overflow: 'hidden' }}>
-                {children}
-            </div>
-            <div className='h-10' />
-            <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}
-            >
-                <div className='flex items-end h-full'>
-                    <div className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2' onClick={() => {
-                        setIsExpanded(!isExpanded)
-                    }}>
-                        <div className='p-1 font-bold text-sm'>
-                            {isExpanded ? 'свернуть' : 'развернуть'}
-                        </div>
-                        <div style={isExpanded ? {
-                            transform: 'rotate(180deg)'
-                        } : {}}>
+        <div style={{ width: cardWidth }}>
+            <div className='mb-4 relative bg-white text-black'>
+                <img
+                    src={imageSrc}
+                    width={300}
+                    height={200}
+                    className='object-cover h-[190px]' />
+                <div className='text-sm leading-6 hyphens-auto' style={isExpanded ? {
+                    height: 'auto'
+                } :
+                    { height: `${defaultHeight}px`, overflow: 'hidden' }}>
+                    {children}
+                </div>
+                <div className='h-10' />
+                <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}
+                >
+                    <div className='flex items-end h-full'>
+                        <div className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2' onClick={() => {
+                            setIsExpanded(!isExpanded)
+                        }}>
+                            <div className='p-1 font-bold text-sm'>
+                                {isExpanded ? 'свернуть' : 'развернуть'}
+                            </div>
+                            <div style={isExpanded ? {
+                                transform: 'rotate(180deg)'
+                            } : {}}>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     )
 }
 
@@ -310,7 +225,7 @@ export const TibetInfoCardContent: React.FC<{
     )
 }
 
-export const ContentLhasa = () => (
+export const ContentLhasa = React.memo(() => (
     <TibetInfoCard imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/fa/a9/photo0jpg.jpg?w=2400&h=-1&s=1">
         <TibetInfoCardTitle>Лхаса</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -323,7 +238,8 @@ export const ContentLhasa = () => (
             Лхаса — это захватывающий город, который предлагает посетителям возможность познакомиться с богатой культурой и историей Тибета.
         </TibetInfoCardContent>
     </TibetInfoCard>
-)
+))
+
 export const ContentPotala = () => (
     <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Potala.jpg/548px-Potala.jpg">
         <TibetInfoCardTitle>Дворец Потала</TibetInfoCardTitle>
@@ -592,58 +508,38 @@ const ContentShalu = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/shalu.jpg">
         <TibetInfoCardTitle>Монастырь Шалу</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Шалу — это буддийский монастырь, расположенный в 22 км к югу от Шигадзе в Тибете. Он был основан в 1040 году Четсуном Шерабом Джунгнаем, и на протяжении веков был известен как центр научных исследований и экстрасенсорного обучения. Его настенные росписи считаются одними из самых древних и красивых в Тибете.
-            <br />
-            <br />
-            Монастырь Шалу является одним из старейших и наиболее важных монастырей в Тибете. Он является важным центром обучения буддизму и является домом для многих ценных реликвий, в том числе статуй Будды, танка и рукописей.
-            <br />
-            <br />
-            Монастырь был разрушен во время Культурной революции, но впоследствии был восстановлен. Сегодня монастырь является важным культурным и религиозным центром Тибета.
-            <br />
-            <br />
-            Вот несколько интересных фактов о монастыре Шалу:
-            <ul>
-                <li>
-                    Монастырь расположен на высоте 3800 метров над уровнем моря.
-                </li>
-                <li>
-                    В монастыре проживает около 200 монахов.
-                </li>
-                <li>
-                    Монастырь является местом проведения ежегодного праздника Шалу Цечу, одного из крупнейших буддийских праздников в Тибете.
-                </li>
-            </ul>
-            Монастырь Шалу является важным символом тибетского буддизма и привлекает посетителей со всего мира.
+            Монастырь Шалу (Shalu)
+            Обитель основал в 1040 г. известный монах и ученый Чецун Шераб Джунгней. Легенда гласит: Джунгней долго не мог найти место для будущего монастыря. Наконец его духовный наставник посоветовал ему пустить стрелу из лука, предварительно вверив ее мудрости Будды. Там, где упала стрела, и возвели главный храм. Входной билет стоит 60 юаней.
+            Расцвет монастыря школы Сакья приходится на период XIV-XVII вв. В XIV в. настоятелем здесь был Будон Ринчен Друб (1290–1364), выдающийся буддистский историк, ученый и йогин, составивший обширные комментарии к Трипи́таке – каноническим письменным текстам раннего буддизма и написавший до сих пор актуальный труд «История буддизма в Индии и Тибете». Так возникла традиция Бу(па), или Шалу, школы Сакья. Деятельность Будона Ринпоче привлекла в обитель множество ученых монахов со всего Тибета, и к 1360-м гг. здесь уже насчитывалось около 3000 насельников. В этом монастыре Будонг написал 26 филосовских трактатов, посвященных буддизму.
+            Монастырь славился далеко за пределами Тибета как центр обучения монахов паранормальным умениям «ходьбы в трансе». Особые духовные практики позволяли человеку без всяких усилий преодолевать пешком огромные расстояния, подниматься в воздух, ходить по воде, становиться невидимым, предсказывать будущее.
+            К XIX в. влияние Шалу ослабло, а центром обучения стал монастырь Самье.
+            О былом значении Шалу напоминают четыре его главные реликвии-сокровища. Это 700-летняя панель, сложенная из 108 блоков сандалового дерева с нанесенными на них сутрами. Если разрушить панель, собрать ее в том же порядке будет уже невозможно. Священным считается особый латунный сосуд с водой, завернутый в ткань красного цвета и запечатанный. Вода в нем святая и может исцелять от 108 болезней. Ее меняют раз в 12 лет. Чудом сохранилась оригинальная каменная «раковина» – камень естественного происхождения с большим углублением на поверхности, наполненным водой. Согласно легенде, эту «раковину» использовал для умывания основатель монастыря Чецун Шераб Джунгней. Уже в наше время при раскопках одного из самых первых зданий монастыря был обнаружен каменный диск с выгравированными на нем изображениями четырех чортенов и мантрой «Ом мани падне хум». В Шалу также хранится библиотека древних буддистских текстов.
+            В главном зале монастыря стоит обратить внимание на 4 боковых храма. Храм Кангюр (Kagyur), храм Авалокитешвары (Budha temple) с его древней статуей из камня, храм Хаягривы и храм трех дверей. Очень интересные храмы на втором этаже монастыря – храм Дайкини (Yogini) и Будды Шакьямуни с 16 архатами.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
 
 const ContentNgor = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/ngor.jpg">
-        <TibetInfoCardTitle>Деревня Нгор</TibetInfoCardTitle>
+        <TibetInfoCardTitle>Монастырь Нгор</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Нгор — это деревня в Тибетском автономном районе Китая, расположенная на высоте 4410 метров над уровнем моря. Она находится в долине реки Янгце, в 100 км к югу от города Шигадзе.
-            <br />
-            <br />
-            Деревня Нгор известна своими буддийскими монастырями, которые являются одними из самых важных в Тибете. Среди них — монастырь Нгор Кадам, основанный в 11 веке, и монастырь Нгор Сачен, основанный в 12 веке.
-            <br />
-            <br />
-            Монастырь Нгор Кадам является одним из крупнейших монастырей школы кадам тибетского буддизма. Он является домом для многих ценных реликвий, в том числе статуй Будды, танка и рукописей. Монастырь Нгор Кадам является важным центром обучения буддизму и привлекает паломников со всего мира.
-            <br />
-            <br />
-            Вот несколько интересных фактов о деревне Нгор:
-            <ul>
-                <li>
-                    Деревня является домом для более чем 10 000 человек.
-                </li>
-                <li>
-                    Деревня является важным центром торговли и коммерции.
-                </li>
-                <li>
-                    Деревня является популярным туристическим направлением.
-                </li>
-            </ul>
-            Деревня Нгор — это прекрасное место для посещения, если вы хотите познакомиться с Тибетом и его культурой.
+            Монастырь Нгор (Ngor)
+            Монастырь был основан в 1429 г. известным монахом школы Сакья Нгор Ченом Кунгой Зангпой. Постепенно в монастыре оформилась особая традиция Нгор(па) школы Сакья. В период расцвета в обители было 5 резиденций великих лам, 19 жилых помещений, два больших зала для песнопений. Всего здесь проживало около 700 монахов.
+            В XV веке здесь жил известный тибетский переводчик Таг Тцанг.
+            Комплекс разрушили во время Культурной революции. Процесс восстановления начался давно и активно продолжается: заново воздвигнут храм, залы собраний, тронный зал, часовни, резиденция лам. Фасад здания зала собраний украшен традиционным для школы Сакья декором – вертикальные красные, белые и синие полосы, символизирующие трех бодхисаттв: Манджушри, Авалокитешвару и Ваджрапани.
+            Обратите внимание на храм Тары справа от зала собраний. Здесь находятся очень старые статуи, возраст которых насчитывает 1600 лет: Тары, Парамиты, Ратнасабхаваы и Будды Шакьямуни.  Кора вокруг монастыря занимает менее часа. Сейчас Нгор– это крупнейший монастырь в окрестностях Шигадзе. На его осмотр нужно минимум 2 часа. Входной билет стоит 30 юаней.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentNartang = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/nratang.jpg">
+        <TibetInfoCardTitle>Монастырь Нартанг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Нартанг (Nartang)
+            Нартанг (700 м) расположен в 14 км от Шигадзе в одноименной деревне. Он был основан в 1153 году ламой Тумтоном Лодро Дракпой и долгое время был центром традиции Кадам, позже оформившейся в школу Гелуг. Когда-то Нартанг был центром книгопечатания многотомных буддистских трактатов. Издание тибетских книг началось в XIII веке. Для этого вручную были вырезаны из дерева 125 тыс. блоков. Сейчас от прошлых времен сохранились лишь вырезанные в камне и раскрашенные рисунки буддистских святых. Храм, зал песнопений и жилые помещения были отстроены заново.
+            В главном храме, в центральной части, установлена статуя Будды Шакьямуни. Слева находится храм Манджушри, справа – храм Будды Маятрии.
+            Справа от главного храма можно осмотреть музей книгопечатания и экспозицию, которая включает в себя фотографии из жизни десятого Панчен-ламы. Входной билет стоит 25 юаней.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -678,8 +574,19 @@ const ContentYamdrok = () => (
     </TibetInfoCard>
 )
 
+const ContentPelkhor = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/pelkhor.jpg">
+        <TibetInfoCardTitle>Монастырь Палчо</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Палчо (Пелкхор Чод; Palcho, Pelkhor Chod) ранее принадлежал школе Сакья, сейчас – школе Гелуг. Главные здания были построены в традиционном для Тибета эклектичном стиле в начале XV в. местным правителем Рабтеном Кунзангом Пхакой, почитателем Кедруба Же (1385–1438), главного ученика Цонкапы, позже признанного первым Панчен-ламой. На протяжении столетий Палчо являлся важным образовательным центром школ Сакья и Гелуг: в XIX в. здесь насчитывалось около 20 колледжей (сейчас только два).
+            Главный храм (цуклакханг) – трехэтажный, с хорошо сохранившимися фресками XV в. Своды большого зала собраний поддерживают 48 колонн. На стенах – многочисленные старинные тханки на шелковых тканях. В глубине зала – статуя Будды Шакьямуни высотой 8 м, на создание которой, по преданию, ушло 14 тонн бронзы. Входной билет – 60 юаней.
+            Своеобразный символ Гьяндзе, и, пожалуй, всего Тибета – Чортен Кумбум (Gyantse Kumbum) - великолепный образец старинной буддистской священной архитектуры. Находится на территории монастыря Палчо рядом с цуклакхангом (уникальный случай для Тибета, обычно чортены располагаются вне стен монастырей). Это 9-этажное сооружение высотой 32 м построено в 1428 г. по канонам как священной геометрии («круг в квадрате») – первые пять этажей образуют многоступенчатую основу для круглого завершения, увенчанного куполом, – так и священной нумерологии – 76 часовен соединены между собой 108 проходами. Хорошо сохранились фрески XIV-XV вв., написанные непальскими мастерами.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
 const ContentEverestBasecamp = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/everest.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/everest-basecamp.jpg">
         <TibetInfoCardTitle>Базовый лагерь Эвереста</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Это отельный маршрут на целый день, который начинается от Нового Тингри.
@@ -699,33 +606,20 @@ const ContentEverestBasecamp = () => (
 
 const ContentSakya = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sakya.jpg">
-        <TibetInfoCardTitle>Сакья</TibetInfoCardTitle>
+        <TibetInfoCardTitle>Монастырь Сакья</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Базовый лагерь Эвереста в Тибете, также известный как Базовый лагерь Эвереста на Северном склоне, расположен на высоте 5150 метров над уровнем моря. Он находится в долине реки Нгарцо, примерно в 60 км к северо-востоку от города Шигадзе.
-            <br />
-            <br />
-            Базовый лагерь Эвереста в Тибете является отправной точкой для альпинистов, которые планируют восхождение на Эверест с северного склона. Он также является популярным туристическим направлением.
-            <br />
-            <br />
-            В базовом лагере Эвереста в Тибете есть множество палаток, кафе, магазинов и других объектов инфраструктуры, необходимых альпинистам и туристам. Здесь также есть небольшой буддийский храм, посвященный богине Авалокитешваре.
-            <br />
-            <br />
-            Добраться до базового лагеря Эвереста в Тибете можно на автомобиле или автобусе из города Шигадзе. Путешествие занимает около 6-8 часов.
-            <br />
-            <br />
-            Вот несколько интересных фактов о базовом лагере Эвереста в Тибете:
-            <ul>
-                <li>
-                    Базовый лагерь был построен в 1956 году китайскими альпинистами.
-                </li>
-                <li>
-                    Базовый лагерь является одним из самых высокогорных базовых лагерей в мире.
-                </li>
-                <li>
-                    В базовом лагере Эвереста в Тибете ежегодно бывает около 10 000 альпинистов и туристов.
-                </li>
-            </ul>
-            Базовый лагерь Эвереста в Тибете — это впечатляющее место, которое предлагает посетителям возможность познакомиться с одной из самых высоких и сложных гор в мире.
+            Монастырь Сакья
+            Монастырь расположен в одноименном городе и является его главной достопримечательностью. Комплекс зданий состоит из двух частей и расположен по обеим сторонам реки Трум-чу на высоте 4300 м. На северном берегу на склоне холма находятся более древние постройки (XI в.), разрушенные в годы Культурной революции и сейчас активно восстанавливаемые. Когда-то в 108 зданиях свыше трех тысяч монахов изучали тантрические практики. Монастырь открыт 9.00–18.00, входной билет стоит 50 юаней.
+            На южном берегу реки за крепкими толстыми стенами с бастионами и сторожевыми башнями находится массивное здание более позднего храма (XIII в.). Благодаря тесным связям школы Сакья с Монгольским государством в XIII-XIV вв. оно построено в стиле монгольской архитектуры Наибольшее внимание паломников и туристов привлекает огромный Ллакханг Ченмо – Зал песнопений с четырьмя рядами колонн высотой 16 м, по 10 колонн в каждом ряду. Некоторые из них сделаны из цельных стволов деревьев и считаются священными. В зале великолепная акустика. Паломники выстраиваются в очередь, чтобы услышать, как монах дует в священную белоснежную раковину – дар монастырю от монгольского хана Хубилая (XIII в.). У левой стены – ряд массивных позолоченных статуй Будд, многие из которых служат хранилищами праха прежних настоятелей монастыря. Здесь же огромное количество священных артефактов, собранных со всего Тибета. В монастыре сохранилась огромная библиотека старинных фолиантов, а в 2003 г. была обнаружена замурованная потайная комната с собранием древних свитков – всего 84 тыс. Так же за стеклом в библиотеке хранится книга мудрости, после прикосновения к которой можно узнать о законах вселенной.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentGirjong = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/girjong.jpg">
+        <TibetInfoCardTitle>Гирьонг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Гьиронг расположен в середине Гималаев на юго-западе от Шигадзе . Область граничит с Непалом, его общая площадь составляет 1200 квадратных километров. Протяженность границ –162 километра. Население области – около 25 тысч человек – распределено между 2 городами, 4 поселками и 42-мя деревнями. Из-за близости к Непалу регион часто подвергался нападениям со стороны этой страны. Гьиронг в переводе с тибетского означает «удобное и счастливое место». Уезд также называют «задним садом горы Эверест» и «последней страной тайн в Тибете». Связанная с названием легенда гласит, что, когда в конце VIII века Падмасамбхава прошел через эти земли, то, увидев прекрасные живописные пейзажи, эмоционально выдохнул слово «Гьиронг», выражая бесконечную похвалу и любовь. Долгое время Гирьонгом управляла династия Тубо, потом на смену пришла династия Гонг Тонг и, позже, Юань. В XVII веке Гьиронг являлся последним политическим оплотом школы Сакья. В средние века здесь находился центр книгопечатания тибетских книг. Область имела очень важное стратегическое значение, так как находилась на перекрестке торговых путей между Непалом и Индией
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -734,28 +628,29 @@ const ContentShashibangma = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sashipangma.jpg">
         <TibetInfoCardTitle>Шашипангма</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Шишабангма — это гора, расположенная в Тибете. Это самая высокая гора в мире, расположенная полностью в пределах одной страны. Высота горы составляет 8048 метров над уровнем моря.
-            <br />
-            <br />
-            Шишабангма считается священной горой в тибетском буддизме. Считается, что гора является домом для богини Мать Шиша. Паломники совершают паломничество к горе, чтобы получить духовное очищение и просветление.
-            <br />
-            <br />
-            Паломничество к Шишабангма может быть опасным и сложным. Гора расположена на высоте более 8000 метров, и погода может быть очень суровой. Паломникам необходимо быть хорошо подготовленными к условиям высокогорья.
-            <br />
-            <br />
-            Паломничество к Шишабангма обычно начинается в деревне Тагланг, расположенной у подножия горы. Паломники совершают восхождение на гору, останавливаясь на пути в небольших монастырях и лачугах.
-            <br />
-            <br />
-            Восхождение на Шишабангма занимает несколько дней, и паломники должны быть готовы к трудностям. Они должны быть готовы к высоте, холоду, ветру и другим опасностям.
+            Шишабангма — одна из высочайших вершин мира, занимающая четырнадцатое место среди восьмитысячников. Она имеет два пика: Главный — 8027 м  и Центральный — 8008 м.
+            Гора находится в центральном Тибете на территории Китая, в нескольких километрах от границы с Непалом. Впервые на нее взошла китайская экспедиция 2 мая 1964 года во главе с Сю Цзином, последней из всех 14 восьмитысячников.
+            В переводе с тибетского языка Шишабангма означает «суровый климат».На северном склоне Шишабангмы расположены долины и ледники длиной более 10 км. Повсюду разбросаны ледяные башни, которые на свету мерцают серебром. На вершине горы Шишапангма блестит снег, благодаря чему на солнце она кажется особенно впечатляющей. В 3000 метрах к востоку от главной вершины Шишабангмы расположен пик Моламенкинг, высота которого составляет 7703 метра над уровнем моря. Согласно местной легенде, Шишабангма была холодной богиней, а гора Моламенкинг являлась ее мужем. Другой холм с плоской вершиной, лежащий на севере, считался любовником богини. В решающей борьбе между двумя вершинами муж отрубил возлюбленной голову, а ему самому разрубили живот и выпустили кишки, которые впоследствии превратились в полосу ледника.
+            Название Шишабангма означает «мертвое мясо». Когда гора гневается, она насылает плохую погоду и неурожай, из-за которого домашний скот тибетцев умирает, и наступает голод.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
 
 const ContentPelkuTso = () => (
-    <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/10/Peiku-Tso-Lake-in-Tibet-1024x462.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/pelku-tso.jpg">
         <TibetInfoCardTitle>Озеро Пелку Цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Пелку Цо — это большое озеро в Тибете, расположенное на высоте 5200 метров над уровнем моря. Оно является популярным туристическим направлением и прекрасным местом для пеших прогулок, рыбалки и других видов активного отдыха.
+            Озеро Пеку-Цо - одно из четырех святых высокогорных озер Тибета. Оно расположено на высоте около 4590 метров на стыке графств Гьиронг и Ньялам префектуры Шигадзе, примерно в 250 километрах от округа Тингри. Пеку-Цо является крупнейшим озером в Шигадзе, его площадь составляет около 300 квадратных километров. На юге озера, примерно в 60 км, находится гора Шишабангма.
+            Когда великий Падмасабхава по приглашению короля Трисонга Децена направлялся в Тибет, его путь лежал через Гьиронг. В то время эту местность населяли бонские божества и демоны. Чтобы пройти на территорию Тибета, Гуру Ринпоче пришлось постоянно сражаться с ними. Они прикладывали все силы, чтобы буддизм не был возрожден в Тибете. Одной из самых могущественных демониц была Кангра Шаме. Падмасабхаве никак не удавалось ее убить. Чувствуя свою неминуемую смерть, она решила спрятаться на дне озера Пеку-Цо. Гуру Ринпоче пришел на берег озера и силами своих мантр заставил воду закипеть. Демоница не смогла долго скрываться в ней. Плоть отошла от костей, и ее скелет вылетел из озера. В итоге она поклялась служить Падмасабхаве и всем живым существам. Гуру Ринпоче принял ее предложение и превратил в Дакиню. Недалеко от озера есть гора Кангра Шаме, где демоница обитает и по сей день. А озеро считается священным, так как оно было благословлено Падмасабхавой.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentChakraDaktso = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chakra-damtso.jpg">
+        <TibetInfoCardTitle>Чакра Дакцо</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Высокогорный храм Чакра Дакцо (Chakra Dakzo) на месте пещер, где долгое время жил Миларепа. По одной из версий, это именно то самое место, откуда он ушелв высшие миры. Место очень энергетически сильное. Стоит обратить внимание на три пещеры, где Миларепа медитировал 3, 6 и 9 лет. Подъем к храму и пещерам на 200 метров занимает примерно 1.5 часа. Так что закладывайте на общую продолжительность экскурсии 4 часа.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -773,7 +668,7 @@ const ContentLangatsoLake = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/langtso.jpg">
         <TibetInfoCardTitle>Озеро Ланга Цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Озеро Ланга Цо — это большое озеро в Тибете, расположенное на высоте 4400 метров над уровнем моря. Оно является популярным туристическим направлением и прекрасным местом для пеших прогулок, рыбалки и других видов активного отдыха.
+            С 2022 года для посещения иностранцами открыто озеро Ланга-Цо (Langa Tso). Озеро расположено высоко в горах, в 15 км от Гьиронга. Дорога на джипе занимает 45 минут. Но она того стоит. Это священное для тибетцев озеро связано с Душой Кармапы. Еще одно название озера – «Исполняющее желания».
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -782,16 +677,76 @@ const ContentTsaparang = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsaparang.jpg">
         <TibetInfoCardTitle>Цапаранг</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Цапаранг — это разрушенная столица древнего царства Гуге, расположенная в долине реки Нгарцо, в провинции Нгари Западного Тибета. Город был основан в 14 веке и был важным торговым центром на Великом шёлковом пути. В 16 веке Цапаранг был разрушен в результате нападения войск Ладакха. С тех пор город лежит в руинах. Сегодня Цапаранг является популярным туристическим направлением. Город является напоминанием о богатой истории и культуре Тибета.
+            Цапаранг расположен в 18 км от Тхолинга (по улице Xiang Xiong Lu в направлении указателя Ancient Guge Kingdom). Фактически это дворцово-храмово-пещерный комплекс площадью более чем 700 м2 в огромной высокой скале высотой свыше 200 м. На протяжении столетий здесь было вырыто свыше 1000 пещер. Бо́льшая часть из них (со сводчатыми потолками) служила в качестве дворцовых и храмовых помещений. Всего ученые обнаружили 500 комнат, 60 крепостных бастионов и 30 буддистских храмов. Не все они открыты для туристов.
+            От входа в комплекс на вершину скалы ведет тропа со ступеньками. Поднимаясь наверх, туристы посещают три храма: маленький Дролма Лхакханг и большие Лхакханг Карпо («Белый»; Lhakhang Karpo) и Лхакханг Марпо («Красный»; Lhakhang Marpo). В каждом из них сохранились потрясающие росписи стен, датируемые XVI-XVII вв., с очевидным влиянием древней буддистской кашмирской традиции. До наших дней сохранилось очень мало образцов этого искусства, и тем ценнее фрески Цапаранга.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
+
+const ContentTholing = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tholing.jpg">
+        <TibetInfoCardTitle>Тхолинг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Древний город (Тхолинг, Занда (Zanda)) на берегу реки Сетледж находится на высоте 3600 м. Чуть западнее от него расположен Цапаранг (Tsaparang). Эти города являлись столицами средневекового царства Гуге.
+            Основной достопримечательностью Тхолинга является одноименный монастырь (конец Х в.) на берегу реки, некогда бывший самым крупным и влиятельным во всем западном Тибете. К сожалению, он сильно пострадал в годы Культурной революции. Из двух его главных храмов – Красного и Белого – хорошо сохранился только Красный, так как его использовали в качестве зернохранилища. Рядом с монастырем находится чортен, посвященный Еше О (X-XI вв.; Nampar Nang Lhakhang), великому правителю царства Гуге. В настоящее время монастырь почти восстановлен. Входной билет стоит 45 юаней.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentTrithapuri = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/trithapuri.jpg">
+        <TibetInfoCardTitle>Монастырь Тиртхапури</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Это священное место на высоте 4300 м считается границей между материальным миром и миром богов. Название образовано от слова «тиртха», что в переводе с санскрита означает «священное место, где есть пруд, озеро или река, воды которых считаются святыми». Во время посещения Тиртхи принято совершать омовение в священных водах. Тиртхапури тесно связано как с Падмасамбхавой, так и с Дордже Пхагмо – духовной супругой Чакрасамвары.
+            Кора вокруг Тиртхапури является очень важной для буддистов. Считается, что 13 Кор вокруг Тиртхапури равны одной Кайлас-Коре, поэтому посещение священной земли очень помогает синхронизации с энергиями Кайласа, а омовение в ее источниках способствует излечению от многих болезней.
+            Кора вокруг Тиртхапури начинается от похожего на шивалингам черного камня с отпечатком волчьей лапы. Дорога ведет на холм, у подножия которого расположен монастырь Тиртхапури (Tirthapuri). Слева амфитеатром расположены складки скальных пород белого цвета, их называют «1000 будд». Справа внизу видны напоминающие термитники коричневые сталактитообразные каменные образования («8 Падмасамбхав»).
+            Паломники подходят к заднему входу в монастырь. Здесь находится большая стена из мани – молитвенных камней. Огромный круг, сложенный из них, символизирует озеро Манасаровар. Возле молитвенных барабанов есть место, где можно узнать о своей карме. Из отверстия в земле паломники вытаскивают камешек или белого (символизирует хорошую карму), или черного (плохая карма) цвета.
+            Монастырь Тиртхапури (его еще называют Гуру Ринпоче) построен на месте пещеры, в которой медитировал Падмасамбхава.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+
+const ContentZanda = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/zanda.jpg">
+        <TibetInfoCardTitle>Национальный парк Занда</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Национальный парк Занда – это лунные пейзажи и каменный лес, которые образовались в результате подъема тибетского плато 3 млн лет назад. Извилистая дорога S565 длинной 110 км с многочисленными смотровыми площадками проходит через весь парк.
+            Этот серпантин, – один из красивейших в Тибете. Крутые горные перевалы сменяются зелеными долинами, вдали виднеется снежная шапка священной горы Камет (Kamet, 7756 м) или Нанди Деви (Nandi Devi), почитаемой тибетцами наравне с Кайласом (Kailash). Многие считают, что Камет – это и есть гора Гандхамандана (Gandhamandana, «опьяняющая благовониями»), упоминаемая в знаменитом индийском эпосе «Махабхарата».
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentGaruda = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/garuda.jpg">
+        <TibetInfoCardTitle>Долина Гаруды</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Долина Гаруды – одно из самых загадочных и мистических мест западного Тибета. С цивилизацией ее раньше соединял небольшой деревянный мост, украшенный разноцветными молитвенными флагами (лунг-та). Под ним висели головы яков, которые служили защитой для данного места. Теперь рядом с уже полуразрушенным старым мостом построили новый железный.
+            По обоим берегам Сетледжа в туфовых породах находятся термальные источники, обрамленные белыми кристаллами соли. Они напоминают мраморные ванны с горячей минеральной водой. Большинство ванн пустые – источники пересохли.
+            Серо-красные скалы поднимаются на головокружительную высоту. На вершине холма – руины древних построек, которые венчает дворец, похожий на неприступную крепость. Справа и слева от него – усеянные пещерами скалы белого цвета, поэтому складывается впечатление, что у дворца в центре огромные белые крылья. Неслучайно его назвали Серебряный дворец Гаруды.
+            Огромный серебряный амфитеатр с пещерным городом внутри венчает большая пирамида из молитвенных флагов (высота над уровнем моря 4400 м). Попасть к ней можно как с левой стороны, так и с правой, но первый вариант намного сложнее и связан с некоторым риском для жизни. Поэтому самое разумное – сделать своеобразную Кору вокруг Серебряного дворца в направлении против часовой стрелки: поднимаешься справа, а спускаешься слева.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentGurugjam = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gurugjam.jpg">
+        <TibetInfoCardTitle>Монастырь Гуругьям</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Древний бонский монастырь Гуругьям (Gurugam) со свастикой на фасаде. Его основал лама Кьюнгтрил Джигме Намкха Дордже (1897–1956), появившийся здесь в 1930 г. Монастырь стал очень важным местом для всех тибетских буддистов. В 1950 г. здесь насчитывалось около 60 монахов. В 2013 г. монастырь решили целиком перестроить: сначала разобрать до основания, а потом воссоздать. Сейчас восстановление завершено.
+            Одна из самых известных реликвий монастыря – карта страны Олмо, или «Карта Шамбалы». В центре изображена 9-этажная гора со свастиками и истоки четырех великих священных рек: изо рта Слона выходит Сетледж, из клюва Павлина – Карнали, изо рта Лошади – Брахмапутра, из пасти Льва – Инд. Авторы многих известных книг подтверждают в своих исследованиях взаимосвязь Кунлунга и Шамбалы.
+            Справа от монастыря, на вершине высокой скалы, находится ретрит Юнгдрунг Ринчин Барба Друб Пхуг («Пещера драгоценного камня блестящей свастики»). Согласно легенде, здесь в Х в. медитировал легендарный бонпо Дренпа Намка. Ретрит уже много лет закрыт для иностранцев.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+
 
 const ContentDungar = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dungar.jpg">
         <TibetInfoCardTitle>Дунгар</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Дунгар — это город в Тибете, основанный в 17 веке. Город является важным центром дунганской культуры и известен своими мечетями.
+            Пещеры Дунгкар (Dungkar) (4250 м). Они находятся посередине скалы высотой в 200 метров, к ним можно подняться по насыпи из мелких камней. Вершина скалы плоская – вероятно, когда-то здесь была крепость. Три пещеры скорее всего использовались как храмы, и в них до сих пор сохранились изумительные росписи (XII в.), по стилю отличные от фресок в Цапаранге, выполненные в традициях Кашмира и Центральной Азии. Ученые нашли похожие росписи в Дунхуанге в Китае на расстоянии 1600 км от Дунгкара (Dungkar). Через Дунхуанг проходил Великий шелковый путь.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -800,47 +755,29 @@ const ContentPiyang = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/piyang.jpg">
         <TibetInfoCardTitle>Пиянг</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Пиянг — это деревня в Тибете, известная своими пещерными храмами, построенными в 10-11 веках. Фрески в пещерах изображают сцены из буддийской мифологии.
+            Комплекс Пиянг (Piyang) внешне напоминает Цапаранг: огромная высокая скала, изрытая пещерами и с храмом на вершине. Впервые храм в Пиянге возвел приблизительно в 1000 г. царь Еше О, но сегодня от него мало что осталось. В двух пещерах сохранились красивые росписи.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
 
 const ContentPurang = () => (
-    <TibetInfoCard imageSrc="https://www.ncpedia.org/sites/default/files//styles/anchor_images/public/nepal_190.jpg?itok=wZhNt3BT">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/purang.jpg">
         <TibetInfoCardTitle>Пуранг</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Пуранг — это город в Тибете, основанный в 15 веке. Город был важным торговым центром на Великом шёлковом пути, но в 16 веке был разрушен войсками Ладакха. Сегодня Пуранг является популярным туристическим направлением, где можно познакомиться с историей и культурой Тибета.
+            Пуранг. Это приграничный город, который находится в 10 км от границы с Непалом.
+            Пуранг был основан 1961 году, его население составляет 13 тысяч человек.
+            Дорога в Пуранг начинается в Барке. В Пуранге на горе при въезде находится монастырь Шапелинг (Sha pel ling), основанный в XVII веке.
+            Монастырь принадлежит школе Гелуг. Главные святыни – статуя Будды Шакьямуни и Мастера Цонкапы. Также стоит обратить внимание на ступу с останками генерала Гандена Цевгагна (Ganden Tsewang), который известен своими победами над армией Ладакха.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
 
 const ContentKorchag = () => (
-    <TibetInfoCard imageSrc="https://forum.awd.ru/gallery/images/upload/eee/17b/eee17beee4096c4f05c2e59bda24580f.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/korchag.jpg">
         <TibetInfoCardTitle>Корчаг</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Корчаг — это деревня в Тибете, основанная в 16 веке. Деревня является важным центром тибетского буддизма и является домом для множества храмов и монастырей. Сегодня Корчаг является популярным туристическим направлением, где можно познакомиться с историей и культурой Тибета.
-        </TibetInfoCardContent>
-    </TibetInfoCard>
-)
-
-const ContentManosarovarKora = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/manosarovar.jpg">
-        <TibetInfoCardTitle>Маносаровар Кора</TibetInfoCardTitle>
-        <TibetInfoCardContent>
-            Манасаровар кора — это паломнический маршрут вокруг священного озера Манасаровар в Тибете. Маршрут имеет длину около 50 километров и занимает около 2-3 дней.
-            <br />
-            <br />
-            Манасаровар считается священным озером в индуизме и буддизме. Паломничество вокруг Манасаровара является одним из самых важных религиозных ритуалов для индуистов и буддистов. Маршрут проходит по пересеченной местности, включая горы, долины и леса.
-            <br />
-            <br />
-            Манасаровар кора — это сложный и физический, но и духовно обогащающий опыт. Паломничество вокруг этого священного озера — это возможность познакомиться с историей и культурой Тибета.
-            <br />
-            <br />
-            Вот некоторые интересные факты о Манасаровар коре:
-            <br />
-            <br />
-            Озеро является одним из самых высокогорных пресноводных озер в мире.
-            Озеро окружено горами высотой более 6000 метров.
+            В 18 км от Пуранга находится очень известный монастырь XII века Корчаг. Это очень известное священное место. Он был построен великим переводчиком Ринченом Цангпо и вначале относился к линии Кадам, а позднее перешел к линии Сакья. В монастыре находится статуя Джобо Джампа Дордже (Бодхисаттвы Манджушри), которая была благословлена самим Ринченом Цангпо. В предании говорится, что, когда эту статую везли в Га Эр, около Кеджиа она внезапно заговорила и произнесла: «Я останусь здесь». Тогда на этом месте был построен главный зал собраний.
+            Самыми священными и почитаемыми объектами в монастыре являются говорящая статуя Долмы (Тары), собрания Кангьюра (перевод слов Будды) и Тенгьюра (перевод учений) и стенные росписи Тридцати Пяти Будд Откровения, изображения  (статуи) Шестнадцати Архатов и Двадцати Одной Гневной Тары.
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
