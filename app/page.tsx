@@ -447,15 +447,15 @@ export default function Home() {
         <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full'></video>
       </div> */}
 
-      <div className='max-w-[30vh]'>
+      <div className='max-w-[30vh] pb-18'>
         <div className='flex pt-8 opacity-80'>
-          <div className="w-[33%] flex items-center justify-center">
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
             <Image src="/ctt.png" alt="China Tibet Tour" height={80} width={80} className="object-contain w-28 h-[68px] saturate-0 contrast-125" />
           </div>
-          <div className="w-[33%] flex items-center justify-center">
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
             <Image src="/kailash.png" alt="Kailash Explorer" height={309} width={551} className="object-contain w-28 h-16 saturate-0 contrast-150" />
           </div>
-          <div className="w-[33%] flex items-center justify-center">
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
             <Image src="/tashidelek.png" alt="Tashi Delek Travel Agency" height={100} width={100} className="object-contain w-28 h-16 brightness-0 saturate-0 rounded-sm" />
           </div>
         </div>
