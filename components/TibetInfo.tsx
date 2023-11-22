@@ -45,20 +45,32 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <div style={{ width: cardWidth }}>
                                     <ContentGanden />
                                 </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentDrepung />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentSera />
+                                </div>
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
                         <AccordionTrigger>{groupTitle('Северный Тибет')}</AccordionTrigger>
                         <AccordionContent>
-                            <div className='flex flex-wrap gap-1'>
+                            <Slick step={cardWidth}>
                                 <div style={{ width: cardWidth }}>
                                     <ContentTsurphu />
                                 </div>
                                 <div style={{ width: cardWidth }}>
                                     <ContentNamTso />
                                 </div>
-                            </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentReting />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTaklung />
+                                </div>
+                            </Slick>
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
@@ -184,13 +196,47 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                     <ContentChongye />
                                 </div>
                                 <div style={{ width: cardWidth }}>
-                                    <ContentBonri />
-                                </div>
-                                <div style={{ width: cardWidth }}>
                                     <ContentKading />
                                 </div>
                                 <div style={{ width: cardWidth }}>
                                     <ContentGangutso />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-8">
+                        <AccordionTrigger>{groupTitle('Маносаровар Кора')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentBonriTemple />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentGosul />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentLangpona />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentManosarovar />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentNjego />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentRakshastal />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentSeralung />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTrugo />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentCherkip />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentChiu />
                                 </div>
                             </Slick>
                         </AccordionContent>
@@ -319,7 +365,7 @@ export const ContentJokang = () => (
     </TibetInfoCard>
 )
 
-export const ContentGanden = () => (
+const ContentGanden = () => (
     <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2019/01/%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%93%D0%B0%D0%BD%D0%B4%D0%B5%D0%BD-%D0%9B%D1%85%D0%B0%D1%81%D0%B0-%D1%82%D1%83%D1%80%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
         <TibetInfoCardTitle>Ганден</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -345,7 +391,33 @@ export const ContentGanden = () => (
     </TibetInfoCard>
 )
 
-export const ContentDrakYerpa = () => (
+const ContentDrepung = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/drepung.jpg">
+        <TibetInfoCardTitle>Монастырь Дрепунг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Расположен в 10 км западнее Лхасы. Важнейший духовный и образовательный центр Тибета, один из крупнейших монастырей в мире (площадь свыше 200 тыс. м2). Принадлежит к школе Гелуг. Название (Drepung) переводится как «горсть риса»: стены зданий монастыря на холме выкрашены в белый цвет. Входной билет стоит 60 юаней.
+            Монастырь основан в 1416 г. Джамьяном Чод же, учеником Цонкапы. До строительства дворца Потала пятым Далай-ламой этот монастырь являлся резиденцией правителей Тибета.
+            На территории монастыря находятся четыре факультета (Нгагпа, Лоселинг, Гоманг и Деянг), где студенты-монахи изучают в том числе тантрические практики и логику. Ежедневно с 14.30 до 16.30 на специальной дискуссионной площадке можно увидеть и услышать оживленно спорящих друг с другом молодых послушников. В эпоху независимого Тибета в монастыре насчитывалось до 15 тыс. монахов, сейчас – около 500.
+            Экскурсионный маршрут по территории монастыря проходит по желтым указателям. Первой достопримечательностью является дворец Ганден (Ganden, XVI в.). Здесь находятся могилы второго, третьего и четвертого Далай-лам, а на верхнем этаже для посещения открыты их покои.
+            Впечатляет Зал собраний – одно из главных зданий монастырского комплекса. В просторном помещении построено свыше 150 колонн. Среди статуй буддистских божеств выполнена и статуя основателя монастыря. Есть отдельный Зал тибетских царей со статуями первых правителей, а в часовне Миванг Лхакханг паломники поклоняются огромной статуе будущего Будды (Джампа). Ее основание находится на первом этаже здания.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentSera = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sera.jpg">
+        <TibetInfoCardTitle>Монастырь Сера</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Се́ра
+            Еще один важнейший духовный и образовательный центр школы Гелуг расположен в 5 км к северу от Лхасы. Входной билет стоит 50 юаней. Монастырь был основан в 1419 г., его название (Sera) переводится как «монастырь диких роз». Когда-то здесь было пять факультетов и до 7 тыс. монахов; сегодня около 500 монахов обучаются на трех факультетах: Ме (основы буддизма), Нгагпа (тантрические практики) и Дже (обучение странствующих монахов не из центрального Тибета), – первый и второй из которых существуют с момента основания обители.
+            В часовнях здания факультета Ме можно увидеть большую медную статую Будды Шакьямуни, скульптуры Будд прошлого, настоящего и будущего, основателя монастыря Сакья (Sakya) Йеше, а также по тысяче статуй божества-защитника и царя обезьян Ченрези, воплощения Авалокитешвары.
+            Из всех факультетов самое большое здание принадлежит факультету Дже. Здесь есть огромный зал собраний, несколько чортенов с мощами наиболее прославленных лам Серы, часовня Тамдрин, посвященная главному божеству-покровителю Серы, и, как обычно, часовня Будды Шакьямуни.
+            Во внушительном здании общемонастырского зала собраний (начало XVIII в.) можно увидеть статую Хаягривы – защитника буддизма и всех живых существ, а также особо почитаемую скульптуру ботхисаттвы Ченрези.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentDrakYerpa = () => (
     <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
         <TibetInfoCardTitle>Драк Йерпа</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -375,7 +447,7 @@ export const ContentDrakYerpa = () => (
     </TibetInfoCard>
 )
 
-export const ContentTsurphu = () => (
+const ContentTsurphu = () => (
     <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg">
         <TibetInfoCardTitle>Цурпу</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -405,7 +477,7 @@ export const ContentTsurphu = () => (
     </TibetInfoCard>
 )
 
-export const ContentNamTso = () => (
+const ContentNamTso = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/namtso.jpg">
         <TibetInfoCardTitle>Озеро Намцо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -434,7 +506,29 @@ export const ContentNamTso = () => (
     </TibetInfoCard>
 )
 
-export const ContentTashilhunpo = () => (
+const ContentReting = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/reting.jpg">
+        <TibetInfoCardTitle>Монастырь Ретинг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Этот монастырь расположен на склоне холма на высоте 4200 м в долине Ронг-чу в окружении красивых и редко встречающихся древовидных можжевельников. Его построил в середине XI в. Дромтонпа, выдающийся ученик знаменитого буддистского мастера и переводчика Атиши. Согласно одной из легенд, можжевеловые деревья выросли из волос с головы Дромтонпы.
+            В XIV в. Ретинг посетил сам лама Цонкапа, основатель школы Гелуг. После видения, в котором ему явился Атиша, Чжэ Ринпоче и написал свой знаменитый труд «Ламрим Ченмо».
+            Ламы, настоятели монастыря, носят титул «Ретинг Ринпоче» и могут избираться регентами малолетнего Далай-ламы. Регентство Ретингов приходится, в частности, на периоды 1845–1855 и 1933–1947 гг. Пятый Ретинг сыграл важную роль в выборе среди детей нынешнего Далай-ламы и являлся его старшим преподавателем.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentTaklung = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/taklung.jpg">
+        <TibetInfoCardTitle>Монастырь Таклунг</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Таклунг расположен на высоте 4150 м. Он был основан в конце XII в. известным монахом Тангпой Ташипелом и принадлежит школе Кагью. Монастырем издревле руководят ламы-тулку, носящие одноименный титул. В период расцвета в обители жили до семи тысяч монахов, сейчас – около 70. В годы Культурной революции монастырь был частично разрушен. Сейчас идет активный процесс возрождения. Некоторые здания уже построены, но в них пока еще нет фресок и фигур божеств. В 2012 г. возвели нижний храм (колледж). Интересная деталь: перед приходом сюда китайской армии в 1959 г. местные жители разобрали самые ценные реликвии по домам и закопали их. Сейчас, когда обитель восстанавливается, многие тханки и скульптуры возвращаются назад.
+            В центре поселка, частично скрытая домами, находится современная резиденция Таклунгов. На склоне холма сохранились массивные стены некогда величественного Красного дворца – главного храма (цуклакханга). Южнее – большой зал собраний, за которым до сих пор можно увидеть фундаменты стоявших здесь некогда трех больших чортенов. В одном из них хранились мощи основателя монастыря. Его бородатая статуя помещена в западную часовню зала собраний, которую используют как дискуссионную площадку.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+
+const ContentTashilhunpo = () => (
     <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
         <TibetInfoCardTitle>Ташилунпо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -464,7 +558,7 @@ export const ContentTashilhunpo = () => (
     </TibetInfoCard>
 )
 
-export const ContentGyandze = () => (
+const ContentGyandze = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gyandze.jpg">
         <TibetInfoCardTitle>Гяндзе</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -494,7 +588,7 @@ export const ContentGyandze = () => (
     </TibetInfoCard>
 )
 
-export const ContentShalu = () => (
+const ContentShalu = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/shalu.jpg">
         <TibetInfoCardTitle>Монастырь Шалу</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -524,7 +618,7 @@ export const ContentShalu = () => (
     </TibetInfoCard>
 )
 
-export const ContentNgor = () => (
+const ContentNgor = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/ngor.jpg">
         <TibetInfoCardTitle>Деревня Нгор</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -554,7 +648,7 @@ export const ContentNgor = () => (
     </TibetInfoCard>
 )
 
-export const ContentYamdrok = () => (
+const ContentYamdrok = () => (
     <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
         <TibetInfoCardTitle>Озеро Ямдрок Юмцо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -584,7 +678,7 @@ export const ContentYamdrok = () => (
     </TibetInfoCard>
 )
 
-export const ContentEverestBasecamp = () => (
+const ContentEverestBasecamp = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/everest.jpg">
         <TibetInfoCardTitle>Базовый лагерь Эвереста</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -603,7 +697,7 @@ export const ContentEverestBasecamp = () => (
     </TibetInfoCard>
 )
 
-export const ContentSakya = () => (
+const ContentSakya = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sakya.jpg">
         <TibetInfoCardTitle>Сакья</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -636,7 +730,7 @@ export const ContentSakya = () => (
     </TibetInfoCard>
 )
 
-export const ContentShashibangma = () => (
+const ContentShashibangma = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sashipangma.jpg">
         <TibetInfoCardTitle>Шашипангма</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -657,7 +751,7 @@ export const ContentShashibangma = () => (
     </TibetInfoCard>
 )
 
-export const ContentPelkuTso = () => (
+const ContentPelkuTso = () => (
     <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/10/Peiku-Tso-Lake-in-Tibet-1024x462.jpg">
         <TibetInfoCardTitle>Озеро Пелку Цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -666,7 +760,7 @@ export const ContentPelkuTso = () => (
     </TibetInfoCard>
 )
 
-export const ContentMilarepaBirthplace = () => (
+const ContentMilarepaBirthplace = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/milarepa-birthplace.jpg">
         <TibetInfoCardTitle>Место рождения Миларепы</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -675,7 +769,7 @@ export const ContentMilarepaBirthplace = () => (
     </TibetInfoCard>
 )
 
-export const ContentLangatsoLake = () => (
+const ContentLangatsoLake = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/langtso.jpg">
         <TibetInfoCardTitle>Озеро Ланга Цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -684,7 +778,7 @@ export const ContentLangatsoLake = () => (
     </TibetInfoCard>
 )
 
-export const ContentTsaparang = () => (
+const ContentTsaparang = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsaparang.jpg">
         <TibetInfoCardTitle>Цапаранг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -693,7 +787,7 @@ export const ContentTsaparang = () => (
     </TibetInfoCard>
 )
 
-export const ContentDungar = () => (
+const ContentDungar = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dungar.jpg">
         <TibetInfoCardTitle>Дунгар</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -702,7 +796,7 @@ export const ContentDungar = () => (
     </TibetInfoCard>
 )
 
-export const ContentPiyang = () => (
+const ContentPiyang = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/piyang.jpg">
         <TibetInfoCardTitle>Пиянг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -711,7 +805,7 @@ export const ContentPiyang = () => (
     </TibetInfoCard>
 )
 
-export const ContentPurang = () => (
+const ContentPurang = () => (
     <TibetInfoCard imageSrc="https://www.ncpedia.org/sites/default/files//styles/anchor_images/public/nepal_190.jpg?itok=wZhNt3BT">
         <TibetInfoCardTitle>Пуранг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -720,7 +814,7 @@ export const ContentPurang = () => (
     </TibetInfoCard>
 )
 
-export const ContentKorchag = () => (
+const ContentKorchag = () => (
     <TibetInfoCard imageSrc="https://forum.awd.ru/gallery/images/upload/eee/17b/eee17beee4096c4f05c2e59bda24580f.jpg">
         <TibetInfoCardTitle>Корчаг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -729,7 +823,7 @@ export const ContentKorchag = () => (
     </TibetInfoCard>
 )
 
-export const ContentManosarovarKora = () => (
+const ContentManosarovarKora = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/manosarovar.jpg">
         <TibetInfoCardTitle>Маносаровар Кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -751,7 +845,7 @@ export const ContentManosarovarKora = () => (
     </TibetInfoCard>
 )
 
-export const ContentKailasKora = () => (
+const ContentKailasKora = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/vnesh-kora.jpg">
         <TibetInfoCardTitle>Внешняя Кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -775,7 +869,7 @@ export const ContentKailasKora = () => (
     </TibetInfoCard>
 )
 
-export const ContentKailasInnerKora = () => (
+const ContentKailasInnerKora = () => (
     <TibetInfoCard imageSrc="https://farm8.staticflickr.com/7459/11837763826_5f13758997_o.jpg">
         <TibetInfoCardTitle>Внутренняя кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -784,7 +878,7 @@ export const ContentKailasInnerKora = () => (
     </TibetInfoCard>
 )
 
-export const ContentNandiKora = () => (
+const ContentNandiKora = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/nandi.jpg">
         <TibetInfoCardTitle>Нанди кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -797,7 +891,7 @@ export const ContentNandiKora = () => (
     </TibetInfoCard>
 )
 
-export const ContentBuddhaThrone = () => (
+const ContentBuddhaThrone = () => (
     <TibetInfoCard imageSrc="https://www.mt-kailash.ru/wp-content/gallery/kaylas-2010-voshozhdenie-na-g-tron-buddyi/budha_thron_01.jpg">
         <TibetInfoCardTitle>Трон Будды</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -815,7 +909,7 @@ export const ContentBuddhaThrone = () => (
     </TibetInfoCard>
 )
 
-export const ContentTsedang = () => (
+const ContentTsedang = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsedang.jpg">
         <TibetInfoCardTitle>Цеданг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -826,7 +920,7 @@ export const ContentTsedang = () => (
     </TibetInfoCard>
 )
 
-export const ContentLamaling = () => (
+const ContentLamaling = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/lamaling.jpg">
         <TibetInfoCardTitle>Ламалинг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -841,7 +935,7 @@ export const ContentLamaling = () => (
     </TibetInfoCard>
 )
 
-export const ContentBuchu = () => (
+const ContentBuchu = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/buchu.jpg">
         <TibetInfoCardTitle>Бучу</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -854,7 +948,7 @@ export const ContentBuchu = () => (
     </TibetInfoCard>
 )
 
-export const ContentBatsumTso = () => (
+const ContentBatsumTso = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/batsum-tso.jpg">
         <TibetInfoCardTitle>Бацум цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -868,7 +962,7 @@ export const ContentBatsumTso = () => (
     </TibetInfoCard>
 )
 
-export const ContentSamye = () => (
+const ContentSamye = () => (
     <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/A_grand_view_of_Samye.jpg/560px-A_grand_view_of_Samye.jpg">
         <TibetInfoCardTitle>Монастырь Самье</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -878,7 +972,7 @@ export const ContentSamye = () => (
     </TibetInfoCard>
 )
 
-export const ContentDorjeDrak = () => (
+const ContentDorjeDrak = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dorje-drag.jpg">
         <TibetInfoCardTitle>Дордже Драк</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -893,7 +987,7 @@ export const ContentDorjeDrak = () => (
     </TibetInfoCard>
 )
 
-export const ContentMidroling = () => (
+const ContentMidroling = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/midroling.jpg">
         <TibetInfoCardTitle>Мидролинг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -906,7 +1000,7 @@ export const ContentMidroling = () => (
     </TibetInfoCard>
 )
 
-export const ContentYumbulakhang = () => (
+const ContentYumbulakhang = () => (
     <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/View-on-Yumbulakhang-from-the-hill.jpg">
         <TibetInfoCardTitle>Ямбулаканг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -916,7 +1010,7 @@ export const ContentYumbulakhang = () => (
     </TibetInfoCard>
 )
 
-export const ContentChongye = () => (
+const ContentChongye = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chongye.jpg">
         <TibetInfoCardTitle>Чонгье</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -925,7 +1019,7 @@ export const ContentChongye = () => (
     </TibetInfoCard>
 )
 
-export const ContentBonri = () => (
+const ContentBonri = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri.jpg">
         <TibetInfoCardTitle>Гора Бон Ри</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -937,7 +1031,7 @@ export const ContentBonri = () => (
     </TibetInfoCard>
 )
 
-export const ContentKading = () => (
+const ContentKading = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/kading.jpg">
         <TibetInfoCardTitle>Долина Кадинг</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -951,7 +1045,7 @@ export const ContentKading = () => (
     </TibetInfoCard>
 )
 
-export const ContentGangutso = () => (
+const ContentGangutso = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gangutso.jpg">
         <TibetInfoCardTitle>Ганг гю цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
@@ -964,4 +1058,121 @@ export const ContentGangutso = () => (
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
+
+const ContentBonriTemple = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri-temple.jpg">
+        <TibetInfoCardTitle>Бонри Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Руины монастыря Бонри Гомпа (Bonri Gompa) находятся вдали от озера, в 5,5 км по другую сторону от шоссе G318 (верстовой столб 3928 км), у подножия той самой горы Бон-ри (Bon Ri), которую Миларепа отдал последователям религии бон взамен выигранного у них Кайласа.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentGosul = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gosul.jpg">
+        <TibetInfoCardTitle>Монастырь Госул</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Госул (высота 4551 м над уровнем моря) является символом юго-западной части Манасаровар-Коры. Он построена чуть правее пещеры, в которой великий Атиша проходил семидневную медитацию. С площадки перед монастырем открывается потрясающая панорама Кайласа и озера. Именно отсюда индусы обычно начинают свою Манасаровар-Кору.
+            Внутри обители находится еще одна пещера, где в XIII в. святой Гоцампа из школы Кагью готовился к восхождению на Кайлас. Он первым прошел Манасаровар-Кору, после чего три месяца медитировал в пещере на берегу озера, а затем совершил Внешнюю Кору вокруг священной горы Кайлас. Маршрутом Гоцампы вокруг озера сейчас идут миллионы людей.
+            Монастырь на этом месте появился в XVII в. Подняться к нему можно по выбитым в скале ступеням. Главной святыней храма является статуя Будды Шакьямуни. Здесь хранится множество драгоценных объектов: Кангьюр (собрание прямых слов Будды), серебряные ступы, статуи Авалокитешвары и ученика Гампопы Дусума Кхьенпы (1110–1193), достигшего Просветления в 50 лет. Особый интерес представляет второй этаж храма: в одной из комнат есть каменная стена с разнообразными глиняными пластинками, представляющими тантрические божества. Это все, что осталось от старого монастыря. В нижнем ряду можно увидеть хранителей шести миров буддизма, в верхнем – изображения священной горы Кайлас.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentLangpona = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/langpona.jpg">
+        <TibetInfoCardTitle>Монастырь Лангпона Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Лангпона Гомпа (Langpona Gompa) – северные ворота Манасаровара. Он стоит на горе, напоминающей по форме хобот слона, отсюда и название (langpona – «хобот слона»). Восстановлен в 1986 г. Рядом протекает река Гьяма Лунг (Gyama Lung).
+            Храм построил учитель школы Кагью Самдеин Пунгког, который очень чтил эти места. В здании монастыря было 36 комнат, шестиколонный зал. Раньше здесь жили 17 монахов, сейчас – 6. Считается, что настоятелем обители являлся сам Будда Чомденте с небольшой статуэткой XII в. Дордже Памо (духовная жена будды Чакрасамвары) на груди, поэтому его образ находится в главном алтаре. Основные святыни – статуи Будды Шакьямуни и Падмасамбхавы. Среди реликвий в храме есть священный бубен, появившийся из Манасаровара, и камень в форме горы Кайлас. При входе во внутренний двор за дверью справа находится зал собраний с изображением Будды Амитабхи.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentManosarovar = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/manosarovar-2.jpg">
+        <TibetInfoCardTitle>Озеро Манасаровар</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Озеро Манасаровар – один из самых фантастических природных памятников западного Тибета и одна из главных святынь буддизма в мире наряду с заповедной горой Кайлас. Оно находится на высоте 4590 м. Его площадь – около 500 км2, максимальная глубина 82 м. По размерам Манасаровар можно сравнить с самыми большими высокогорными озерами нашей планеты, но по степени почитаемости и символическому значению равных ему нет. Для представителей сразу четырех религий (буддистов, индуистов, джайнистов и последователей бон) именно здесь, у Кайласа и Манасаровара, бьется сердце Вселенной, проходит ось Земли.
+            Приближение к мандале Кайласа рекомендуется начинать с Манасаровар-Коры, ритуального обхода озера, как бы преддверия Кайлас-Коры. Паломник сначала совершает омовение в Манасароваре и только потом – обход священной горы.
+            В соответствии с индуистской теологией, Брахма – творец Вселенной – создал это озеро из своего ума. На санскрите mana значит «разум», а sarovar – «озеро». По легенде, на рассвете боги нисходят с небес, чтобы принять омовение или испить благодати Манасаровара. Отсюда еще одно его название – Озеро богов. Однако – и в этом сила данного места – пройти путем богов здесь может каждый. Каждый, кто дотронется до заветной воды или выпьет ее, сделает шаг к небесам Шивы. Манасаровар очистит карму от плохой энергии и омрачений, полученных за множество перерождений. Поверхность озера считается символом активной творческой силы Шивы, которая ассоциируется с его супругой Шакти, а в более широком смысле – с женской созидательной мощью Вселенной. Для буддистов Манасаровар – это священное озеро Анаватапта, где, по легенде, королева Майя зачала Будду. Для тибетцев гора символизирует мужской аспект мира, а озеро – женский: Манасаровар-Кора призвана гармонизировать внутренние энергии паломника.
+            Во время своих путешествий я досконально исследовал путь Коры: фотографировал, фиксировал километражи, описывал руины и населенные пункты, беседовал с местными жителями и монахами. Протяженность Коры вокруг озера по береговой линии составляет 91-98 км. Столь большой диапазон вызван трудностями точного исчисления на пересеченной местности, ведь на всем протяжении Коры едва наберется десяток километровых указателей. Как обычно в Тибете, каждый топоним имеет минимум три варианта, пишется на английском, китайском и тибетском языках. Одних только названий Манасаровара насчитывается до полутора десятков!
+            Говорят, что отсчет километража Коры ведется от монастыря Чиу Гомпа (Chiu Gompa). Его особая популярность объясняется не столько близостью к Дарчену (главному центру цивилизации в этих местах), сколько тем, что Чиу – священное место для буддистов. Именно отсюда великий Падмасамбхава ушел в тонкие миры. Хотя по моим наблюдениям, этим местом должны быть руины монастыря Черким Гомпа.
+            Чаще всего для входа (въезда) на маршрут Манасаровар-Коры используют дорогу, начинающуюся около места первого простирания Чакцалкханг (Сhak tsal khang, Ta-ko-cheng) на северо-восточном крае озера. От трассы G318 грунтовая дорога ведет к современному инфоцентру.
+            В информационно-туристическом комплексе, построенном в 2013 году, нужно купить два билета (на одного человека): один для подхода к озеру (150 юаней), второй – для Манасаровар-Коры (110 юаней). Стоянка муниципального транспорта находится слева от ворот. Рядом – длинное двухэтажное здание с сувенирным магазином и туалетом.
+            Приезжающие обычно лишь в туристический сезон европейские туристы крайне редко обходят озеро пешком, предпочитая путешествовать на автобусах или джипах. Паломники совершают Кору только пешком. Для туристов озеро и его побережье – лишь очередная достопримечательность, для паломников – одна из главных святынь Тибета.
+            Пешком Манасаровар-Кора может занимать до четырёх дней, на машине – 3-6 часов.
+            Кора вокруг озера не будет полной без посещения монастырей на его берегах. Изначально вокруг Манасаровара насчитывалось восемь монастырей, соответственно основным и промежуточным сторонам света. Все они были разрушены во время Культурной революции. С середины 1980-х гг. их постепенно начали восстанавливать, но не все и не всегда на тех же местах.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentNjego = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/njego.jpg">
+        <TibetInfoCardTitle>Монастырь Ньего Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Ньего Гомпа (49-й км Манасаровар-Коры), от него сохранились только руины. В 1042 г. здесь проходил путь знаменитого буддистского проповедника, мыслителя и переводчика Атиши Дипанкары Шриджняны (982–1054). Он настолько проникся священной аурой этого места, что задержался в нем на семь дней, посвятив все время буддистским церемониям и медитациям. Он изготавливал жертвенные фигурки из глины. (Эти фигурки называются «цаца» и служат символами божественных качеств ума, необходимых на пути к Просветлению.) Атиша соорудил над своим жертвенником маленькое святилище. Позднее там медитировал святой Нгорчен Кунга Лхундроп. В одном из видений ему явился Падмасамбхава, призвавший святого построить на этом месте монастырь.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentRakshastal = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/rakshastal.jpg">
+        <TibetInfoCardTitle>Озеро Ракшастал</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Озеро Ракшастал (Ланга-Цо; Rakshas Tal, Langa Tso) расположено слева от Манасаровара на высоте 4575 м. Длина его береговой линии составляет примерно 125 км, площадь – 360 км2. Другое название озера Равана Храда связано с правнуком Брахмы Раваной, царем демонов (ракшасов). По одной из легенд, Равана простоял в Ракшастале на одной ноге 1000 лет, поклоняясь Шиве, после чего получил от него сверхсилы (сиддхи). По другой, Равана совершал здесь ягью (огненное подношение) Шиве, причем приносимой жертвой служила его собственная голова. Шива был настолько поражен его самоотречением, что подарил Раване неуязвимость и бессмертие.
+            Манасаровар и Ракшастал образуют как бы союз противоположностей, единство живой и мертвой воды. Формы озер и свойства их поверхностей также указывают на разделение добра и зла, божественного и демонического начал.
+            На озере есть четыре острова: Топсерма, Дола, Лачато и Дошарба. В северо-западной части, примерно в 800 м от берега, находятся руины небольшого монастыря Цепгье (Tsepgye, Chepgye).
+            Канал Ганга-чу (Ganga Chu)
+            Манасаровар и Ракшастал связаны извилистым каналом, вода в котором время от времени иссякает. Тибетцы убеждены, что высыхание Ганга-чу – это предзнаменование трагических событий, что подтверждается многими историческими примерами.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentSeralung = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/seralung.jpg">
+        <TibetInfoCardTitle>Монастырь Сералунг Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Сералунг Гомпа (28 км Маносаровар-Коры) Это восточные ворота озера. «Монастырь терновой долины» основан в XI в., восстановлен в 1984 г. Он расположен в защищенном от стихий месте, но так близко к озеру, что приезжие сначала видят лишь небольшой бело-красный чортен и только потом сам небольшой монастырский комплекс. Раньше Сералунг Гомпа стоял в стороне от озера, в глубине долины. Новое место для него нашли с помощью предсказаний. Если раньше от монастыря просматривалась лишь тонкая полоска озера, то теперь перед наблюдателем открывается превосходная панорама.
+            Основание монастыря связано с просветленным мастером Гонджо из линии Дрикунг школы Кагью, которому его Драгоценный учитель повелел: «У восточных ворот омовений на озере Цо Мапам, в подобной раскрывшемуся цветку лотоса земле золотых лепестков вод Джамбу есть горы, которые соответствуют аспектам трех защитников: Авалокитешваре, Манджушри и Ваджрапани. Там создай место для уединения».
+            В монастыре можно увидеть статую Авалокитешвары, скульптурное изображение Будды Шакьямуни, четыре буддистских реликвии Самбхавы, рукопись великого переводчика Байруо Зана, подушку Дабу Раджа, волосы проявленного бодхисаттвы Седьмого Брахмана, мастера Дунджи из линии Кадампа и проявленного бодхисаттвы, мастера Куджи Пункога. Когда-то в Сералунг Гомпа было 24 помещения и колонный зал, в котором содержались священные рукописи. Во времена расцвета здесь находились от 42 до 50 монахов. Восстановленная в 1984году  обитель состояла из одного здания. За последнее время монастырь стал гораздо больше. Построили еще один храм, посвященный Падмасабхаве.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+
+const ContentTrugo = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/trugo.jpg">
+        <TibetInfoCardTitle>Монастырь Сералунг Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Тхуголхо (Thugolho); еще одно название Труго Гомпа, (Trugo Gompa). Он находится прямо на берегу Манасаровара, у подножия горы Гурла-Мандхата. «Тху» переводится как омовение, «го» – голова, «лхо» – юг. Омовение головы у южных ворот Манасаровара является с духовной точки зрения исключительно благословенным действом, поскольку в пророчествах сказано: кто здесь предастся омовению головы, переродится богом. Для паломников, желающих омыть голову, устроены специальные мостки.
+            Обители насчитывается около 900 лет. Это одно из самых больших и хорошо сохранившихся культовых сооружений у Манасаровара.
+            История монастыря началась с маленькой хижины, которая могла вместить двух человек. Она была построена для монахов школы Кагью мастером той же школы Джиеввой. Со временем хижина превратилась в небольшое четыреёхколонное пространство, а затем – в большой зал.
+            Когда у власти был седьмой Далай-лама Келсанг Гьяцо (1708–1757), настоятели окрестных монастырей постоянно спорили по поводу права на выморочное имущество крестьянских хозяйств и лугов в этом районе. Дело дошло до того, что пришлось вмешаться Верховному государственному совету (кашаг). Он и принял решение, по которому весь район отошел к монастырю Труго Гомпа. Со временем в обители построили 18 помещений и 12-колонный главный зал. Когда-то тут жили 8 монахов, хранилось золотое изображение воина-спутника Будды и две керамические фигуры – Будды Шакьямуни и Дзамбалы. Монастырь частично пострадал в годы Культурной революции, но был полностью восстановлен в 1984 г. Сейчас здесь можно увидеть статуи богини Тары, Будд прошлого, настоящего и будущего, а также Авалокитешвары, Манджушри и Ваджрапани.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentCherkip = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/cherkip.jpg">
+        <TibetInfoCardTitle>Монастырь Черкип Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Черкип Гомпа (Cherkip Gompa) – самой маленькой из восьми обителей на берегах Манасаровара, до сих пор не восстановленной.
+            Рядом с руинами монастыря можно увидеть несколько пещер для медитаций, которыми пользуются и до сих пор. Они находятся на отвесных скалах, смотрящих на озеро.
+            Хотя мне говорили, что Кора начинается от монастыря Чиу, но обнаруженные рядом с Черким Гомпа нескольких верстовых камней говорят о том, что Кора начиналась именно от этого монастыря.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
+const ContentChiu = () => (
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chiu-2.jpg">
+        <TibetInfoCardTitle>Монастырь Чиу Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardContent>
+            Монастырь Чиу Гомпа - единственная обитель, где взимают плату за вход (25 юаней). Впрочем, многие туристы ограничиваются посещением лишь этого монастыря.
+            Название Чиу Гомпа (Chiu Gompa) переводится как «птичий монастырь», что вполне оправданно: культовое сооружение, подобно птичьему гнезду, словно прилеплено к высокой каменной пирамиде. Изначально Чиу Гомпа был построен на горе овальной формы Сангдуо Байре («Медная гора»). Центральное Место Силы здесь – пещера VIII в., в которой медитировал Падмасамбхава. Здесь он провел последние семь дней своей земной жизни. Легенды говорят, что, победив местных жрецов и обязав их исповедовать буддизм в Тибете, Падмасамбхава покинул страну на белом коне и взошел на небо по радуге. Он отправился на остров к югу от Джамбудвипы (один из четырех материков в мировом океане, которые, согласно буддийской космологии, располагаются по четырем сторонам граням центральной горы мироздания Меру), где удалился в трехступенчатый храм на вершине горы. Окружность острова одновременно является и окружностью мандалы, с четырьмя воротами и четырьмя охраняющими ее стражами.
+            Монахи традиции Дрикунг школы Кагью возвели точную копию «славного, цвета меди рая на горе». Три чортена в Чиу Гомпа напоминают о «чистой земле» Падмасамбхавы, куда стремится попасть для перерождения каждый буддист.
+        </TibetInfoCardContent>
+    </TibetInfoCard>
+)
+
 

@@ -110,7 +110,7 @@ export const Slick: React.FC<SlickProps> = ({ children, step }) => {
         }}
         onClick={() => scrollContent('left')}
       >
-        <div className='bg-gray-500 p-2 cursor-pointer rounded-full'>
+        <div className='bg-gray-100 p-3 cursor-pointer rounded-full'>
           <IconArrowLeft />
         </div>
       </div>
@@ -126,7 +126,7 @@ export const Slick: React.FC<SlickProps> = ({ children, step }) => {
           scrollContent('right')
         }}
       >
-        <div className='bg-gray-500 p-2 cursor-pointer rounded-full'>
+        <div className='bg-gray-100 p-3 cursor-pointer rounded-full'>
           <IconArrowRight />
         </div>
 
