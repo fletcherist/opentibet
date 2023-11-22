@@ -2,11 +2,21 @@
 import { useState } from "react";
 import { Slick } from "./Slick";
 
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
 export const TibetInfo: React.FC<{}> = ({ }) => {
     const groupTitle = (text: string) => {
         return (
-            <div className='py-4 font-semibold text-xl'>{text}</div>
+            <span>{text}</span>
         );
+        // return (
+        //     <div className='py-4 font-semibold text-xl'>{text}</div>
+        // );
     };
     const defaultSize = `max-w-[48%]`;
     const mdSize = `md:max-w-[23%]`;
@@ -15,149 +25,177 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
     return (
         <div>
             <div className='p-4'>
-                <div className='py-2'>
-                    {groupTitle('Центральный Тибет')}
-                    <Slick step={cardWidth}>
-                        <div style={{ width: cardWidth }}>
-                            <ContentLhasa />
-                        </div>
-                        <div style={{ width: cardWidth }}>
-                            <ContentPotala />
-                        </div>
-                        <div style={{ width: cardWidth }}>
-                            <ContentJokang />
-                        </div>
-                        <div style={{ width: cardWidth }}>
-                            <ContentDrakYerpa />
-                        </div>
-                        <div style={{ width: cardWidth }}>
-                            <ContentGanden />
-                        </div>
-                    </Slick>
-                </div>
-                {groupTitle('Северный Тибет')}
-                <div className='flex flex-wrap gap-1'>
-                    <div style={{ width: cardWidth }}>
-                        <ContentTsurphu />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentNamTso />
-                    </div>
-                </div>
-                {groupTitle('Округ Шигадзе')}
-                <Slick step={cardWidth}>
-                    <div style={{ width: cardWidth }}>
-                        <ContentTashilhunpo />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentGyandze />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentSakya />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentEverestBasecamp />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentNgor />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentShalu />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentYamdrok />
-                    </div>
-                </Slick>
-                {groupTitle('Гирьонг')}
-                <Slick step={cardWidth}>
-                    <div style={{ width: cardWidth }}>
-                        <ContentShashibangma />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentMilarepaBirthplace />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentLangatsoLake />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentPelkuTso />
-                    </div>
-                </Slick>
-                {groupTitle('Королевство Гуге')}
-                <Slick step={cardWidth}>
-                    <div style={{ width: cardWidth }}>
-                        <ContentDungar />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentTsaparang />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentPiyang />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentManosarovarKora />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentKorchag />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentPurang />
-                    </div>
-                </Slick>
-                {groupTitle('Мандала Кайласа')}
-                <Slick step={cardWidth}>
-                    <div style={{ width: cardWidth }}>
-                        <ContentKailasKora />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentKailasInnerKora />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentNandiKora />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentBuddhaThrone />
-                    </div>
-                </Slick>
-                {groupTitle('Восточный Тибет')}
-                <Slick step={cardWidth}>
-                    <div style={{ width: cardWidth }}>
-                        <ContentTsedang />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentLamaling />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentBuchu />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentBatsumTso />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentSamye />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentDorjeDrak />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentMidroling />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentYumbulakhang />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentChongye />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentBonri />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentKading />
-                    </div>
-                    <div style={{ width: cardWidth }}>
-                        <ContentGangutso />
-                    </div>
-                </Slick>
+                <Accordion type="single" collapsible defaultValue="item-1">
+                    <AccordionItem value="item-1" >
+                        <AccordionTrigger>{groupTitle('Центральный Тибет')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentLhasa />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentPotala />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentJokang />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentDrakYerpa />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentGanden />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger>{groupTitle('Северный Тибет')}</AccordionTrigger>
+                        <AccordionContent>
+                            <div className='flex flex-wrap gap-1'>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTsurphu />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentNamTso />
+                                </div>
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger>{groupTitle('Округ Шигадзе')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTashilhunpo />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentGyandze />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentSakya />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentEverestBasecamp />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentNgor />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentShalu />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentYamdrok />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-4">
+                        <AccordionTrigger>{groupTitle('Гирьонг')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentShashibangma />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentMilarepaBirthplace />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentLangatsoLake />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentPelkuTso />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-5">
+                        <AccordionTrigger>{groupTitle('Королевство Гуге')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentDungar />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTsaparang />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentPiyang />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentManosarovarKora />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentKorchag />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentPurang />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-6">
+                        <AccordionTrigger>{groupTitle('Мандала Кайласа')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentKailasKora />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentKailasInnerKora />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentNandiKora />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentBuddhaThrone />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-7">
+                        <AccordionTrigger>{groupTitle('Восточный Тибет')}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentTsedang />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentLamaling />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentBuchu />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentBatsumTso />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentSamye />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentDorjeDrak />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentMidroling />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentYumbulakhang />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentChongye />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentBonri />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentKading />
+                                </div>
+                                <div style={{ width: cardWidth }}>
+                                    <ContentGangutso />
+                                </div>
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
                 {/* Над Сакьей фото Шашипангма
             Озеро Ланга Цо заменить фото
              */}
