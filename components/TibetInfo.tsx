@@ -126,16 +126,16 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionTrigger>{groupTitle('Маносаровар Кора')}</AccordionTrigger>
                         <AccordionContent>
                             <Slick step={cardWidth}>
+                                <ContentManosarovar />
                                 <ContentBonriTemple />
                                 <ContentGosul />
                                 <ContentLangpona />
-                                <ContentManosarovar />
                                 <ContentNjego />
-                                <ContentRakshastal />
                                 <ContentSeralung />
                                 <ContentTrugo />
                                 <ContentCherkip />
                                 <ContentChiu />
+                                <ContentRakshastal />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -978,7 +978,7 @@ const ContentBatsumTso = () => (
 )
 
 const ContentSamye = () => (
-    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/A_grand_view_of_Samye.jpg/560px-A_grand_view_of_Samye.jpg">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/samye.jpg">
         <TibetInfoCardTitle>Монастырь Самье</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Самье – самый первый тибетский буддистский монастырь. С его возникновением связано множество легенд. Согласно самой распространенной из них, Самье был построен при выдающемся правителе Ярлунгской династии Трисонге Децене (VIII в.). Руководил строительством великий буддистский гуру Шантаракшита, приглашенный Трисонгом Деценом из Индии. Однако местные божества, владыки почв, противились укреплению позиций буддизма в Тибете и по ночам с помощью землетрясений разрушали все, что Шантаракшите удавалось построить за день. Кроме того, в стране начался голод и вспыхнули эпидемии. Перепуганный Трисонг Децен попросил Шантаракшиту покинуть Тибет. Перед уходом великий гуру посоветовал царю пригласить Падмасамбхаву (Гуру Ринпоче), другого великого Учителя. Он так и сделал. Вскоре после прибытия Падмасамбхавы в Тибет в недостроенном монастыре Самье в присутствии царя и всей его свиты состоялся религиозный диспут между сторонниками тибетской религии бон и Гуру Ринпоче, в котором последний одержал победу. Трисонг Децен повелел всем бонцам принять буддизм, а монастырь Самье был наконец возведен.
