@@ -29,9 +29,9 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
         //     <div className='py-4 font-semibold text-xl'>{text}</div>
         // );
     };
+
     const defaultSize = `max-w-[48%]`;
     const mdSize = `md:max-w-[23%]`;
-
 
     return (
         <div>
@@ -206,7 +206,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 } : {}}>
                                 </div>
                             </DialogTrigger>
-                            <DialogContent className="max-h-[80vh] overflow-y-auto">
+                            <DialogContent className="max-h-[95vh] h-full overflow-y-auto">
                                 <DialogHeader>
                                     {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
                                     <DialogDescription>
@@ -219,7 +219,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
 
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="">
+                                <div className="overflow-y-auto">
                                     {children}
                                 </div>
                             </DialogContent>
@@ -245,7 +245,7 @@ export const TibetInfoCardContent: React.FC<{
     children: React.ReactNode
 }> = ({ children }) => {
     return (
-        <div className='px-3 py-2' style={{ zIndex: -1 }}>
+        <div className='px-3 py-2 overflow-y-auto' style={{ zIndex: -1 }}>
             {children}
         </div>
     )
