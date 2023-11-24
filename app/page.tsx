@@ -302,13 +302,9 @@ export default function Home() {
             <div className="flex px-4 w-fit mb-4 mx-auto">
               <div className="w-32 h-32">
                 <img
-                  className="object-cover object-cover rounded-full w-full h-full"
+                  className={`${tibet.alexeyPortrait} object-cover object-cover rounded-full w-full h-full`}
                   src="https://storage.googleapis.com/opentibet/alexey-portrait.jpeg"
                   alt="profile picture"
-                  style={{
-                    objectViewBox: "inset(0 405px 243px 180px)",
-                    transform: "rotate(-3deg)",
-                  }}
                 />
               </div>
               <div className="flex items-center flex-1 pl-4">
