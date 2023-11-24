@@ -868,13 +868,13 @@ const Copyright: React.FC = () => {
   return (
     <div className="text-center text-xs text-gray-500 text-sm py-4">
       &copy; {currentYear}, OPEN TIBET
-      <br />
+      {/*<br />
       <span className="text-[9px]">
         Дизайн:{" "}
         <a href="https://k60.in" className="hover:text-red-500">
           k60.in
         </a>
-      </span>
+  </span>*/}
     </div>
   );
 };
