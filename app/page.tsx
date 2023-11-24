@@ -692,7 +692,7 @@ export default function Home() {
           <div className="py-2">
             <input
               type="tel"
-              value="+7 911 927 41 14"
+              value="+7 981 160-88-00"
               className="text-3xl max-w-full"
               readOnly
             />
