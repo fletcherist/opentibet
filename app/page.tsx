@@ -508,7 +508,7 @@ export default function Home() {
             subtitle="Список необходимых вещей для поездки в Тибет"
           >
             <div className="p-4">
-              <ul className="list-decimal list-outside ms-10 leading-7 space-y-1">
+              <ul className="list-decimal list-outside ms-10 leading-7 space-y-1 hyphens-auto">
                 <li>Термобельё.</li>
                 <li>Спальник для температур до −10&nbsp;°С.</li>
                 <li>
@@ -567,7 +567,7 @@ export default function Home() {
             subtitle="Нужные лекарственные препараты"
           >
             <div className="p-4">
-              <ul className="space-y-1 list-decimal list-outside ms-10 leading-7">
+              <ul className="space-y-1 list-decimal list-outside ms-10 leading-7 hyphens-auto">
                 <li>
                   Ацетилсалициловая кислота (
                   <b className="font-semibold">аспирин</b>, тромбо АСС) для
@@ -688,11 +688,11 @@ export default function Home() {
           <div className="py-2">
             <input
               type="tel"
-              value="+7 981 160-88-00"
+              value="+7 981 160 88 00"
               className="text-3xl max-w-full"
               readOnly
             />
-            <div className="text-xs uppercase tracking-wider font-bold">
+            <div className="text-[10px] uppercase tracking-wider font-bold">
               Россия
             </div>
           </div>
@@ -703,7 +703,7 @@ export default function Home() {
               className="text-3xl max-w-full"
               readOnly
             />
-            <div className="text-xs uppercase tracking-wider font-bold">
+            <div className="text-[10px] uppercase tracking-wider font-bold">
               Китай
             </div>
           </div>

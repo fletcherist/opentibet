@@ -724,14 +724,14 @@ export const ApplyForm: React.FC = () => {
             <div className="py-[8px]">
               <label
                 htmlFor="first_name"
-                className="block mb-1 text-sm font-medium text-gray-900"
+                className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
                 Имя
               </label>
               <input
                 type="text"
                 id="first_name"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder=""
                 required
               />
@@ -739,14 +739,14 @@ export const ApplyForm: React.FC = () => {
             <div className="py-[8px]">
               <label
                 htmlFor="email"
-                className="block mb-1 text-sm font-medium text-gray-900"
+                className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
                 Эл. почта
               </label>
               <input
                 type="email"
                 id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder="example@gmail.com"
                 required
               />
@@ -754,14 +754,14 @@ export const ApplyForm: React.FC = () => {
             <div className="py-[8px]">
               <label
                 htmlFor="tel"
-                className="block mb-1 text-sm font-medium text-gray-900"
+                className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
                 Или номер телефона
               </label>
               <input
                 type="tel"
                 id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder="+7 (999) 123 45 67"
                 required
               />
