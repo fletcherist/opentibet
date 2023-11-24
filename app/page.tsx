@@ -377,7 +377,7 @@ export default function Home() {
                   className="w-full col-start-1 col-end-3 cursor-pointer"
                 />
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alex-6.jpg"
+                  src="https://storage.googleapis.com/opentibet/alex-10.jpg"
                   alt=""
                   width={375}
                   height={250}
@@ -385,7 +385,7 @@ export default function Home() {
                   className="h-full object-cover w-full col-start-3 col-end-4 cursor-pointer"
                 />
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alexey-7.jpg"
+                  src="https://storage.googleapis.com/opentibet/alex-11.jpeg"
                   alt=""
                   width={375}
                   height={250}
@@ -393,7 +393,7 @@ export default function Home() {
                   className="w-full col-start-2 col-end-4 row-start-2 row-end-4  cursor-pointer"
                 />
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alex-4.jpg"
+                  src="https://storage.googleapis.com/opentibet/alex-12.jpeg"
                   alt=""
                   width={375}
                   height={250}
@@ -401,7 +401,7 @@ export default function Home() {
                   className="w-full col-start-1 col-end-2  cursor-pointer"
                 />
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alex-1.jpg"
+                  src="https://storage.googleapis.com/opentibet/alexey-7.jpg"
                   alt=""
                   width={375}
                   height={250}
