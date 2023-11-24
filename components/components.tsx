@@ -107,35 +107,35 @@ export const PhotoGallery = () => {
           <img
             src={photo1src}
             alt=""
-            className="col-start-1 col-end-3 rounded-sm cursor-pointer"
+            className="col-start-1 col-end-3 cursor-pointer"
           />
         </PhotoView>
         <PhotoView src={photo2src}>
           <img
             src={photo2src}
             alt=""
-            className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer"
+            className="col-start-1 col-end-2 row-start-2 row-end-4 cursor-pointer"
           />
         </PhotoView>
         <PhotoView src={photo3src}>
           <img
             src={photo3src}
             alt=""
-            className="col-start-2 col-end-3 row-start-2 row-end-3 rounded-sm cursor-pointer"
+            className="col-start-2 col-end-3 row-start-2 row-end-3 cursor-pointer"
           />
         </PhotoView>
         <PhotoView src={photo4src}>
           <img
             src={photo4src}
             alt=""
-            className="col-start-1 col-end-2 row-start-3 row-end-4 rounded-sm cursor-pointer"
+            className="col-start-1 col-end-2 row-start-3 row-end-4 cursor-pointer"
           />
         </PhotoView>
         <PhotoView src={photo5src}>
           <img
             src={photo5src}
             alt=""
-            className="col-start-2 col-end-3 row-start-3 row-end-4 rounded-sm cursor-pointer"
+            className="col-start-2 col-end-3 row-start-3 row-end-4 cursor-pointer"
           />
         </PhotoView>
       </div>
@@ -176,7 +176,7 @@ const Accordion: React.FC<{ title: string; content: string }> = ({
 export const IconArrowDown = () => {
   return (
     <svg
-      className="w-4 h-4 text-gray-500"
+      className="w-4 h-4 text-white/50"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -184,8 +184,6 @@ export const IconArrowDown = () => {
     >
       <path
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
         strokeWidth="2"
         d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
       />
@@ -196,7 +194,7 @@ export const IconArrowDown = () => {
 export const IconArrowClose = () => {
   return (
     <svg
-      className="w-3.5 h-3.5 text-gray-500"
+      className="w-4 h-4 text-white/50"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -204,8 +202,6 @@ export const IconArrowClose = () => {
     >
       <path
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
         strokeWidth="2"
         d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
       />
@@ -647,10 +643,10 @@ export const TimetableButton: React.FC<{
   return (
     <div className={`m-4 my-2 relative bg-gray-100`}>
       <div
-        className={`py-3 px-4 sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}
+        className={`h-[72px] sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}
       >
         <div
-          className="flex cursor-pointer justify-between"
+          className="py-3 px-4 flex cursor-pointer justify-between"
           onClick={() => {
             setIsOpened(!isOpened);
           }}
@@ -690,19 +686,22 @@ export const ButtonWithContent: React.FC<{
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (
-    <div className="border rounded p-4 m-4 my-2 hover:bg-gray-100">
+    <div className={`m-4 my-2 bg-gray-100`}>
       <div
-        className="flex cursor-pointer justify-between"
-        onClick={() => {
-          setIsOpened(!isOpened);
-        }}
+        className={`h-[72px] sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}
       >
-        <div>
-          <div className="font-semibold">{title}</div>
-          <div className="text-sm text-gray-500">{subtitle}</div>
-        </div>
-        <div className="p-4">
-          {isOpened ? <IconArrowClose /> : <IconArrowDown />}
+        <div
+          className="py-3 px-4 cursor-pointer flex items-center justify-between"
+          onClick={() => {
+            setIsOpened(!isOpened);
+          }}
+        >
+          <div>
+            <div className="font-semibold text-2xl leading-5">{title}</div>
+          </div>
+          <div className="p-4">
+            {isOpened ? <IconArrowClose /> : <IconArrowDown />}
+          </div>
         </div>
       </div>
       {isOpened && <>{children}</>}
@@ -717,17 +716,17 @@ export const ApplyForm: React.FC = () => {
         <div className="w-full md:max-w-[50%]">
           <Header
             title="Заявка на участие"
-            subtitle="заполните заявку и мы свяжемся с вами в ближайшее время"
+            subtitle="Заполните заявку, и мы свяжемся с вами в ближайшее время"
           />
         </div>
         <div className="w-full md:max-w-[50%] p-4">
           <form>
-            <div className="py-2">
+            <div className="py-[8px]">
               <label
                 htmlFor="first_name"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="block mb-1 text-sm font-medium text-gray-900"
               >
-                Имя <span className="text-blue-700">*</span>
+                Имя
               </label>
               <input
                 type="text"
@@ -737,12 +736,12 @@ export const ApplyForm: React.FC = () => {
                 required
               />
             </div>
-            <div className="py-2">
+            <div className="py-[8px]">
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="block mb-1 text-sm font-medium text-gray-900"
               >
-                Email <span className="text-blue-700">*</span>
+                Эл. почта
               </label>
               <input
                 type="email"
@@ -752,12 +751,12 @@ export const ApplyForm: React.FC = () => {
                 required
               />
             </div>
-            <div className="py-2">
+            <div className="py-[8px]">
               <label
                 htmlFor="tel"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="block mb-1 text-sm font-medium text-gray-900"
               >
-                Телефон <span className="text-blue-700">*</span>
+                Или номер телефона
               </label>
               <input
                 type="tel"
@@ -808,20 +807,20 @@ export const Navbar = () => {
   return (
     <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-10">
       <div className="flex justify-center">
-        <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 w-full">
+        <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 pb-3 w-full">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
             <Image
               src="opentibet-logo-hb.svg"
-              width={150}
-              height={80}
+              width={190}
+              height={44}
               alt="OpenTibet Logo"
-              className="h-8 mr-3"
+              className="h-8 mr-3 md:h-11"
             />
           </a>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:text-yellow focus:outline-none focus:text-yellow-500"
             aria-controls="navbar-default"
             aria-expanded="false"
           >
@@ -848,7 +847,7 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_TOURS);
                   }}
-                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0"
+                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
                   Программы
                 </a>
@@ -859,7 +858,7 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_PHOTO_GALLERY);
                   }}
-                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0"
+                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
                   Фото
                 </a>
@@ -870,7 +869,7 @@ export const Navbar = () => {
                   onClick={(event) => {
                     smoothScroll(event, LINK_CONTACTS);
                   }}
-                  className="block py-2 px-3 rounded text-xs md:border-0 md:hover:text-red-500 md:p-0"
+                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
                   Контакты
                 </a>

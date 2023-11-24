@@ -1,4 +1,5 @@
 import Image from "next/image";
+import tibet from "./tibet.module.css";
 
 import {
   Arrow,
@@ -28,7 +29,7 @@ export default function Home() {
       className="flex min-h-screen flex-col items-center justify-between"
     >
       <Navbar />
-      <div className="w-full h-[100vh] mt-[-5vh] relative">
+      <div className="w-full h-[93vh] mt-[-5vh] relative">
         <video
           id="background-video"
           className="absolute w-full h-full object-cover"
@@ -56,7 +57,7 @@ export default function Home() {
           }}
         />
         <div className="h-full flex flex-col justify-end items-center px-4 md:px-20 relative z-100">
-          <div className="max-w-4xl w-full mb-[10vh]">
+          <div className="max-w-4xl w-full mb-[5vh]">
             <div className="text-gray-200 font-bold text-5xl md:text-[4em] uppercase tracking-wider leading-[1.15em]">
               Откройте
               <br />
@@ -80,7 +81,7 @@ export default function Home() {
       </div>
 
       <div className="w-full text-white pb-14">
-        <div className="h-[60vh] relative">
+        <div className="h-[45vh] relative">
           <div
             className="w-full -z-10 h-full top-0 object-cover"
             style={{
@@ -88,15 +89,10 @@ export default function Home() {
                 "url(https://storage.googleapis.com/opentibet/batsum-tso.jpg)",
               backgroundSize: "cover",
               backgroundAttachment: "fixed",
+              backgroundPosition: "60%",
             }}
           />
-          <div
-            className="w-full h-full absolute top-0 h-full"
-            style={{
-              backgroundImage: "url(triangle.svg)",
-              backgroundSize: "100% auto",
-            }}
-          />
+          <div className={tibet.triangle} />
           <Image
             src="opentibet-logo-v.svg"
             width={280}
@@ -137,7 +133,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="px-4 mt-8 mb-4 max-w-4xl mx-auto leading-7">
+      <p className="px-4 mt-5 mb-4 max-w-4xl mx-auto leading-7">
         Мы много трудились над каждым элементом путешествий и получили
         всестороннюю поддержку правительства Тибета, чтобы обеспечить самые
         лучшие предложения для паломников.
@@ -148,7 +144,11 @@ export default function Home() {
         опыта и высочайший профессионализм.
       </p>
 
-      <ul className="mx-auto w-fit mb-4 flex-col flex justify-center">
+      <h3 className="uppercase tracking-[.4em] mt-4 mb-3 font-semibold text-sm">
+        Организаторы
+      </h3>
+
+      <ul className="mx-auto w-fit mb-4 px-4 flex-col flex justify-center">
         <li className="flex items-center my-2">
           <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
             <Image
@@ -159,7 +159,7 @@ export default function Home() {
               className="object-contain w-28 h-[68px]  cursor-pointer"
             />
           </div>
-          <div className="text-lg leading-5">
+          <div className="leading-5">
             <span className="font-semibold">Тибетский туристический офис</span>
             <br /> <span>правительство Тибета</span>
           </div>
@@ -174,7 +174,7 @@ export default function Home() {
               className="object-contain w-28 h-16  cursor-pointer"
             />
           </div>
-          <div className="text-lg leading-5">
+          <div className="leading-5">
             <span className="font-semibold">Турагентство Kailash Explorer</span>
             <br /> Россия, Санкт Петербург
           </div>
@@ -189,7 +189,7 @@ export default function Home() {
               className="object-contain w-28 h-16 brightness-75 -hue-rotate-15  cursor-pointer"
             />
           </div>
-          <div className="text-lg leading-5">
+          <div className="leading-5">
             <span className="font-semibold">Турагентство Tashi Delek</span>
             <br /> Тибет, Лхаса
           </div>
@@ -302,9 +302,13 @@ export default function Home() {
             <div className="flex px-4 w-fit mb-4 mx-auto">
               <div className="w-32 h-32">
                 <img
-                  className="object-cover rounded-full w-full h-full"
+                  className="object-cover object-cover rounded-full w-full h-full"
                   src="https://storage.googleapis.com/opentibet/alexey-portrait.jpeg"
                   alt="profile picture"
+                  style={{
+                    objectViewBox: "inset(0 405px 243px 180px)",
+                    transform: "rotate(-3deg)",
+                  }}
                 />
               </div>
               <div className="flex items-center flex-1 pl-4">
@@ -369,12 +373,12 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-1 max-w-2xl">
                 {/* <Image src={"https://storage.googleapis.com/opentibet/chiu.jpg"} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4  cursor-pointer" /> */}
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alex-1.jpg"
+                  src="https://storage.googleapis.com/opentibet/alex-2.jpg"
                   alt=""
                   width={750}
                   height={500}
                   quality={90}
-                  className="w-full col-start-1 col-end-4   cursor-pointer"
+                  className="w-full col-start-1 col-end-3 cursor-pointer"
                 />
                 <Image
                   src="https://storage.googleapis.com/opentibet/alex-6.jpg"
@@ -382,7 +386,7 @@ export default function Home() {
                   width={375}
                   height={250}
                   quality={75}
-                  className="w-full col-start-1 col-end-2 row-start-2 row-end-4  cursor-pointer"
+                  className="h-full object-cover w-full col-start-3 col-end-4 cursor-pointer"
                 />
                 <Image
                   src="https://storage.googleapis.com/opentibet/alexey-7.jpg"
@@ -398,15 +402,15 @@ export default function Home() {
                   width={375}
                   height={250}
                   quality={75}
-                  className="w-full col-start-2 col-end-3  cursor-pointer"
+                  className="w-full col-start-1 col-end-2  cursor-pointer"
                 />
                 <Image
-                  src="https://storage.googleapis.com/opentibet/alex-2.jpg"
+                  src="https://storage.googleapis.com/opentibet/alex-1.jpg"
                   alt=""
                   width={375}
                   height={250}
                   quality={75}
-                  className="w-full col-start-3 col-end-3 row-start-4 row-end-5  cursor-pointer"
+                  className="w-full col-start-1 col-end-2 cursor-pointer"
                 />
               </div>
             </div>
@@ -508,59 +512,55 @@ export default function Home() {
             subtitle="Список необходимых вещей для поездки в Тибет"
           >
             <div className="p-4">
-              <ul className="space-y-1">
-                <li>1. Термобельё.</li>
-                <li>2. Спальник для температур до минус 10оС.</li>
+              <ul className="list-decimal list-outside ms-10 leading-7 space-y-1">
+                <li>Термобельё.</li>
+                <li>Спальник для температур до −10&nbsp;°С.</li>
                 <li>
-                  3. Тёплый вкладыш в спальник, если собираетесь брать спальник
+                  Тёплый вкладыш в спальник, если собираетесь брать спальник
                   напрокат.
                 </li>
                 <li>
-                  4. Тёплые вещи для сна (в том числе шапку, шерстяные перчатки
-                  и носки).
+                  Тёплые вещи для сна (в том числе шапку, шерстяные перчатки и
+                  носки).
                 </li>
                 <li>
-                  5. Непромокаемые высокие кроссовки для треккинга с рифлёной
+                  Непромокаемые высокие кроссовки для треккинга с рифлёной
                   подошвой.
                 </li>
-                <li>6. Непромокаемые штаны (для совершения Коры).</li>
-                <li>7. Флиска (куртка из флиса).</li>
-                <li>8. Шерстяные носки или термоноски (2 пары).</li>
-                <li> 9. Шапка шерстяная.</li>
-                <li> 10. Перчатки (лучше 2 пары: флисовые и непромокаемые).</li>
-                <li> 11. Непромокаемая куртка (ветровка goretex).</li>
-                <li>12. Сменная одежда и бельё.</li>
-                <li> 13. Сменная обувь (лёгкие кроссовки ).</li>
-                <li> 14. Небольшой рюкзак (25-30 л).</li>
-                <li> 15. Шарф (шаль).</li>
+                <li>Непромокаемые штаны (для совершения Коры).</li>
+                <li>Флиска (куртка из флиса).</li>
+                <li>Шерстяные носки или термоноски (2 пары).</li>
+                <li>Шапка шерстяная.</li>
+                <li>Перчатки (лучше 2 пары: флисовые и непромокаемые).</li>
+                <li>Непромокаемая куртка (ветровка goretex).</li>
+                <li>Сменная одежда и бельё.</li>
+                <li>Сменная обувь (лёгкие кроссовки ).</li>
+                <li>Небольшой рюкзак (25-30 л).</li>
+                <li>Шарф (шаль).</li>
+                <li> Набор приборов для еды (нож, ложка, вилка, кружка).</li>
+                <li>Пластиковый контейнер (миска).</li>
+                <li>Кипятильник.</li>
+                <li>Термос (1 л).</li>
                 <li>
                   {" "}
-                  16. Набор приборов для еды (нож, ложка, вилка, кружка).
-                </li>
-                <li> 17. Пластиковый контейнер (миска).</li>
-                <li> 18. Кипятильник.</li>
-                <li> 19. Термос (1 л).</li>
-                <li>
-                  {" "}
-                  20. Альпинистские «кошки» (желательно — для тех, кто пойдёт к
+                  Альпинистские «кошки» (желательно — для тех, кто пойдёт к
                   северному склону).
                 </li>
-                <li> 22. Полотенце туристическое (быстросохнущее).</li>
-                <li> 23. Две палки для треккинга.</li>
-                <li> 24. Налобный фонарик и батарейки.</li>
+                <li>Полотенце туристическое (быстросохнущее).</li>
+                <li>Две палки для треккинга.</li>
+                <li>Налобный фонарик и батарейки.</li>
                 <li>
                   {" "}
-                  25. Беруши (на случай, если будут лаять собаки и храпеть
-                  соседи).
+                  Беруши (на случай, если будут лаять собаки и храпеть соседи).
                 </li>
-                <li> 26. Солнцезащитный крем.</li>
-                <li> 27. Гигиеническая помада.</li>
-                <li> 28. Влажные салфетки.</li>
-                <li> 29. Туристическая сидушка.</li>
-                <li> 30. Зонт.</li>
+                <li>Солнцезащитный крем.</li>
+                <li>Гигиеническая помада.</li>
+                <li>Влажные салфетки.</li>
+                <li>Туристическая сидушка.</li>
+                <li>Зонт.</li>
                 <li>
                   {" "}
-                  31. Еда: чай травяной, мёд, орехи, сухофрукты, каши быстрого
+                  Еда: чай травяной, мёд, орехи, сухофрукты, каши быстрого
                   приготовления, копчёный сыр.
                 </li>
               </ul>
@@ -571,50 +571,57 @@ export default function Home() {
             subtitle="Нужные лекарственные препараты"
           >
             <div className="p-4">
-              <ul className="space-y-1 leading-7">
+              <ul className="space-y-1 list-decimal list-outside ms-10 leading-7">
                 <li>
-                  1. Ацетилсалициловая кислота (<b>аспирин</b>, тромбо АСС) для
+                  Ацетилсалициловая кислота (
+                  <b className="font-semibold">аспирин</b>, тромбо АСС) для
                   разжижения крови и улучшения транспорта кислорода. (для
                   ежедневного приема)
                 </li>
                 <li>
-                  2. <b>Витамин С</b>. Лучше брать растворимую форму по 500 или
-                  1000мг. (Для ежедневного приема)
+                  <b className="font-semibold">Витамин С</b>. Лучше брать
+                  растворимую форму по 500 или 1000мг. (Для ежедневного приема)
                 </li>
                 <li>
-                  3. <b>Аспаркам</b> или <b>Панангин</b>. (Для ежедневного
+                  <b className="font-semibold">Аспаркам</b> или{" "}
+                  <b className="font-semibold">Панангин</b>. (Для ежедневного
                   приема)
                 </li>
                 <li>
-                  4. <b>Рибоксин</b>. (Для ежедневного приема)
+                  <b className="font-semibold">Рибоксин</b>. (Для ежедневного
+                  приема)
                 </li>
                 <li>
-                  5. <b>Калия оротат</b>. (Для ежедневного приема)
+                  <b className="font-semibold">Калия оротат</b>. (Для
+                  ежедневного приема)
                 </li>
                 <li>
-                  6. <b>Диакарб</b>. (Рекомендуется применять при ночевках на
-                  высотах выше 4000м).
+                  <b className="font-semibold">Диакарб</b>. (Рекомендуется
+                  применять при ночевках на высотах выше 4000м).
                 </li>
                 <li>
-                  7. <b>Дексаметазон</b>
+                  <b className="font-semibold">Дексаметазон</b>
                 </li>
                 <li>
-                  8. <b>Ибупрофен</b> или <b>Солпадеин</b>. Хорошо снимает
+                  <b className="font-semibold">Ибупрофен</b> или{" "}
+                  <b className="font-semibold">Солпадеин</b>. Хорошо снимает
                   головную боль при начальных симптомах горной болезни.
                 </li>
                 <li>
-                  9. <b>Церукал</b>. Противорвотное средство.
+                  <b className="font-semibold">Церукал</b>. Противорвотное
+                  средство.
                 </li>
                 <li>
-                  10. Противопростудные препараты, иммуномодуляторы (
-                  <b>Оциллококцинум</b>, <b>Анаферон</b>) их следует начинать
+                  Противопростудные препараты, иммуномодуляторы (
+                  <b className="font-semibold">Оциллококцинум</b>,{" "}
+                  <b className="font-semibold">Анаферон</b>) их следует начинать
                   принимать сразу же при переохлаждении, ознобах, насморке или
                   при возникновении в группе любых аденовирусных инфекций.
                 </li>
                 <li>
-                  11. Средства для разжижения мокроты (например, <b>АЦЦ</b>,
-                  прием которого начинать при любых формах кашля, для ранней
-                  профилактики отека легких).
+                  Средства для разжижения мокроты (например,{" "}
+                  <b className="font-semibold">АЦЦ</b>, прием которого начинать
+                  при любых формах кашля, для ранней профилактики отека легких).
                 </li>
               </ul>
             </div>
@@ -624,17 +631,30 @@ export default function Home() {
       <div className="pt-5" />
       <div className="w-full bg-blue-500 text-white py-12">
         <div className="max-w-4xl w-full mx-auto">
-          <Header title="Информация о Тибете" subtitle="что посмотреть?" />
+          <Header
+            title="Знаковые места Тибета"
+            subtitle="Перечень достопримечательностей по регионам"
+          />
           <TibetInfo />
         </div>
       </div>
+
+      <div className="pt-10" />
+      <div className="max-w-4xl w-full">
+        <Header
+          title="Фото с прошлых туров"
+          subtitle="Нажмите на фото, чтобы открыть галерею"
+          id={LINK_PHOTO_GALLERY}
+        />
+        <div className="pt-6">
+          <PhotoGallery />
+        </div>
+      </div>
+
       <div className="pt-10" />
       <div className="max-w-4xl">
         <div className="pb-5">
-          <Header
-            title="Отзывы участников"
-            subtitle="вот, что пишут участники прошлых туров"
-          />
+          <Header title="Отзывы участников" subtitle="" />
         </div>
         <div className="grid mb-8 rounded-lg md:mb-12 md:grid-cols-2">
           <Review
@@ -656,23 +676,8 @@ export default function Home() {
       </div>
 
       <div className="max-w-4xl w-full">
-        <Header
-          title="Часто задаваемые вопросы"
-          subtitle="вот, что спрашивают больше всего"
-        />
+        <Header title="Часто задаваемые вопросы" subtitle="" />
         <FAQ />
-      </div>
-
-      <div className="pt-10" />
-      <div className="max-w-4xl w-full">
-        <Header
-          title="Фото с прошлых туров"
-          subtitle="нажмите на фото, чтобы открыть галерею"
-          id={LINK_PHOTO_GALLERY}
-        />
-        <div className="pt-6">
-          <PhotoGallery />
-        </div>
       </div>
 
       <div className="pt-10" />
@@ -680,27 +685,31 @@ export default function Home() {
         <ApplyForm />
         <Header
           title="Контакты"
-          subtitle="связаться с нами"
+          subtitle="Алексей Перчуков"
           id={LINK_CONTACTS}
         />
-        <div className="p-4">
+        <div className="p-4 pt-0">
           <div className="py-2">
-            <div>Россия, Алексей</div>
             <input
               type="tel"
               value="+7 911 927 41 14"
               className="text-3xl max-w-full"
               readOnly
             />
+            <div className="text-xs uppercase tracking-wider font-bold">
+              Россия
+            </div>
           </div>
           <div className="py-2">
-            <div>Китай, Алексей</div>
             <input
               type="tel"
               value="+86 173 8999 5190"
               className="text-3xl max-w-full"
               readOnly
             />
+            <div className="text-xs uppercase tracking-wider font-bold">
+              Китай
+            </div>
           </div>
         </div>
       </div>
@@ -718,7 +727,7 @@ export default function Home() {
       </div> */}
 
       <div className="max-w-[30vh] pb-18">
-        <div className="flex pt-8 opacity-80">
+        <div className="flex pt-8 pb-4 opacity-80">
           <div className="w-[33%] h-[40px] flex items-center justify-center">
             <Image
               src="/ctt.png"
@@ -861,8 +870,15 @@ const WhyGoTibetWithUsStatement: React.FC<{
 const Copyright: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="text-center text-gray-500 text-sm py-4">
-      &copy; {currentYear} Все права защищены.
+    <div className="text-center text-xs text-gray-500 text-sm py-4">
+      &copy; {currentYear}, OPEN TIBET
+      <br />
+      <span className="text-[9px]">
+        Дизайн:{" "}
+        <a href="https://k60.in" className="hover:text-red-500">
+          k60.in
+        </a>
+      </span>
     </div>
   );
 };
