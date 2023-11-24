@@ -135,15 +135,16 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                         <AccordionContent>
                             <Slick step={cardWidth}>
                                 <ContentManosarovar />
-                                <ContentBonriTemple />
-                                <ContentGosul />
-                                <ContentLangpona />
-                                <ContentNjego />
                                 <ContentSeralung />
+                                <ContentNjego />
                                 <ContentTrugo />
-                                <ContentCherkip />
+                                <ContentGosul />
                                 <ContentChiu />
+                                <ContentCherkip />
+                                <ContentLangpona />
+                                <ContentBonriTemple />
                                 <ContentRakshastal />
+                                <ContentGangutso />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -161,7 +162,6 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentYumbulakhang />
                                 <ContentChongye />
                                 <ContentKading />
-                                <ContentGangutso />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -193,8 +193,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                     {children}
                 </div>
                 <div className='h-10' />
-                <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}
-                >
+                <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}>
                     <div className='flex items-end h-full'>
                         <Dialog>
                             <DialogTrigger className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2'>
@@ -206,20 +205,18 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 } : {}}>
                                 </div>
                             </DialogTrigger>
-                            <DialogContent className="max-h-[95vh] h-full overflow-y-auto">
+                            <DialogContent className="max-h-[95vh] h-auto">
                                 <DialogHeader>
                                     {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
                                     <DialogDescription>
                                         <div className="pt-4">
                                             <img
                                                 src={imageSrc}
-                                                // height={200}
                                                 className='object-cover h-[220px] w-full rounded-lg' />
                                         </div>
-
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="overflow-y-auto">
+                                <div className="overflow-y-auto" style={{ maxHeight: 700 }}>
                                     {children}
                                 </div>
                             </DialogContent>
@@ -245,14 +242,14 @@ export const TibetInfoCardContent: React.FC<{
     children: React.ReactNode
 }> = ({ children }) => {
     return (
-        <div className='px-3 py-2 overflow-y-auto' style={{ zIndex: -1 }}>
+        <div className='px-3 py-2' style={{ zIndex: -1 }}>
             {children}
         </div>
     )
 }
 
 export const ContentLhasa = React.memo(() => (
-    <TibetInfoCard imageSrc="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/85/fa/a9/photo0jpg.jpg?w=2400&h=-1&s=1">
+    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/lhasa.jpg">
         <TibetInfoCardTitle>Лхаса</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Лхаса — столица Тибета, автономного района Китая. Город расположен на высоте 3650 метров над уровнем моря и является важным центром тибетского буддизма.
@@ -1118,12 +1115,12 @@ const ContentGangutso = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gangutso.jpg">
         <TibetInfoCardTitle>Ганг гю цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
-            Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+            {/* Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
             <br />
             <br />
             Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
             <br />
-            <br />
+            <br /> */}
         </TibetInfoCardContent>
     </TibetInfoCard>
 )
@@ -1212,7 +1209,7 @@ const ContentSeralung = () => (
 
 const ContentTrugo = () => (
     <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/trugo.jpg">
-        <TibetInfoCardTitle>Монастырь Сералунг Гомпа</TibetInfoCardTitle>
+        <TibetInfoCardTitle>Монастырь Тхуголхо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Тхуголхо (Thugolho); еще одно название Труго Гомпа, (Trugo Gompa). Он находится прямо на берегу Манасаровара, у подножия горы Гурла-Мандхата. «Тху» переводится как омовение, «го» – голова, «лхо» – юг. Омовение головы у южных ворот Манасаровара является с духовной точки зрения исключительно благословенным действом, поскольку в пророчествах сказано: кто здесь предастся омовению головы, переродится богом. Для паломников, желающих омыть голову, устроены специальные мостки.
             Обители насчитывается около 900 лет. Это одно из самых больших и хорошо сохранившихся культовых сооружений у Манасаровара.
