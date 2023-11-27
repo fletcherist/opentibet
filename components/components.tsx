@@ -710,6 +710,10 @@ export const ButtonWithContent: React.FC<{
 };
 
 export const ApplyForm: React.FC = () => {
+  const [name, setName] = useState<string>("")
+  const [email, setEmail] = useState<string>("")
+  const [phone, setPhone] = useState<string>("")
+
   return (
     <div>
       <div className="flex items-center flex-wrap">
@@ -720,7 +724,32 @@ export const ApplyForm: React.FC = () => {
           />
         </div>
         <div className="w-full md:max-w-[50%] p-4">
-          <form>
+          <form onSubmit={async (event) => {
+            event.preventDefault()
+            try {
+              const body = {
+                name: name,
+                email: email,
+                phone: phone
+              }
+              const resp = await fetch("./api/applications", {
+                method: 'POST',
+                body: JSON.stringify(body),
+                headers: {
+                  'content-type': 'application/json'
+                }
+              })
+              alert(`Спасибо за заявку, ${name}! Мы свяжемся с вами в ближайшее время`)
+              setName("")
+              setEmail("")
+              setPhone("")
+              console.log(resp)
+              const json = await resp.json()
+              console.log(json)
+            } catch (error) {
+              alert(`${name}, не удалось отправить заявку! Пожалуйста, попробуйте ещё раз или напишите нам на почту info@opentibet.ru`)
+            }
+          }}>
             <div className="py-[8px]">
               <label
                 htmlFor="first_name"
@@ -734,6 +763,10 @@ export const ApplyForm: React.FC = () => {
                 className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder=""
                 required
+                value={name}
+                onChange={event => {
+                  setName(event.target.value)
+                }}
               />
             </div>
             <div className="py-[8px]">
@@ -749,6 +782,10 @@ export const ApplyForm: React.FC = () => {
                 className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder="example@gmail.com"
                 required
+                value={email}
+                onChange={event => {
+                  setEmail(event.target.value)
+                }}
               />
             </div>
             <div className="py-[8px]">
@@ -764,10 +801,14 @@ export const ApplyForm: React.FC = () => {
                 className="bg-gray-100 border border-gray-100 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-1.5 outline-none"
                 placeholder="+7 (999) 123 45 67"
                 required
+                value={phone}
+                onChange={event => {
+                  setPhone(event.target.value)
+                }}
               />
             </div>
             <div className="flex justify-end py-4">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center" type="submit">
                 Отправить
               </button>
             </div>
