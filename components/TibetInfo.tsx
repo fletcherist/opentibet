@@ -216,7 +216,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                         </div>
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="overflow-y-auto" style={{ maxHeight: 700 }}>
+                                <div className="overflow-y-auto" style={{ maxHeight: '58vh' }}>
                                     {children}
                                 </div>
                             </DialogContent>

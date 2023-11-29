@@ -461,7 +461,7 @@ export default function Home() {
           title="Май"
           subtitle="2—21 мая"
           days={19}
-          price={2000}
+          price={1900}
         />
         <TimetableButton
           title="Июнь"
@@ -473,25 +473,25 @@ export default function Home() {
           title="Июль"
           subtitle="1—23 июля"
           days={22}
-          price={1500}
+          price={2100}
         />
         <TimetableButton
           title="Август"
           subtitle="2—19 августа"
           days={17}
-          price={2500}
+          price={2200}
         />
         <TimetableButton
           title="Сентябрь"
           subtitle="2—21 сентября"
           days={19}
-          price={2650}
+          price={2300}
         />
         <TimetableButton
           title="Октябрь"
           subtitle="2—23 октября"
           days={21}
-          price={2800}
+          price={1900}
         />
       </div>
       <div className="pt-10" />
