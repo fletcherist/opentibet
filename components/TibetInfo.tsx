@@ -205,7 +205,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 } : {}}>
                                 </div>
                             </DialogTrigger>
-                            <DialogContent className="max-h-[95vh] h-auto">
+                            <DialogContent className="h-auto">
                                 <DialogHeader>
                                     {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
                                     <DialogDescription>
