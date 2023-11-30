@@ -475,20 +475,20 @@ export default function Home() {
           <TabsList className="shadow-inner p-[3px] border-[1px] border-gray-500/20 h-min bg-white -mx-3 z-30 relative self-center flex">
             <TabsTrigger
               value="reg"
-              className="rounded-r-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal 
+              className="rounded-r-none w-1/2 h-[70px] transition-none md:whitespace-nowrap whitespace-normal 
               data-[state=inactive]:text-blue-500 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
-              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
+              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
                 Пакетные <br className="md:hidden" />
                 туры
               </h3>
             </TabsTrigger>
             <TabsTrigger
               value="exc"
-              className="rounded-l-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal
+              className="rounded-l-none w-1/2 h-[70px] transition-none md:whitespace-nowrap whitespace-normal
               data-[state=inactive]:text-blue-500 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
-              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
+              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
                 Эксклюзивные <br className="md:hidden" />
                 туры
               </h3>
