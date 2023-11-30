@@ -2,10 +2,16 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  safelist: [
+    "bg-yellow-500",
+    "hover:bg-yellow-600",
+    "border-b-white/30",
+    "border-b-black/30",
   ],
   theme: {
     container: {
@@ -31,7 +37,6 @@ module.exports = {
           950: "#000000",
         },
         yellow: {
-          DEFAULT: "#FBB03B",
           50: "#FFF9EF",
           100: "#FEF0DB",
           200: "#FDE0B3",
@@ -118,4 +123,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { useState, useEffect } from "react";
-import { useRef } from "react";
+import { useRef, Children } from "react";
 
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
@@ -12,6 +12,7 @@ import {
   LINK_CONTACTS,
   LINK_PHOTO_GALLERY,
   LINK_TOURS,
+  LINK_OFFERS,
 } from "@/utils/constants";
 
 export const BackgroundSlider = () => {
@@ -176,7 +177,7 @@ const Accordion: React.FC<{ title: string; content: string }> = ({
 export const IconArrowDown = () => {
   return (
     <svg
-      className="w-4 h-4 text-white/50"
+      className="w-4 h-4 opacity-70"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -194,7 +195,7 @@ export const IconArrowDown = () => {
 export const IconArrowClose = () => {
   return (
     <svg
-      className="w-4 h-4 text-white/50"
+      className="w-4 h-4 opacity-70"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -236,12 +237,25 @@ export const FAQ: React.FC = () => {
   );
 };
 
-export const ActionButton = () => {
+export const AbstractButton: React.FC<{
+  label: string;
+  accentColor?: string;
+  hoverColor?: string;
+  textColor?: string;
+  anchor?: string;
+}> = ({
+  label = "Смотреть программы на 2024",
+  accentColor = "blue-500",
+  hoverColor = "blue-800",
+  textColor = "white",
+  anchor = LINK_TOURS,
+}) => {
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg"
+      className={`bg-${accentColor} hover:bg-${hoverColor} text-${textColor} font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg`}
       onClick={() => {
-        const timetableElementRef = document.getElementById(LINK_TOURS);
+        console.log(anchor);
+        const timetableElementRef = document.getElementById(anchor);
         if (timetableElementRef) {
           timetableElementRef.scrollIntoView({
             behavior: "smooth",
@@ -250,7 +264,7 @@ export const ActionButton = () => {
         }
       }}
     >
-      Смотреть программы на 2024
+      {label}
       <svg
         className="w-4 h-4 ml-2"
         aria-hidden="true"
@@ -268,15 +282,20 @@ export const ActionButton = () => {
   );
 };
 
+export const ActionButton = () => {
+  return <AbstractButton label="К предложениям" anchor={LINK_OFFERS} />;
+};
+
 const TimetableDay: React.FC<{
   title: string;
+  accentColor: string;
   children: React.ReactNode;
-}> = ({ children, title }) => {
+}> = ({ children, accentColor = "blue-500", title }) => {
   return (
     <div className="flex">
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-center p-4 pl-2">
-          <div className="w-3 h-3 rounded-full bg-blue-500" />
+          <div className={`w-3 h-3 rounded-full bg-${accentColor}`} />
         </div>
         <div className="w-0.5 bg-gray-300 h-full" />
       </div>
@@ -321,15 +340,15 @@ const TimetablePhotoDouble = () => {
   );
 };
 
-const TimetableList = () => {
+const TimetableList = ({ accentColor = "blue-500" }) => {
   return (
     <>
-      <TimetableDay title="1 день">
+      <TimetableDay accentColor={accentColor} title="1 день">
         Перелет Ченду-Лхаса. Прибытие в аэропорт Гонкар в 19.00-(3550м)
         <br />
         Переезд в Лхасу (3600м). Ночь в Лхасе Tibet hotel
       </TimetableDay>
-      <TimetableDay title="2 день">
+      <TimetableDay accentColor={accentColor} title="2 день">
         Лхаса Посещение монастыря Джокханг, Дворца Потала (Опционно ) и
         туристического района Баркор. Лха́са (произносится l̥ásə, тиб. ལྷ་ས, Вайли
         lhasa, кит. трад. 拉薩, упр. 拉萨, пиньинь: Lāsà) — городской округ в
@@ -356,7 +375,7 @@ const TimetableList = () => {
         установленная в главном зале нижнего этажа статуя Джово Шакьямуни,
         изображающая Будду в 12 лет.
       </TimetableDay>
-      <TimetableDay title="3 день">
+      <TimetableDay accentColor={accentColor} title="3 день">
         Экскурсии в монастыри Ганден(4300м) и Драк Йерпа(4400м) в окрестностях
         Лхасы.
         <br />
@@ -380,7 +399,7 @@ const TimetableList = () => {
         <br />
         Ночь в Лхасе. Ночь в Tibet hotel.
       </TimetableDay>
-      <TimetableDay title="4 день">
+      <TimetableDay accentColor={accentColor} title="4 день">
         Посещение монастыря Ташилунпо. Монастырь построен в 1447 году на холме
         недалеко от центра города. Полное название монастыря по-тибетски
         буквально означает «всё счастье и благополучие собрано тут». Монастырь
@@ -398,7 +417,7 @@ const TimetableList = () => {
         Китая). В это время школа Сакья была главной школой тибетского буддизма,
         а город Сакья — административным центром всего Тибета.
       </TimetableDay>
-      <TimetableDay title="5 день">
+      <TimetableDay accentColor={accentColor} title="5 день">
         Выезд в 7 утра. Прибытие в Ронгбук в 10.00
         <br />
         <br />
@@ -412,7 +431,7 @@ const TimetableList = () => {
         использовались женской монашеской общиной для медитаций. Стоит обратить
         внимание на пещеру Падмасабхавы (8 век).
       </TimetableDay>
-      <TimetableDay title="6 день">
+      <TimetableDay accentColor={accentColor} title="6 день">
         Нью Тингри- Percu Tso (озеро ) – Сага -Парьянг Дорога проходит вдоль
         Гималайской гряды.
         <br />
@@ -423,7 +442,7 @@ const TimetableList = () => {
         <br />
         Ночь Парьянг
       </TimetableDay>
-      <TimetableDay title="7 день">
+      <TimetableDay accentColor={accentColor} title="7 день">
         Преодоление первых перевалов высотой более 5000 метров, первые виды на
         священный Кайлас.
         <br />
@@ -451,7 +470,7 @@ const TimetableList = () => {
         отличающемся от традиционного тибетского. Особенную известность
         приобрели фрески монастыря.
       </TimetableDay>
-      <TimetableDay title="9 день">
+      <TimetableDay accentColor={accentColor} title="9 день">
         Цапаранг – древняя столица королевства Гуге, располагавшегося  в
         западном Тибете. Цапаранг пережил период расцвета в IX и был заброшен в
         XVII веке. В Гуге было основано более 100 буддийских монастырей. В
@@ -466,7 +485,7 @@ const TimetableList = () => {
         <br />
         Ночь в Цапаранге, Guge Hotel.
       </TimetableDay>
-      <TimetableDay title="10 день">
+      <TimetableDay accentColor={accentColor} title="10 день">
         Переезд в Дарчен. Священная земля Тритхапури и монастыря Гурген.
         Посещение монастыря боннского Гурген на въезде в Долину Гаруды, столицу
         древнего королевства Шанг Шунг.
@@ -499,7 +518,7 @@ const TimetableList = () => {
         Рядом на скале находится известный храм Тиртхапури с пещерой, где
         Падмасамбхава, Драгоценный Гуру, по преданию, покорил демона.
       </TimetableDay>
-      <TimetableDay title="11 день">
+      <TimetableDay accentColor={accentColor} title="11 день">
         Переход до монастыря Дирапук (4910 м) 20 км, около 6-7 часов ходьбы. Вы
         начинаете путь от Тарпоче, мимо ступ, по пути мы увидим небесное
         кладбище, связанное с 84 махасидхами (йогинами) из Индии, пройдем через
@@ -519,7 +538,7 @@ const TimetableList = () => {
         <br />
         Ночь в гестхаузе рядом с монастырем Дхрира Пхук.
       </TimetableDay>
-      <TimetableDay title="12 день">
+      <TimetableDay accentColor={accentColor} title="12 день">
         Нам предстоит радиальный выход к Северо-восточному лицу Кайласа. Выход
         из гестхауса в 10ч. Подход к Северо-восточному лицу Кайласа и каменному
         зеркалу Дхарма Кинг Нарсанг. (5350м)
@@ -534,7 +553,7 @@ const TimetableList = () => {
         <br />
         Ночь в гестхаузе около монастыря Дрира Пхук (4950м)
       </TimetableDay>
-      <TimetableDay title="13 день">
+      <TimetableDay accentColor={accentColor} title="13 день">
         Это самый трудный день коры. Он является кульминационным днём коры
         вокруг Кайласа, так как Вы пересечете перевал Дролма-Ла (5600 м),
         который поразит Вас своей энергетикой. Здесь Вы возрождаетесь, так как
@@ -560,7 +579,7 @@ const TimetableList = () => {
         <br />
         Ночь в Гест Хаус Zutur Phuk
       </TimetableDay>
-      <TimetableDay title="14 день">
+      <TimetableDay accentColor={accentColor} title="14 день">
         Так же возможен радиальный выход в «симметричную Долину» (Гедхун)
         <br />
         <br />
@@ -573,31 +592,33 @@ const TimetableList = () => {
         <br />
         Ночь в Дарчене hotel.
       </TimetableDay>
-      <TimetableDay title="15 день">
+      <TimetableDay accentColor={accentColor} title="15 день">
         Дарчен (4600) – Сага (4500) – Ладзе (4000) (800км, 14 часов)
         <br />
         <br />
         Ночь в Ладзе в отеле Viena.
       </TimetableDay>
-      <TimetableDay title="16 день">
+      <TimetableDay accentColor={accentColor} title="16 день">
         Переезд Ладзе (4000) – Шигадзе (3900)–Лхаса (3600) (450км, 8 часов)
         <br />
         <br />
         Переезд. Ночь в Tibet hotel.
       </TimetableDay>
-      <TimetableDay title="17 день">
+      <TimetableDay accentColor={accentColor} title="17 день">
         Свободный день в Лхасе.
         <br />
         <br />
         Ночь в Tibet hotel.
       </TimetableDay>
-      <TimetableDay title="18 день">
+      <TimetableDay accentColor={accentColor} title="18 день">
         Свободный день Лхаса
         <br />
         <br />
         Ночь Tibet Hotel
       </TimetableDay>
-      <TimetableDay title="19 день">Перелет Лхаса-Ченду-Москва</TimetableDay>
+      <TimetableDay accentColor={accentColor} title="19 день">
+        Перелет Лхаса-Ченду-Москва
+      </TimetableDay>
     </>
   );
 };
@@ -635,15 +656,30 @@ export const TimetableButton: React.FC<{
   subtitle: string;
   days: number;
   price: number;
-}> = ({ title, subtitle, days, price }) => {
+  bgColor?: string;
+  fgColor?: string;
+  accentColor?: string;
+}> = ({
+  title,
+  subtitle,
+  days,
+  price,
+  bgColor = "blue-500",
+  fgColor = "white",
+  accentColor = "yellow-500",
+}) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const daysLabel = getNoun(days, "день", "дня", "дней");
 
   return (
-    <div className={`m-4 my-2 relative bg-gray-100`}>
+    <div className={`my-0 relative bg-gray-100`}>
+      <div className="hidden bg-yellow-500" />
       <div
-        className={`h-[72px] sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}
+        className={`h-[72px] sticky top-[60px] md:top-[64px]
+         border-b-[1px] border-b-${fgColor}/30
+         text-${fgColor} bg-${bgColor} hover:brightness-90
+         `}
       >
         <div
           className="py-3 px-4 flex cursor-pointer justify-between"
@@ -654,25 +690,31 @@ export const TimetableButton: React.FC<{
           <div className="flex items-center">
             <div className="mr-4 w-[11ch]">
               <div className="font-semibold text-2xl leading-5">{title}</div>
-              <div className="text-yellow-500 text-xs">{subtitle}</div>
+              <div className={`text-${accentColor} text-xs`}>{subtitle}</div>
             </div>
-            <div className="flex space-x-4 text-white/80">
+            <div className={`flex space-x-4 text-${fgColor}/80`}>
               <TimetableFactoid fact={daysLabel} value={String(days)} />
               <TimetableFactoid fact="цена, $" value={`${price}`} />
             </div>
           </div>
 
-          <div className="p-4">
+          <div className={`p-4 text-${fgColor}`}>
             {isOpened ? <IconArrowClose /> : <IconArrowDown />}
           </div>
         </div>
       </div>
       {isOpened && (
-        <div className="px-4">
-          <TimetableList />
-          <div className="py-4" />
-          <ApplyForm />
-        </div>
+        <>
+          <div className="px-4">
+            <TimetableList accentColor={bgColor} />
+            <div className="py-4" />
+          </div>
+          <div
+            className={`px-4 bg-${bgColor} text-${fgColor} border-b-[1px] border-b-${fgColor}/30`}
+          >
+            <ApplyForm />
+          </div>
+        </>
       )}
     </div>
   );
@@ -686,9 +728,10 @@ export const ButtonWithContent: React.FC<{
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (
-    <div className={`m-4 my-2 bg-gray-100`}>
+    <div className={`mx-1 my-0 bg-gray-100`}>
       <div
-        className={`h-[72px] sticky top-[48px] bg-blue-500 hover:bg-blue-800 text-white`}
+        className={`h-[72px] sticky top-[60px] md:top-[64px] bg-blue-500 hover:bg-blue-800 text-white
+        border-b-[1px] border-b-white/20`}
       >
         <div
           className="py-3 px-4 cursor-pointer flex items-center justify-between"
@@ -710,9 +753,9 @@ export const ButtonWithContent: React.FC<{
 };
 
 export const ApplyForm: React.FC = () => {
-  const [name, setName] = useState<string>("")
-  const [email, setEmail] = useState<string>("")
-  const [phone, setPhone] = useState<string>("")
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
 
   return (
     <div>
@@ -724,32 +767,38 @@ export const ApplyForm: React.FC = () => {
           />
         </div>
         <div className="w-full md:max-w-[50%] p-4">
-          <form onSubmit={async (event) => {
-            event.preventDefault()
-            try {
-              const body = {
-                name: name,
-                email: email,
-                phone: phone
+          <form
+            onSubmit={async (event) => {
+              event.preventDefault();
+              try {
+                const body = {
+                  name: name,
+                  email: email,
+                  phone: phone,
+                };
+                const resp = await fetch("./api/applications", {
+                  method: "POST",
+                  body: JSON.stringify(body),
+                  headers: {
+                    "content-type": "application/json",
+                  },
+                });
+                alert(
+                  `Спасибо за заявку, ${name}! Мы свяжемся с вами в ближайшее время`
+                );
+                setName("");
+                setEmail("");
+                setPhone("");
+                console.log(resp);
+                const json = await resp.json();
+                console.log(json);
+              } catch (error) {
+                alert(
+                  `${name}, не удалось отправить заявку! Пожалуйста, попробуйте ещё раз или напишите нам на почту info@opentibet.ru`
+                );
               }
-              const resp = await fetch("./api/applications", {
-                method: 'POST',
-                body: JSON.stringify(body),
-                headers: {
-                  'content-type': 'application/json'
-                }
-              })
-              alert(`Спасибо за заявку, ${name}! Мы свяжемся с вами в ближайшее время`)
-              setName("")
-              setEmail("")
-              setPhone("")
-              console.log(resp)
-              const json = await resp.json()
-              console.log(json)
-            } catch (error) {
-              alert(`${name}, не удалось отправить заявку! Пожалуйста, попробуйте ещё раз или напишите нам на почту info@opentibet.ru`)
-            }
-          }}>
+            }}
+          >
             <div className="py-[8px]">
               <label
                 htmlFor="first_name"
@@ -764,8 +813,8 @@ export const ApplyForm: React.FC = () => {
                 placeholder=""
                 required
                 value={name}
-                onChange={event => {
-                  setName(event.target.value)
+                onChange={(event) => {
+                  setName(event.target.value);
                 }}
               />
             </div>
@@ -783,8 +832,8 @@ export const ApplyForm: React.FC = () => {
                 placeholder="example@gmail.com"
                 required
                 value={email}
-                onChange={event => {
-                  setEmail(event.target.value)
+                onChange={(event) => {
+                  setEmail(event.target.value);
                 }}
               />
             </div>
@@ -802,13 +851,16 @@ export const ApplyForm: React.FC = () => {
                 placeholder="+7 (999) 123 45 67"
                 required
                 value={phone}
-                onChange={event => {
-                  setPhone(event.target.value)
+                onChange={(event) => {
+                  setPhone(event.target.value);
                 }}
               />
             </div>
             <div className="flex justify-end py-4">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center" type="submit">
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center"
+                type="submit"
+              >
                 Отправить
               </button>
             </div>
@@ -846,7 +898,7 @@ export const Navbar = () => {
     window.history.pushState({}, "", `#${elementId}`);
   };
   return (
-    <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-10">
+    <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-50">
       <div className="flex justify-center">
         <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 pb-3 w-full">
           <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
@@ -855,7 +907,7 @@ export const Navbar = () => {
               width={190}
               height={44}
               alt="OpenTibet Logo"
-              className="h-8 mr-3 md:h-11"
+              className="h-8 w-auto mr-3 md:h-11"
             />
           </a>
           <button
