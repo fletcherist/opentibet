@@ -476,7 +476,7 @@ export default function Home() {
             <TabsTrigger
               value="reg"
               className="rounded-r-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal 
-              data-[state=inactive]:text-gray-600 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+              data-[state=inactive]:text-blue-500 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
                 Пакетные <br className="md:hidden" />
@@ -486,7 +486,7 @@ export default function Home() {
             <TabsTrigger
               value="exc"
               className="rounded-l-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal
-              data-[state=inactive]:text-gray-600 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
+              data-[state=inactive]:text-blue-500 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
                 Эксклюзивные <br className="md:hidden" />
