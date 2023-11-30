@@ -472,27 +472,31 @@ export default function Home() {
           премиум-класса по эксклюзивным маршрутам.
         </p>
         <Tabs defaultValue="reg" className="w-full px-4">
-          <TabsList className="shadow-inner p-[2px] border-[1px] border-gray-500/20 h-min bg-white w-min mx-auto -mb-[34px] z-30 relative self-center flex">
+          <TabsList className="shadow-inner p-[3px] border-[1px] border-gray-500/20 h-min bg-white -mx-3 z-30 relative self-center flex">
             <TabsTrigger
               value="reg"
-              className="rounded-r-none w-1/2 h-[30px] transition-none whitespace-normal data-[state=inactive]:text-gray-600 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+              className="rounded-r-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal 
+              data-[state=inactive]:text-gray-600 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
-              <h3 className="px-2 font-bold uppercase leading-6 tracking-widest text-xs">
-                Пакетные
+              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
+                Пакетные <br className="md:hidden" />
+                туры
               </h3>
             </TabsTrigger>
             <TabsTrigger
               value="exc"
-              className="rounded-l-none w-1/2 h-[30px] transition-none whitespace-normal data-[state=inactive]:text-gray-600 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
+              className="rounded-l-none w-1/2 h-[40px] transition-none md:whitespace-nowrap whitespace-normal
+              data-[state=inactive]:text-gray-600 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
-              <h3 className="px-2 font-bold uppercase leading-6 tracking-widest text-xs">
-                Эксклюзивные
+              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-base">
+                Эксклюзивные <br className="md:hidden" />
+                туры
               </h3>
             </TabsTrigger>
           </TabsList>
 
           <TabsContent
-            className="bg-gray-200 mt-4 -mx-3 pt-3 rounded-sm"
+            className="bg-gray-200 mt-4 -mx-3 rounded-sm"
             value="reg"
           >
             <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-blue-500">
@@ -541,10 +545,7 @@ export default function Home() {
             </div>
           </TabsContent>
 
-          <TabsContent
-            className="bg-black mt-4 -mx-3 pt-3 rounded-sm"
-            value="exc"
-          >
+          <TabsContent className="bg-black mt-4 -mx-3 rounded-sm" value="exc">
             <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-yellow-500">
               Эксклюзивные туры
             </h4>
