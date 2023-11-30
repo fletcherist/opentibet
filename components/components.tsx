@@ -12,6 +12,7 @@ import {
   LINK_CONTACTS,
   LINK_PHOTO_GALLERY,
   LINK_TOURS,
+  LINK_WELCOME_SCREEN,
   LINK_OFFERS,
 } from "@/utils/constants";
 
@@ -885,18 +886,6 @@ export const Header: React.FC<{
 };
 
 export const Navbar = () => {
-  const smoothScroll = (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    elementId: string
-  ) => {
-    event.preventDefault();
-    const elRef = document.getElementById(elementId);
-    if (elRef) {
-      elRef.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    // change location
-    window.history.pushState({}, "", `#${elementId}`);
-  };
   return (
     <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-50">
       <div className="flex justify-center">
@@ -908,6 +897,9 @@ export const Navbar = () => {
               height={44}
               alt="OpenTibet Logo"
               className="h-8 w-auto mr-3 md:h-11"
+              onClick={(event) => {
+                smoothScroll(event, LINK_WELCOME_SCREEN);
+              }}
             />
           </a>
           <button
@@ -973,4 +965,14 @@ export const Navbar = () => {
       </div>
     </nav>
   );
+};
+
+export const smoothScroll = (event: React.MouseEvent, elementId: string) => {
+  event.preventDefault();
+  const elRef = document.getElementById(elementId);
+  if (elRef) {
+    elRef.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  // change location
+  window.history.pushState({}, "", `#${elementId}`);
 };

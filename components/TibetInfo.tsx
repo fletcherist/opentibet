@@ -205,7 +205,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 } : {}}>
                                 </div>
                             </DialogTrigger>
-                            <DialogContent className="max-h-[95vh] h-auto">
+                            <DialogContent className="h-auto">
                                 <DialogHeader>
                                     {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
                                     <DialogDescription>
@@ -216,7 +216,7 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                         </div>
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="overflow-y-auto" style={{ maxHeight: 700 }}>
+                                <div className="overflow-y-auto" style={{ maxHeight: '58vh' }}>
                                     {children}
                                 </div>
                             </DialogContent>

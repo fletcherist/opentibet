@@ -24,6 +24,7 @@ import {
   LINK_CONTACTS,
   LINK_PHOTO_GALLERY,
   LINK_TOURS,
+  LINK_WELCOME_SCREEN,
   LINK_OFFERS,
 } from "@/utils/constants";
 
@@ -34,7 +35,10 @@ export default function Home() {
       className="flex min-h-screen flex-col items-center justify-between"
     >
       <Navbar />
-      <div className="w-full h-[93vh] mt-[-5vh] relative">
+      <div
+        className="w-full h-[93vh] mt-[-5vh] relative"
+        id={LINK_WELCOME_SCREEN}
+      >
         <video
           id="background-video"
           className="absolute w-full h-full object-cover"
