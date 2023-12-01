@@ -251,37 +251,37 @@ export const AbstractButton: React.FC<{
   textColor = "white",
   anchor = LINK_TOURS,
 }) => {
-  return (
-    <button
-      className={`bg-${accentColor} hover:bg-${hoverColor} text-${textColor} font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg`}
-      onClick={() => {
-        console.log(anchor);
-        const timetableElementRef = document.getElementById(anchor);
-        if (timetableElementRef) {
-          timetableElementRef.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }}
-    >
-      {label}
-      <svg
-        className="w-4 h-4 ml-2"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 8 14"
+    return (
+      <button
+        className={`bg-${accentColor} hover:bg-${hoverColor} text-${textColor} font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg`}
+        onClick={() => {
+          console.log(anchor);
+          const timetableElementRef = document.getElementById(anchor);
+          if (timetableElementRef) {
+            timetableElementRef.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }}
       >
-        <path
-          stroke="currentColor"
-          strokeWidth="2"
-          d="m1 13 5.7-5.326a 0 0 0 0 0 0-1.348L1 1"
-        />
-      </svg>
-    </button>
-  );
-};
+        {label}
+        <svg
+          className="w-4 h-4 ml-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 8 14"
+        >
+          <path
+            stroke="currentColor"
+            strokeWidth="2"
+            d="m1 13 5.7-5.326a 0 0 0 0 0 0-1.348L1 1"
+          />
+        </svg>
+      </button>
+    );
+  };
 
 export const ActionButton = () => {
   return <AbstractButton label="К предложениям" anchor={LINK_OFFERS} />;
@@ -669,57 +669,57 @@ export const TimetableButton: React.FC<{
   fgColor = "white",
   accentColor = "yellow-500",
 }) => {
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+    const [isOpened, setIsOpened] = useState<boolean>(false);
 
-  const daysLabel = getNoun(days, "день", "дня", "дней");
+    const daysLabel = getNoun(days, "день", "дня", "дней");
 
-  return (
-    <div className={`my-0 relative bg-gray-100`}>
-      <div className="hidden bg-yellow-500" />
-      <div
-        className={`h-[72px] sticky top-[60px] md:top-[64px]
+    return (
+      <div className={`my-0 relative bg-gray-100`}>
+        <div className="hidden bg-yellow-500" />
+        <div
+          className={`h-[72px] sticky top-[60px] md:top-[64px]
          border-b-[1px] border-b-${fgColor}/30
          text-${fgColor} bg-${bgColor} hover:brightness-90
          `}
-      >
-        <div
-          className="py-3 px-4 flex cursor-pointer justify-between"
-          onClick={() => {
-            setIsOpened(!isOpened);
-          }}
         >
-          <div className="flex items-center">
-            <div className="mr-4 w-[11ch]">
-              <div className="font-semibold text-2xl leading-5">{title}</div>
-              <div className={`text-${accentColor} text-xs`}>{subtitle}</div>
+          <div
+            className="py-3 px-4 flex cursor-pointer justify-between"
+            onClick={() => {
+              setIsOpened(!isOpened);
+            }}
+          >
+            <div className="flex items-center">
+              <div className="mr-4 w-[11ch]">
+                <div className="font-semibold text-2xl leading-5">{title}</div>
+                <div className={`text-${accentColor} text-xs`}>{subtitle}</div>
+              </div>
+              <div className={`flex space-x-4 text-${fgColor}/80`}>
+                <TimetableFactoid fact={daysLabel} value={String(days)} />
+                <TimetableFactoid fact="цена, $" value={`${price}`} />
+              </div>
             </div>
-            <div className={`flex space-x-4 text-${fgColor}/80`}>
-              <TimetableFactoid fact={daysLabel} value={String(days)} />
-              <TimetableFactoid fact="цена, $" value={`${price}`} />
-            </div>
-          </div>
 
-          <div className={`p-4 text-${fgColor}`}>
-            {isOpened ? <IconArrowClose /> : <IconArrowDown />}
+            <div className={`p-4 text-${fgColor}`}>
+              {isOpened ? <IconArrowClose /> : <IconArrowDown />}
+            </div>
           </div>
         </div>
+        {isOpened && (
+          <>
+            <div className="px-4">
+              <TimetableList accentColor={bgColor} />
+              <div className="py-4" />
+            </div>
+            <div
+              className={`px-4 bg-${bgColor} text-${fgColor} border-b-[1px] border-b-${fgColor}/30`}
+            >
+              <ApplyForm />
+            </div>
+          </>
+        )}
       </div>
-      {isOpened && (
-        <>
-          <div className="px-4">
-            <TimetableList accentColor={bgColor} />
-            <div className="py-4" />
-          </div>
-          <div
-            className={`px-4 bg-${bgColor} text-${fgColor} border-b-[1px] border-b-${fgColor}/30`}
-          >
-            <ApplyForm />
-          </div>
-        </>
-      )}
-    </div>
-  );
-};
+    );
+  };
 
 export const ButtonWithContent: React.FC<{
   title: string;
@@ -898,7 +898,11 @@ export const Navbar = () => {
               alt="OpenTibet Logo"
               className="h-8 w-auto mr-3 md:h-11"
               onClick={(event) => {
-                smoothScroll(event, LINK_WELCOME_SCREEN);
+                event.preventDefault();
+                const elRef = document.getElementById(LINK_WELCOME_SCREEN);
+                if (elRef) {
+                  elRef.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
               }}
             />
           </a>
