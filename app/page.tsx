@@ -560,7 +560,7 @@ export default function Home() {
               <TimetableButton
                 title="Июль"
                 subtitle="1—23 июля"
-                days={22}
+                days={15}
                 price={2100}
               />
               <TimetableButton
