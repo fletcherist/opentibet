@@ -11,7 +11,6 @@ import "react-photo-view/dist/react-photo-view.css";
 import {
   LINK_CONTACTS,
   LINK_PHOTO_GALLERY,
-  LINK_TOURS,
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
   LINK_TIBET_PREPARATION,
@@ -250,7 +249,7 @@ export const AbstractButton: React.FC<{
   accentColor = "blue-500",
   hoverColor = "blue-800",
   textColor = "white",
-  anchor = LINK_TOURS,
+  anchor = LINK_OFFERS,
 }) => {
     return (
       <button
@@ -939,9 +938,9 @@ export const Navbar = () => {
             <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
                 <a
-                  href={`#${LINK_TOURS}`}
+                  href={`#${LINK_OFFERS}`}
                   onClick={(event) => {
-                    smoothScroll(event, LINK_TOURS);
+                    smoothScroll(event, LINK_OFFERS);
                   }}
                   className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >

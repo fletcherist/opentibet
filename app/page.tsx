@@ -23,7 +23,6 @@ import { TibetInfo } from "@/components/TibetInfo";
 import {
   LINK_CONTACTS,
   LINK_PHOTO_GALLERY,
-  LINK_TOURS,
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
   LINK_TIBET_PREPARATION,
