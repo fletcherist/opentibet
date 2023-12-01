@@ -14,6 +14,7 @@ import {
   LINK_TOURS,
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
+  LINK_TIBET_PREPARATION,
 } from "@/utils/constants";
 
 export const BackgroundSlider = () => {
@@ -670,7 +671,6 @@ export const TimetableButton: React.FC<{
   accentColor = "yellow-500",
 }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
-
     const daysLabel = getNoun(days, "день", "дня", "дней");
 
     return (
@@ -738,6 +738,13 @@ export const ButtonWithContent: React.FC<{
           className="py-3 px-4 cursor-pointer flex items-center justify-between"
           onClick={() => {
             setIsOpened(!isOpened);
+            // when user closes button scroll to "Подготовка к поездке" block
+            if (isOpened) {
+              const el = document.getElementById(LINK_TIBET_PREPARATION);
+              if (el) {
+                el.scrollIntoView({ behavior: 'instant', block: "start" });
+              }
+            }
           }}
         >
           <div>

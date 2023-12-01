@@ -26,6 +26,7 @@ import {
   LINK_TOURS,
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
+  LINK_TIBET_PREPARATION,
 } from "@/utils/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -546,13 +547,13 @@ export default function Home() {
               <TimetableButton
                 title="Май"
                 subtitle="2—21 мая"
-                days={19}
+                days={15}
                 price={1900}
               />
               <TimetableButton
                 title="Июнь"
                 subtitle="6—19 июня"
-                days={13}
+                days={15}
                 price={2000}
               />
               <TimetableButton
@@ -564,19 +565,19 @@ export default function Home() {
               <TimetableButton
                 title="Август"
                 subtitle="2—19 августа"
-                days={17}
+                days={15}
                 price={2200}
               />
               <TimetableButton
                 title="Сентябрь"
                 subtitle="2—21 сентября"
-                days={19}
+                days={15}
                 price={2300}
               />
               <TimetableButton
                 title="Октябрь"
                 subtitle="2—23 октября"
-                days={21}
+                days={15}
                 price={1900}
               />
             </div>
@@ -622,7 +623,7 @@ export default function Home() {
         </Tabs>
       </div>
       <div className="pt-10" />
-      <div className="max-w-4xl w-full">
+      <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
         <div className="pb-5">
           <Header title="Подготовка к поездке" subtitle="" />
           <p className="mx-4 mb-6">
