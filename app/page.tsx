@@ -509,10 +509,10 @@ export default function Home() {
           премиум-класса по эксклюзивным маршрутам.
         </p>
         <Tabs defaultValue="reg" className="w-full px-4">
-          <TabsList className="shadow-inner p-[3px] border-[1px] border-gray-500/20 h-min bg-white -mx-3 z-30 relative self-center flex">
+          <TabsList className="border-black border-[2px] md:border-2 p-0 rounded-[7px] h-min bg-white -mx-3 z-30 relative self-center flex">
             <TabsTrigger
               value="reg"
-              className="rounded-r-none w-1/2 h-[70px] transition-none md:whitespace-nowrap whitespace-normal 
+              className="rounded-r-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal 
               data-[state=inactive]:text-blue-500 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
@@ -522,10 +522,11 @@ export default function Home() {
             </TabsTrigger>
             <TabsTrigger
               value="exc"
-              className="rounded-l-none w-1/2 h-[70px] transition-none md:whitespace-nowrap whitespace-normal
-              data-[state=inactive]:text-blue-500 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
+              className="rounded-l-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal
+              data-[state=inactive]:text-black data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
-              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
+              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide whitespace-nowrap md:tracking-widest text-sm md:text-lg">
+                <div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>
                 Эксклюзивные <br className="md:hidden" />
                 туры
               </h3>
