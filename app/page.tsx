@@ -238,7 +238,7 @@ export default function Home() {
         className="w-full text-white relative mt-8"
         style={{
           backgroundImage:
-            'url("https://storage.googleapis.com/opentibet/background-kailas.jpg")',
+            'url("https://storage.googleapis.com/opentibet/kailash_alt.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -422,7 +422,7 @@ export default function Home() {
                       quality={75}
                       className="object-cover w-full h-full"
                     />
-                  </div >
+                  </div>
                 </div>
                 <div className="flex gap-1">
                   <div className="bg-blue max-w-[50%] w-full h-full">
