@@ -179,52 +179,54 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
     const defaultHeight = 100
     const [isExpanded, setIsExpanded] = useState(false)
     return (
-        <div style={{ width: cardWidth }}>
-            <div className='mb-4 relative bg-white text-black'>
-                <img
-                    src={imageSrc}
-                    width={300}
-                    height={200}
-                    className='object-cover h-[190px]' />
-                <div className='text-sm leading-6 hyphens-auto' style={isExpanded ? {
-                    height: 'auto'
-                } :
-                    { height: `${defaultHeight}px`, overflow: 'hidden' }}>
-                    {children}
-                </div>
-                <div className='h-10' />
-                <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}>
-                    <div className='flex items-end h-full'>
-                        <Dialog>
-                            <DialogTrigger className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2'>
-                                <div className='p-1 font-bold text-sm'>
-                                    подробнее
+        <Dialog>
+            <DialogTrigger>
+                <div style={{ width: cardWidth }}>
+                    <div className='mb-4 relative bg-white text-black'>
+                        <img
+                            src={imageSrc}
+                            width={300}
+                            height={200}
+                            className='object-cover h-[190px]' />
+                        <div className='text-sm leading-6 hyphens-auto' style={isExpanded ? {
+                            height: 'auto'
+                        } :
+                            { height: `${defaultHeight}px`, overflow: 'hidden' }}>
+                            {children}
+                        </div>
+                        <div className='h-10' />
+                        <div className={`absolute w-full h-32 bottom-0 left-0 right-0 ${isExpanded ? '' : 'bg-gradient-to-b from-transparent to-white'}`}>
+                            <div className='flex items-end h-full'>
+                                <div className='text-center text-white flex w-full justify-center items-center cursor-pointer bg-blue-800 hover:bg-blue-900 p-2'>
+                                    <div className='p-1 font-bold text-sm'>
+                                        подробнее
+                                    </div>
+                                    <div style={isExpanded ? {
+                                        transform: 'rotate(180deg)'
+                                    } : {}}>
+                                    </div>
                                 </div>
-                                <div style={isExpanded ? {
-                                    transform: 'rotate(180deg)'
-                                } : {}}>
-                                </div>
-                            </DialogTrigger>
-                            <DialogContent className="h-auto">
-                                <DialogHeader>
-                                    {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
-                                    <DialogDescription>
-                                        <div className="pt-4">
-                                            <img
-                                                src={imageSrc}
-                                                className='object-cover h-[220px] w-full rounded-lg' />
-                                        </div>
-                                    </DialogDescription>
-                                </DialogHeader>
-                                <div className="overflow-y-auto" style={{ maxHeight: '58vh' }}>
-                                    {children}
-                                </div>
-                            </DialogContent>
-                        </Dialog>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </DialogTrigger>
+            <DialogContent className="h-auto">
+                <DialogHeader>
+                    {/* <DialogTitle>Are you sure absolutely sure?</DialogTitle> */}
+                    <DialogDescription>
+                        <div className="pt-4">
+                            <img
+                                src={imageSrc}
+                                className='object-cover h-[220px] w-full rounded-lg' />
+                        </div>
+                    </DialogDescription>
+                </DialogHeader>
+                <div className="overflow-y-auto" style={{ maxHeight: '58vh' }}>
+                    {children}
+                </div>
+            </DialogContent>
+        </Dialog>
     )
 }
 
