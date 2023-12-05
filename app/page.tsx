@@ -44,7 +44,7 @@ export default function Home() {
       >
         <video
           id="background-video"
-          className="absolute w-full h-full object-cover saturate-[1.2] brightness-200"
+          className="absolute w-full h-full object-cover saturate-[1.2] brightness-175"
           autoPlay
           playsInline
           muted
