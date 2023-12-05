@@ -266,7 +266,7 @@ export default function Home() {
             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
               <ActionButton />
               <h2 className="text-2xl font-light mt-3 leading-8">
-                от 1900 $ за 13 дней
+                от 1900 $ за 15 дней
               </h2>
             </div>
           </div>
