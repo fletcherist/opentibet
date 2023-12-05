@@ -44,7 +44,10 @@ export const imagesSrc = {
     girjong: "https://storage.googleapis.com/opentibet/girjong.jpg",
     sashipangma: "https://storage.googleapis.com/opentibet/sashipangma.jpg",
     pelkutso: "https://storage.googleapis.com/opentibet/pelku-tso.jpg",
-
+    chiu: "https://storage.googleapis.com/opentibet/chiu-2.jpg",
+    rakshastal: "https://storage.googleapis.com/opentibet/rakshastal.jpg",
+    vneshKora: "https://storage.googleapis.com/opentibet/vnesh-kora.jpg",
+    nandi: "https://storage.googleapis.com/opentibet/nandi.jpg"
 }
 
 export const TibetInfo: React.FC<{}> = ({ }) => {
@@ -878,7 +881,7 @@ const ContentKorchag = () => (
 )
 
 const ContentKailasKora = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/vnesh-kora.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.vneshKora}>
         <TibetInfoCardTitle>Внешняя Кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Для представителей всех местных конфессий Кайлас-Кора имеет огромное символическое значение как особый путь духовного развития, во время которого сжигается негативная карма паломников. Распростертые сферические зеркала Кайласа создают энергетические поля особой частоты и интенсивности, и тонкие тела любого человека, попав в эти поля, могут с ними синхронизироваться. Главное – услышать Кайлас, настроиться на его волну.
@@ -973,7 +976,7 @@ const ContentMandjushri = () => (
 )
 
 const ContentNandiKora = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/nandi.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.nandi}>
         <TibetInfoCardTitle>Нанди кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Существует множество вариантов Внутренних Кор. В широком смысле так называется обход любого из плеч Кайласа, то есть любой из примыкающих к нему гор. Самый распространенный маршрут – Нанди-Кора, обход горы Нанди (Nandi), расположенной у юго-восточной грани Кайласа. Именно эту Кору большинство паломников называет Внутренней. По форме гора Нанди похожа на перевернутый ковчег, поэтому иногда ее именуют «горой-саркофагом» (тибетское название Neten Yelakzung). Общая протяженность маршрута – около 23 км (километраж считается от Дарчена).
@@ -1212,7 +1215,7 @@ const ContentNjego = () => (
 )
 
 const ContentRakshastal = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/rakshastal.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.rakshastal}>
         <TibetInfoCardTitle>Озеро Ракшастал</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Озеро Ракшастал (Ланга-Цо; Rakshas Tal, Langa Tso) расположено слева от Манасаровара на высоте 4575 м. Длина его береговой линии составляет примерно 125 км, площадь – 360 км2. Другое название озера Равана Храда связано с правнуком Брахмы Раваной, царем демонов (ракшасов). По одной из легенд, Равана простоял в Ракшастале на одной ноге 1000 лет, поклоняясь Шиве, после чего получил от него сверхсилы (сиддхи). По другой, Равана совершал здесь ягью (огненное подношение) Шиве, причем приносимой жертвой служила его собственная голова. Шива был настолько поражен его самоотречением, что подарил Раване неуязвимость и бессмертие.
@@ -1260,7 +1263,7 @@ const ContentCherkip = () => (
 )
 
 const ContentChiu = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chiu-2.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.chiu}>
         <TibetInfoCardTitle>Монастырь Чиу Гомпа</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Чиу Гомпа - единственная обитель, где взимают плату за вход (25 юаней). Впрочем, многие туристы ограничиваются посещением лишь этого монастыря.
