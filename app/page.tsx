@@ -65,7 +65,7 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(0,0,0,0.6) 2%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 60%)",
+              "linear-gradient(to top, rgba(0,0,0,1) 2%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 60%)",
           }}
         />
         <div className="h-full flex flex-col justify-end items-center px-4 md:px-20 relative z-100">
