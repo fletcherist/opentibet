@@ -65,7 +65,7 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(0,0,0,1) 2%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 70%)",
+              "linear-gradient(to top, rgba(0,0,0,0.6) 2%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 60%)",
           }}
         />
         <div className="h-full flex flex-col justify-end items-center px-4 md:px-20 relative z-100">
@@ -267,7 +267,7 @@ export default function Home() {
             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
               <ActionButton />
               <h2 className="text-2xl font-light mt-3 leading-8">
-                от 1900 $ за 15 дней
+                от 1900 $ за 14 дней
               </h2>
             </div>
           </div>
@@ -480,15 +480,15 @@ export default function Home() {
       >
         <Header title="Программы на 2024" subtitle="" />
         <p className="mx-4 mb-6">
-          Мы предлагаем как регулярные пакетные туры, так и поездки
-          премиум-класса по эксклюзивным маршрутам.
+          Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
+          авторские маршруты.
         </p>
         <Tabs defaultValue="reg" className="w-full px-4">
-          <TabsList className="border-black border-[2px] md:border-2 p-0 rounded-[7px] h-min bg-white -mx-3 z-30 relative self-center flex">
+          <TabsList className="shadow-inner shadow-black/20 border-black border-[2px] md:border-2 p-2 rounded-full h-min bg-white -mx-3 z-30 relative self-center flex">
             <TabsTrigger
               value="reg"
-              className="rounded-r-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal 
-              data-[state=inactive]:text-blue-500 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+              className="rounded-full rounded-r-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal 
+              data-[state=inactive]:text-blue-500 shadow-xl shadow-black/30 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
                 Пакетные <br className="md:hidden" />
@@ -497,8 +497,8 @@ export default function Home() {
             </TabsTrigger>
             <TabsTrigger
               value="exc"
-              className="rounded-l-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal
-              data-[state=inactive]:text-black data-[state=active]:bg-black data-[state=active]:text-yellow-500"
+              className="rounded-full rounded-l-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal
+              data-[state=inactive]:text-black shadow-xl shadow-black/30 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide whitespace-nowrap md:tracking-widest text-sm md:text-lg">
                 {/*<div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>*/}
@@ -526,48 +526,48 @@ export default function Home() {
                 <TimetableButton
                   title="Май"
                   subtitle="2—21 мая"
-                  days={15}
-                  price={getTourPriceForMonth('may')}
+                  days={14}
+                  price={getTourPriceForMonth("may")}
                 />
               </Link>
               <Link href={"/tours/tibet-june-2024"} target="_blank">
                 <TimetableButton
                   title="Июнь"
                   subtitle="6—19 июня"
-                  days={15}
-                  price={getTourPriceForMonth('june')}
+                  days={14}
+                  price={getTourPriceForMonth("june")}
                 />
               </Link>
               <Link href={"/tours/tibet-july-2024"} target="_blank">
                 <TimetableButton
                   title="Июль"
                   subtitle="1—23 июля"
-                  days={15}
-                  price={getTourPriceForMonth('july')}
+                  days={14}
+                  price={getTourPriceForMonth("july")}
                 />
               </Link>
               <Link href={"/tours/tibet-august-2024"} target="_blank">
                 <TimetableButton
                   title="Август"
                   subtitle="2—19 августа"
-                  days={15}
-                  price={getTourPriceForMonth('august')}
+                  days={14}
+                  price={getTourPriceForMonth("august")}
                 />
               </Link>
               <Link href={"/tours/tibet-september-2024"} target="_blank">
                 <TimetableButton
                   title="Сентябрь"
                   subtitle="2—21 сентября"
-                  days={15}
-                  price={getTourPriceForMonth('september')}
+                  days={14}
+                  price={getTourPriceForMonth("september")}
                 />
               </Link>
               <Link href={"/tours/tibet-october-2024"} target="_blank">
                 <TimetableButton
                   title="Октябрь"
                   subtitle="2—23 октября"
-                  days={15}
-                  price={getTourPriceForMonth('october')}
+                  days={14}
+                  price={getTourPriceForMonth("october")}
                 />
               </Link>
             </div>
@@ -582,18 +582,27 @@ export default function Home() {
             </p>
             <div>
               <TimetableButton
-                title="Август"
-                subtitle="2—19 августа"
-                days={17}
-                price={3000}
+                title="Май"
+                subtitle="2—19 мая"
+                days={20}
+                price={3600}
+                bgColor="yellow-500"
+                fgColor="black"
+                accentColor="white"
+              />
+              <TimetableButton
+                title="Июнь"
+                subtitle="2—21 июнь"
+                days={20}
+                price={3600}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
               />
               <TimetableButton
                 title="Сентябрь"
-                subtitle="2—21 сентября"
-                days={19}
+                subtitle="2—23 сентября"
+                days={21}
                 price={3600}
                 bgColor="yellow-500"
                 fgColor="black"
@@ -603,7 +612,7 @@ export default function Home() {
                 title="Октябрь"
                 subtitle="2—23 октября"
                 days={21}
-                price={3200}
+                price={3600}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
@@ -671,9 +680,8 @@ export default function Home() {
                 информации. Ее можно найти в ведической литературе. Если
                 говорить о моем опыте, то после голоданий я по-новому, более
                 глубоко стал понимать Махабхарату , Пураны , а также увлекся
-                учением Г. И. Гурджиева.
+                учением Г. И. Гурджиева .
               </p>
-
               <p className="my-4 leading-8">
                 Аскетические практики позволяют настроить организм на
                 энергетические поля Тибета и смягчают во время поездки их
@@ -687,69 +695,8 @@ export default function Home() {
                 Одновременно с голоданиями я регулярно выполнял комплекс
                 упражнений, связанных с задержкой дыхания. Вызывание
                 искусственной гипоксии в обычных условиях ускоряет начало
-                долговременной высотной адаптации в горах.
+                долговременной высотной адаптации в горах
               </p>
-              <p className="my-4 leading-8">
-                Интенсивная физическая и духовная подготовка позволила мне
-                добиться впечатляющих результатов:
-              </p>
-              <ul className="space-y-4 list-disc list-outside ms-5 leading-7 hyphens-auto">
-                <li>
-                  в 2011 году после 12-дневной сухой голодовки я один совершил
-                  Кору за 9 часов. На следующий день я прошел Внутреннюю
-                  Кайлас-Кору (вокруг горы-саркофага Нанди) и, не спускаясь с
-                  перевала Сердунг-Чуксум (5805 м), без альпинистского
-                  снаряжения и подготовки совершил одиночное восхождение на
-                  Нанди. Мысль об этом пришла мне в долине Гаруды. В Дарчене мне
-                  все говорили, что такое невозможно и никто никогда туда не
-                  поднимался;
-                </li>
-                <li>
-                  в 2012 году в течение пяти дней я преодолел следующие
-                  маршруты:
-                </li>
-                <ul className="-mt-4 space-y-3 list-decimal list-outside ms-5 leading-7 hyphens-auto">
-                  <li>
-                    Кора через перевал Кхандро Саглам – одна из самых тяжелых,
-                    около 12 часов.
-                  </li>
-                  <li>
-                    Северная Кора по стопам С. Балалаева – выход из Дарчена,
-                    подъем от восточного лица Кайласа на гору Ваджрапани и спуск
-                    к северному лицу, возвращение в Дарчен.
-                  </li>
-                  <li>
-                    Выход из Дарчена, подъем на перевал между северным и
-                    западным лицами Кайласа на священную гору Ваджрапани,
-                    возвращение в Дарчен.
-                  </li>
-                  <li>
-                    Внутренняя Нанди-Кора (вокруг горы-саркофага Нанди),
-                    повторный подъем на Нанди, исследование ее вершины,
-                    постройка каменной пирамидки «турик». Ночь в монастыре
-                    Серлунг Гампо.
-                  </li>
-                  <li>
-                    5-й день. Восхождение к Малому Кайласу. Исследование горного
-                    образования «Трон Шивы»;
-                  </li>
-                </ul>
-                <li>
-                  в 2014 году я за один день прошел всю Симметричную долину,
-                  поднялся на юго-восточное плечо Кайласа и вернулся назад в
-                  Дарчен в 4 часа утра, то есть спуск с юго-восточного плеча
-                  проходил ночью;– в 2023 году я за четыре дня подошел ко всем
-                  четырем граням Кайласа;
-                </li>
-                <li>
-                  совершил Кору вокруг горы Трон Будды (5850 м) за 8 часов (20
-                  км);
-                </li>
-                <li>
-                  прошел по маршруту Коры через перевал Кхандро Санглам за 12
-                  часов.
-                </li>
-              </ul>
             </div>
           </ButtonWithContent>
         </div>
@@ -986,60 +933,60 @@ export default function Home() {
             title="Аптечка"
             subtitle="Нужные лекарственные препараты"
           >
-            <div className="p-4">
-              <ul className="space-y-1 list-decimal list-outside ms-5 leading-7 hyphens-auto">
-                <li>
-                  Ацетилсалициловая кислота (
-                  <b className="font-semibold">аспирин</b>, тромбо АСС) для
-                  разжижения крови и улучшения транспорта кислорода. (для
-                  ежедневного приема)
-                </li>
-                <li>
-                  <b className="font-semibold">Витамин С</b>. Лучше брать
-                  растворимую форму по 500 или 1000мг. (Для ежедневного приема)
-                </li>
-                <li>
-                  <b className="font-semibold">Аспаркам</b> или{" "}
-                  <b className="font-semibold">Панангин</b>. (Для ежедневного
-                  приема)
-                </li>
-                <li>
-                  <b className="font-semibold">Рибоксин</b>. (Для ежедневного
-                  приема)
-                </li>
-                <li>
-                  <b className="font-semibold">Калия оротат</b>. (Для
-                  ежедневного приема)
-                </li>
-                <li>
-                  <b className="font-semibold">Диакарб</b>. (Рекомендуется
-                  применять при ночевках на высотах выше 4000м).
-                </li>
-                <li>
-                  <b className="font-semibold">Дексаметазон</b>
-                </li>
-                <li>
-                  <b className="font-semibold">Ибупрофен</b> или{" "}
-                  <b className="font-semibold">Солпадеин</b>. Хорошо снимает
-                  головную боль при начальных симптомах горной болезни.
-                </li>
-                <li>
-                  <b className="font-semibold">Церукал</b>. Противорвотное
-                  средство.
-                </li>
-                <li>
-                  Противопростудные препараты, иммуномодуляторы (
-                  <b className="font-semibold">Оциллококцинум</b>,{" "}
-                  <b className="font-semibold">Анаферон</b>) их следует начинать
-                  принимать сразу же при переохлаждении, ознобах, насморке или
-                  при возникновении в группе любых аденовирусных инфекций.
-                </li>
-                <li>
-                  Средства для разжижения мокроты (например,{" "}
-                  <b className="font-semibold">АЦЦ</b>, прием которого начинать
-                  при любых формах кашля, для ранней профилактики отека легких).
-                </li>
-              </ul>
+            <div className="p-4 leading-8 hyphens-auto">
+              <p className="leading-8">
+                Перед поездкой обратитесь к врачу обязательно!
+              </p>
+              <p className="my-4 leading-8">
+                Посетите своего лечащего врача, посоветуйтесь, какие средства
+                вам лучше подойдут для снятия описанных ниже симптомов (в первую
+                очередь – головная боль, бессонница, проблемы с давлением). Но
+                даже самому опытному доктору будет трудно предсказать реакцию
+                организма человека, впервые оказавшегося в условиях высокогорья.
+              </p>
+              <p className="my-4 leading-8">
+                Основываясь на многолетнем опыте, могу порекомендовать до
+                поездки и во время нее принимать поливитамины, содержащие все
+                микроэлементы, например «Витрум», «Дуовит», «Центрум», а также
+                ферментные средства – «Мезим» или «Биозим». На собственном опыте
+                я убедился в том, что пищеварение на высоте работает не так, как
+                в обычных условиях.
+              </p>
+              <p className="my-4 leading-8">
+                Для улучшения общего самочувствия можно использовать такие
+                препараты, как «Фенотропил», «Эскузиан», глютаминовая кислота,
+                «Панангин».
+              </p>
+              <p className="my-4 leading-8">
+                Для повышения иммунитета и укрепления стенок сосудов –
+                «Капилар». Прием лучше начать за 15–60 дней до поездки, в
+                зависимости от самочувствия.
+              </p>
+              <p className="my-4 leading-8">
+                Если вы метеозависимы, у вас частые головные боли или
+                остеохондроз шейного отдела позвоночника, то для улучшения
+                мозгового кровообращения примерно за 30 дней до поездки нужно
+                начать принимать «Кавинтон» или «Гинкго Билоба».
+              </p>
+              <p className="my-4 leading-8">
+                Для преодоления последствий гипоксии прекрасно подходят
+                «Гипоксен» (за неделю до путешествия), а также «Глицин» и
+                «Милдронат». Два последних препората надо начать принимать за
+                две недели до поездки. «Милдронат» – хороший энергетик для
+                профилактики сердечной недостаточности.
+              </p>
+              <p className="my-4 leading-8">
+                Для снижения воздействия на организм деятельности активно
+                потребляющих кислород аэробных бактерий толстого кишечника
+                рекомендую «Линекс», «Бифиформ», а также различные пробиотики и
+                пребиотики (за месяц до поездки). Это очень важно, так как
+                процесс пищеварения на высоте проходит иначе, и обязательно надо
+                помочь организму переваривать и усваивать пищу.
+              </p>
+              <p className="my-4 leading-8">
+                Для защиты печени от последствий гипоксии подойдут «Карсил»,
+                «Ливолин Форте», «Метионин».
+              </p>
             </div>
           </ButtonWithContent>
         </div>
