@@ -15,6 +15,7 @@ import {
   Header,
   ApplyForm,
   Navbar,
+  Footer,
 } from "../components/components";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -28,6 +29,7 @@ import {
   LINK_TIBET_PREPARATION,
 } from "@/utils/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,7 +37,6 @@ export default function Home() {
       lang="ru"
       className="flex min-h-screen flex-col items-center justify-between"
     >
-      <Navbar />
       <div
         className="w-full h-[93vh] mt-[-5vh] relative"
         id={LINK_WELCOME_SCREEN}
@@ -472,33 +473,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/*<div className="w-full h-[70vh] md:h-[80vh]  relative">
-        <BackgroundSlider />
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
-          }}
-        />
-        <div
-          className="scroll-m-[60px] h-full flex flex-col justify-center items-center px-4 md:px-20 relative z-100"
-          id={LINK_OFFERS}
-        >
-          <div className="max-w-4xl w-full">
-            <div className="text-gray-200 font-bold text-2xl md:text-4xl lg:text-5xl leading-9">
-              Наши программы
-              <br /> на 2024 год
-            </div>
-            <div className="text-gray-300 py-6 mb-14 pr-6 text-base md:text-xl">
-              Мы предлагаем регулярные программы, о которых здесь вообще-то
-              стоит рассказать текстом. Над этим уже работают специалисты.
-            </div>
-            <div className="py-4 flex space-x-5"></div>
-          </div>
-        </div>
-        </div>*/}
-
       <div
         className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
         id={LINK_OFFERS}
@@ -544,42 +518,54 @@ export default function Home() {
               Всё, что нужно паломнику. От 1900$
             </p>
             <div>
-              <TimetableButton
-                title="Май"
-                subtitle="2—21 мая"
-                days={15}
-                price={1900}
-              />
-              <TimetableButton
-                title="Июнь"
-                subtitle="6—19 июня"
-                days={15}
-                price={2000}
-              />
-              <TimetableButton
-                title="Июль"
-                subtitle="1—23 июля"
-                days={15}
-                price={2100}
-              />
-              <TimetableButton
-                title="Август"
-                subtitle="2—19 августа"
-                days={15}
-                price={2200}
-              />
-              <TimetableButton
-                title="Сентябрь"
-                subtitle="2—21 сентября"
-                days={15}
-                price={2300}
-              />
-              <TimetableButton
-                title="Октябрь"
-                subtitle="2—23 октября"
-                days={15}
-                price={1900}
-              />
+              <Link href={"/tours/tibet-may-2024"} target="_blank">
+                <TimetableButton
+                  title="Май"
+                  subtitle="2—21 мая"
+                  days={15}
+                  price={1900}
+                />
+              </Link>
+              <Link href={"/tours/tibet-june-2024"} target="_blank">
+                <TimetableButton
+                  title="Июнь"
+                  subtitle="6—19 июня"
+                  days={15}
+                  price={2000}
+                />
+              </Link>
+              <Link href={"/tours/tibet-july-2024"} target="_blank">
+                <TimetableButton
+                  title="Июль"
+                  subtitle="1—23 июля"
+                  days={15}
+                  price={2100}
+                />
+              </Link>
+              <Link href={"/tours/tibet-august-2024"} target="_blank">
+                <TimetableButton
+                  title="Август"
+                  subtitle="2—19 августа"
+                  days={15}
+                  price={2200}
+                />
+              </Link>
+              <Link href={"/tours/tibet-september-2024"} target="_blank">
+                <TimetableButton
+                  title="Сентябрь"
+                  subtitle="2—21 сентября"
+                  days={15}
+                  price={2300}
+                />
+              </Link>
+              <Link href={"/tours/tibet-october-2024"} target="_blank">
+                <TimetableButton
+                  title="Октябрь"
+                  subtitle="2—23 октября"
+                  days={15}
+                  price={1900}
+                />
+              </Link>
             </div>
           </TabsContent>
 
@@ -1152,38 +1138,7 @@ export default function Home() {
         <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full'></video>
       </div> */}
 
-      <div className="max-w-[30vh] pb-18">
-        <div className="flex pt-8 pb-4 opacity-80">
-          <div className="w-[33%] h-[40px] flex items-center justify-center">
-            <Image
-              src="/ctt.png"
-              alt="China Tibet Tour"
-              height={80}
-              width={80}
-              className="object-contain w-28 h-[68px] saturate-0 contrast-125"
-            />
-          </div>
-          <div className="w-[33%] h-[40px] flex items-center justify-center">
-            <Image
-              src="/kailash.png"
-              alt="Kailash Explorer"
-              height={309}
-              width={551}
-              className="object-contain w-28 h-16 saturate-0 contrast-150"
-            />
-          </div>
-          <div className="w-[33%] h-[40px] flex items-center justify-center">
-            <Image
-              src="/tashidelek.png"
-              alt="Tashi Delek Travel Agency"
-              height={100}
-              width={100}
-              className="object-contain w-28 h-16 brightness-0 saturate-0 "
-            />
-          </div>
-        </div>
-      </div>
-      <Copyright />
+      <Footer />
     </main>
   );
 }
@@ -1293,18 +1248,4 @@ const WhyGoTibetWithUsStatement: React.FC<{
   );
 };
 
-const Copyright: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  return (
-    <div className="text-center text-xs text-gray-500 text-sm py-4">
-      &copy; {currentYear}, OPEN TIBET
-      {/*<br />
-      <span className="text-[9px]">
-        Дизайн:{" "}
-        <a href="https://k60.in" className="hover:text-red-500">
-          k60.in
-        </a>
-  </span>*/}
-    </div>
-  );
-};
+

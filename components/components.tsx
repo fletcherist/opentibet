@@ -15,6 +15,7 @@ import {
   LINK_OFFERS,
   LINK_TIBET_PREPARATION,
 } from "@/utils/constants";
+import Link from "next/link";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -337,13 +338,14 @@ export const AbstractButton: React.FC<{
       <button
         className={`bg-${accentColor} hover:bg-${hoverColor} text-${textColor} font-bold py-3 px-5 rounded-lg flex items-center md:py-3 md:px-6 md:text-lg`}
         onClick={() => {
-          console.log(anchor);
-          const timetableElementRef = document.getElementById(anchor);
-          if (timetableElementRef) {
-            timetableElementRef.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+          if (anchor) {
+            const timetableElementRef = document.getElementById(anchor);
+            if (timetableElementRef) {
+              timetableElementRef.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
           }
         }}
       >
@@ -384,7 +386,7 @@ const TimetableDay: React.FC<{
       </div>
       <div className="pr-10">
         <div className="font-bold text-xl text-gray-800 pt-2 pb-4">{title}</div>
-        <div className="leading-9 text-sm md:text-base">{children}</div>
+        <div className="text-sm md:text-base md:leading-7">{children}</div>
       </div>
     </div>
   );
@@ -423,7 +425,7 @@ const TimetablePhotoDouble = () => {
   );
 };
 
-const TimetableList = ({ accentColor = "blue-500" }) => {
+export const TimetableList = ({ accentColor = "blue-500" }) => {
   return (
     <>
       <TimetableDay accentColor={accentColor} title="1 день">
@@ -679,11 +681,14 @@ export const TimetableButton: React.FC<{
             </div>
 
             <div className={`p-4 text-${fgColor}`}>
-              {isOpened ? <IconArrowClose /> : <IconArrowDown />}
+              <svg className="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+              </svg>
+              {/* {isOpened ? <IconArrowClose /> : <IconArrowDown />} */}
             </div>
           </div>
         </div>
-        {isOpened && (
+        {/* {isOpened && (
           <>
             <div className="px-4">
               <TimetableList accentColor={bgColor} />
@@ -695,10 +700,11 @@ export const TimetableButton: React.FC<{
               <ApplyForm />
             </div>
           </>
-        )}
+        )} */}
       </div>
     );
   };
+
 
 export const ButtonWithContent: React.FC<{
   title: string;
@@ -745,7 +751,7 @@ export const ApplyForm: React.FC = () => {
   const [phone, setPhone] = useState<string>("");
 
   return (
-    <div>
+    <div id="">
       <div className="flex items-center flex-wrap">
         <div className="w-full md:max-w-[50%]">
           <Header
@@ -876,22 +882,28 @@ export const Navbar = () => {
     <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-50">
       <div className="flex justify-center">
         <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-2 pb-3 w-full">
-          <a className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
+          <Link className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer" href={"/"}>
             <Image
-              src="opentibet-logo-hb.svg"
+              src="/opentibet-logo-hb.svg"
               width={190}
               height={44}
               alt="OpenTibet Logo"
               className="h-8 w-auto mr-3 md:h-11"
               onClick={(event) => {
-                event.preventDefault();
-                const elRef = document.getElementById(LINK_WELCOME_SCREEN);
-                if (elRef) {
-                  elRef.scrollIntoView({ behavior: "smooth", block: "start" });
+                // if on main page scroll to top,
+                // on other pages navigate to main page
+                if (window.location.pathname === "/") {
+                  event.preventDefault();
+                  const elRef = document.getElementById(LINK_WELCOME_SCREEN);
+                  if (elRef) {
+                    elRef.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                } else {
+                  // do nothing bc default behavior is fine
                 }
               }}
             />
-          </a>
+          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -954,6 +966,61 @@ export const Navbar = () => {
         </div>
       </div>
     </nav>
+  );
+};
+
+export const Footer = () => {
+  return (
+    <div>
+      <div className="max-w-[30vh] pb-18">
+        <div className="flex pt-8 pb-4 opacity-80">
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
+            <Image
+              src="/ctt.png"
+              alt="China Tibet Tour"
+              height={80}
+              width={80}
+              className="object-contain w-28 h-[68px] saturate-0 contrast-125"
+            />
+          </div>
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
+            <Image
+              src="/kailash.png"
+              alt="Kailash Explorer"
+              height={309}
+              width={551}
+              className="object-contain w-28 h-16 saturate-0 contrast-150"
+            />
+          </div>
+          <div className="w-[33%] h-[40px] flex items-center justify-center">
+            <Image
+              src="/tashidelek.png"
+              alt="Tashi Delek Travel Agency"
+              height={100}
+              width={100}
+              className="object-contain w-28 h-16 brightness-0 saturate-0 "
+            />
+          </div>
+        </div>
+      </div>
+      <Copyright />
+    </div>
+  )
+}
+
+const Copyright: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <div className="text-center text-xs text-gray-500 py-4">
+      &copy; {currentYear}, OPEN TIBET
+      {/*<br />
+      <span className="text-[9px]">
+        Дизайн:{" "}
+        <a href="https://k60.in" className="hover:text-red-500">
+          k60.in
+        </a>
+  </span>*/}
+    </div>
   );
 };
 

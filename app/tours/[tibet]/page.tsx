@@ -1,0 +1,90 @@
+
+
+import { ActionButton, ApplyForm, BackgroundSlider, Footer, TimetableList } from "@/components/components";
+
+export default function ({ params }: { params: { tibet: string } }) {
+    // get month from url
+    // get timetable for month
+    // render timetable
+    // example is tibet-may-2024
+    const month = params.tibet.split('-') ? params.tibet.split('-')[1] : ''
+    const months = ['may', 'june', 'july', 'august', 'september', 'october']
+    if (month === '' || !months.includes(month)) {
+        return (
+            <main
+                lang="ru"
+                className="flex min-h-screen flex-col items-center justify-center"
+            >
+                <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
+                    Программа не найдена
+                </h2>
+            </main>
+        )
+    }
+
+    const translationsMap: Record<string, string> = {
+        'may': 'май',
+        'june': 'июнь',
+        'july': 'июль',
+        'august': 'август',
+        'september': 'сентябрь',
+        'october': 'октябрь',
+    }
+
+    return (
+        <main
+            lang="ru"
+            className="flex min-h-screen flex-col items-center justify-between"
+        >
+            <div className="w-full h-[70vh] md:h-[70vh]  relative">
+                <BackgroundSlider />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
+                    }}
+                />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
+                    }}
+                />
+                <div className="text-white h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100">
+                    <div className="max-w-5xl w-full">
+                        <div className="text-3xl font-semibold text-center w-full px-4 mt-5 mb-5">
+                            Программа на {translationsMap[month]} 2024 года
+                        </div>
+                        <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
+                            Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей
+                            открывали для себя эту священную землю.
+                            <br />
+                            <br />
+                        </div>
+                        <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
+                            {/* <ActionButton /> */}
+                            <h2 className="text-2xl font-light mt-3 leading-8">
+                                1900$ за 15 дней
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="pt-10" />
+            {/* <div className="py-10">
+                <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
+                    
+                </h2>
+            </div> */}
+
+            <div className="max-w-4xl">
+                <TimetableList />
+                <ApplyForm />
+            </div>
+            <div className="pt-20" />
+            <Footer />
+        </main>
+    )
+}
