@@ -44,7 +44,7 @@ export default function Home() {
       >
         <video
           id="background-video"
-          className="absolute w-full h-full object-cover"
+          className="absolute w-full h-full object-cover saturate-[1.2] brightness-200"
           autoPlay
           playsInline
           muted
@@ -65,12 +65,17 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(0,0,0,1) 2%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 60%)",
+              "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 30%)",
           }}
         />
         <div className="h-full flex flex-col justify-end items-center px-4 md:px-20 relative z-100">
           <div className="max-w-4xl w-full mb-[5vh]">
-            <div className="text-gray-200 font-bold text-5xl md:text-[4em] uppercase tracking-wider leading-[1.15em]">
+            <div
+              className="text-white font-bold text-5xl md:text-[4em] uppercase tracking-wider leading-[1.15em]"
+              style={{
+                textShadow: "0 3px 20px rgba(0, 0, 0, .6)",
+              }}
+            >
               Откройте
               <br />
               для&nbsp;себя
