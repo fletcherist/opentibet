@@ -500,7 +500,10 @@ export default function Home() {
               data-[state=inactive]:text-black data-[state=active]:bg-black data-[state=active]:text-yellow-500"
             >
               <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide whitespace-nowrap md:tracking-widest text-sm md:text-lg">
-                <div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>
+                {/*<div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>*/}
+                <span className="text-yellow-500 leading-3 text-lg md:text-2xl">
+                  ★
+                </span>{" "}
                 Эксклюзивные <br className="md:hidden" />
                 туры
               </h3>
@@ -1247,5 +1250,3 @@ const WhyGoTibetWithUsStatement: React.FC<{
     </div>
   );
 };
-
-
