@@ -14,8 +14,10 @@ import {
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
   LINK_TIBET_PREPARATION,
+  LINK_APPLY_FORM,
 } from "@/utils/constants";
 import Link from "next/link";
+import { imagesSrc } from "./TibetInfo";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -392,16 +394,19 @@ const TimetableDay: React.FC<{
   );
 };
 
-const TimetablePhoto = () => {
+const TimetablePhoto: React.FC<{
+  src: string;
+  title: string;
+}> = ({ src, title }) => {
   return (
     <div className="py-5 flex justify-center">
       <div className="max-w-lg">
         <img
-          src="https://storage.googleapis.com/opentibet/background-kailas.jpg"
+          src={src}
           className="rounded-lg"
         />
         <div className="text-center p-2 text-sm text-gray-500">
-          Манасаровар и Кайлас
+          {title}
         </div>
       </div>
     </div>
@@ -430,7 +435,7 @@ export const TimetableList = ({ accentColor = "blue-500" }) => {
     <>
       <TimetableDay accentColor={accentColor} title="1 день">
         Перелет Ченду-Лхаса
-        Прибытие в аэропорт Гонкар - (3550м)
+        Прибытие в аэропорт Гонкар – (3550м)
         <br />Трансфер в Лхасу (3600м)
         <br />
         <br />
@@ -446,7 +451,7 @@ export const TimetableList = ({ accentColor = "blue-500" }) => {
         Дворец Потала –Белый дворец – одна из главных «визитных карточек» Лхасы и Тибета.Это самый большой по площади и самый высокогорный дворец-музей (3700 м) в мире. Входит в Список Всемирного наследия ЮНЕСКО. В настоящее время возведенный в характерном для тибетской архитектуры эклектичном стиле дворец-храм занимает площадь свыше 360 тыс. м2, и в нем насчитывается более 1000 помещений. Многие из них это часовни со скульптурами Далай-лам и их тронные и медитационные залы, а также спальные покои, где бережно хранятся предметы личного быта духовных правителей Тибета. Стены многих комнат украшены фресками; в экспозиции также выставлены многочисленные скульптуры и манускрипты. С балконов открываются прекрасные виды на Лхасу и окружающие горы.
         <br />
         <br />
-        <TimetablePhoto />
+        <TimetablePhoto src={imagesSrc.potala} title="Дворец Потала" />
         Монастырь Джоканг - это самый почитаемый в Тибете храм (Jokhang), входит в список Всемирного наследия ЮНЕСКО. По преданию его построил Сонгцэн Гампо в 647 г. для своей жены, непальской принцессы Бхрикути. Внутри 4-этажного храма, в многочисленных часовнях, сейчас хранятся свыше 3 тыс. изображений (скульптуры, фрески) Будды, буддистских божеств и тибетских буддистских святых. Основным объектом поклонения является установленная в главном зале нижнего этажа статуя Джово Шакьямуни, изображающая Будду в 12 лет.
         <br />
         <br />
@@ -751,7 +756,7 @@ export const ApplyForm: React.FC = () => {
   const [phone, setPhone] = useState<string>("");
 
   return (
-    <div id="">
+    <div id={LINK_APPLY_FORM}>
       <div className="flex items-center flex-wrap">
         <div className="w-full md:max-w-[50%]">
           <Header
