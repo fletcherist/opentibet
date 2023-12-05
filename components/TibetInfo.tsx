@@ -20,6 +20,36 @@ import {
 
 const cardWidth = 300;
 
+
+export const imagesSrc = {
+    potala: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Potala.jpg/548px-Potala.jpg',
+    lhasa: 'https://storage.googleapis.com/opentibet/lhasa.jpg',
+    jokang: "https://ic.pics.livejournal.com/vlade_mir/25001231/1603650/1603650_original.jpg",
+    ganden: "https://snowliontours.ru/wp-content/uploads/2019/01/%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%93%D0%B0%D0%BD%D0%B4%D0%B5%D0%BD-%D0%9B%D1%85%D0%B0%D1%81%D0%B0-%D1%82%D1%83%D1%80%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg",
+    drepung: "https://storage.googleapis.com/opentibet/drepung.jpg",
+    sera: "https://storage.googleapis.com/opentibet/sera.jpg",
+    tsurphu: "https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg",
+    namtso: "https://storage.googleapis.com/opentibet/namtso.jpg",
+    reting: "https://storage.googleapis.com/opentibet/reting.jpg",
+    taklung: "https://storage.googleapis.com/opentibet/taklung.jpg",
+    tashilhunpo: "https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg",
+    gyandze: "https://storage.googleapis.com/opentibet/gyandze.jpg",
+    shalu: "https://storage.googleapis.com/opentibet/shalu.jpg",
+    ngor: "https://storage.googleapis.com/opentibet/ngor.jpg",
+    nartang: "https://storage.googleapis.com/opentibet/nratang.jpg",
+    yamdrok: "https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg",
+    pelkhor: "https://storage.googleapis.com/opentibet/pelkhor.jpg",
+    everestBasecamp: "https://storage.googleapis.com/opentibet/everest-basecamp.jpg",
+    sakya: "https://storage.googleapis.com/opentibet/sakya.jpg",
+    girjong: "https://storage.googleapis.com/opentibet/girjong.jpg",
+    sashipangma: "https://storage.googleapis.com/opentibet/sashipangma.jpg",
+    pelkutso: "https://storage.googleapis.com/opentibet/pelku-tso.jpg",
+    chiu: "https://storage.googleapis.com/opentibet/chiu-2.jpg",
+    rakshastal: "https://storage.googleapis.com/opentibet/rakshastal.jpg",
+    vneshKora: "https://storage.googleapis.com/opentibet/vnesh-kora.jpg",
+    nandi: "https://storage.googleapis.com/opentibet/nandi.jpg"
+}
+
 export const TibetInfo: React.FC<{}> = ({ }) => {
     const groupTitle = (text: string) => {
         return (
@@ -251,7 +281,7 @@ export const TibetInfoCardContent: React.FC<{
 }
 
 export const ContentLhasa = React.memo(() => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/lhasa.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.lhasa}>
         <TibetInfoCardTitle>Лхаса</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Лхаса — столица Тибета, автономного района Китая. Город расположен на высоте 3650 метров над уровнем моря и является важным центром тибетского буддизма.
@@ -266,7 +296,7 @@ export const ContentLhasa = React.memo(() => (
 ))
 
 export const ContentPotala = () => (
-    <TibetInfoCard imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Potala.jpg/548px-Potala.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.potala}>
         <TibetInfoCardTitle>Дворец Потала</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Дворец Потала — это величественный буддийский храмовый комплекс, расположенный на вершине холма Марпори в Лхасе, Тибет. Он был построен в 7 веке и является резиденцией Далай-ламы, духовного лидера тибетского буддизма.
@@ -280,7 +310,7 @@ export const ContentPotala = () => (
     </TibetInfoCard>
 )
 export const ContentJokang = () => (
-    <TibetInfoCard imageSrc="https://ic.pics.livejournal.com/vlade_mir/25001231/1603650/1603650_original.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.jokang}>
         <TibetInfoCardTitle>Джоканг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Джоканг — это буддийский храм и монастырь, расположенный в центре Старого города Лхасы, Тибет. Он был построен в 7 веке и является одним из самых важных религиозных сооружений в Тибете.
@@ -307,7 +337,7 @@ export const ContentJokang = () => (
 )
 
 const ContentGanden = () => (
-    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2019/01/%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%93%D0%B0%D0%BD%D0%B4%D0%B5%D0%BD-%D0%9B%D1%85%D0%B0%D1%81%D0%B0-%D1%82%D1%83%D1%80%D1%8B-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82-%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.ganden}>
         <TibetInfoCardTitle>Ганден</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Ганден — это буддийский монастырь, расположенный в 47 км к востоку от Лхасы, Тибет. Он был основан в 14 веке Цонкапой, основателем школы гелуг тибетского буддизма.
@@ -333,7 +363,7 @@ const ContentGanden = () => (
 )
 
 const ContentDrepung = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/drepung.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.drepung}>
         <TibetInfoCardTitle>Монастырь Дрепунг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Расположен в 10 км западнее Лхасы. Важнейший духовный и образовательный центр Тибета, один из крупнейших монастырей в мире (площадь свыше 200 тыс. м2). Принадлежит к школе Гелуг. Название (Drepung) переводится как «горсть риса»: стены зданий монастыря на холме выкрашены в белый цвет. Входной билет стоит 60 юаней.
@@ -346,7 +376,7 @@ const ContentDrepung = () => (
 )
 
 const ContentSera = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sera.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.sera}>
         <TibetInfoCardTitle>Монастырь Сера</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Се́ра
@@ -389,7 +419,7 @@ const ContentDrakYerpa = () => (
 )
 
 const ContentTsurphu = () => (
-    <TibetInfoCard imageSrc="https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.tsurphu}>
         <TibetInfoCardTitle>Цурпу</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Цурпу — это буддийский монастырь, расположенный в 70 км к западу от Лхасы, Тибет. Он был основан в 12 веке и является родиной школы карма кагью тибетского буддизма.
@@ -419,7 +449,7 @@ const ContentTsurphu = () => (
 )
 
 const ContentNamTso = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/namtso.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.namtso}>
         <TibetInfoCardTitle>Озеро Намцо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Озеро Намцо — это большое солёное озеро, расположенное на Тибетском нагорье, на высоте 4718 метров над уровнем моря. Оно является одним из самых высоких озёр в мире и вторым по величине озёром в Тибете.
@@ -448,7 +478,7 @@ const ContentNamTso = () => (
 )
 
 const ContentReting = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/reting.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.reting}>
         <TibetInfoCardTitle>Монастырь Ретинг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Этот монастырь расположен на склоне холма на высоте 4200 м в долине Ронг-чу в окружении красивых и редко встречающихся древовидных можжевельников. Его построил в середине XI в. Дромтонпа, выдающийся ученик знаменитого буддистского мастера и переводчика Атиши. Согласно одной из легенд, можжевеловые деревья выросли из волос с головы Дромтонпы.
@@ -459,7 +489,7 @@ const ContentReting = () => (
 )
 
 const ContentTaklung = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/taklung.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.taklung}>
         <TibetInfoCardTitle>Монастырь Таклунг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Таклунг расположен на высоте 4150 м. Он был основан в конце XII в. известным монахом Тангпой Ташипелом и принадлежит школе Кагью. Монастырем издревле руководят ламы-тулку, носящие одноименный титул. В период расцвета в обители жили до семи тысяч монахов, сейчас – около 70. В годы Культурной революции монастырь был частично разрушен. Сейчас идет активный процесс возрождения. Некоторые здания уже построены, но в них пока еще нет фресок и фигур божеств. В 2012 г. возвели нижний храм (колледж). Интересная деталь: перед приходом сюда китайской армии в 1959 г. местные жители разобрали самые ценные реликвии по домам и закопали их. Сейчас, когда обитель восстанавливается, многие тханки и скульптуры возвращаются назад.
@@ -470,7 +500,7 @@ const ContentTaklung = () => (
 
 
 const ContentTashilhunpo = () => (
-    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.tashilhunpo}>
         <TibetInfoCardTitle>Ташилунпо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Ташилунпо — это буддийский монастырь, расположенный в городе Шигадзе, Тибет. Он был основан в 1447 году Гендун Друпом, первым Далай-ламой. Монастырь является резиденцией Панчен-ламы, второго по значимости ламы в тибетском буддизме.
@@ -500,7 +530,7 @@ const ContentTashilhunpo = () => (
 )
 
 const ContentGyandze = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gyandze.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.gyandze}>
         <TibetInfoCardTitle>Гяндзе</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Гьяндзе — это город в Тибетском автономном районе Китая. Он расположен на Тибетском нагорье, на высоте 3900 метров над уровнем моря. Гьяндзе является одним из старейших городов Тибета и является важным религиозным и культурным центром.
@@ -530,7 +560,7 @@ const ContentGyandze = () => (
 )
 
 const ContentShalu = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/shalu.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.shalu}>
         <TibetInfoCardTitle>Монастырь Шалу</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Шалу (Shalu)
@@ -545,7 +575,7 @@ const ContentShalu = () => (
 )
 
 const ContentNgor = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/ngor.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.ngor}>
         <TibetInfoCardTitle>Монастырь Нгор</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Нгор (Ngor)
@@ -558,7 +588,7 @@ const ContentNgor = () => (
 )
 
 const ContentNartang = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/nratang.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.nartang}>
         <TibetInfoCardTitle>Монастырь Нартанг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Нартанг (Nartang)
@@ -570,7 +600,7 @@ const ContentNartang = () => (
 )
 
 const ContentYamdrok = () => (
-    <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/Yamdrok-Lake.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.yamdrok}>
         <TibetInfoCardTitle>Озеро Ямдрок Юмцо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Ямдрок-Цо, или Ямдрок Юмцо, — это высокогорное озеро в Тибете, расположенное на высоте 4488 метров над уровнем моря. Оно является одним из четырех священных озер в Тибете, наряду с озерами Лхамо Лацо, Намцо и Мансаровар.
@@ -600,7 +630,7 @@ const ContentYamdrok = () => (
 )
 
 const ContentPelkhor = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/pelkhor.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.pelkhor}>
         <TibetInfoCardTitle>Монастырь Палчо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Палчо (Пелкхор Чод; Palcho, Pelkhor Chod) ранее принадлежал школе Сакья, сейчас – школе Гелуг. Главные здания были построены в традиционном для Тибета эклектичном стиле в начале XV в. местным правителем Рабтеном Кунзангом Пхакой, почитателем Кедруба Же (1385–1438), главного ученика Цонкапы, позже признанного первым Панчен-ламой. На протяжении столетий Палчо являлся важным образовательным центром школ Сакья и Гелуг: в XIX в. здесь насчитывалось около 20 колледжей (сейчас только два).
@@ -611,7 +641,7 @@ const ContentPelkhor = () => (
 )
 
 const ContentEverestBasecamp = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/everest-basecamp.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.everestBasecamp}>
         <TibetInfoCardTitle>Базовый лагерь Эвереста</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Это отельный маршрут на целый день, который начинается от Нового Тингри.
@@ -630,7 +660,7 @@ const ContentEverestBasecamp = () => (
 )
 
 const ContentSakya = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sakya.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.sakya}>
         <TibetInfoCardTitle>Монастырь Сакья</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Сакья
@@ -641,7 +671,7 @@ const ContentSakya = () => (
 )
 
 const ContentGirjong = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/girjong.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.girjong}>
         <TibetInfoCardTitle>Гирьонг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Гьиронг расположен в середине Гималаев на юго-западе от Шигадзе . Область граничит с Непалом, его общая площадь составляет 1200 квадратных километров. Протяженность границ –162 километра. Население области – около 25 тысч человек – распределено между 2 городами, 4 поселками и 42-мя деревнями. Из-за близости к Непалу регион часто подвергался нападениям со стороны этой страны. Гьиронг в переводе с тибетского означает «удобное и счастливое место». Уезд также называют «задним садом горы Эверест» и «последней страной тайн в Тибете». Связанная с названием легенда гласит, что, когда в конце VIII века Падмасамбхава прошел через эти земли, то, увидев прекрасные живописные пейзажи, эмоционально выдохнул слово «Гьиронг», выражая бесконечную похвалу и любовь. Долгое время Гирьонгом управляла династия Тубо, потом на смену пришла династия Гонг Тонг и, позже, Юань. В XVII веке Гьиронг являлся последним политическим оплотом школы Сакья. В средние века здесь находился центр книгопечатания тибетских книг. Область имела очень важное стратегическое значение, так как находилась на перекрестке торговых путей между Непалом и Индией
@@ -650,7 +680,7 @@ const ContentGirjong = () => (
 )
 
 const ContentShashibangma = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/sashipangma.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.sashipangma}>
         <TibetInfoCardTitle>Шашипангма</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Шишабангма — одна из высочайших вершин мира, занимающая четырнадцатое место среди восьмитысячников. Она имеет два пика: Главный — 8027 м  и Центральный — 8008 м.
@@ -662,7 +692,7 @@ const ContentShashibangma = () => (
 )
 
 const ContentPelkuTso = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/pelku-tso.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.pelkutso}>
         <TibetInfoCardTitle>Озеро Пелку Цо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Озеро Пеку-Цо - одно из четырех святых высокогорных озер Тибета. Оно расположено на высоте около 4590 метров на стыке графств Гьиронг и Ньялам префектуры Шигадзе, примерно в 250 километрах от округа Тингри. Пеку-Цо является крупнейшим озером в Шигадзе, его площадь составляет около 300 квадратных километров. На юге озера, примерно в 60 км, находится гора Шишабангма.
@@ -851,7 +881,7 @@ const ContentKorchag = () => (
 )
 
 const ContentKailasKora = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/vnesh-kora.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.vneshKora}>
         <TibetInfoCardTitle>Внешняя Кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Для представителей всех местных конфессий Кайлас-Кора имеет огромное символическое значение как особый путь духовного развития, во время которого сжигается негативная карма паломников. Распростертые сферические зеркала Кайласа создают энергетические поля особой частоты и интенсивности, и тонкие тела любого человека, попав в эти поля, могут с ними синхронизироваться. Главное – услышать Кайлас, настроиться на его волну.
@@ -946,7 +976,7 @@ const ContentMandjushri = () => (
 )
 
 const ContentNandiKora = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/nandi.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.nandi}>
         <TibetInfoCardTitle>Нанди кора</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Существует множество вариантов Внутренних Кор. В широком смысле так называется обход любого из плеч Кайласа, то есть любой из примыкающих к нему гор. Самый распространенный маршрут – Нанди-Кора, обход горы Нанди (Nandi), расположенной у юго-восточной грани Кайласа. Именно эту Кору большинство паломников называет Внутренней. По форме гора Нанди похожа на перевернутый ковчег, поэтому иногда ее именуют «горой-саркофагом» (тибетское название Neten Yelakzung). Общая протяженность маршрута – около 23 км (километраж считается от Дарчена).
@@ -1185,7 +1215,7 @@ const ContentNjego = () => (
 )
 
 const ContentRakshastal = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/rakshastal.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.rakshastal}>
         <TibetInfoCardTitle>Озеро Ракшастал</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Озеро Ракшастал (Ланга-Цо; Rakshas Tal, Langa Tso) расположено слева от Манасаровара на высоте 4575 м. Длина его береговой линии составляет примерно 125 км, площадь – 360 км2. Другое название озера Равана Храда связано с правнуком Брахмы Раваной, царем демонов (ракшасов). По одной из легенд, Равана простоял в Ракшастале на одной ноге 1000 лет, поклоняясь Шиве, после чего получил от него сверхсилы (сиддхи). По другой, Равана совершал здесь ягью (огненное подношение) Шиве, причем приносимой жертвой служила его собственная голова. Шива был настолько поражен его самоотречением, что подарил Раване неуязвимость и бессмертие.
@@ -1233,7 +1263,7 @@ const ContentCherkip = () => (
 )
 
 const ContentChiu = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chiu-2.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.chiu}>
         <TibetInfoCardTitle>Монастырь Чиу Гомпа</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Монастырь Чиу Гомпа - единственная обитель, где взимают плату за вход (25 юаней). Впрочем, многие туристы ограничиваются посещением лишь этого монастыря.

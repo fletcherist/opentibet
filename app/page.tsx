@@ -27,6 +27,7 @@ import {
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
   LINK_TIBET_PREPARATION,
+  getTourPriceForMonth,
 } from "@/utils/constants";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
@@ -526,7 +527,7 @@ export default function Home() {
                   title="Май"
                   subtitle="2—21 мая"
                   days={15}
-                  price={1900}
+                  price={getTourPriceForMonth('may')}
                 />
               </Link>
               <Link href={"/tours/tibet-june-2024"} target="_blank">
@@ -534,7 +535,7 @@ export default function Home() {
                   title="Июнь"
                   subtitle="6—19 июня"
                   days={15}
-                  price={2000}
+                  price={getTourPriceForMonth('june')}
                 />
               </Link>
               <Link href={"/tours/tibet-july-2024"} target="_blank">
@@ -542,7 +543,7 @@ export default function Home() {
                   title="Июль"
                   subtitle="1—23 июля"
                   days={15}
-                  price={2100}
+                  price={getTourPriceForMonth('july')}
                 />
               </Link>
               <Link href={"/tours/tibet-august-2024"} target="_blank">
@@ -550,7 +551,7 @@ export default function Home() {
                   title="Август"
                   subtitle="2—19 августа"
                   days={15}
-                  price={2200}
+                  price={getTourPriceForMonth('august')}
                 />
               </Link>
               <Link href={"/tours/tibet-september-2024"} target="_blank">
@@ -558,7 +559,7 @@ export default function Home() {
                   title="Сентябрь"
                   subtitle="2—21 сентября"
                   days={15}
-                  price={2300}
+                  price={getTourPriceForMonth('september')}
                 />
               </Link>
               <Link href={"/tours/tibet-october-2024"} target="_blank">
@@ -566,7 +567,7 @@ export default function Home() {
                   title="Октябрь"
                   subtitle="2—23 октября"
                   days={15}
-                  price={1900}
+                  price={getTourPriceForMonth('october')}
                 />
               </Link>
             </div>

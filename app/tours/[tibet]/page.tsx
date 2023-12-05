@@ -1,15 +1,16 @@
 
 
-import { ActionButton, ApplyForm, BackgroundSlider, Footer, TimetableList } from "@/components/components";
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, TimetableList } from "@/components/components";
+import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
 
 export default function ({ params }: { params: { tibet: string } }) {
     // get month from url
     // get timetable for month
     // render timetable
     // example is tibet-may-2024
-    const month = params.tibet.split('-') ? params.tibet.split('-')[1] : ''
+    const month = (params.tibet.split('-') ? params.tibet.split('-')[1] : '') as Month | undefined
     const months = ['may', 'june', 'july', 'august', 'september', 'october']
-    if (month === '' || !months.includes(month)) {
+    if (!month || !months.includes(month)) {
         return (
             <main
                 lang="ru"
@@ -64,9 +65,9 @@ export default function ({ params }: { params: { tibet: string } }) {
                             <br />
                         </div>
                         <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
-                            {/* <ActionButton /> */}
+                            <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
                             <h2 className="text-2xl font-light mt-3 leading-8">
-                                1900$ за 15 дней
+                                {getTourPriceForMonth(month)}$ за 15 дней
                             </h2>
                         </div>
                     </div>
@@ -75,7 +76,6 @@ export default function ({ params }: { params: { tibet: string } }) {
             <div className="pt-10" />
             {/* <div className="py-10">
                 <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
-                    
                 </h2>
             </div> */}
 
