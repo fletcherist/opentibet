@@ -581,24 +581,28 @@ export default function Home() {
               Авторские маршруты Алексея Перчукова
             </p>
             <div>
-              <TimetableButton
-                title="Август"
-                subtitle="2—19 августа"
-                days={17}
-                price={3000}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
-              <TimetableButton
-                title="Сентябрь"
-                subtitle="2—21 сентября"
-                days={19}
-                price={3600}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Август"
+                  subtitle="2—19 августа"
+                  days={17}
+                  price={3000}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Сентябрь"
+                  subtitle="2—21 сентября"
+                  days={19}
+                  price={3600}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
               <TimetableButton
                 title="Октябрь"
                 subtitle="2—23 октября"
