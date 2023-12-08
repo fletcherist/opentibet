@@ -1022,9 +1022,9 @@ export default function Home() {
           subtitle="Нажмите на фото, чтобы открыть галерею"
           id={LINK_PHOTO_GALLERY}
         />
-        <div className="pt-6">
-          <PhotoGallery />
-        </div>
+      </div>
+      <div className="max-w-6xl pt-6">
+        <PhotoGallery />
       </div>
 
       <div className="pt-10" />

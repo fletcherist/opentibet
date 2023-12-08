@@ -55,8 +55,8 @@ export const imagesSrc = {
     drakYerpa2: "https://media.discordapp.net/attachments/1182687528613064777/1182687697874210856/image.png?ex=65859ac0&is=657325c0&hm=480438d16c05c63d72ccae6e64913281e1fecbba7b4422df096e222ed68caf25&=&format=webp&quality=lossless&width=940&height=708",
     drakYerpa3: "https://media.discordapp.net/attachments/1182687528613064777/1182688061776220273/image.png?ex=65859b17&is=65732617&hm=89f3ca6cf8f9b82928e0d815641f96dbe7be1cb1e65078a0c2afc09beffdd1d7&=&format=webp&quality=lossless&width=940&height=708",
     chakraDamtso: "https://storage.googleapis.com/opentibet/chakra-damtso.jpg",
-
-
+    purang: "https://storage.googleapis.com/opentibet/purang.jpg",
+    korchag: "https://storage.googleapis.com/opentibet/korchag.jpg",
 }
 
 export const TibetInfo: React.FC<{}> = ({ }) => {
@@ -868,7 +868,7 @@ const ContentPiyang = () => (
 )
 
 const ContentPurang = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/purang.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.purang}>
         <TibetInfoCardTitle>Пуранг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Пуранг. Это приграничный город, который находится в 10 км от границы с Непалом.
@@ -880,7 +880,7 @@ const ContentPurang = () => (
 )
 
 const ContentKorchag = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/korchag.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.korchag}>
         <TibetInfoCardTitle>Корчаг</TibetInfoCardTitle>
         <TibetInfoCardContent>
             В 18 км от Пуранга находится очень известный монастырь XII века Корчаг. Это очень известное священное место. Он был построен великим переводчиком Ринченом Цангпо и вначале относился к линии Кадам, а позднее перешел к линии Сакья. В монастыре находится статуя Джобо Джампа Дордже (Бодхисаттвы Манджушри), которая была благословлена самим Ринченом Цангпо. В предании говорится, что, когда эту статую везли в Га Эр, около Кеджиа она внезапно заговорила и произнесла: «Я останусь здесь». Тогда на этом месте был построен главный зал собраний.
