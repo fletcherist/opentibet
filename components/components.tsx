@@ -208,9 +208,9 @@ export const PhotoGallery = () => {
             className={imgClassName}
           />
         </PhotoView>
-        <PhotoView src={imagesSrc.ganden}>
+        <PhotoView src={imagesSrc.sashipangma}>
           <img
-            src={imagesSrc.ganden}
+            src={imagesSrc.sashipangma}
             alt=""
             className={imgClassName}
           />
