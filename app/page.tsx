@@ -586,42 +586,50 @@ export default function Home() {
               Авторские маршруты Алексея Перчукова
             </p>
             <div>
-              <TimetableButton
-                title="Май"
-                subtitle="2—19 мая"
-                days={20}
-                price={3600}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
-              <TimetableButton
-                title="Июнь"
-                subtitle="2—21 июнь"
-                days={20}
-                price={3600}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
-              <TimetableButton
-                title="Сентябрь"
-                subtitle="2—23 сентября"
-                days={21}
-                price={3600}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
-              <TimetableButton
-                title="Октябрь"
-                subtitle="2—23 октября"
-                days={21}
-                price={3600}
-                bgColor="yellow-500"
-                fgColor="black"
-                accentColor="white"
-              />
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Май"
+                  subtitle="2—19 мая"
+                  days={20}
+                  price={3600}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Июнь"
+                  subtitle="2—21 июнь"
+                  days={20}
+                  price={3600}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Сентябрь"
+                  subtitle="2—23 сентября"
+                  days={21}
+                  price={3600}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
+              <Link href={"/tours/tibet-istoki"} target="_blank">
+                <TimetableButton
+                  title="Октябрь"
+                  subtitle="2—23 октября"
+                  days={21}
+                  price={3600}
+                  bgColor="yellow-500"
+                  fgColor="black"
+                  accentColor="white"
+                />
+              </Link>
             </div>
           </TabsContent>
         </Tabs>
