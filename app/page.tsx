@@ -382,7 +382,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-10 flex justify-center">
-              <div className="flex flex-col  gap-1 max-w-2xl">
+              <div className="flex flex-col gap-1 max-w-2xl">
                 <div className="grid gap-1">
                   <Image
                     src="https://storage.googleapis.com/opentibet/alex-2.jpg"

@@ -18,6 +18,7 @@ import {
 } from "@/utils/constants";
 import Link from "next/link";
 import { TimetableFactoid } from "./ToursTimetable";
+import { imagesSrc } from "./TibetInfo";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -102,54 +103,105 @@ export const PhotoGallery = () => {
   const photo3src = "https://storage.googleapis.com/opentibet/topor.jpg";
   const photo4src = "https://storage.googleapis.com/opentibet/background-7.jpg"; // replace with actual photos
   const photo5src = "https://storage.googleapis.com/opentibet/background-8.jpg";
-  const photo6src = "https://storage.googleapis.com/opentibet/background-1.jpg";
+  const photo6src = "https://media.discordapp.net/attachments/1182687528613064777/1182705035767992360/azwj9jLfIEWJV9xS-6qHn9-0p4rChwLNdPupTzFdU-Jf8A2qMsFAEPhDNGW652PuiunrNjQU8Rjo9D6kUh1VWw3D3D.png?ex=6585aae6&is=657335e6&hm=b2be063f0e9cdd128ff6e1454682108195f21173308ae2aa314fb7c7f0d4a3c5&=&format=webp&quality=lossless&width=1522&height=1142";
+
+  const imgClassName = "cursor-pointer w-48 bg-cover"
 
   return (
     <PhotoProvider>
-      <div className="grid grid-cols-2 gap-1">
-        <PhotoView src={photo1src}>
-          {/* <Image src={photo1src} alt="" width={375} height={250} quality={75} className="col-start-1 col-end-2 row-start-2 row-end-4 rounded-sm cursor-pointer" /> */}
+      <div className="flex flex-wrap gap-1">
+        <PhotoView src={imagesSrc.namtso}>
           <img
-            src={photo1src}
+            src={imagesSrc.namtso}
             alt=""
-            className="col-start-1 col-end-3 cursor-pointer"
+            className={imgClassName}
           />
         </PhotoView>
-        <PhotoView src={photo2src}>
+        <PhotoView src={imagesSrc.drepung}>
           <img
-            src={photo2src}
+            src={imagesSrc.drepung}
             alt=""
-            className="col-start-1 col-end-2 row-start-2 row-end-4 cursor-pointer"
+            className={imgClassName}
           />
         </PhotoView>
-        <PhotoView src={photo3src}>
+        <PhotoView src={imagesSrc.namtsoNorth1}>
           <img
-            src={photo3src}
+            src={imagesSrc.namtsoNorth1}
             alt=""
-            className="col-start-2 col-end-3 row-start-2 row-end-3 cursor-pointer"
+            className={imgClassName}
           />
         </PhotoView>
-        <PhotoView src={photo4src}>
+        <PhotoView src={imagesSrc.girjong}>
           <img
-            src={photo4src}
+            src={imagesSrc.girjong}
             alt=""
-            className="col-start-1 col-end-2 row-start-3 row-end-4 cursor-pointer"
+            className={imgClassName}
           />
         </PhotoView>
-        <PhotoView src={photo5src}>
+        <PhotoView src={imagesSrc.ganden}>
           <img
-            src={photo5src}
+            src={imagesSrc.ganden}
             alt=""
-            className="col-start-2 col-end-3 row-start-3 row-end-4 cursor-pointer"
+            className={imgClassName}
           />
         </PhotoView>
+        <PhotoView src={photo6src}>
+          <img
+            src={photo6src}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.jokang}>
+          <img
+            src={imagesSrc.jokang}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.sakya}>
+          <img
+            src={imagesSrc.sakya}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.everestBasecamp}>
+          <img
+            src={imagesSrc.everestBasecamp}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.nandi}>
+          <img
+            src={imagesSrc.nandi}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.nartang}>
+          <img
+            src={imagesSrc.nartang}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        <PhotoView src={imagesSrc.drakYerpa}>
+          <img
+            src={imagesSrc.drakYerpa}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>
+        {/* <PhotoView src={imagesSrc.chakraDamtso}>
+          <img
+            src={imagesSrc.chakraDamtso}
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView> */}
       </div>
-      {/* <PhotoView src={photo5src}>
-        <img src={photo5src} alt="" />
-      </PhotoView>
-      <PhotoView src={photo6src}>
-        <img src={photo6src} alt="" />
-      </PhotoView> */}
     </PhotoProvider>
   );
 };
@@ -415,17 +467,23 @@ export const TimetablePhoto: React.FC<{
   );
 };
 
-const TimetablePhotoDouble = () => {
+export const TimetablePhotoDouble: React.FC<{
+  src1: string;
+  src2: string;
+  maxHeight?: number
+}> = ({ src1, src2, maxHeight }) => {
   return (
     <div className="py-5 md:py-5 flex justify-center">
       <div className="flex max-w-3xl gap-1">
         <img
-          src="https://storage.googleapis.com/opentibet/background-kailas.jpg"
+          src={src1}
           className="rounded-lg w-[50%]"
+          style={maxHeight ? { maxHeight } : {}}
         />
         <img
-          src="https://storage.googleapis.com/opentibet/background-kailas.jpg"
+          src={src2}
           className="rounded-lg w-[50%]"
+          style={maxHeight ? { maxHeight } : {}}
         />
       </div>
     </div>

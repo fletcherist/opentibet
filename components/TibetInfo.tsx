@@ -30,6 +30,9 @@ export const imagesSrc = {
     sera: "https://storage.googleapis.com/opentibet/sera.jpg",
     tsurphu: "https://wondersoftibet.com/wp-content/uploads/2018/09/Tsurpu-Monastery-complex-in-Tibet-1024x768.jpg",
     namtso: "https://storage.googleapis.com/opentibet/namtso.jpg",
+    namtso2: "https://media.discordapp.net/attachments/1182687528613064777/1182689019029635182/image.png?ex=65859bfb&is=657326fb&hm=5feaad5a1653b92753034295aad7c1cf7ac367395362a1a99e77d96a873cd77d&=&format=webp&quality=lossless&width=1934&height=1142",
+    namtsoNorth1: 'https://media.discordapp.net/attachments/1182687528613064777/1182689473520226354/image.png?ex=65859c67&is=65732767&hm=93dfb45500acd5b15e658dd0755db0b2f034b9c84f4a4fd53d3f58bb493d4f0c&=&format=webp&quality=lossless&width=1730&height=1142',
+    namtsoNorth2: 'https://media.discordapp.net/attachments/1182687528613064777/1182689530642440252/Screenshot_2023-12-08_at_17.25.51.png?ex=65859c75&is=65732775&hm=85f6d8af95a29a9dbd741fb1007cb94da9d8e4ce86fd7be3fd6e92ead333e15e&=&format=webp&quality=lossless&width=1808&height=1142',
     reting: "https://storage.googleapis.com/opentibet/reting.jpg",
     taklung: "https://storage.googleapis.com/opentibet/taklung.jpg",
     tashilhunpo: "https://snowliontours.ru/wp-content/uploads/2018/10/%D0%A2%D0%B0%D1%88%D0%B8%D0%BB%D1%83%D0%BD%D0%BF%D0%BE-%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C-%D0%A2%D0%B0%D1%88%D0%B8-%D0%9B%D1%83%D0%BD%D0%BF%D0%BE-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D1%82%D1%83%D1%80-%D0%B2-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg",
@@ -47,7 +50,13 @@ export const imagesSrc = {
     chiu: "https://storage.googleapis.com/opentibet/chiu-2.jpg",
     rakshastal: "https://storage.googleapis.com/opentibet/rakshastal.jpg",
     vneshKora: "https://storage.googleapis.com/opentibet/vnesh-kora.jpg",
-    nandi: "https://storage.googleapis.com/opentibet/nandi.jpg"
+    nandi: "https://storage.googleapis.com/opentibet/nandi.jpg",
+    drakYerpa: "https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg",
+    drakYerpa2: "https://media.discordapp.net/attachments/1182687528613064777/1182687697874210856/image.png?ex=65859ac0&is=657325c0&hm=480438d16c05c63d72ccae6e64913281e1fecbba7b4422df096e222ed68caf25&=&format=webp&quality=lossless&width=940&height=708",
+    drakYerpa3: "https://media.discordapp.net/attachments/1182687528613064777/1182688061776220273/image.png?ex=65859b17&is=65732617&hm=89f3ca6cf8f9b82928e0d815641f96dbe7be1cb1e65078a0c2afc09beffdd1d7&=&format=webp&quality=lossless&width=940&height=708",
+    chakraDamtso: "https://storage.googleapis.com/opentibet/chakra-damtso.jpg",
+
+
 }
 
 export const TibetInfo: React.FC<{}> = ({ }) => {
@@ -389,7 +398,7 @@ const ContentSera = () => (
 )
 
 const ContentDrakYerpa = () => (
-    <TibetInfoCard imageSrc="https://snowliontours.ru/wp-content/uploads/2018/10/%D0%BC%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%B5%D1%89%D0%B5%D1%80%D1%8B-%D0%94%D1%80%D0%B0%D0%B9-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%99%D0%B5%D1%80%D0%BF%D0%B0-%D0%A6%D0%B5%D1%87%D1%83-%D0%BF%D0%B5%D1%80%D0%BC%D0%B8%D1%82%D1%8B-%D0%B2-%D0%9B%D1%85%D0%B0%D1%81%D1%83-%D0%A2%D0%B8%D0%B1%D0%B5%D1%82.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.drakYerpa}>
         <TibetInfoCardTitle>Драк Йерпа</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Драк Йерпа — это буддийский монастырский комплекс, расположенный в 30 км к северо-востоку от Лхасы, Тибет. Он был основан в 8 веке и является одним из самых важных религиозных сооружений в Тибете.
@@ -702,7 +711,7 @@ const ContentPelkuTso = () => (
 )
 
 const ContentChakraDaktso = () => (
-    <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chakra-damtso.jpg">
+    <TibetInfoCard imageSrc={imagesSrc.chakraDamtso}>
         <TibetInfoCardTitle>Чакра Дакцо</TibetInfoCardTitle>
         <TibetInfoCardContent>
             Высокогорный храм Чакра Дакцо (Chakra Dakzo) на месте пещер, где долгое время жил Миларепа. По одной из версий, это именно то самое место, откуда он ушелв высшие миры. Место очень энергетически сильное. Стоит обратить внимание на три пещеры, где Миларепа медитировал 3, 6 и 9 лет. Подъем к храму и пещерам на 200 метров занимает примерно 1.5 часа. Так что закладывайте на общую продолжительность экскурсии 4 часа.

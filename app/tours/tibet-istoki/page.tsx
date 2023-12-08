@@ -29,18 +29,20 @@ export default function ({ params }: { params: { tibet: string } }) {
                 <div className="text-white h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100">
                     <div className="max-w-5xl w-full">
                         <div className="text-3xl font-semibold text-center w-full px-4 mt-5 mb-5">
-                            Истоки
+                            Истоки четырех священных рек и<br /> исследование мандалы Кайласа.
+                            <br />
                         </div>
                         <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
-                            Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей
-                            открывали для себя эту священную землю.
+                            Эксклюзивный маршрут в июне 2024
+                            {/* Большинство паломников, приезжающих в Тибет, осматривают лишь самые популярные туристические места.
                             <br />
-                            <br />
+                            У вас есть уникальная возможность оказаться там, куда обычному туристу не попасть.
+                            <br /> */}
                         </div>
                         <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
                             <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
                             <h2 className="text-2xl font-light mt-3 leading-8">
-                                3400$ за 21 день
+                                3600$ за 21 день
                             </h2>
                         </div>
                     </div>
