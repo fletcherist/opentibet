@@ -109,7 +109,7 @@ export const PhotoGallery = () => {
 
   return (
     <PhotoProvider>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-1 justify-center">
         <PhotoView src={imagesSrc.namtso}>
           <img
             src={imagesSrc.namtso}
