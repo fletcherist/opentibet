@@ -901,6 +901,7 @@ export default function Home() {
       </div>
 
       <div className="pt-10" />
+      {/* <div className="pt-10" />
       <div className="max-w-4xl">
         <div className="pb-5">
           <Header title="Отзывы участников" subtitle="" />
@@ -922,7 +923,7 @@ export default function Home() {
             text="Моя поездка в Тибет с этой компанией оказалась невероятным приключением! Горы, монастыри и доброжелательные люди сделали это путешествие незабываемым. Организация была на высшем уровне, и я чувствовал себя в надежных руках на протяжении всей поездки."
           />
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-4xl w-full">
         <Header title="Часто задаваемые вопросы" subtitle="" />
