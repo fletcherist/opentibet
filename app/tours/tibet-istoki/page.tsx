@@ -1,6 +1,6 @@
 
 
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer } from "@/components/components";
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, TimetableButton } from "@/components/components";
 import { TourBasicTimetable, TourExclusiveTimetable } from "@/components/ToursTimetable";
 import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
 
@@ -48,12 +48,31 @@ export default function ({ params }: { params: { tibet: string } }) {
                     </div>
                 </div>
             </div>
+            <div className="w-full max-w-4xl">
+                <div className="bg-white mt-4">
+                    <div>
+                        <h4 className="font-bold px-3 pt-3 leading-5 text-xl text-black">
+                            Эксклюзивный тур
+                        </h4>
+                        <p className="font-semibold mx-3 mb-3 text-yellow-500">
+                            Авторский маршрут Алексея Перчукова
+                        </p>
+                    </div>
+                    <TimetableButton
+                        title="Июнь"
+                        subtitle="2—19 мая"
+                        days={24}
+                        price={3600}
+                        bgColor="yellow-500"
+                        fgColor="black"
+                        accentColor="white"
+                    />
+                </div>
+                <div className="w-full flex justify-end">
+                    <LinkTours />
+                </div>
+            </div>
             <div className="pt-10" />
-            {/* <div className="py-10">
-                <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
-                </h2>
-            </div> */}
-
             <div className="max-w-4xl">
                 <TourExclusiveTimetable />
                 <ApplyForm />

@@ -478,162 +478,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div
-        className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
-        id={LINK_OFFERS}
-      >
-        <Header title="Программы на 2024" subtitle="" />
-        <p className="mx-4 mb-6">
-          Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
-          авторские маршруты.
-        </p>
-        <Tabs defaultValue="reg" className="w-full px-4">
-          <TabsList className="shadow-inner shadow-black/20 border-black border-[2px] md:border-2 p-2 rounded-full h-min bg-white -mx-3 z-30 relative self-center flex">
-            <TabsTrigger
-              value="reg"
-              className="rounded-full rounded-r-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal 
-              data-[state=inactive]:text-blue-500 shadow-xl shadow-black/30 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
-            >
-              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
-                Пакетные <br className="md:hidden" />
-                туры
-              </h3>
-            </TabsTrigger>
-            <TabsTrigger
-              value="exc"
-              className="rounded-full rounded-l-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal
-              data-[state=inactive]:text-black shadow-xl shadow-black/30 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
-            >
-              <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide whitespace-nowrap md:tracking-widest text-sm md:text-lg">
-                {/*<div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>*/}
-                <span className="text-yellow-500 leading-3 text-lg md:text-2xl">
-                  ★
-                </span>{" "}
-                Эксклюзивные <br className="md:hidden" />
-                туры
-              </h3>
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent
-            className="bg-gray-200 mt-4 -mx-3 rounded-sm"
-            value="reg"
-          >
-            <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-blue-500">
-              Пакетные туры OPEN TIBET
-            </h4>
-            <p className="font-semibold mx-3 mb-3 text-blue-500">
-              Всё, что нужно паломнику. От 1900$
-            </p>
-            <div>
-              <Link href={"/tours/tibet-may-2024"} target="_blank">
-                <TimetableButton
-                  title="Май"
-                  subtitle="2—21 мая"
-                  days={14}
-                  price={getTourPriceForMonth("may")}
-                />
-              </Link>
-              <Link href={"/tours/tibet-june-2024"} target="_blank">
-                <TimetableButton
-                  title="Июнь"
-                  subtitle="6—19 июня"
-                  days={14}
-                  price={getTourPriceForMonth("june")}
-                />
-              </Link>
-              <Link href={"/tours/tibet-july-2024"} target="_blank">
-                <TimetableButton
-                  title="Июль"
-                  subtitle="1—23 июля"
-                  days={14}
-                  price={getTourPriceForMonth("july")}
-                />
-              </Link>
-              <Link href={"/tours/tibet-august-2024"} target="_blank">
-                <TimetableButton
-                  title="Август"
-                  subtitle="2—19 августа"
-                  days={14}
-                  price={getTourPriceForMonth("august")}
-                />
-              </Link>
-              <Link href={"/tours/tibet-september-2024"} target="_blank">
-                <TimetableButton
-                  title="Сентябрь"
-                  subtitle="2—21 сентября"
-                  days={14}
-                  price={getTourPriceForMonth("september")}
-                />
-              </Link>
-              <Link href={"/tours/tibet-october-2024"} target="_blank">
-                <TimetableButton
-                  title="Октябрь"
-                  subtitle="2—23 октября"
-                  days={14}
-                  price={getTourPriceForMonth("october")}
-                />
-              </Link>
-            </div>
-          </TabsContent>
-
-          <TabsContent className="bg-black mt-4 -mx-3 rounded-sm" value="exc">
-            <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-yellow-500">
-              Эксклюзивные туры
-            </h4>
-            <p className="font-semibold mx-3 mb-3 text-yellow-500">
-              Авторские маршруты Алексея Перчукова
-            </p>
-            <div>
-              <Link href={"/tours/tibet-istoki"} target="_blank">
-                <TimetableButton
-                  title="Май"
-                  subtitle="2—19 мая"
-                  days={20}
-                  price={3600}
-                  bgColor="yellow-500"
-                  fgColor="black"
-                  accentColor="white"
-                />
-              </Link>
-              <Link href={"/tours/tibet-istoki"} target="_blank">
-                <TimetableButton
-                  title="Июнь"
-                  subtitle="2—21 июнь"
-                  days={20}
-                  price={3600}
-                  bgColor="yellow-500"
-                  fgColor="black"
-                  accentColor="white"
-                />
-              </Link>
-              <Link href={"/tours/tibet-istoki"} target="_blank">
-                <TimetableButton
-                  title="Сентябрь"
-                  subtitle="2—23 сентября"
-                  days={21}
-                  price={3600}
-                  bgColor="yellow-500"
-                  fgColor="black"
-                  accentColor="white"
-                />
-              </Link>
-              <Link href={"/tours/tibet-istoki"} target="_blank">
-                <TimetableButton
-                  title="Октябрь"
-                  subtitle="2—23 октября"
-                  days={21}
-                  price={3600}
-                  bgColor="yellow-500"
-                  fgColor="black"
-                  accentColor="white"
-                />
-              </Link>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
+      <ToursTabs />
       <div className="pt-10" />
       <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
         <div className="pb-5">
@@ -1211,3 +1056,183 @@ const WhyGoTibetWithUsStatement: React.FC<{
     </div>
   );
 };
+
+const ToursTabs = () => {
+  return (
+    <div
+      className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
+      id={LINK_OFFERS}
+    >
+      <Header title="Программы на 2024" subtitle="" />
+      <p className="mx-4 mb-6">
+        Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
+        авторские маршруты.
+      </p>
+      <Tabs defaultValue="reg" className="w-full px-4">
+        <TabsList className="shadow-inner shadow-black/20 border-black border-[2px] md:border-2 p-2 rounded-full h-min bg-white -mx-3 z-30 relative self-center flex">
+          <TabsTrigger
+            value="reg"
+            className="rounded-full rounded-r-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal 
+              data-[state=inactive]:text-blue-500 shadow-xl shadow-black/30 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+          >
+            <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
+              Пакетные <br className="md:hidden" />
+              туры
+            </h3>
+          </TabsTrigger>
+          <TabsTrigger
+            value="exc"
+            className="rounded-full rounded-l-none w-1/2 h-[70px] m-0 transition-none md:whitespace-nowrap whitespace-normal
+              data-[state=inactive]:text-black shadow-xl shadow-black/30 data-[state=active]:bg-black data-[state=active]:text-yellow-500"
+          >
+            <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide whitespace-nowrap md:tracking-widest text-sm md:text-lg">
+              {/*<div className="rounded-full w-[1em] h-[1em] bg-yellow-500 inline-block mr-[0.33em] align-middle mb-[0.25em]"></div>*/}
+              <span className="text-yellow-500 leading-3 text-lg md:text-2xl">
+                ★
+              </span>{" "}
+              Эксклюзивные <br className="md:hidden" />
+              туры
+            </h3>
+          </TabsTrigger>
+        </TabsList>
+
+        <TabsContent
+          className="bg-gray-200 mt-4 -mx-3 rounded-sm"
+          value="reg"
+        >
+          <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-blue-500">
+            Пакетные туры OPEN TIBET
+          </h4>
+          <p className="font-semibold mx-3 mb-3 text-blue-500">
+            Всё, что нужно паломнику. От 1900$
+          </p>
+          <div>
+            <Link href={"/tours/tibet-may-2024"} target="_blank">
+              <TimetableButton
+                title="Май"
+                subtitle="2—21 мая"
+                days={14}
+                price={getTourPriceForMonth("may")}
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-june-2024"} target="_blank">
+              <TimetableButton
+                title="Июнь"
+                subtitle="6—19 июня"
+                days={14}
+                price={getTourPriceForMonth("june")}
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-july-2024"} target="_blank">
+              <TimetableButton
+                title="Июль"
+                subtitle="1—23 июля"
+                days={14}
+                price={getTourPriceForMonth("july")}
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-august-2024"} target="_blank">
+              <TimetableButton
+                title="Август"
+                subtitle="2—19 августа"
+                days={14}
+                price={getTourPriceForMonth("august")}
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-september-2024"} target="_blank">
+              <TimetableButton
+                title="Сентябрь"
+                subtitle="2—21 сентября"
+                days={14}
+                price={getTourPriceForMonth("september")}
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-october-2024"} target="_blank">
+              <TimetableButton
+                title="Октябрь"
+                subtitle="2—23 октября"
+                days={14}
+                price={getTourPriceForMonth("october")}
+                withIcon
+                withBorder
+              />
+            </Link>
+          </div>
+        </TabsContent>
+
+        <TabsContent className="bg-black mt-4 -mx-3 rounded-sm" value="exc">
+          <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-yellow-500">
+            Эксклюзивные туры
+          </h4>
+          <p className="font-semibold mx-3 mb-3 text-yellow-500">
+            Авторские маршруты Алексея Перчукова
+          </p>
+          <div>
+            <Link href={"/tours/tibet-istoki"} target="_blank">
+              <TimetableButton
+                title="Май"
+                subtitle="2—19 мая"
+                days={20}
+                price={3600}
+                bgColor="yellow-500"
+                fgColor="black"
+                accentColor="white"
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-istoki"} target="_blank">
+              <TimetableButton
+                title="Июнь"
+                subtitle="2—21 июнь"
+                days={20}
+                price={3600}
+                bgColor="yellow-500"
+                fgColor="black"
+                accentColor="white"
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-istoki"} target="_blank">
+              <TimetableButton
+                title="Сентябрь"
+                subtitle="2—23 сентября"
+                days={21}
+                price={3600}
+                bgColor="yellow-500"
+                fgColor="black"
+                accentColor="white"
+                withIcon
+                withBorder
+              />
+            </Link>
+            <Link href={"/tours/tibet-istoki"} target="_blank">
+              <TimetableButton
+                title="Октябрь"
+                subtitle="2—23 октября"
+                days={21}
+                price={3600}
+                bgColor="yellow-500"
+                fgColor="black"
+                accentColor="white"
+                withIcon
+                withBorder
+              />
+            </Link>
+          </div>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}

@@ -528,6 +528,8 @@ export const TimetableButton: React.FC<{
   bgColor?: string;
   fgColor?: string;
   accentColor?: string;
+  withIcon?: boolean
+  withBorder?: boolean;
 }> = ({
   title,
   subtitle,
@@ -536,6 +538,8 @@ export const TimetableButton: React.FC<{
   bgColor = "blue-500",
   fgColor = "white",
   accentColor = "yellow-500",
+  withIcon = false,
+  withBorder
 }) => {
     const [isOpened, setIsOpened] = useState<boolean>(false);
     const daysLabel = getNoun(days, "день", "дня", "дней");
@@ -545,7 +549,7 @@ export const TimetableButton: React.FC<{
         <div className="hidden bg-yellow-500" />
         <div
           className={`h-[72px] sticky top-[60px] md:top-[64px]
-         border-b-[1px] border-b-${fgColor}/30
+          ${withBorder ? `border-b-[1px] border-b-${fgColor}/30` : ''}
          text-${fgColor} bg-${bgColor} hover:brightness-90
          `}
         >
@@ -565,13 +569,14 @@ export const TimetableButton: React.FC<{
                 <TimetableFactoid fact="цена, $" value={`${price}`} />
               </div>
             </div>
-
-            <div className={`p-4 text-${fgColor}`}>
-              <svg className="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-              </svg>
-              {/* {isOpened ? <IconArrowClose /> : <IconArrowDown />} */}
-            </div>
+            <div className="h-12" />
+            {withIcon && (
+              <div className={`w-12 h-12 text-${fgColor} flex items-center justify-center`}>
+                <svg className="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+                </svg>
+              </div>
+            )}
           </div>
         </div>
         {/* {isOpened && (
@@ -655,7 +660,7 @@ export const ApplyForm: React.FC = () => {
                   email: email,
                   phone: phone,
                 };
-                const resp = await fetch("./api/applications", {
+                const resp = await fetch("/api/applications", {
                   method: "POST",
                   body: JSON.stringify(body),
                   headers: {
@@ -919,3 +924,16 @@ export const smoothScroll = (event: React.MouseEvent, elementId: string) => {
   // change location
   window.history.pushState({}, "", `#${elementId}`);
 };
+
+export const LinkTours: React.FC = () => {
+  return (
+    <Link href={`/#${LINK_OFFERS}`}>
+      <div className="flex items-center gap-2 py-2 cursor-pointer">
+        <span className="text-blue-500">Смотреть все программы</span>
+        <svg className="w-4 h-4 text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+        </svg>
+      </div>
+    </Link>
+  )
+}
