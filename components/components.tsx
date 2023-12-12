@@ -599,9 +599,8 @@ export const TimetableButton: React.FC<{
 
 export const ButtonWithContent: React.FC<{
   title: string;
-  subtitle: string;
   children: React.ReactNode;
-}> = ({ title, subtitle, children }) => {
+}> = ({ title, children }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (

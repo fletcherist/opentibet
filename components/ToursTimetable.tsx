@@ -522,4 +522,3 @@ export const TimetableFactoid: React.FC<{
         </div>
     );
 };
-

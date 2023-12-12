@@ -319,7 +319,7 @@ export default function Home() {
             <div className="flex px-4 w-fit mb-4 mx-auto">
               <div className="w-32 h-32">
                 <img
-                  className={`${tibet.alexeyPortrait} object-cover object-cover rounded-full w-full h-full`}
+                  className={`${tibet.alexeyPortrait} object-cover rounded-full w-full h-full`}
                   src="https://storage.googleapis.com/opentibet/alexey-portrait.jpeg"
                   alt="profile picture"
                 />
@@ -481,18 +481,30 @@ export default function Home() {
       <ToursTabs />
       <div className="pt-10" />
       <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
-        <div className="pb-5">
+        <div>
           <Header title="Подготовка к поездке" subtitle="" />
-          <p className="mx-4 mb-6">
+          <p className="mx-4">
             Поездка в Тибет требует тщательной подготовки. Мы собрали для вас
             сведения, которые помогут вам подготовиться духовно и физически.
           </p>
-          <p className="mx-4 mb-6"></p>
+        </div>
+        <div className="p-1">
+          <div className="w-full h-[315px] mt-5 mb-2 md:h-96">
+            <iframe
+              width="100%"
+              // height="315"
+              height="100%"
+              src="https://www.youtube.com/embed/YmAMQHDuP2k?si=pfVRQfVv36idRIrm"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
         <div>
           <ButtonWithContent
             title="Личный опыт Алексея&nbsp;Перчукова"
-            subtitle=""
           >
             <div className="p-4 leading-8 hyphens-auto">
               <p className="leading-8">
@@ -559,7 +571,7 @@ export default function Home() {
           </ButtonWithContent>
         </div>
         <div>
-          <ButtonWithContent title="Высотная болезнь" subtitle="">
+          <ButtonWithContent title="Высотная болезнь">
             <div className="p-4 leading-8">
               Это главная опасность, подстерегающая путешественников в горах.
               Из-за разреженного воздуха и недостаточного количества кислорода в
@@ -586,7 +598,7 @@ export default function Home() {
               и лечения может наступить смерть.
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title="Акклиматизация и адаптация" subtitle="">
+          <ButtonWithContent title="Акклиматизация и адаптация">
             <div className="p-4 leading-8">
               Различают краткосрочную и долгосрочную высотные адаптации.
               <br />
@@ -642,7 +654,7 @@ export default function Home() {
               действовать гравитация.
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title="Ночевки в горах" subtitle="">
+          <ButtonWithContent title="Ночевки в горах">
             <div className="p-4 leading-8">
               Наибольшую опасность для неподготовленных путешественников
               представляют ночевки в горах, когда во время сна контроль сознания
@@ -729,8 +741,25 @@ export default function Home() {
             </div>
           </ButtonWithContent>
           <ButtonWithContent
+            title="Собираем вещи на Кору вокруг Кайласа"
+          >
+            <div className="p-4">
+              <div className="w-full h-[315px] mt-5 mb-2 md:h-96">
+                <iframe
+                  width="100%"
+                  // height="315"
+                  height="100%"
+                  src="https://www.youtube.com/embed/5KtoeQl4rW4?si=W8tHtnfAKdzWxDgw"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </ButtonWithContent>
+          <ButtonWithContent
             title="Что взять с собой?"
-            subtitle="Список необходимых вещей для поездки в Тибет"
           >
             <div className="p-4">
               <ul className="list-decimal list-outside ms-5 leading-7 space-y-1 hyphens-auto">
@@ -789,7 +818,6 @@ export default function Home() {
           </ButtonWithContent>
           <ButtonWithContent
             title="Аптечка"
-            subtitle="Нужные лекарственные препараты"
           >
             <div className="p-4 leading-8 hyphens-auto">
               <p className="leading-8">

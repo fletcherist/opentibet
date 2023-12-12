@@ -85,8 +85,8 @@ export default function ({ params }: { params: { tibet: string } }) {
                         </p>
                     </div>
                     <TimetableButton
-                        title={`${month.charAt(0).toUpperCase()}${month.slice(1)}`}
-                        subtitle="2—19 мая"
+                        title={`${translationsMap[month].charAt(0).toUpperCase()}${translationsMap[month].slice(1)}`}
+                        subtitle={`2—19 ${translationsMap[month]}`}
                         days={15}
                         price={getTourPriceForMonth(month)}
                     />
