@@ -592,10 +592,18 @@ function Home() {
       <div className="pt-10" />
       <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
         <div>
-          <Header title="Подготовка к поездке" subtitle="" />
+          <Header title={
+            translate({
+              ru: "Подготовка к поездке",
+              en: "Preparing for the trip"
+            }) as string
+          } subtitle="" />
           <p className="mx-4">
-            Поездка в Тибет требует тщательной подготовки. Мы собрали для вас
-            сведения, которые помогут вам подготовиться духовно и физически.
+            {translate({
+              ru: `Поездка в Тибет требует тщательной подготовки. Мы собрали для вас
+              сведения, которые помогут вам подготовиться духовно и физически.`,
+              en: `A trip to Tibet requires careful preparation. We have collected information for you that will help you prepare spiritually and physically.`
+            })}
           </p>
         </div>
         <div className="p-1">
@@ -614,101 +622,153 @@ function Home() {
         </div>
         <div>
           <ButtonWithContent
-            title="Личный опыт Алексея&nbsp;Перчукова"
+            title={
+              translate({
+                ru: "Личный опыт Алексея&nbsp;Перчукова",
+                en: "Personal experience of Alexey Perchukov"
+              }) as string
+            }
           >
             <div className="p-4 leading-8 hyphens-auto">
               <p className="leading-8">
-                Хочу поделиться своим опытом, благодаря которому мне удалось
-                достичь уникальных результатов без использования медицинских
-                препаратов.
+                {translate({
+                  ru: `Хочу поделиться своим опытом, благодаря которому мне удалось
+              достичь уникальных результатов без использования медицинских
+              препаратов.`,
+                  en: `I want to share my experience, thanks to which I was able to achieve unique results without the use of medications.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Наилучшим образом подготовиться к путешествию в Тибет мне
-                помогли сухие голодания. Этот метод хорош тем, что имеет своим
-                следствием комплексную перестройку деятельности всех систем
-                организма. В нем запускаются естественные оздоровительные
-                процессы. Если в 2007 году я с большим трудом прошел обычную
-                Кору за три дня, то после двух лет практики сухих голоданий (3,
-                5, 7, 9 и 11 дней; каждый квартал я добавлял по два дня), мне не
-                составило труда обойти священную гору за 9 часов.
+                {translate({
+                  ru: `Наилучшим образом подготовиться к путешествию в Тибет мне
+                  помогли сухие голодания. Этот метод хорош тем, что имеет своим
+                  следствием комплексную перестройку деятельности всех систем
+                  организма. В нем запускаются естественные оздоровительные
+                  процессы. Если в 2007 году я с большим трудом прошел обычную
+                  Кору за три дня, то после двух лет практики сухих голоданий (3,
+                  5, 7, 9 и 11 дней; каждый квартал я добавлял по два дня), мне не
+                  составило труда обойти священную гору за 9 часов.`,
+                  en: `Dry fasting helped me best prepare for the trip to Tibet. This method is good because it results in a comprehensive restructuring of the activities of all body systems. Natural healing processes are launched in it. If in 2007 I walked through the usual Kora in three days with great difficulty, then after two years of practicing dry fasting (3, 5, 7, 9 and 11 days; I added two days every quarter), it was not difficult for me to walk around the sacred mountain in 9 hours.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Перед тем, как приступать к голоданиям, обязательно
-                проконсультируйтесь с врачом. Рекомендую начать с соблюдения два
-                раза в месяц экадаши (11-й день после полнолуния и новолуния).
-                Каждый квартал можно проводить длительные (3 дня и более) сухие
-                голодания, то есть полное исключение пищи и воды, или голодания
-                на воде. Если вы чувствуете непосредственную связь с Кайласом,
-                то лучше соблюдать как экадаши, так и прадош (13-й лунный день
-                на растущую и убывающую луну) – считается, что постящийся в эти
-                дни получает особое благословение Шивы.
+                {translate({
+                  ru: `Перед тем, как приступать к голоданиям, обязательно
+                  проконсультируйтесь с врачом. Рекомендую начать с соблюдения два
+                  раза в месяц экадаши (11-й день после полнолуния и новолуния).
+                  Каждый квартал можно проводить длительные (3 дня и более) сухие
+                  голодания, то есть полное исключение пищи и воды, или голодания
+                  на воде. Если вы чувствуете непосредственную связь с Кайласом,
+                  то лучше соблюдать как экадаши, так и прадош (13-й лунный день
+                  на растущую и убывающую луну) – считается, что постящийся в эти
+                  дни получает особое благословение Шивы.`,
+                  en: `Before you start fasting, be sure to consult your doctor. I recommend starting by observing Ekadashi twice a month (11th day after the full moon and new moon). Every quarter you can carry out long-term (3 days or more) dry fasting, that is, complete exclusion of food and water, or fasting on water. If you feel a direct connection with Kailash, then it is better to observe both Ekadashi and Pradosh (the 13th lunar day on the waxing and waning moon) - it is believed that the person fasting on these days receives a special blessing from Shiva.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Важнейшее значение имеет выход из голоданий. Использование при
-                этом высокочастотной пищи, то есть продуктов с высокой частотой
-                вибраций, в которой не могут выжить вредные микроорганизмы,
-                увеличивает вибрацию всех клеток организма, из-за чего
-                повышается иммунитет и кардинально улучшается самочувствие.
+                {translate({
+                  ru: `Важнейшее значение имеет выход из голоданий. Использование при
+                  этом высокочастотной пищи, то есть продуктов с высокой частотой
+                  вибраций, в которой не могут выжить вредные микроорганизмы,
+                  увеличивает вибрацию всех клеток организма, из-за чего
+                  повышается иммунитет и кардинально улучшается самочувствие.`,
+                  en: `The most important thing is to get out of fasting. The use of high-frequency food, that is, products with a high frequency of vibrations in which harmful microorganisms cannot survive, increases the vibration of all cells of the body, which increases immunity and radically improves well-being.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                После нескольких месяцев подобных практик вы легко перейдете к
-                вегетарианству, а затем и к раздельному питанию.
+                {translate({
+                  ru: `После нескольких месяцев подобных практик вы легко перейдете к
+                  вегетарианству, а затем и к раздельному питанию.`,
+                  en: `After several months of such practices, you will easily switch to vegetarianism, and then to separate meals.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Но это еще не все. Изменения будут происходить на ментальном
-                уровне – появится потребность в духовной (высокочастотной)
-                информации. Ее можно найти в ведической литературе. Если
-                говорить о моем опыте, то после голоданий я по-новому, более
-                глубоко стал понимать Махабхарату , Пураны , а также увлекся
-                учением Г. И. Гурджиева .
+                {translate({
+                  ru: `Но это еще не все. Изменения будут происходить на ментальном
+                  уровне – появится потребность в духовной (высокочастотной)
+                  информации. Ее можно найти в ведической литературе. Если
+                  говорить о моем опыте, то после голоданий я по-новому, более
+                  глубоко стал понимать Махабхарату , Пураны , а также увлекся
+                  учением Г. И. Гурджиева.`,
+                  en: `But that is not all. Changes will occur at the mental level - there will be a need for spiritual (high-frequency) information. It can be found in Vedic literature. If we talk about my experience, then after fasting I began to understand the Mahabharata, Puranas in a new, more profound way, and also became interested in the teachings of G.I. Gurdjieff.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Аскетические практики позволяют настроить организм на
-                энергетические поля Тибета и смягчают во время поездки их
-                воздействие, зачастую разрушительное для неподготовленного
-                человека. Конечной целью подобных практик, несомненно, является
-                изменение сознания. Я думаю, что этого можно достичь и с помощью
-                произнесения мантр или чтения молитв, однако такой путь займет
-                много времени, а самое главное – для него нужна сильная вера.
+                {translate({
+                  ru: `Аскетические практики позволяют настроить организм на
+                  энергетические поля Тибета и смягчают во время поездки их
+                  воздействие, зачастую разрушительное для неподготовленного
+                  человека. Конечной целью подобных практик, несомненно, является
+                  изменение сознания. Я думаю, что этого можно достичь и с помощью
+                  произнесения мантр или чтения молитв, однако такой путь займет
+                  много времени, а самое главное – для него нужна сильная вера.`,
+                  en: `Ascetic practices allow you to attune your body to the energy fields of Tibet and soften their impact during the trip, which is often destructive for an unprepared person. The ultimate goal of such practices is undoubtedly a change in consciousness. I think this can be achieved by chanting mantras or reciting prayers, but this path will take a lot of time, and most importantly, it requires strong faith.`
+                })}
               </p>
               <p className="my-4 leading-8">
-                Одновременно с голоданиями я регулярно выполнял комплекс
-                упражнений, связанных с задержкой дыхания. Вызывание
-                искусственной гипоксии в обычных условиях ускоряет начало
-                долговременной высотной адаптации в горах
+                {translate({
+                  ru: `Одновременно с голоданиями я регулярно выполнял комплекс
+                  упражнений, связанных с задержкой дыхания. Вызывание
+                  искусственной гипоксии в обычных условиях ускоряет начало
+                  долговременной высотной адаптации в горах`,
+                  en: `Along with fasting, I regularly performed a set of exercises involving holding my breath. Inducing artificial hypoxia under normal conditions accelerates the onset of long-term altitude adaptation in the mountains`
+                })}
+
               </p>
             </div>
           </ButtonWithContent>
         </div>
         <div>
-          <ButtonWithContent title="Высотная болезнь">
+          <ButtonWithContent title={
+            translate({
+              ru: "Высотная болезнь",
+              en: "Altitude sickness",
+            }) as string
+          } >
             <div className="p-4 leading-8">
-              Это главная опасность, подстерегающая путешественников в горах.
+              {translate({
+                ru: `Это главная опасность, подстерегающая путешественников в горах.
               Из-за разреженного воздуха и недостаточного количества кислорода в
-              организме человека развивается гипоксия.
+              организме человека развивается гипоксия.`,
+                en: "This is the main danger that awaits travelers in the mountains. Due to thin air and insufficient oxygen, hypoxia develops in the human body.",
+              })}
               <br />
               <br />
-              Разновидностью высотной болезни является горная болезнь, когда
-              гипоксия усугубляется переутомлением, резкими перепадами
-              температур, охлаждением и обезвоживанием организма и пр.
-              Вследствие нехватки кислорода клеточные мембраны и стенки сосудов
-              становятся более проницаемыми, а кровяное давление растет – так
-              организм пытается увеличить перенос кислорода в ткани.
+              {translate({
+                ru: `Разновидностью высотной болезни является горная болезнь, когда
+                гипоксия усугубляется переутомлением, резкими перепадами
+                температур, охлаждением и обезвоживанием организма и пр.
+                Вследствие нехватки кислорода клеточные мембраны и стенки сосудов
+                становятся более проницаемыми, а кровяное давление растет – так
+                организм пытается увеличить перенос кислорода в ткани.`,
+                en: "A type of altitude sickness is mountain sickness, when hypoxia is aggravated by overwork, sudden temperature changes, cooling and dehydration of the body, etc. Due to lack of oxygen cell membranes and vessel walls become more permeable, and blood pressure rises - this is how the body tries to increase the transfer of oxygen to the tissues.",
+              })}
               <br />
               <br />
-              В результате плазма крови начинает просачиваться через стенки
-              сосудов и возникают отеки. Наиболее опасными являются отек
-              головного мозга и легких. Человек испытывает головную боль,
-              головокружение, тошноту.
+              {translate({
+                ru: `В результате плазма крови начинает просачиваться через стенки
+                сосудов и возникают отеки. Наиболее опасными являются отек
+                головного мозга и легких. Человек испытывает головную боль,
+                головокружение, тошноту.`,
+                en: "As a result, blood plasma begins to leak through the walls of blood vessels and edema occurs. The most dangerous are cerebral and pulmonary edema. The person experiences a headache, dizziness, nausea.",
+              })}
               <br />
               <br />
-              Дальнейшее развитие болезни характеризуется замедлением реакции,
-              ухудшением координации движений, неадекватным восприятием
-              действительности, потерей сознания. При отсутствии должного ухода
-              и лечения может наступить смерть.
+              {translate({
+                ru: `Дальнейшее развитие болезни характеризуется замедлением реакции,
+                ухудшением координации движений, неадекватным восприятием
+                действительности, потерей сознания. При отсутствии должного ухода
+                и лечения может наступить смерть.`,
+                en: "Further development of the disease is characterized by a slower reaction, deterioration in coordination of movements, inadequate perception of reality, and loss of consciousness. Without proper care and treatment, death can occur.",
+              })}
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title="Акклиматизация и адаптация">
+          <ButtonWithContent title={
+            translate({
+              ru: "Акклиматизация и адаптация",
+              en: "Acclimatization and adaptation",
+            }) as string
+          } >
             <div className="p-4 leading-8">
               Различают краткосрочную и долгосрочную высотные адаптации.
               <br />
@@ -764,7 +824,12 @@ function Home() {
               действовать гравитация.
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title="Ночевки в горах">
+          <ButtonWithContent title={
+            translate({
+              ru: "Ночевки в горах",
+              en: "Overnight in the mountains",
+            }) as string
+          }>
             <div className="p-4 leading-8">
               Наибольшую опасность для неподготовленных путешественников
               представляют ночевки в горах, когда во время сна контроль сознания
@@ -851,7 +916,12 @@ function Home() {
             </div>
           </ButtonWithContent>
           <ButtonWithContent
-            title="Собираем вещи на Кору вокруг Кайласа"
+            title={
+              translate({
+                ru: "Собираем вещи на Кору вокруг Кайласа",
+                en: "Packing for Kora around Kailash",
+              }) as string
+            }
           >
             <div className="p-4">
               <div className="w-full h-[315px] mt-5 mb-2 md:h-96">
@@ -869,7 +939,12 @@ function Home() {
             </div>
           </ButtonWithContent>
           <ButtonWithContent
-            title="Что взять с собой?"
+            title={
+              translate({
+                ru: "Что взять с собой?",
+                en: "What to take with you?",
+              }) as string
+            }
           >
             <div className="p-4">
               <ul className="list-decimal list-outside ms-5 leading-7 space-y-1 hyphens-auto">
@@ -927,7 +1002,12 @@ function Home() {
             </div>
           </ButtonWithContent>
           <ButtonWithContent
-            title="Аптечка"
+            title={
+              translate({
+                ru: "Аптечка",
+                en: "First aid kit",
+              }) as string
+            }
           >
             <div className="p-4 leading-8 hyphens-auto">
               <p className="leading-8">
@@ -1011,6 +1091,7 @@ function Home() {
       </div>
 
       <div className="pt-10" />
+
       {/* <div className="pt-10" />
       <div className="max-w-4xl">
         <div className="pb-5">
@@ -1044,8 +1125,16 @@ function Home() {
       <div className="max-w-4xl w-full">
         <ApplyForm />
         <Header
-          title="Контакты"
-          subtitle="Алексей Перчуков"
+          title={translate({
+            ru: "Контакты",
+            en: "Contacts"
+          }) as string}
+          subtitle={
+            translate({
+              ru: "Алексей Перчуков",
+              en: "Alexey Perchukov"
+            }) as string
+          }
           id={LINK_CONTACTS}
         />
         <div className="p-4 pt-0">
@@ -1057,7 +1146,10 @@ function Home() {
               readOnly
             />
             <div className="text-[10px] uppercase tracking-wider font-bold">
-              Россия
+              {translate({
+                ru: "Россия",
+                en: "RUSSIA"
+              })}
             </div>
           </div>
           <div className="py-2">
@@ -1068,7 +1160,10 @@ function Home() {
               readOnly
             />
             <div className="text-[10px] uppercase tracking-wider font-bold">
-              Китай
+              {translate({
+                ru: "Китай",
+                en: "CHINA"
+              })}
             </div>
           </div>
         </div>
@@ -1232,15 +1327,24 @@ const WhyGoTibetWithUsStatement: React.FC<{
 };
 
 const ToursTabs = () => {
+  const translate = useTranslateFn()
   return (
     <div
       className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
       id={LINK_OFFERS}
     >
-      <Header title="Программы на 2024" subtitle="" />
+      <Header title={
+        translate({
+          ru: "Программы на 2024",
+          en: "Programs for 2024",
+        }) as string
+      } subtitle="" />
       <p className="mx-4 mb-6">
-        Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
-        авторские маршруты.
+        {translate({
+          ru: `Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
+          авторские маршруты.`,
+          en: `We offer both regular package tours and exclusive signature routes.`
+        })}
       </p>
       <Tabs defaultValue="reg" className="w-full px-4">
         <TabsList className="shadow-inner shadow-black/20 border-black border-[2px] md:border-2 p-2 rounded-full h-min bg-white -mx-3 z-30 relative self-center flex">
@@ -1250,8 +1354,10 @@ const ToursTabs = () => {
               data-[state=inactive]:text-blue-500 shadow-xl shadow-black/30 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
           >
             <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
-              Пакетные <br className="md:hidden" />
-              туры
+              {translate({
+                ru: <>Пакетные <br className="md:hidden" />туры</>,
+                en: <>Package <br className="md:hidden" />tours</>,
+              })}
             </h3>
           </TabsTrigger>
           <TabsTrigger
@@ -1264,8 +1370,10 @@ const ToursTabs = () => {
               <span className="text-yellow-500 leading-3 text-lg md:text-2xl">
                 ★
               </span>{" "}
-              Эксклюзивные <br className="md:hidden" />
-              туры
+              {translate({
+                ru: <>Эксклюзивные <br className="md:hidden" />туры</>,
+                en: <>Exclusive <br className="md:hidden" />tours</>,
+              })}
             </h3>
           </TabsTrigger>
         </TabsList>
@@ -1275,10 +1383,16 @@ const ToursTabs = () => {
           value="reg"
         >
           <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-blue-500">
-            Пакетные туры OPEN TIBET
+            {translate({
+              ru: "Пакетные туры OPEN TIBET",
+              en: "Package tours OPEN TIBET",
+            })}
           </h4>
           <p className="font-semibold mx-3 mb-3 text-blue-500">
-            Всё, что нужно паломнику. От 1900$
+            {translate({
+              ru: "Всё, что нужно паломнику. От 1900$",
+              en: "Everything a pilgrim needs. From $1900",
+            })}
           </p>
           <div>
             <Link href={"/tours/tibet-may-2024"} target="_blank">
@@ -1346,10 +1460,16 @@ const ToursTabs = () => {
 
         <TabsContent className="bg-black mt-4 -mx-3 rounded-sm" value="exc">
           <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-yellow-500">
-            Эксклюзивные туры
+            {translate({
+              ru: "Эксклюзивные туры",
+              en: "Exclusive Tours",
+            })}
           </h4>
           <p className="font-semibold mx-3 mb-3 text-yellow-500">
-            Авторские маршруты Алексея Перчукова
+            {translate({
+              ru: "Авторские маршруты Алексея Перчукова",
+              en: "Author's routes of Alexey Perchukov",
+            })}
           </p>
           <div>
             <Link href={"/tours/tibet-istoki"} target="_blank">
