@@ -19,6 +19,7 @@ import {
 import Link from "next/link";
 import { TimetableFactoid } from "./ToursTimetable";
 import { imagesSrc } from "./TibetInfo";
+import { useLanguage, useSetLanguage, useTranslateFn } from "@/lib/language";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -396,7 +397,7 @@ export const AbstractButton: React.FC<{
   textColor?: string;
   anchor?: string;
 }> = ({
-  label = "Смотреть программы на 2024",
+  label,
   accentColor = "blue-500",
   hoverColor = "blue-800",
   textColor = "white",
@@ -436,7 +437,14 @@ export const AbstractButton: React.FC<{
   };
 
 export const ActionButton = () => {
-  return <AbstractButton label="Смотреть программы" anchor={LINK_OFFERS} />;
+  const translate = useTranslateFn()
+
+  return <AbstractButton label={
+    translate({
+      ru: "Смотреть программы",
+      en: "View programs"
+    }) as string
+  } anchor={LINK_OFFERS} />;
 };
 
 export const TimetableDay: React.FC<{
@@ -768,6 +776,10 @@ export const Header: React.FC<{
 };
 
 export const Navbar = () => {
+  const translate = useTranslateFn()
+  const language = useLanguage()
+  const setLanguage = useSetLanguage()
+
   return (
     <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-50">
       <div className="flex justify-center">
@@ -826,7 +838,10 @@ export const Navbar = () => {
                   }}
                   className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
-                  Программы
+                  {translate({
+                    ru: 'Программы',
+                    en: 'Tours'
+                  })}
                 </a>
               </li>
               <li>
@@ -837,7 +852,10 @@ export const Navbar = () => {
                   }}
                   className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
-                  Фото
+                  {translate({
+                    ru: 'Фото',
+                    en: 'Photos'
+                  })}
                 </a>
               </li>
               <li>
@@ -848,7 +866,22 @@ export const Navbar = () => {
                   }}
                   className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0"
                 >
-                  Контакты
+                  {translate({
+                    ru: 'Контакты',
+                    en: 'Contacts'
+                  })}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={(event) => {
+                    const newLanguage = language === 'ru' ? 'en' : 'ru'
+                    console.log(language, newLanguage)
+                    setLanguage(newLanguage)
+                  }}
+                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0 cursor-pointer"
+                >
+                  {language === 'ru' ? 'En' : 'Ru'}
                 </a>
               </li>
             </ul>
@@ -925,10 +958,16 @@ export const smoothScroll = (event: React.MouseEvent, elementId: string) => {
 };
 
 export const LinkTours: React.FC = () => {
+  const translate = useTranslateFn()
   return (
     <Link href={`/#${LINK_OFFERS}`}>
       <div className="flex items-center gap-2 py-2 cursor-pointer">
-        <span className="text-blue-500">Смотреть все программы</span>
+        <span className="text-blue-500">{
+          translate({
+            ru: "Смотреть все программы",
+            en: "View programs"
+          })
+        }</span>
         <svg className="w-4 h-4 text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
         </svg>

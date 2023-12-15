@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import tibet from "./tibet.module.css";
 
@@ -29,15 +31,32 @@ import {
   LINK_TIBET_PREPARATION,
   getTourPriceForMonth,
 } from "@/utils/constants";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
+import { Language, LanguageProvider, useLanguage, useTranslate, useTranslateFn, useTranslateMap } from "@/lib/language";
+import { useState } from "react";
 
-export default function Home() {
+export default function Page() {
+  const [language, setLanguage] = useState<Language>('ru')
+  return (
+    <LanguageProvider value={{
+      language: language,
+      setLanguage: (language) => {
+        setLanguage(language)
+      }
+    }}>
+      <Home />
+    </LanguageProvider>
+  )
+}
+
+function Home() {
+  const translate = useTranslateFn()
   return (
     <main
       lang="ru"
       className="flex min-h-screen flex-col items-center justify-between"
     >
+      <Navbar />
       <div
         className="w-full h-[93vh] mt-[-5vh] relative"
         id={LINK_WELCOME_SCREEN}
@@ -76,16 +95,16 @@ export default function Home() {
                 textShadow: "0 3px 20px rgba(0, 0, 0, .6)",
               }}
             >
-              Откройте
-              <br />
-              для&nbsp;себя
-              <br />
-              Тибет
+              {translate({
+                ru: <>Откройте<br />для&nbsp;себя<br />Тибет</>,
+                en: <>Discover<br />Tibet</>
+              })}
             </div>
             <div className="text-white py-2 pr-6 text-base md:text-xl">
-              Маршруты по доступным ценам
-              <br />
-              Пакетные туры от 1900 $
+              {translate({
+                ru: <>Маршруты по доступным ценам<br />Пакетные туры от 1900 $</>,
+                en: <>Routes at affordable prices<br />Package tours from $1900</>
+              })}
             </div>
             <div className="py-4">
               <ActionButton />
@@ -121,50 +140,76 @@ export default function Home() {
       </div>
 
       <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
-        Мы делаем Тибет доступнее для вас
+        {translate({
+          ru: "Мы делаем Тибет доступнее для вас",
+          en: "We make Tibet more accessible to you"
+        })}
       </h2>
 
       <div className="max-w-4xl">
         <div className="p-4 pt-0">
           <p className="text-xl leading-9 text-center">
-            Путешествия с <b>OPEN TIBET</b> &mdash; это:
+            {translate({
+              ru: <>Путешествия с <b>OPEN TIBET</b> &mdash; это:</>,
+              en: <>Travel with OPEN TIBET is:</>
+            })}
           </p>
           <ul className="py-4 mt-3 max-w-md text-xl w-fit mx-auto space-y-3 list-inside">
             <li className="flex items-center">
               <IconMark />
-              Размещение в хороших отелях
+              {translate({
+                ru: "Размещение в хороших отелях",
+                en: "Accommodation in good hotels"
+              })}
             </li>
             <li className="flex items-center">
               <IconMark />
-              Качественный транспорт
+              {translate({
+                ru: "Качественный транспорт",
+                en: "Quality transport"
+              })}
             </li>
             <li className="flex items-center">
               <IconMark />
-              Квалифицированные гиды
+              {translate({
+                ru: "Квалифицированные гиды",
+                en: "Qualified guides"
+              })}
             </li>
             <li className="flex items-center">
               <IconMark />
-              Самые доступные цены
+              {translate({
+                ru: "Самые доступные цены",
+                en: "The most affordable prices"
+              })}
             </li>
           </ul>
         </div>
       </div>
 
       <p className="px-4 mt-5 mb-4 max-w-4xl mx-auto leading-7">
-        Мы много трудились над каждым элементом путешествий и получили
-        всестороннюю поддержку правительства Тибета, чтобы обеспечить самые
-        лучшие предложения для паломников.
+        {translate({
+          ru: `Мы много трудились над каждым элементом путешествий и получили
+                всестороннюю поддержку правительства Тибета, чтобы обеспечить самые
+                лучшие предложения для паломников.`,
+          en: "We have worked hard on every element of the travel experience and have received the full support of the Tibetan government to ensure the best possible offerings for pilgrims."
+        })}
       </p>
 
       <p className="px-4 mb-8 max-w-4xl mx-auto leading-7">
-        Это стало возможно благодаря партнёрству трёх агентств, имеющих годы
-        опыта и высочайший профессионализм.
+        {translate({
+          ru: `Это стало возможно благодаря партнёрству трёх агентств, имеющих годы
+          опыта и высочайший профессионализм.`,
+          en: "This became possible thanks to the partnership of three agencies with years of experience and the highest professionalism."
+        })}
       </p>
 
       <h3 className="uppercase tracking-[.4em] mt-4 mb-3 font-semibold text-sm">
-        Организаторы
+        {translate({
+          ru: "Организаторы",
+          en: "ORGANIZERS"
+        })}
       </h3>
-
       <ul className="mx-auto w-fit mb-4 px-4 flex-col flex justify-center">
         <li className="flex items-center my-2">
           <div className="w-24 mr-3 flex-grow-0 flex-shrink-0">
@@ -177,8 +222,18 @@ export default function Home() {
             />
           </div>
           <div className="leading-5">
-            <span className="font-semibold">Тибетский туристический офис</span>
-            <br /> <span>правительство Тибета</span>
+            <span className="font-semibold">
+              {translate({
+                ru: "Тибетский туристический офис",
+                en: "Tibetan Tourism Office"
+              })}
+            </span>
+            <br /> <span>
+              {translate({
+                ru: "правительство Тибета",
+                en: "Government of Tibet"
+              })}
+            </span>
           </div>
         </li>
         <li className="flex items-center my-2">
@@ -192,8 +247,17 @@ export default function Home() {
             />
           </div>
           <div className="leading-5">
-            <span className="font-semibold">Турагентство Kailash Explorer</span>
-            <br /> Россия, Санкт Петербург
+            <span className="font-semibold">
+              {translate({
+                ru: "Турагентство Kailash Explorer",
+                en: "Travel agency Kailash Explorer"
+              })}
+            </span>
+            <br />
+            {translate({
+              ru: "Россия, Санкт Петербург",
+              en: "Russia, St. Petersburg"
+            })}
           </div>
         </li>
         <li className="flex items-center my-2">
@@ -207,8 +271,17 @@ export default function Home() {
             />
           </div>
           <div className="leading-5">
-            <span className="font-semibold">Турагентство Tashi Delek</span>
-            <br /> Тибет, Лхаса
+            <span className="font-semibold">
+              {translate({
+                ru: "Турагентство Tashi Delek",
+                en: "Tashi Delek Travel Agency"
+              })}
+            </span>
+            <br />
+            {translate({
+              ru: "Тибет, Лхаса",
+              en: "Tibet, Lhasa"
+            })}
           </div>
           {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
         </li>
@@ -261,18 +334,27 @@ export default function Home() {
         <div className="h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100">
           <div className="max-w-5xl w-full">
             <div className="text-3xl font-semibold text-center w-full px-4 mt-5 mb-5">
-              Тибет меняет жизнь. Проверьте и вы
+              {translate({
+                ru: "Тибет меняет жизнь. Проверьте и вы",
+                en: "Tibet changes lives. Check it out too"
+              })}
             </div>
             <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
-              Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей
-              открывали для себя эту священную землю.
+              {translate({
+                ru: `Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей
+                открывали для себя эту священную землю.`,
+                en: "We know and love Tibet. We want as many people as possible to discover this sacred land."
+              })}
               <br />
               <br />
             </div>
             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
               <ActionButton />
               <h2 className="text-2xl font-light mt-3 leading-8">
-                от 1900 $ за 14 дней
+                {translate({
+                  ru: `от 1900 $ за 14 дней`,
+                  en: "from 1900 $ for 14 days"
+                })}
               </h2>
             </div>
           </div>
@@ -283,23 +365,24 @@ export default function Home() {
         <div className="max-w-4xl mt-6 mx-auto">
           <div className="w-full pt-8">
             <Header
-              title="Посмотрите фильм о Тибете"
-              subtitle="снятый Виктором Щербаковым и Алексеем Перчуковым"
+              title={translate({
+                ru: "Посмотрите фильм о Тибете",
+                en: "Watch a film about Tibet"
+              }) as string}
+              subtitle={translate({
+                ru: "снятый Виктором Щербаковым и Алексеем Перчуковым",
+                en: "filmed by Viktor Shcherbakov and Alexey Perchukov"
+              }) as string}
             />
             <div className="px-4 py-2">
-              {/* <div className='text-black font-semibold text-xl md:text-4xl lg:text-5xl'>
-              Посмотрите фильм о Тибете
-            </div>
-            <div className='pt-1 pr-6 md:text-xl'>
-              снятый{' '}
-              Виктором Щербаковым{' '} и{' '}
-              <a href='https://www.instagram.com/kailash_explorer/' className='text-blue-600 hover:text-blue-700 font-semibold' target='_blank'>Алексеем Перчуковым</a>
-            </div> */}
               <p className="py-4 pb-0 leading-7 hyphens-auto">
-                Мы организуем регулярные ежемесячные туры в Тибет по уникальной
-                программе. В фильме показана одна из наших программ. Оцените
-                красоты местных монастырей и природы, силу и энергию тибетской
-                земли:
+                {translate({
+                  ru: `Мы организуем регулярные ежемесячные туры в Тибет по уникальной
+                  программе. В фильме показана одна из наших программ. Оцените
+                  красоты местных монастырей и природы, силу и энергию тибетской
+                  земли:`,
+                  en: "We organize regular monthly tours to Tibet according to a unique program. The film shows one of our programs. Appreciate the beauty of local monasteries and nature, the strength and energy of the Tibetan land:"
+                })}
               </p>
             </div>
             <div className="w-full h-[315px] mt-5 mb-2 md:h-96">
@@ -326,9 +409,17 @@ export default function Home() {
               </div>
               <div className="flex items-center flex-1 pl-4">
                 <div>
-                  <div className="text-xl">Алексей Перчуков</div>
+                  <div className="text-xl">
+                    {translate({
+                      ru: `Алексей Перчуков`,
+                      en: "Alexey Perchukov"
+                    })}
+                  </div>
                   <div className="text-sm font-semibold">
-                    Координатор проекта OPEN TIBET
+                    {translate({
+                      ru: `Координатор проекта OPEN TIBET`,
+                      en: "Project Coordinator OPEN TIBET"
+                    })}
                   </div>
                   <a
                     href="https://www.instagram.com/kailash_explorer/"
@@ -341,25 +432,41 @@ export default function Home() {
               </div>
             </div>
             <div className="p-4 leading-7 hyphens-auto">
-              Алексей &mdash; автор нескольких профессиональных путеводителей по
-              Тибету на русском языке, со-автор фильма{" "}
+              {translate({
+                ru: <>Алексей &mdash; автор нескольких профессиональных путеводителей по
+                  Тибету на русском языке, со-автор фильма{" "}</>,
+                en: <>Alexey is the author of several professional guides to Tibet in Russian, co-author of the film{" "}</>
+              })}
+
               <a
                 className="text-yellow-600"
                 href="https://www.youtube.com/watch?v=OhtIDb8ioT0"
                 target="_blank"
               >
-                «Тибет, место которое меняет жизнь»
+                {translate({
+                  ru: "«Тибет, место которое меняет жизнь»",
+                  en: "“Tibet, a place that changes your life”"
+                })}
               </a>
-              . Докладчик многочисленных международных конференции, посвященных
-              Кайласу. Автор статьи{" "}
+              {translate({
+                ru: <>. Докладчик многочисленных международных конференции, посвященных
+                  Кайласу. Автор статьи{" "}</>,
+                en: <>Speaker of numerous international conferences dedicated to Kailash. The author of the article{" "}</>
+              })}
               <a
                 className="text-yellow-600"
                 href="https://kailash-explorer.com/2017/01/26/opisanie-spiralnoj-kory-gory-kajlas/"
               >
-                «Спиральная Кора»
+                {translate({
+                  ru: "«Спиральная Кора»",
+                  en: "“Spiral Kore”",
+                })}
               </a>
-              , исследователь , который поднялся на все плечи Кайласа и посетил
-              все священные долины Мандалы Кайласа.
+              {translate({
+                ru: `, исследователь , который поднялся на все плечи Кайласа и посетил
+                все священные долины Мандалы Кайласа.`,
+                en: `, a researcher who climbed all the shoulders of Kailash and visited all the sacred valleys of the Kailash Mandala.`
+              })}
             </div>
             <div className="flex justify-center">
               <div className="flex max-w-lg gap-5 mb-4 mt-3">
@@ -465,7 +572,10 @@ export default function Home() {
             </div>
             <div className="text-center p-4">
               <p className="text-gray-400 text-sm">
-                Больше фото в{" "}
+                {translate({
+                  ru: <>Больше фото в{" "}</>,
+                  en: <>More photos on{" "}</>
+                })}
                 <a
                   href="https://www.instagram.com/kailash_explorer/"
                   className="text-yellow-500 hover:text-yellow-700"
@@ -1010,47 +1120,82 @@ const IconMark = () => {
   return <div className="w-2 h-2 rounded-full bg-yellow-600 mr-2" />;
 };
 
-const IconBookmark = () => {
-  return (
-    <svg
-      className="w-4 h-4 text-gray-300 mr-4"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 14 20"
-    >
-      <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
-    </svg>
-  );
-};
+// const IconBookmark = () => {
+//   return (
+//     <svg
+//       className="w-4 h-4 text-gray-300 mr-4"
+//       aria-hidden="true"
+//       xmlns="http://www.w3.org/2000/svg"
+//       fill="currentColor"
+//       viewBox="0 0 14 20"
+//     >
+//       <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
+//     </svg>
+//   );
+// };
 
 const WhyGoTibetWithUs = () => {
+  const translate = useTranslateFn()
   return (
     <>
       <div className="text-black font-semibold text-3xl py-2 px-4">
-        Почему стоит ехать в Тибет с нами?
+        {translate({
+          ru: "Почему стоит ехать в Тибет с нами?",
+          en: "Why is it worth going to Tibet with us?"
+        })}
       </div>
 
-      <WhyGoTibetWithUsStatement title="Глубокое знание Тибета">
-        Приезжая в место исключительной силы, хочется узнать как можно больше
-        обо всех его традициях, истоках. Мы действительно понимаем Тибет. Наши
-        гиды — местные эксперты с огромным опытом, и они помогут вам раскрыть
-        все тайны и красоту этой уникальной земли.
+      <WhyGoTibetWithUsStatement title={translate({
+        ru: "Глубокое знание Тибета",
+        en: "Deep knowledge of Tibet"
+      }) as string}>
+        {translate({
+          ru: `Приезжая в место исключительной силы, хочется узнать как можно больше
+          обо всех его традициях, истоках. Мы действительно понимаем Тибет. Наши
+          гиды — местные эксперты с огромным опытом, и они помогут вам раскрыть
+          все тайны и красоту этой уникальной земли.`,
+          en: `Coming to a place of exceptional power, you want to learn as much as possible about all its traditions and origins. We truly understand Tibet. Our guides are local experts with extensive experience and will help you discover all the secrets and beauty of this unique land.`
+        })}
+
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title="Эксклюзивные маршруты">
-        Мы предлагаем эксклюзивные маршруты, которые недоступны большинству
-        туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.
+      <WhyGoTibetWithUsStatement title={
+        translate({
+          ru: "Эксклюзивные маршруты",
+          en: "Exclusive routes"
+        }) as string
+      }>
+        {translate({
+          ru: `Мы предлагаем эксклюзивные маршруты, которые недоступны большинству
+          туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.`,
+          en: `We offer exclusive routes that are inaccessible to most tourists. You will see Tibet from the inside, discovering its magic and authenticity.`
+        })}
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title="Индивидуальный подход">
-        Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который
-        соответствует вашим интересам и пожеланиям, обеспечивая максимальный
-        комфорт и удовлетворение.
+      <WhyGoTibetWithUsStatement title={
+        translate({
+          ru: "Индивидуальный подход",
+          en: "Individual approach"
+        }) as string
+      }>
+        {translate({
+          ru: `Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который
+          соответствует вашим интересам и пожеланиям, обеспечивая максимальный
+          комфорт и удовлетворение.`,
+          en: `We understand that every client is unique. We will create an itinerary that suits your interests and wishes, ensuring maximum comfort and satisfaction.`
+        })}
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title="Высокое качество услуг">
-        Мы позаботимся обо всем, чтобы вы получили незабываемые впечатления, не
-        переплачивая. Авторские маршруты, достойные отели, заботливые и
-        компетентные гиды, хороший сервис. Ваше удовольствие и безопасность
-        &mdash; наша главная задача.
+      <WhyGoTibetWithUsStatement title={
+        translate({
+          ru: "Высокое качество услуг",
+          en: "High quality services"
+        }) as string
+      }>
+        {translate({
+          ru: `Мы позаботимся обо всем, чтобы вы получили незабываемые впечатления, не
+          переплачивая. Авторские маршруты, достойные отели, заботливые и
+          компетентные гиды, хороший сервис. Ваше удовольствие и безопасность
+          &mdash; наша главная задача.`,
+          en: `We will take care of everything so that you get an unforgettable experience without overpaying. Author's routes, decent hotels, caring and competent guides, good service. Your pleasure and safety are our main concern.`
+        })}
       </WhyGoTibetWithUsStatement>
     </>
   );

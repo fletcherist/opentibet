@@ -1,6 +1,6 @@
 
 
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, TimetableButton } from "@/components/components";
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableButton } from "@/components/components";
 import { TourBasicTimetable } from "@/components/ToursTimetable";
 import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
 
@@ -38,6 +38,7 @@ export default function ({ params }: { params: { tibet: string } }) {
             lang="ru"
             className="flex min-h-screen flex-col items-center justify-between"
         >
+            <Navbar />
             <div className="w-full h-[70vh] md:h-[70vh]  relative">
                 <BackgroundSlider />
                 <div
