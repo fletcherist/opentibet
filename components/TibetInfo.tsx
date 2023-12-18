@@ -993,15 +993,27 @@ const ContentTholing = () => {
 }
 
 const ContentTrithapuri = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/trithapuri.jpg">
-            <TibetInfoCardTitle>Монастырь Тиртхапури</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Монастырь Тиртхапури",
+                    en: "Tirthapuri Monastery"
+                })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Это священное место на высоте 4300 м считается границей между материальным миром и миром богов. Название образовано от слова «тиртха», что в переводе с санскрита означает «священное место, где есть пруд, озеро или река, воды которых считаются святыми». Во время посещения Тиртхи принято совершать омовение в священных водах. Тиртхапури тесно связано как с Падмасамбхавой, так и с Дордже Пхагмо – духовной супругой Чакрасамвары.
-                Кора вокруг Тиртхапури является очень важной для буддистов. Считается, что 13 Кор вокруг Тиртхапури равны одной Кайлас-Коре, поэтому посещение священной земли очень помогает синхронизации с энергиями Кайласа, а омовение в ее источниках способствует излечению от многих болезней.
-                Кора вокруг Тиртхапури начинается от похожего на шивалингам черного камня с отпечатком волчьей лапы. Дорога ведет на холм, у подножия которого расположен монастырь Тиртхапури (Tirthapuri). Слева амфитеатром расположены складки скальных пород белого цвета, их называют «1000 будд». Справа внизу видны напоминающие термитники коричневые сталактитообразные каменные образования («8 Падмасамбхав»).
-                Паломники подходят к заднему входу в монастырь. Здесь находится большая стена из мани – молитвенных камней. Огромный круг, сложенный из них, символизирует озеро Манасаровар. Возле молитвенных барабанов есть место, где можно узнать о своей карме. Из отверстия в земле паломники вытаскивают камешек или белого (символизирует хорошую карму), или черного (плохая карма) цвета.
-                Монастырь Тиртхапури (его еще называют Гуру Ринпоче) построен на месте пещеры, в которой медитировал Падмасамбхава.
+                {translate({
+                    ru: `Это священное место на высоте 4300 м считается границей между материальным миром и миром богов. Название образовано от слова «тиртха», что в переводе с санскрита означает «священное место, где есть пруд, озеро или река, воды которых считаются святыми». Во время посещения Тиртхи принято совершать омовение в священных водах. Тиртхапури тесно связано как с Падмасамбхавой, так и с Дордже Пхагмо – духовной супругой Чакрасамвары.
+                    Кора вокруг Тиртхапури является очень важной для буддистов. Считается, что 13 Кор вокруг Тиртхапури равны одной Кайлас-Коре, поэтому посещение священной земли очень помогает синхронизации с энергиями Кайласа, а омовение в ее источниках способствует излечению от многих болезней.
+                    Кора вокруг Тиртхапури начинается от похожего на шивалингам черного камня с отпечатком волчьей лапы. Дорога ведет на холм, у подножия которого расположен монастырь Тиртхапури (Tirthapuri). Слева амфитеатром расположены складки скальных пород белого цвета, их называют «1000 будд». Справа внизу видны напоминающие термитники коричневые сталактитообразные каменные образования («8 Падмасамбхав»).
+                    Паломники подходят к заднему входу в монастырь. Здесь находится большая стена из мани – молитвенных камней. Огромный круг, сложенный из них, символизирует озеро Манасаровар. Возле молитвенных барабанов есть место, где можно узнать о своей карме. Из отверстия в земле паломники вытаскивают камешек или белого (символизирует хорошую карму), или черного (плохая карма) цвета.
+                    Монастырь Тиртхапури (его еще называют Гуру Ринпоче) построен на месте пещеры, в которой медитировал Падмасамбхава.`,
+                    en: `This sacred place at an altitude of 4300 m is considered the border between the material world and the world of the gods. The name is derived from the word “tirtha”, which in Sanskrit means “a sacred place where there is a pond, lake or river, the waters of which are considered holy.” While visiting Tirtha, it is customary to take a bath in the sacred waters. Tirthapuri is closely associated with both Padmasambhava and Dorje Phagmo, the spiritual consort of Chakrasamvara.
+                    The bark around Tirthapuri is very important for Buddhists. It is believed that the 13 Koras around Tirthapuri are equal to one Kailash Kora, so visiting the sacred land greatly helps to synchronize with the energies of Kailash, and bathing in its springs helps to cure many diseases.
+                    The bark around Tirthapuri starts from a Shivalinga-like black stone with a wolf's paw print. The road leads to the hill, at the foot of which is the Tirthapuri monastery. On the left, like an amphitheater, there are folds of white rocks, they are called “1000 Buddhas”. At the bottom right are brown stalactite-like rock formations resembling termite mounds (“8 Padmasambhavas”).
+                    Pilgrims approach the rear entrance to the monastery. There is a large wall of mani - prayer stones. A huge circle made of them symbolizes Lake Manasarovar. There is a place near the prayer wheels where you can learn about your karma. From a hole in the ground, pilgrims pull out a pebble that is either white (symbolizes good karma) or black (bad karma).
+                    Tirthapuri Monastery (also called Guru Rinpoche) was built on the site of the cave in which Padmasambhava meditated.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
@@ -1009,54 +1021,98 @@ const ContentTrithapuri = () => {
 
 
 const ContentZanda = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/zanda.jpg">
-            <TibetInfoCardTitle>Национальный парк Занда</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Национальный парк Занда",
+                    en: "Zanda National Park"
+                })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Национальный парк Занда – это лунные пейзажи и каменный лес, которые образовались в результате подъема тибетского плато 3 млн лет назад.
+                {translate({
+                    ru: "Национальный парк Занда – это лунные пейзажи и каменный лес, которые образовались в результате подъема тибетского плато 3 млн лет назад.",
+                    en: "Zanda National Park features lunar landscapes and stone forests that were formed by the uplift of the Tibetan plateau 3 million years ago."
+                })}
                 <br />
                 <br />
-                Извилистая дорога S565 длинной 110 км с многочисленными смотровыми площадками проходит через весь парк.
-                Этот серпантин, – один из красивейших в Тибете. Крутые горные перевалы сменяются зелеными долинами, вдали виднеется снежная шапка священной горы Камет (Kamet, 7756 м) или Нанди Деви (Nandi Devi), почитаемой тибетцами наравне с Кайласом (Kailash).
+                {translate({
+                    ru: `Извилистая дорога S565 длинной 110 км с многочисленными смотровыми площадками проходит через весь парк.
+                    Этот серпантин, – один из красивейших в Тибете. Крутые горные перевалы сменяются зелеными долинами, вдали виднеется снежная шапка священной горы Камет (Kamet, 7756 м) или Нанди Деви (Nandi Devi), почитаемой тибетцами наравне с Кайласом (Kailash).`,
+                    en: `The 110 km long winding road S565 with numerous viewpoints runs through the entire park.
+                    This serpentine is one of the most beautiful in Tibet. Steep mountain passes give way to green valleys; in the distance you can see the snow cap of the sacred mountain Kamet (7756 m) or Nandi Devi, revered by Tibetans along with Kailash.`
+                })}
                 <br />
                 <br />
-                Многие считают, что Камет – это и есть гора Гандхамандана (Gandhamandana, «опьяняющая благовониями»), упоминаемая в знаменитом индийском эпосе «Махабхарата».
+                {translate({
+                    ru: `Многие считают, что Камет – это и есть гора Гандхамандана (Gandhamandana, «опьяняющая благовониями»), упоминаемая в знаменитом индийском эпосе «Махабхарата».`,
+                    en: `Many believe that Kamet is Mount Gandhamandana ("intoxicating with incense"), mentioned in the famous Indian epic "Mahabharata".`,
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentGaruda = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/garuda.jpg">
-            <TibetInfoCardTitle>Долина Гаруды</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Долина Гаруды",
+                en: "Garuda Valley"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Долина Гаруды – одно из самых загадочных и мистических мест западного Тибета. С цивилизацией ее раньше соединял небольшой деревянный мост, украшенный разноцветными молитвенными флагами (лунг-та).
-                Под ним висели головы яков, которые служили защитой для данного места. Теперь рядом с уже полуразрушенным старым мостом построили новый железный.
+                {translate({
+                    ru: `Долина Гаруды – одно из самых загадочных и мистических мест западного Тибета. С цивилизацией ее раньше соединял небольшой деревянный мост, украшенный разноцветными молитвенными флагами (лунг-та).
+                    Под ним висели головы яков, которые служили защитой для данного места. Теперь рядом с уже полуразрушенным старым мостом построили новый железный.`,
+                    en: `The Garuda Valley is one of the most mysterious and mystical places in western Tibet. It used to be connected to civilization by a small wooden bridge decorated with colorful prayer flags (lung-ta).
+                    Below it hung the heads of yaks, which served as protection for this place. Now a new iron bridge has been built next to the already dilapidated old bridge.`
+                })}
                 <br />
                 <br />
-                По обоим берегам Сетледжа в туфовых породах находятся термальные источники, обрамленные белыми кристаллами соли. Они напоминают мраморные ванны с горячей минеральной водой. Большинство ванн пустые – источники пересохли.
-                Серо-красные скалы поднимаются на головокружительную высоту.
+                {translate({
+                    ru: `По обоим берегам Сетледжа в туфовых породах находятся термальные источники, обрамленные белыми кристаллами соли. Они напоминают мраморные ванны с горячей минеральной водой. Большинство ванн пустые – источники пересохли.
+                    Серо-красные скалы поднимаются на головокружительную высоту.`,
+                    en: `On both banks of the Setledge, in tuff rocks, there are thermal springs framed by white salt crystals. They resemble marble baths with hot mineral water. Most of the baths are empty - the springs have dried up.
+                    Gray-red cliffs rise to dizzying heights.`
+                })}
                 <br />
                 <br />
-                На вершине холма – руины древних построек, которые венчает дворец, похожий на неприступную крепость. Справа и слева от него – усеянные пещерами скалы белого цвета, поэтому складывается впечатление, что у дворца в центре огромные белые крылья. Неслучайно его назвали Серебряный дворец Гаруды.
-                Огромный серебряный амфитеатр с пещерным городом внутри венчает большая пирамида из молитвенных флагов (высота над уровнем моря 4400 м). Попасть к ней можно как с левой стороны, так и с правой, но первый вариант намного сложнее и связан с некоторым риском для жизни.
+                {translate({
+                    ru: `На вершине холма – руины древних построек, которые венчает дворец, похожий на неприступную крепость. Справа и слева от него – усеянные пещерами скалы белого цвета, поэтому складывается впечатление, что у дворца в центре огромные белые крылья. Неслучайно его назвали Серебряный дворец Гаруды.
+                    Огромный серебряный амфитеатр с пещерным городом внутри венчает большая пирамида из молитвенных флагов (высота над уровнем моря 4400 м). Попасть к ней можно как с левой стороны, так и с правой, но первый вариант намного сложнее и связан с некоторым риском для жизни.`,
+                    en: `At the top of the hill are the ruins of ancient buildings, which are crowned by a palace that looks like an impregnable fortress. To the right and left of it are white rocks dotted with caves, so it seems that the palace in the center has huge white wings. It is no coincidence that it was called the Silver Palace of Garuda.
+                    A huge silver amphitheater with a cave city inside is crowned by a large pyramid of prayer flags (altitude 4400 m above sea level). You can get to it from both the left and the right, but the first option is much more difficult and involves some risk to life.`
+                })}
                 <br />
                 <br />
-                Поэтому самое разумное – сделать своеобразную Кору вокруг Серебряного дворца в направлении против часовой стрелки: поднимаешься справа, а спускаешься слева.
+                {translate({
+                    ru: "Поэтому самое разумное – сделать своеобразную Кору вокруг Серебряного дворца в направлении против часовой стрелки: поднимаешься справа, а спускаешься слева.",
+                    en: "Therefore, the most reasonable thing is to make a kind of Cora around the Silver Palace in a counterclockwise direction: you go up on the right and go down on the left."
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentGurugjam = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gurugjam.jpg">
-            <TibetInfoCardTitle>Монастырь Гуругьям</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Гуругьям",
+                en: "Gurugyam Monastery"
+            })
+            }</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Древний бонский монастырь Гуругьям (Gurugam) со свастикой на фасаде. Его основал лама Кьюнгтрил Джигме Намкха Дордже (1897–1956), появившийся здесь в 1930 г. Монастырь стал очень важным местом для всех тибетских буддистов. В 1950 г. здесь насчитывалось около 60 монахов. В 2013 г. монастырь решили целиком перестроить: сначала разобрать до основания, а потом воссоздать. Сейчас восстановление завершено.
-                Одна из самых известных реликвий монастыря – карта страны Олмо, или «Карта Шамбалы». В центре изображена 9-этажная гора со свастиками и истоки четырех великих священных рек: изо рта Слона выходит Сетледж, из клюва Павлина – Карнали, изо рта Лошади – Брахмапутра, из пасти Льва – Инд. Авторы многих известных книг подтверждают в своих исследованиях взаимосвязь Кунлунга и Шамбалы.
-                Справа от монастыря, на вершине высокой скалы, находится ретрит Юнгдрунг Ринчин Барба Друб Пхуг («Пещера драгоценного камня блестящей свастики»). Согласно легенде, здесь в Х в. медитировал легендарный бонпо Дренпа Намка. Ретрит уже много лет закрыт для иностранцев.
+                {translate({
+                    ru: `Древний бонский монастырь Гуругьям (Gurugam) со свастикой на фасаде. Его основал лама Кьюнгтрил Джигме Намкха Дордже (1897–1956), появившийся здесь в 1930 г. Монастырь стал очень важным местом для всех тибетских буддистов. В 1950 г. здесь насчитывалось около 60 монахов. В 2013 г. монастырь решили целиком перестроить: сначала разобрать до основания, а потом воссоздать. Сейчас восстановление завершено.
+                    Одна из самых известных реликвий монастыря – карта страны Олмо, или «Карта Шамбалы». В центре изображена 9-этажная гора со свастиками и истоки четырех великих священных рек: изо рта Слона выходит Сетледж, из клюва Павлина – Карнали, изо рта Лошади – Брахмапутра, из пасти Льва – Инд. Авторы многих известных книг подтверждают в своих исследованиях взаимосвязь Кунлунга и Шамбалы.
+                    Справа от монастыря, на вершине высокой скалы, находится ретрит Юнгдрунг Ринчин Барба Друб Пхуг («Пещера драгоценного камня блестящей свастики»). Согласно легенде, здесь в Х в. медитировал легендарный бонпо Дренпа Намка. Ретрит уже много лет закрыт для иностранцев.`,
+                    en: `Ancient Bon monastery of Gurugam with a swastika on the facade. It was founded by Lama Kyungtril Jigme Namkha Dorje (1897–1956), who appeared here in 1930. The monastery has become a very important place for all Tibetan Buddhists. In 1950 there were about 60 monks here. In 2013, they decided to completely rebuild the monastery: first dismantle it to its foundations, and then rebuild it. The restoration is now complete.
+                    One of the most famous relics of the monastery is the map of the country of Olmo, or “Map of Shambhala”. In the center is a 9-storey mountain with swastikas and the sources of four great sacred rivers: from the mouth of the Elephant comes the Setledge, from the beak of the Peacock - the Karnali, from the mouth of the Horse - the Brahmaputra, from the mouth of the Lion - the Indus. The authors of many famous books confirm in their research the relationship between Kunlung and Shambhala.
+                    To the right of the monastery, on top of a high rock, is the Yungdrung Rinchin Barba Drub Phug (“Cave of the Gemstone of the Shining Swastika”) retreat. According to legend, here in the 10th century. The legendary Bonpo Drenpa Namkha meditated. The retreat has been closed to foreigners for many years.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
@@ -1065,172 +1121,328 @@ const ContentGurugjam = () => {
 
 
 const ContentDungar = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dungar.jpg">
-            <TibetInfoCardTitle>Дунгар</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Дунгар",
+                    en: "Dungar",
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Пещеры Дунгкар (Dungkar) (4250 м). Они находятся посередине скалы высотой в 200 метров, к ним можно подняться по насыпи из мелких камней. Вершина скалы плоская – вероятно, когда-то здесь была крепость. Три пещеры скорее всего использовались как храмы, и в них до сих пор сохранились изумительные росписи (XII в.), по стилю отличные от фресок в Цапаранге, выполненные в традициях Кашмира и Центральной Азии. Ученые нашли похожие росписи в Дунхуанге в Китае на расстоянии 1600 км от Дунгкара (Dungkar). Через Дунхуанг проходил Великий шелковый путь.
+                {translate({
+                    ru: "Пещеры Дунгкар (Dungkar) (4250 м). Они находятся посередине скалы высотой в 200 метров, к ним можно подняться по насыпи из мелких камней. Вершина скалы плоская – вероятно, когда-то здесь была крепость. Три пещеры скорее всего использовались как храмы, и в них до сих пор сохранились изумительные росписи (XII в.), по стилю отличные от фресок в Цапаранге, выполненные в традициях Кашмира и Центральной Азии. Ученые нашли похожие росписи в Дунхуанге в Китае на расстоянии 1600 км от Дунгкара (Dungkar). Через Дунхуанг проходил Великий шелковый путь.",
+                    en: "Dungkar Caves (4250 m). They are located in the middle of a cliff 200 meters high; you can climb to them along an embankment of small stones. The top of the rock is flat - there was probably once a fortress here. The three caves were most likely used as temples, and they still contain amazing paintings (12th century), different in style from the frescoes at Tsaparang, made in the traditions of Kashmir and Central Asia. Scientists have found similar paintings in Donghuang in China at a distance of 1600 km from Dungkar. The Great Silk Road passed through Donghuang."
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentPiyang = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/piyang.jpg">
-            <TibetInfoCardTitle>Пиянг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Пиянг",
+                en: "Piyang"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Комплекс Пиянг (Piyang) внешне напоминает Цапаранг: огромная высокая скала, изрытая пещерами и с храмом на вершине. Впервые храм в Пиянге возвел приблизительно в 1000 г. царь Еше О, но сегодня от него мало что осталось. В двух пещерах сохранились красивые росписи.
+                {translate({
+                    ru: "Комплекс Пиянг (Piyang) внешне напоминает Цапаранг: огромная высокая скала, изрытая пещерами и с храмом на вершине. Впервые храм в Пиянге возвел приблизительно в 1000 г. царь Еше О, но сегодня от него мало что осталось. В двух пещерах сохранились красивые росписи.",
+                    en: "The Piyang complex resembles Tsaparang in appearance: a huge high rock, pitted with caves and with a temple on top. The temple in Piyang was first built around the year 1000 by King Yeshe O, but little remains of it today. Beautiful paintings have been preserved in two caves."
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentPurang = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc={imagesSrc.purang}>
-            <TibetInfoCardTitle>Пуранг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Пуранг",
+                en: "Purang"
+            })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Пуранг. Это приграничный город, который находится в 10 км от границы с Непалом.
-                Пуранг был основан 1961 году, его население составляет 13 тысяч человек.
-                Дорога в Пуранг начинается в Барке. В Пуранге на горе при въезде находится монастырь Шапелинг (Sha pel ling), основанный в XVII веке.
-                Монастырь принадлежит школе Гелуг. Главные святыни – статуя Будды Шакьямуни и Мастера Цонкапы. Также стоит обратить внимание на ступу с останками генерала Гандена Цевгагна (Ganden Tsewang), который известен своими победами над армией Ладакха.
+                {translate({
+                    ru: `Это приграничный город, который находится в 10 км от границы с Непалом.
+                    Пуранг был основан 1961 году, его население составляет 13 тысяч человек.
+                    Дорога в Пуранг начинается в Барке. В Пуранге на горе при въезде находится монастырь Шапелинг (Sha pel ling), основанный в XVII веке.
+                    Монастырь принадлежит школе Гелуг. Главные святыни – статуя Будды Шакьямуни и Мастера Цонкапы. Также стоит обратить внимание на ступу с останками генерала Гандена Цевгагна (Ganden Tsewang), который известен своими победами над армией Ладакха.`,
+                    en: `It is a border town located 10 km from the Nepal border.
+                    Purang was founded in 1961 and has a population of 13 thousand people.
+                    The road to Purang starts from Barka. In Purang, on the mountain at the entrance, there is the Shapeling Monastery, founded in the 17th century.
+                    The monastery belongs to the Gelug school. The main shrines are the statue of Buddha Shakyamuni and Master Tsongkhapa. Also worth paying attention to is the stupa with the remains of General Ganden Tsewang, who is famous for his victories over the Ladakh army.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentKorchag = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc={imagesSrc.korchag}>
-            <TibetInfoCardTitle>Корчаг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Корчаг",
+                en: "Korczag"
+            })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                В 18 км от Пуранга находится очень известный монастырь XII века Корчаг. Это очень известное священное место. Он был построен великим переводчиком Ринченом Цангпо и вначале относился к линии Кадам, а позднее перешел к линии Сакья. В монастыре находится статуя Джобо Джампа Дордже (Бодхисаттвы Манджушри), которая была благословлена самим Ринченом Цангпо. В предании говорится, что, когда эту статую везли в Га Эр, около Кеджиа она внезапно заговорила и произнесла: «Я останусь здесь». Тогда на этом месте был построен главный зал собраний.
-                Самыми священными и почитаемыми объектами в монастыре являются говорящая статуя Долмы (Тары), собрания Кангьюра (перевод слов Будды) и Тенгьюра (перевод учений) и стенные росписи Тридцати Пяти Будд Откровения, изображения  (статуи) Шестнадцати Архатов и Двадцати Одной Гневной Тары.
+                {translate({
+                    ru: `В 18 км от Пуранга находится очень известный монастырь XII века Корчаг. Это очень известное священное место. Он был построен великим переводчиком Ринченом Цангпо и вначале относился к линии Кадам, а позднее перешел к линии Сакья. В монастыре находится статуя Джобо Джампа Дордже (Бодхисаттвы Манджушри), которая была благословлена самим Ринченом Цангпо. В предании говорится, что, когда эту статую везли в Га Эр, около Кеджиа она внезапно заговорила и произнесла: «Я останусь здесь». Тогда на этом месте был построен главный зал собраний.
+                    Самыми священными и почитаемыми объектами в монастыре являются говорящая статуя Долмы (Тары), собрания Кангьюра (перевод слов Будды) и Тенгьюра (перевод учений) и стенные росписи Тридцати Пяти Будд Откровения, изображения  (статуи) Шестнадцати Архатов и Двадцати Одной Гневной Тары.`,
+                    en: `18 km from Purang there is a very famous 12th century Korchag monastery. This is a very famous sacred place. It was built by the great translator Rinchen Tsangpo and initially belonged to the Kadam lineage, and later passed to the Sakya lineage. The monastery houses a statue of Jobo Jampa Dorje (Bodhisattva Manjushri), which was blessed by Rinchen Tsangpo himself. The legend says that when this statue was being transported to Ga Er, near Kejia it suddenly spoke and said: “I will stay here.” The main meeting hall was then built on this site.
+                    The most sacred and revered objects in the monastery are the talking statue of Dolma (Tara), the collections of the Kangyur (translation of the words of the Buddha) and Tengyur (translation of the teachings) and the wall paintings of the Thirty-Five Buddhas of Revelation, images (statues) of the Sixteen Arhats and the Twenty-One Wrathful Tara.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentKailasKora = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc={imagesSrc.vneshKora}>
-            <TibetInfoCardTitle>Внешняя Кора</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: `Внешняя Кора`,
+                en: `Outer Kora`
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Для представителей всех местных конфессий Кайлас-Кора имеет огромное символическое значение как особый путь духовного развития, во время которого сжигается негативная карма паломников. Распростертые сферические зеркала Кайласа создают энергетические поля особой частоты и интенсивности, и тонкие тела любого человека, попав в эти поля, могут с ними синхронизироваться. Главное – услышать Кайлас, настроиться на его волну.
-                Для иностранцев Кайлас-Кора – кульминационное событие каждого паломничества в Тибет. Протяженность маршрута – около 55 км, время прохождения варьируется: тибетские паломники обычно совершают Кору за один день, западные туристы – за два-три. Местные жители стараются проводить этот ритуал в полнолуние, когда одна Кора засчитывается за три.
-                Обычно европейские туристы начинают маршрут Кайлас коры от Тарпоче, куда их привозит автобус из Дарчена.
-                Тарпоче (Tarboche/Darpoche). Название переводится как «большой флагшток». Здесь каждый год в июле отмечается один из главных буддистских праздников – день рождения Будды Шакьямуни, его Просветление и смерть. Перед началом Кайлас-Коры сакральный флагшток обычно обходят трижды по часовой стрелке.
-                Прямо за Тарпоче находится Плато «небесных похорон» 84-х Махасиддх, или Терраса Мандалы (Mandala Terrace). Это кладбище, где тибетцы оставляют тела умерших высших духовных лиц.
-                Над ним находится еще один объект поклонения – пещера Наро Бон-Чунга с отпечатком стопы Миларепы (Milarepa’s Footprint).
-                Немного в стороне от пещеры расположен источник с целебной водой, а на скале, напоминающей гробницу, находится утес Шестнадцати Нерукотворных Архатов (архат – человек, достигший Нирваны).
-                К востоку от Тарпоче можно увидеть «неизменный ноготь» – едва заметный след Учителя Будды в окружении 500 следов буддистских святых (500 Arhats Assembly).
-                Слева от Тарпоче расположен Чортен Кангни (Kangnyi), завешенный множеством молитвенных флагов. Известно, что чортен Кангни много раз разрушали враги, но он всегда самовосстанавливался. Здесь паломники совершают важнейший ритуал: они трижды обходят чортен по часовой стрелке и один раз проходят сквозь него, звоня при этом в находящиеся внутри колокола. Так они очищают свою карму.
-                Пройдя от чортена вперед, попадаем в нижнюю часть долины реки Лха-чу (Lha Chu). Это место, которое называется Сердзонг (Serdzong, Sershong), что значит «бочонок с золотом».
-                Преодолев около 1,5 км (набор высоты 4730–4750 м), подходим к первому чайному домику (Tea House) на тропе Внешней Коры. Здесь можно перекусить или попить чайю. Еще выше находится монастырь Чуку Гомпа – одно из самых интересных сакральных сооружений на данном маршруте. Удивительно, но его посещает от силы четверть паломников.
-                По дороге от Чуку Гомпа слева можно видеть так называемые Три Вершины Долгожительства (по порядку): Тара (Tara, 5936 м), Амитаюс-ри (Amitayus Ri, 6010 м) и Виджая (Vidschaya, 5938 м). Ближе всех к следующему монастырю Дрира Пхуг находится гора Гесар-Линг-ри (Gesar Ling Ri, 5690 м), названная в честь легендарной личности – короля Гесара.
-
-                Напротив Тары на другом берегу реки Лха-чу возвышается гора Гуру Ринпоче Торма (Guru Rimpoche Torma, 5656 м). За ней завораживающее Западное лицо Кайласа. Эта грань священной горы представляет собой почти сферическое зеркало.
-                Здесь же находится место второго простирания (2nd Prostration Point, 4900 м). Расстояние от монастыря Чуку Гомпа до него – 5,5 км. Рядом – камень Махакалы (Rock of Mahakalas) с многочисленными молитвенными флагами.
-                Монастырь Дрира Пхуг находится напротив Северного лица Кайласа.
-                Основанный в 1213 г. монастырь Дрира Пхуг (Drira Phug) принадлежит линии Дрикунг школы Кагью. Если от монастыря смотреть на Кайлас, то справа к нему примыкает гора Ваджрапани, слева – Авалокитешвары. Долина между ними называется Гангьям-чу (Gangyam Сhu). Третья из здешних вершин, посвященная Манджушри, как бы прислонилась к горе Пхакна-ри (Phakna Ri, 5998 м), которая упирается в Восточное плечо Кайласа, каменное зеркало Дхарма Кинг Норсанг.
-
-                Перевал Дролма
-                Самая высокая точка маршрута Внешней Кайлас-Коры.
-                Кладбище Шива Цаль, самопроявленная буква «अ» и перевал Дролма представляют собой мифо-энергетическое триединство: паломник проходит сквозь ритуальную смерть – пустотность – и получает потенциальную энергию, заново рождаясь.
-                Вершина перевала представляет собой плоский валун, полностью завешанный молитвенными флагами.
-                Сразу за перевалом дорога резко идет вниз. Примерно через 50 м спускаемся к священному озеру Гаури Кунд (Gauri Kund), или озеру Сострадания (Lake of Compassion, 5608 м), у склона горы Шарма-ри.
-                Третий монастырь на внешней коре- Зутрул Пхуг (Zutrul Phug), или «Пещера Магических Сил» (4800 м). Обитель принадлежит линии Дрикунг школы Кагью. Гора над ней называется «След Учителя Будды» (5924 м).
-                Главная святыня монастыря – пещера, где медитировал великий йогин Миларепа. Здесь же находится его статуя. На черном потолке – отпечатки рук и головы Миларепы. Снаружи монастыря, в нескольких метрах на юг, вертикально стоит огромная шестигранная глыба, окруженная каменной стеной.
-                Отсюда до автобусной остановки около 10 км, где туристов забирает автобус и отвозит в Дарчен.
+                {translate({
+                    ru: <>
+                        Для представителей всех местных конфессий Кайлас-Кора имеет огромное символическое значение как особый путь духовного развития, во время которого сжигается негативная карма паломников. Распростертые сферические зеркала Кайласа создают энергетические поля особой частоты и интенсивности, и тонкие тела любого человека, попав в эти поля, могут с ними синхронизироваться. Главное – услышать Кайлас, настроиться на его волну.
+                        Для иностранцев Кайлас-Кора – кульминационное событие каждого паломничества в Тибет. Протяженность маршрута – около 55 км, время прохождения варьируется: тибетские паломники обычно совершают Кору за один день, западные туристы – за два-три. Местные жители стараются проводить этот ритуал в полнолуние, когда одна Кора засчитывается за три.
+                        Обычно европейские туристы начинают маршрут Кайлас коры от Тарпоче, куда их привозит автобус из Дарчена.
+                        Тарпоче (Tarboche/Darpoche). Название переводится как «большой флагшток». Здесь каждый год в июле отмечается один из главных буддистских праздников – день рождения Будды Шакьямуни, его Просветление и смерть. Перед началом Кайлас-Коры сакральный флагшток обычно обходят трижды по часовой стрелке.
+                        Прямо за Тарпоче находится Плато «небесных похорон» 84-х Махасиддх, или Терраса Мандалы (Mandala Terrace). Это кладбище, где тибетцы оставляют тела умерших высших духовных лиц.
+                        Над ним находится еще один объект поклонения – пещера Наро Бон-Чунга с отпечатком стопы Миларепы (Milarepa’s Footprint).
+                        Немного в стороне от пещеры расположен источник с целебной водой, а на скале, напоминающей гробницу, находится утес Шестнадцати Нерукотворных Архатов (архат – человек, достигший Нирваны).
+                        К востоку от Тарпоче можно увидеть «неизменный ноготь» – едва заметный след Учителя Будды в окружении 500 следов буддистских святых (500 Arhats Assembly).
+                        Слева от Тарпоче расположен Чортен Кангни (Kangnyi), завешенный множеством молитвенных флагов. Известно, что чортен Кангни много раз разрушали враги, но он всегда самовосстанавливался. Здесь паломники совершают важнейший ритуал: они трижды обходят чортен по часовой стрелке и один раз проходят сквозь него, звоня при этом в находящиеся внутри колокола. Так они очищают свою карму.
+                        Пройдя от чортена вперед, попадаем в нижнюю часть долины реки Лха-чу (Lha Chu). Это место, которое называется Сердзонг (Serdzong, Sershong), что значит «бочонок с золотом».
+                        Преодолев около 1,5 км (набор высоты 4730–4750 м), подходим к первому чайному домику (Tea House) на тропе Внешней Коры. Здесь можно перекусить или попить чайю. Еще выше находится монастырь Чуку Гомпа – одно из самых интересных сакральных сооружений на данном маршруте. Удивительно, но его посещает от силы четверть паломников.
+                        По дороге от Чуку Гомпа слева можно видеть так называемые Три Вершины Долгожительства (по порядку): Тара (Tara, 5936 м), Амитаюс-ри (Amitayus Ri, 6010 м) и Виджая (Vidschaya, 5938 м). Ближе всех к следующему монастырю Дрира Пхуг находится гора Гесар-Линг-ри (Gesar Ling Ri, 5690 м), названная в честь легендарной личности – короля Гесара.
+                        <br />
+                        <br />
+                        Напротив Тары на другом берегу реки Лха-чу возвышается гора Гуру Ринпоче Торма (Guru Rimpoche Torma, 5656 м). За ней завораживающее Западное лицо Кайласа. Эта грань священной горы представляет собой почти сферическое зеркало.
+                        Здесь же находится место второго простирания (2nd Prostration Point, 4900 м). Расстояние от монастыря Чуку Гомпа до него – 5,5 км. Рядом – камень Махакалы (Rock of Mahakalas) с многочисленными молитвенными флагами.
+                        Монастырь Дрира Пхуг находится напротив Северного лица Кайласа.
+                        Основанный в 1213 г. монастырь Дрира Пхуг (Drira Phug) принадлежит линии Дрикунг школы Кагью. Если от монастыря смотреть на Кайлас, то справа к нему примыкает гора Ваджрапани, слева – Авалокитешвары. Долина между ними называется Гангьям-чу (Gangyam Сhu). Третья из здешних вершин, посвященная Манджушри, как бы прислонилась к горе Пхакна-ри (Phakna Ri, 5998 м), которая упирается в Восточное плечо Кайласа, каменное зеркало Дхарма Кинг Норсанг.
+                        <br />
+                        <br />
+                        Перевал Дролма
+                        <br />
+                        <br />
+                        Самая высокая точка маршрута Внешней Кайлас-Коры.
+                        Кладбище Шива Цаль, самопроявленная буква «अ» и перевал Дролма представляют собой мифо-энергетическое триединство: паломник проходит сквозь ритуальную смерть – пустотность – и получает потенциальную энергию, заново рождаясь.
+                        Вершина перевала представляет собой плоский валун, полностью завешанный молитвенными флагами.
+                        Сразу за перевалом дорога резко идет вниз. Примерно через 50 м спускаемся к священному озеру Гаури Кунд (Gauri Kund), или озеру Сострадания (Lake of Compassion, 5608 м), у склона горы Шарма-ри.
+                        Третий монастырь на внешней коре- Зутрул Пхуг (Zutrul Phug), или «Пещера Магических Сил» (4800 м). Обитель принадлежит линии Дрикунг школы Кагью. Гора над ней называется «След Учителя Будды» (5924 м).
+                        Главная святыня монастыря – пещера, где медитировал великий йогин Миларепа. Здесь же находится его статуя. На черном потолке – отпечатки рук и головы Миларепы. Снаружи монастыря, в нескольких метрах на юг, вертикально стоит огромная шестигранная глыба, окруженная каменной стеной.
+                        Отсюда до автобусной остановки около 10 км, где туристов забирает автобус и отвозит в Дарчен.
+                    </>,
+                    en: <>
+                        For representatives of all local faiths, Kailash-Kora has great symbolic significance as a special path of spiritual development, during which the negative karma of pilgrims is burned. The outstretched spherical mirrors of Kailash create energy fields of special frequency and intensity, and the subtle bodies of any person, once in these fields, can synchronize with them. The main thing is to hear Kailash, tune in to its wave.
+                        For foreigners, Kailash Kora is the culminating event of every pilgrimage to Tibet. The length of the route is about 55 km, the travel time varies: Tibetan pilgrims usually complete Kora in one day, Western tourists - in two or three. Local residents try to perform this ritual on a full moon, when one Kora is counted as three.
+                        Usually European tourists start the Kailash kora route from Tarpoche, where they are brought by a bus from Darchen.
+                        Tarpoche (Tarboche/Darpoche). The name translates as “big flagpole.” Here, every year in July, one of the main Buddhist holidays is celebrated - the birthday of Buddha Shakyamuni, his Enlightenment and death. Before the start of Kailas Kora, the sacred flagpole is usually walked around three times clockwise.
+                        Just beyond Tarpoche is the Plateau of the “heavenly funeral” of the 84 Mahasiddhas, or Mandala Terrace. This is a cemetery where Tibetans leave the bodies of deceased senior clerics.
+                        Above it is another object of worship - the Naro Bon-Chung cave with Milarepa's Footprint.
+                        A little away from the cave there is a spring with healing water, and on a rock resembling a tomb there is a cliff of the Sixteen Arhats Not Made by Hands (an arhat is a person who has achieved Nirvana).
+                        To the east of Tarpoche one can see the “immutable nail” - the faint footprint of the Master Buddha surrounded by 500 footprints of Buddhist saints (500 Arhats Assembly).
+                        To the left of Tarpoche is the Kangnyi Chorten, hung with many prayer flags. It is known that the Kangni chorten was destroyed many times by enemies, but it always repaired itself. Here, pilgrims perform the most important ritual: they walk around the chorten three times clockwise and pass through it once, while ringing the bells inside. This is how they clear their karma.
+                        Walking forward from the chorten, we find ourselves in the lower part of the Lha Chu river valley. This is a place called Serdzong, Sershong, which means “barrel of gold.”
+                        Having covered about 1.5 km (elevation gain 4730–4750 m), we approach the first Tea House on the Outer Cortex trail. Here you can have a snack or drink tea. Even higher is the Chuku Gompa Monastery - one of the most interesting sacred buildings on this route. Surprisingly, only a quarter of pilgrims visit it.
+                        On the road from Chuku Gompa on the left you can see the so-called Three Peaks of Longevity (in order): Tara (5936 m), Amitayus Ri (6010 m) and Vidschaya (5938 m). The closest to the next Drira Phug monastery is Mount Gesar Ling Ri, 5690 m, named after the legendary figure - King Gesar.
+                        <br />
+                        <br />
+                        Opposite Tara, on the other bank of the Lha-chu River, rises Mount Guru Rimpoche Torma (5656 m). Behind her is the mesmerizing Western face of Kailash. This face of the sacred mountain is an almost spherical mirror.
+                        Here is also the place of the second strike (2nd Prostration Point, 4900 m). The distance from the Chuku Gompa monastery to it is 5.5 km. Nearby is the Rock of Mahakalas with numerous prayer flags.
+                        Drira Phug Monastery is located opposite the North Face of Kailash.
+                        Founded in 1213, Drira Phug Monastery belongs to the Drikung lineage of the Kagyu school. If you look at Kailash from the monastery, then Mount Vajrapani adjoins it on the right, and Avalokiteshvara on the left. The valley between them is called Gangyam Chu. The third of the local peaks, dedicated to Manjushri, seems to lean against Mount Phakna Ri (5998 m), which abuts the Eastern shoulder of Kailash, the stone mirror of Dharma King Norsang.
+                        <br />
+                        <br />
+                        Drolma Pass
+                        <br />
+                        <br />
+                        The highest point of the Outer Kailash-Kora route.
+                        The Shiva Tsal cemetery, the self-manifested letter “अ” and the Drolma Pass represent a mythological-energetic trinity: the pilgrim passes through ritual death - emptiness - and receives potential energy, being reborn.
+                        The top of the pass is a flat boulder completely covered with prayer flags.
+                    </>
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentKailasSpiralKora = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/spiral-kora.jpg">
-            <TibetInfoCardTitle>Спиральная Кора</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Спиральная Кора",
+                en: "Spiral Kora"
+            })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                СПИРАЛЬНАЯ КОРА
-                Для индуистов гора Кайлас – это место пребывания бога Шивы и его супруги Парвати, для буддистов – Будды Чакрасамвары (Buddha Chakrasamvara, тиб. Demchok) и его супруги Ваджраварахи (Vajravarahi, тиб. Dorje Phagmo). Будда Чакрасамвара имеет четыре лица, сориентированных по сторонам света, каждому из которых соответствует определенный цвет и драгоценный камень. Первое лицо считается Восточным ликом, ему соответствует голубой цвет и сапфир, или ляпис-лазурит. Второе лицо – это Северный лик, ему соответствует зеленый цвет и камень изумруд. Третье лицо – это Западный лик, ему соответствует красный цвет и рубин. Четвертое лицо – это Южный лик, ему соответствует желтый цвет и элемент золото. Именно этими цветам отмечены четыре витка Спиральной коры.
-                Четыре витка Спиральной Коры
-
-                1. Сапфировая Кора
-                Этот маршрут совпадает с тропой Внешней Коры, о которой уже много написано, в том числе и в этой книге.
-
-                2. Изумрудная Кора
-                Кора также начинается от Чортена в центре Дарчена, но проходит по вершинам холмов напротив Южного лица. Спуск к плато 84 Махасидхов происходит через перевал Тугсум. Далее паломники следуют по тропе Внешней Коры до долины Кхандро чу.
-                Потом идут посещение озера Ваджрварахи, подъем на перевал Кхандро Санглам, посещение озера Куберы и спуск на тропу Внешней Коры к месту третьего простирания.
-                От монастыря Зутрул Пхук паломники идут по так называемому Южному траверсу: входят в Симметричную долину (Гедхун), поднимаютсяна перевалы Гево ла и Шапджи ла, посещают монастыри Гяндрак и Серлунг.
-
-                3. Рубиновая Кора
-                Это продолжение Изумрудной Коры. Начинается она от монастыря Серлунг. Паломники идут по направлению к Южному лицу Кайласа. Маршрут предполагает восхождение на гору Дворец Махакалы к Шива Лингаму.
-                После идет спуск на тропу Внешней Коры. Паломники доходят до Западного лица Кайласа и начинают Северный траверс:
-                Подъем на г. Ваджрапани, спуск в долину Гангджам Чу
-                Подъем на перевал г. Авалокитешвара, спуск в долину Полунг Чу Подъем на перевал г. Манджушри, спуск в долину Кхандро Чу Подъем на перевал Кхандро Санглам, спуск к озеру Куберы
-
-                Подъем на Восточное зеркало слева от горы Пакна, спуск в долину Шингджонг
-                Подъем на г. Дворец Таши Тцерингма и спуск в долину Менлунг Чу
-                Подъем на юго-восточное плечо Кайласа, рядом с г. Мексиканская Пирамида, спуск в долину Гедхун Лха Чу
-                Подъем на гору Трон Будды, спуск в долину Селунг Чу через монастырь Гяндрак.
-                В принципе это достаточно посильная задача. Я проходил все элементы Рубиновой Коры не один раз.
-
-                4. Золотая Кора
-                Эта наиболее сложная часть маршрута Спиральной Коры. Мне удалось пройти лишь несколько ее участков.
-                Кроме перечисленных в предыдущих Корах фрагментов пути в нее входит спуск в Долину 2-х озер от горы Трон Будды и спуск от Малого Кайласа (Тисум) к Западному лицу. Без специального снаряжения сделать хэто невозможно. Так же, как и выйти на центральную часть каменного зеркала от горы Пакна.
-                Представленный здесь маршрут Спиральной Коры подходит только для хорошо подготовленных физически паломников. Изумрудная, Сапфировая и Золотая коры включают в себя Нанди-Кору и Кору Кхандро Санглам, поэтому все ограничения, связанные с прохождением двух упомянутых Внутренних Кор, должны также соблюдаться и для Спиральной Коры. Каждый виток приближает нас к священной горе, и для их прохождения паломнику потребуется сила воли, выносливость и отменное здоровье. В результате представляется уникальная возможность не только насладиться прекрасными видами, но и ощутить мощнейшую энергетику этих мест. Как упоминалось выше, при прохождении Кор не рекомендуется использовать специальное альпинистское снаряжение. Паломники должны проявлять глубокое уважение как к самим маршрутам, так и к другим паломникам, которых они встречают на своем пути и к их религиозным убеждениям.
-
+                {translate({
+                    ru: <>
+                        СПИРАЛЬНАЯ КОРА
+                        <br />
+                        Для индуистов гора Кайлас – это место пребывания бога Шивы и его супруги Парвати, для буддистов – Будды Чакрасамвары (Buddha Chakrasamvara, тиб. Demchok) и его супруги Ваджраварахи (Vajravarahi, тиб. Dorje Phagmo). Будда Чакрасамвара имеет четыре лица, сориентированных по сторонам света, каждому из которых соответствует определенный цвет и драгоценный камень. Первое лицо считается Восточным ликом, ему соответствует голубой цвет и сапфир, или ляпис-лазурит. Второе лицо – это Северный лик, ему соответствует зеленый цвет и камень изумруд. Третье лицо – это Западный лик, ему соответствует красный цвет и рубин. Четвертое лицо – это Южный лик, ему соответствует желтый цвет и элемент золото. Именно этими цветам отмечены четыре витка Спиральной коры.
+                        Четыре витка Спиральной Коры
+                        <br />
+                        <br />
+                        1. Сапфировая Кора
+                        Этот маршрут совпадает с тропой Внешней Коры, о которой уже много написано, в том числе и в этой книге.
+                        <br />
+                        <br />
+                        2. Изумрудная Кора
+                        Кора также начинается от Чортена в центре Дарчена, но проходит по вершинам холмов напротив Южного лица. Спуск к плато 84 Махасидхов происходит через перевал Тугсум. Далее паломники следуют по тропе Внешней Коры до долины Кхандро чу.
+                        Потом идут посещение озера Ваджрварахи, подъем на перевал Кхандро Санглам, посещение озера Куберы и спуск на тропу Внешней Коры к месту третьего простирания.
+                        От монастыря Зутрул Пхук паломники идут по так называемому Южному траверсу: входят в Симметричную долину (Гедхун), поднимаютсяна перевалы Гево ла и Шапджи ла, посещают монастыри Гяндрак и Серлунг.
+                        <br />
+                        <br />
+                        3. Рубиновая Кора
+                        Это продолжение Изумрудной Коры. Начинается она от монастыря Серлунг. Паломники идут по направлению к Южному лицу Кайласа. Маршрут предполагает восхождение на гору Дворец Махакалы к Шива Лингаму.
+                        После идет спуск на тропу Внешней Коры. Паломники доходят до Западного лица Кайласа и начинают Северный траверс:
+                        Подъем на г. Ваджрапани, спуск в долину Гангджам Чу
+                        Подъем на перевал г. Авалокитешвара, спуск в долину Полунг Чу Подъем на перевал г. Манджушри, спуск в долину Кхандро Чу Подъем на перевал Кхандро Санглам, спуск к озеру Куберы
+                        <br />
+                        <br />
+                        Подъем на Восточное зеркало слева от горы Пакна, спуск в долину Шингджонг
+                        Подъем на г. Дворец Таши Тцерингма и спуск в долину Менлунг Чу
+                        Подъем на юго-восточное плечо Кайласа, рядом с г. Мексиканская Пирамида, спуск в долину Гедхун Лха Чу
+                        Подъем на гору Трон Будды, спуск в долину Селунг Чу через монастырь Гяндрак.
+                        В принципе это достаточно посильная задача. Я проходил все элементы Рубиновой Коры не один раз.
+                        <br />
+                        <br />
+                        4. Золотая Кора
+                        Эта наиболее сложная часть маршрута Спиральной Коры. Мне удалось пройти лишь несколько ее участков.
+                        Кроме перечисленных в предыдущих Корах фрагментов пути в нее входит спуск в Долину 2-х озер от горы Трон Будды и спуск от Малого Кайласа (Тисум) к Западному лицу. Без специального снаряжения сделать хэто невозможно. Так же, как и выйти на центральную часть каменного зеркала от горы Пакна.
+                        Представленный здесь маршрут Спиральной Коры подходит только для хорошо подготовленных физически паломников. Изумрудная, Сапфировая и Золотая коры включают в себя Нанди-Кору и Кору Кхандро Санглам, поэтому все ограничения, связанные с прохождением двух упомянутых Внутренних Кор, должны также соблюдаться и для Спиральной Коры. Каждый виток приближает нас к священной горе, и для их прохождения паломнику потребуется сила воли, выносливость и отменное здоровье. В результате представляется уникальная возможность не только насладиться прекрасными видами, но и ощутить мощнейшую энергетику этих мест. Как упоминалось выше, при прохождении Кор не рекомендуется использовать специальное альпинистское снаряжение. Паломники должны проявлять глубокое уважение как к самим маршрутам, так и к другим паломникам, которых они встречают на своем пути и к их религиозным убеждениям.
+                    </>,
+                    en: <>
+                        SPIRAL KORA
+                        <br />
+                        For Hindus, Mount Kailash is the place of residence of the god Shiva and his wife Parvati, for Buddhists - Buddha Chakrasamvara (Buddha Chakrasamvara, Tib. Demchok) and his wife Vajravarahi (Tib. Dorje Phagmo). Buddha Chakrasamvara has four faces oriented to the cardinal directions, each of which corresponds to a specific color and gemstone. The first face is considered the Eastern face, it corresponds to blue color and sapphire, or lapis lazuli. The second face is the Northern Face, it corresponds to the green color and emerald stone. The third person is the Western face, it corresponds to the color red and ruby. The fourth face is the Southern Face, it corresponds to the color yellow and the element gold. It is these colors that mark the four turns of the Spiral Bark.
+                        Four turns of the Spiral Cortex
+                        <br />
+                        <br />
+                        1. Sapphire Bark
+                        This route coincides with the Outer Cortex Trail, about which much has already been written, including in this book.
+                        <br />
+                        <br />
+                        2. Emerald Bark
+                        The Kora also starts from the Chorten in the center of Darchen, but runs along the tops of the hills opposite the South Face. The descent to the 84 Mahasidha plateau occurs through the Tugsum pass. Next, pilgrims follow the Outer Kora trail to the Khandro Chu valley.
+                        Then there is a visit to Lake Vajvarahi, an ascent to the Khandro Sanglam pass, a visit to Lake Kubera and a descent to the Outer Kora trail to the place of the third prostration.
+                        From the Zutrul Phuk Monastery, pilgrims walk along the so-called Southern Traverse: they enter the Symmetrical Valley (Gedkhun), climb the Gewo La and Shapji La passes, and visit the Gyandrak and Serlung monasteries.
+                        <br />
+                        <br />
+                        3. Ruby Bark
+                        This is a continuation of the Emerald Bark. It starts from the Serlung Monastery. Pilgrims walk towards the southern face of Kailash. The route involves climbing the Mahakala Palace mountain to the Shiva Lingam.
+                        Afterwards there is a descent to the Outer Cortex trail. Pilgrims reach the Western face of Kailash and begin the Northern traverse:
+                        Ascent to Mount Vajrapani, descent to the Gangjam Chu valley
+                        Ascent to the Avalokiteshvara pass, descent to the Polung Chu valley Ascent to the Manjushri pass, descent to the Khandro Chu valley Ascent to the Khandro Sanglam pass, descent to Lake Kubera
+                        <br />
+                        <br />
+                        Ascent to the Eastern Mirror to the left of Pakna Mountain, descent into the Shingjong Valley
+                        Ascent to the Tashi Tseringma Palace and descent into the Menlung Chu valley
+                        Ascent to the southeastern shoulder of Kailash, near the city of the Mexican Pyramid, descent into the Gedhun Lha Chu valley
+                        Climbing Mount Buddha's Throne, descending to the Selung Chu valley through the Gyandrak Monastery.
+                        In principle, this is a fairly feasible task. I went through all the elements of the Ruby Bark more than once.
+                        <br />
+                        <br />
+                        4. Golden Bark
+                        This is the most difficult part of the Spiral Crust route. I only managed to walk through a few sections of it.
+                        In addition to the fragments of the path listed in the previous Koras, it includes a descent into the Valley of 2 Lakes from Mount Buddha's Throne and a descent from Little Kailash (Tisum) to the Western Face. It is impossible to do this without special equipment. Just like going to the central part of the stone mirror from Mount Pakna.
+                        The Spiral Cortex route presented here is only suitable for physically fit pilgrims. The Emerald, Sapphire and Golden Crusts include the Nandi Cortex and the Khandro Sanglam Cortex, so all the restrictions associated with the passage of the two mentioned Inner Cortexes must also be observed for the Spiral Cortex. Each turn brings us closer to the sacred mountain, and to complete them the pilgrim will need willpower, endurance and excellent health. As a result, there is a unique opportunity not only to enjoy beautiful views, but also to feel the powerful energy of these places. As mentioned above, it is not recommended to use special climbing equipment when climbing Kor. Pilgrims must show deep respect both for the routes themselves, for other pilgrims they meet along the way and for their religious beliefs.</>
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentKhandro = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/khandro.jpg">
-            <TibetInfoCardTitle>Перевал Кхандро Санглам</TibetInfoCardTitle>
+            <TibetInfoCardTitle>
+                {translate({
+                    ru: "Перевал Кхандро Санглам",
+                    en: "Khandro Sanglam Pass"
+                })}
+            </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Перевал Кхандро Санглам (Khandro Sanglam, 5675 м) расположен между двумя горами: Пхакна-ри (Phakna Ri, 5998 м), примыкающей к Дхарма Кинг Норсанг, одному из каменных зеркал Кайласа, и Шарма-ри. Именно этот маршрут местные жители называют «Внутренней Корой».
-                Для меня обход Кайласа через перевал Кхандро Санглам – один из самых сложных и непредсказуемых. Я шел этим маршрутом больше двадцати раз – и до сих пор не знаю, как это лучше делать! Здесь нет и не может быть универсального алгоритма: каждый раз не ведаешь, что тебя ждет. Одному подниматься на перевал очень рискованно, и мало кто решается на такой шаг.
-                Сам перевал достаточно крут – 70-80о. Тибетцы, как правило, поднимаются наверх по его правой стороне. Проблема в том, что последние 15 метров надо взбираться по практически вертикальной стене, что, поверьте, опасно и крайне неприятно.
-                Хочу особенно подчеркнуть: ни в коем случае нельзя идти через этот перевал тем, кто первый раз приехал в Тибет! Неоднократно группы туристов, не знакомых с местными обычаями, просили меня провести их через Кхандро Санглам, и буквально каждый раз, как только мы начинали подъем, погода портилась: начинался ливень или сильный снегопад, а иногда даже разыгрывалась настоящая буря.
-                Этот перевал так же закрыт для посещения иностранными туристами с 2023 года.
+                {translate({
+                    ru: `Перевал Кхандро Санглам (Khandro Sanglam, 5675 м) расположен между двумя горами: Пхакна-ри (Phakna Ri, 5998 м), примыкающей к Дхарма Кинг Норсанг, одному из каменных зеркал Кайласа, и Шарма-ри. Именно этот маршрут местные жители называют «Внутренней Корой».
+                    Для меня обход Кайласа через перевал Кхандро Санглам – один из самых сложных и непредсказуемых. Я шел этим маршрутом больше двадцати раз – и до сих пор не знаю, как это лучше делать! Здесь нет и не может быть универсального алгоритма: каждый раз не ведаешь, что тебя ждет. Одному подниматься на перевал очень рискованно, и мало кто решается на такой шаг.
+                    Сам перевал достаточно крут – 70-80о. Тибетцы, как правило, поднимаются наверх по его правой стороне. Проблема в том, что последние 15 метров надо взбираться по практически вертикальной стене, что, поверьте, опасно и крайне неприятно.
+                    Хочу особенно подчеркнуть: ни в коем случае нельзя идти через этот перевал тем, кто первый раз приехал в Тибет! Неоднократно группы туристов, не знакомых с местными обычаями, просили меня провести их через Кхандро Санглам, и буквально каждый раз, как только мы начинали подъем, погода портилась: начинался ливень или сильный снегопад, а иногда даже разыгрывалась настоящая буря.
+                    Этот перевал так же закрыт для посещения иностранными туристами с 2023 года.`,
+                    en: `Khandro Sanglam Pass (5675 m) is located between two mountains: Phakna Ri (5998 m), adjacent to Dharma King Norsang, one of the stone mirrors of Kailash, and Sharma Ri. It is this route that the locals call the “Inner Kora”.
+                    For me, going around Kailash through the Khandro Sanglam pass is one of the most difficult and unpredictable. I've walked this route more than twenty times - and I still don't know the best way to do it! There is not and cannot be a universal algorithm: every time you don’t know what awaits you. Climbing the pass alone is very risky, and few people dare to take such a step.
+                    The pass itself is quite steep - 70-80o. Tibetans, as a rule, climb up along its right side. The problem is that the last 15 meters you have to climb an almost vertical wall, which, believe me, is dangerous and extremely unpleasant.
+                    I would like to especially emphasize: under no circumstances should anyone who has come to Tibet for the first time go through this pass! More than once, groups of tourists unfamiliar with local customs asked me to guide them through Khandro Sanglam, and literally every time, as soon as we began to climb, the weather deteriorated: it began to rain or snow heavily, and sometimes even a real storm broke out.
+                    This pass is also closed to foreign tourists from 2023.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentMandjushri = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/mandjushri.jpg">
-            <TibetInfoCardTitle>Манджушри кора</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Манджушри кора",
+                    en: "Manjushri kora"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Кора через перевал Манджушри одна из самых моих любимых. Я прохожу ее несколько раз в году.
-                Перевал Манджушри 5810м расположен между г. Пакна (5998м) и г. Манджушри. Я почему-то люблю ее делать против часовой стрелки. Начинается она с подхода к каменному зеркалу Дхарма Кинг Нарсанг по долине Полунг, подъем на перевал Манджушри (5810м). С него открывается великолепный вид на северо-восточную грань Кайласа и на перевел Кхандро Салам.
-                Спуск в долину Кхандро чу и возвращение к Дрира Пхук. Весь маршрут занимает около 6 часов.
+                {translate({
+                    ru: `Кора через перевал Манджушри одна из самых моих любимых. Я прохожу ее несколько раз в году.
+                    Перевал Манджушри 5810м расположен между г. Пакна (5998м) и г. Манджушри. Я почему-то люблю ее делать против часовой стрелки. Начинается она с подхода к каменному зеркалу Дхарма Кинг Нарсанг по долине Полунг, подъем на перевал Манджушри (5810м). С него открывается великолепный вид на северо-восточную грань Кайласа и на перевел Кхандро Салам.
+                    Спуск в долину Кхандро чу и возвращение к Дрира Пхук. Весь маршрут занимает около 6 часов.`,
+                    en: `The Manjushri Pass Kora is one of my favorites. I go through it several times a year.
+                    Manjushri Pass 5810m is located between the town of Pakna (5998m) and the town of Manjushri. For some reason I like to do it counterclockwise. It begins with an approach to the stone mirror Dharma King Narsang along the Polung valley, climbing to the Manjushri pass (5810m). It offers a magnificent view of the north-eastern edge of Kailash and Khandro Salam.
+                    Descent to the Khandro Chu valley and return to Drira Phuk. The entire route takes about 6 hours.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentNandiKora = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc={imagesSrc.nandi}>
-            <TibetInfoCardTitle>Нанди кора</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Нанди кора",
+                en: "Nandi Kora"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Существует множество вариантов Внутренних Кор. В широком смысле так называется обход любого из плеч Кайласа, то есть любой из примыкающих к нему гор. Самый распространенный маршрут – Нанди-Кора, обход горы Нанди (Nandi), расположенной у юго-восточной грани Кайласа. Именно эту Кору большинство паломников называет Внутренней. По форме гора Нанди похожа на перевернутый ковчег, поэтому иногда ее именуют «горой-саркофагом» (тибетское название Neten Yelakzung). Общая протяженность маршрута – около 23 км (километраж считается от Дарчена).
-                Нанди-Кора включает в себя прохождение перевала Сердунг-Чуксум (Serdung Chuksum La, 5859 м), а также подъем к горизонтальной нише на южной стороне Кайласа – месту поклонения «13 золотых чортенов»; там размещены реликвии лам традиции Дрикунг школы Кагью.
-                Энергии при прохождении Внутренней Кайлас-Коры отличаются от энергий Внешней Коры. Они намного сильнее, ведь тропа Нанди-Коры проходит гораздо ближе к священным горам. Паломник находится под совокупным воздействием полей Кайласа и Нанди, которые соединяются в единую мощную силу на перевале Сердунг-Чуксум. Считается, что в этом месте можно получить знания от Великих Учителей.
-                Буддисты и индуисты идут на Внутреннюю Кайлас-Кору только после совершения 13 Внешних Кайлас-Кор. Но бывают и исключения. Например, у буддистов в год Огненной Лошади (раз в 60 лет) одна Внешняя Кора засчитывается за 13. Для индуистов же одна Внешняя Кора засчитывается за 13 в год, когда проводится «Праздник кувшина» (Кумбха-мела) и совершается массовое паломничество для омовения в священных реках. Кумбха-мела происходит один раз в 12 лет в одном из четырех священных индийских городов: Харидваре, Аллахабаде, Насике и Удджайне.
-                С 2015 года Нанди-Кора официально закрыта. На перевале установлены камеры видеонаблюдения и маршрут патрулируют дроны.
+                {translate({
+                    ru: `Существует множество вариантов Внутренних Кор. В широком смысле так называется обход любого из плеч Кайласа, то есть любой из примыкающих к нему гор. Самый распространенный маршрут – Нанди-Кора, обход горы Нанди (Nandi), расположенной у юго-восточной грани Кайласа. Именно эту Кору большинство паломников называет Внутренней. По форме гора Нанди похожа на перевернутый ковчег, поэтому иногда ее именуют «горой-саркофагом» (тибетское название Neten Yelakzung). Общая протяженность маршрута – около 23 км (километраж считается от Дарчена).
+                    Нанди-Кора включает в себя прохождение перевала Сердунг-Чуксум (Serdung Chuksum La, 5859 м), а также подъем к горизонтальной нише на южной стороне Кайласа – месту поклонения «13 золотых чортенов»; там размещены реликвии лам традиции Дрикунг школы Кагью.
+                    Энергии при прохождении Внутренней Кайлас-Коры отличаются от энергий Внешней Коры. Они намного сильнее, ведь тропа Нанди-Коры проходит гораздо ближе к священным горам. Паломник находится под совокупным воздействием полей Кайласа и Нанди, которые соединяются в единую мощную силу на перевале Сердунг-Чуксум. Считается, что в этом месте можно получить знания от Великих Учителей.
+                    Буддисты и индуисты идут на Внутреннюю Кайлас-Кору только после совершения 13 Внешних Кайлас-Кор. Но бывают и исключения. Например, у буддистов в год Огненной Лошади (раз в 60 лет) одна Внешняя Кора засчитывается за 13. Для индуистов же одна Внешняя Кора засчитывается за 13 в год, когда проводится «Праздник кувшина» (Кумбха-мела) и совершается массовое паломничество для омовения в священных реках. Кумбха-мела происходит один раз в 12 лет в одном из четырех священных индийских городов: Харидваре, Аллахабаде, Насике и Удджайне.
+                    С 2015 года Нанди-Кора официально закрыта. На перевале установлены камеры видеонаблюдения и маршрут патрулируют дроны.`,
+                    en: `There are many options for Internal Koras. In a broad sense, this is the name for going around any of the shoulders of Kailash, that is, any of the mountains adjacent to it. The most common route is Nandi-Kora, bypassing Mount Nandi, located on the southeastern edge of Kailash. It is this Kora that most pilgrims call the Inner Kora. The shape of Mount Nandi is similar to an inverted ark, which is why it is sometimes called “sarcophagus mountain” (Tibetan name Neten Yelakzung). The total length of the route is about 23 km (kilometers are counted from Darchen).
+                    Nandi Kora includes crossing the Serdung Chuksum Pass (Serdung Chuksum La, 5859 m), as well as climbing to a horizontal niche on the southern side of Kailash - the place of worship of the “13 golden chortens”; there are relics of lamas of the Drikung tradition of the Kagyu school.
+                    The energies during the passage of the Inner Kailash-Kort are different from the energies of the Outer Kort. They are much stronger, because the Nandi-Kora trail passes much closer to the sacred mountains. The pilgrim is under the combined influence of the Kailash and Nandi fields, which unite into a single powerful force at the Serdung-Chuksum pass. It is believed that in this place one can gain knowledge from Great Teachers.
+                    Buddhists and Hindus go to the Inner Kailash Kor only after completing the 13 Outer Kailash Kor. But there are also exceptions. For example, for Buddhists, in the year of the Fire Horse (every 60 years), one Outer Cortex is counted as 13. For Hindus, one Outer Cortex is counted as 13 in the year when the “Feast of the Jug” (Kumbha Mela) is held and a mass pilgrimage for ablution is made in sacred rivers. Kumbh Mela occurs once every 12 years in one of the four holy Indian cities: Haridwar, Allahabad, Nasik and Ujjain.
+                    Since 2015, Nandi Kora has been officially closed. CCTV cameras are installed at the pass and drones patrol the route.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentBuddhaThrone = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/buddha-throne.jpg">
             <TibetInfoCardTitle>Трон Будды</TibetInfoCardTitle>
