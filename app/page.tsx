@@ -1071,8 +1071,16 @@ function Home() {
       <div className="w-full bg-blue-500 text-white py-12">
         <div className="max-w-4xl w-full mx-auto">
           <Header
-            title="Знаковые места Тибета"
-            subtitle="Перечень достопримечательностей по регионам"
+            title={translate({
+              ru: "Знаковые места Тибета",
+              en: "Iconic places of Tibet",
+            }) as string}
+            subtitle={
+              translate({
+                ru: "Перечень достопримечательностей по регионам",
+                en: "List of attractions by region"
+              }) as string
+            }
           />
           <TibetInfo />
         </div>
@@ -1081,8 +1089,14 @@ function Home() {
       <div className="pt-10" />
       <div className="max-w-4xl w-full">
         <Header
-          title="Фото с прошлых туров"
-          subtitle="Нажмите на фото, чтобы открыть галерею"
+          title={translate({
+            ru: "Фото с прошлых туров",
+            en: "Photos from past tours"
+          }) as string}
+          subtitle={translate({
+            ru: "Нажмите на фото, чтобы открыть галерею",
+            en: "Click on the photo to open the gallery"
+          }) as string}
           id={LINK_PHOTO_GALLERY}
         />
       </div>
@@ -1117,7 +1131,12 @@ function Home() {
       </div> */}
 
       <div className="max-w-4xl w-full">
-        <Header title="Часто задаваемые вопросы" subtitle="" />
+        <Header title={
+          translate({
+            ru: "Часто задаваемые вопросы",
+            en: "FAQ",
+          }) as string
+        } subtitle="" />
         <FAQ />
       </div>
 
@@ -1397,7 +1416,10 @@ const ToursTabs = () => {
           <div>
             <Link href={"/tours/tibet-may-2024"} target="_blank">
               <TimetableButton
-                title="Май"
+                title={translate({
+                  ru: "Май",
+                  en: "May"
+                }) as string}
                 subtitle="2—21 мая"
                 days={14}
                 price={getTourPriceForMonth("may")}

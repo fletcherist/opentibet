@@ -282,109 +282,180 @@ export const IconArrowClose = () => {
 };
 
 export const FAQ: React.FC = () => {
+  const translate = useTranslateFn()
   return (
     <>
       <Accordion
-        title="Где лучше менять валюту и что лучше везти в Тибет?"
+        title={translate({
+          ru: "Где лучше менять валюту и что лучше везти в Тибет?",
+          en: "Where is the best place to change currency and what is the best thing to bring to Tibet?",
+        }) as string}
       >
-        Лучше всего везти с собой юани.
+        {translate({
+          ru: "Лучше всего везти с собой юани.",
+          en: "It is best to take yuan with you.",
+        })}
         <br />
-        Если стоит выбор: доллары или евро, то лучше доллары.
+        {translate({
+          ru: "Если стоит выбор: доллары или евро, то лучше доллары.",
+          en: "If you have a choice: dollars or euros, then dollars are better.",
+        })}
         <br />
-        Валюту можно менять в банке, это долго или на черном рынке, если гид поможет
+        {translate({
+          ru: "Валюту можно менять в банке, это долго или на черном рынке, если гид поможет",
+          en: "Currency can be changed at a bank, it takes a long time or on the black market, if the guide helps",
+        })}
       </Accordion>
       <Accordion
-        title="Можно ли купить в Китае сим карту?"
+        title={translate({
+          ru: "Можно ли купить в Китае сим карту?",
+          en: "Is it possible to buy a SIM card in China?",
+        }) as string}
       >
-        Покупка сим карты это очень долгая процедура.<br />
-        Иностранцам продает сим карты China Mobile. И без гида это сложно сделать.
+        {translate({
+          ru: "Покупка сим карты это очень долгая процедура",
+          en: "Buying a SIM card is a very long procedure.",
+        })}
         <br />
-        Если нужна гарантированно связь, то лучше приобрести e-sim. <a className="text-blue-500" href="https://t.me/Mobile" target="_blank">https://t.me/Mobile</a>
-      </Accordion>
-      <Accordion
-        title="Работает ли Гугл и Воцап?"
-      >
-        В Китае для нормальной связи с Россией нужен VPN.
+        {translate({
+          ru: "Иностранцам продает сим карты China Mobile. И без гида это сложно сделать.",
+          en: "China Mobile sells SIM cards to foreigners. And it’s difficult to do this without a guide.",
+        })}
         <br />
-        Оптимальным является Wire Guard
+        {translate({
+          ru: "Если нужна гарантированно связь, то лучше приобрести e-sim. ",
+          en: "If you need a guaranteed connection, it’s better to purchase an e-sim. ",
+        })}
+        <a className="text-blue-500" href="https://t.me/Mobile" target="_blank">https://t.me/Mobile</a>
       </Accordion>
       <Accordion
-        title="Есть ли проблема с питанием ? С питанием для вегетарианцев?"
+        title={
+          translate({
+            ru: "Работает ли в Тибете Гугл и Воцап?",
+            en: "Do Google and Whatsapp work?"
+          }) as string
+        }
       >
-        Сейчас в Тибете нет никаких проблем с едой.<br />
-        Большие супермаркеты есть в каждом городе, включая Дарчен. Фрукты (Яблоки, мандарины, манго и тд) и овощи (помидоры, огурцы, цветная капуста и тд) продается по всему маршруту. Китайские рестораны представлены везде.
+        {translate({
+          ru: <>В Китае для нормальной связи с Россией нужен VPN.
+            <br />
+            Оптимальным является Wire Guard</>,
+          en: <>
+            In China, for normal communication with Russia you need a VPN.
+            Wire Guard is optimal</>
+        })}
       </Accordion>
       <Accordion
-        title="Как организовано питание на Кайлас коре?"
+        title={translate({
+          ru: "Есть ли проблема с питанием ? С питанием для вегетарианцев?",
+          en: "Is there a problem with food? With meals for vegetarians?"
+        }) as string}
       >
-        В обязанность гида входит организация завтрака в гестхаусе.<br />
-        Завтрак достаточно скромный. Хлеб, яйцо чай. Но по всему маршруту Коры очень много ресторанов/кафе где можно заказать полноценный обед. Китайская и Тибетская кухня.
+        {translate({
+          ru: <>Сейчас в Тибете нет никаких проблем с едой.<br />
+            Большие супермаркеты есть в каждом городе, включая Дарчен. Фрукты (Яблоки, мандарины, манго и тд) и овощи (помидоры, огурцы, цветная капуста и тд) продается по всему маршруту. Китайские рестораны представлены везде.</>,
+          en: <>Now in Tibet there are no problems with food.
+            There are large supermarkets in every city, including Darchen. Fruits (Apples, tangerines, mangoes, etc.) and vegetables (tomatoes, cucumbers, cauliflower, etc.) are sold along the entire route. Chinese restaurants are everywhere.</>
+        })}
       </Accordion>
       <Accordion
-        title="Дорогая ли еда в Тибете?"
+        title={translate({
+          ru: "Как организовано питание на Кайлас коре?",
+          en: "How is food organized on Kailash kora?",
+        }) as string}
       >
-        Можно рассчитывать примерно на 200 юаней в день. (хороший обед и ужин)
-      </Accordion>
-      {/* <Accordion
-        title=" Можно ли купить в Тибете орехи и сухофрукты?"
-      >
-        Все это продается. Стоит обратить внимание на Bayi supermarket.
-      </Accordion> */}
-      <Accordion
-        title=" Где можно купить сувениры?"
-      >
-        Barkor supermarket лучшее место для этого. Или район Barkor, но цены там дороже
-      </Accordion>
-      <Accordion
-        title="Какие условия проживания на Кайлас коре?"
-      >
-        Проживание в гестхаусе скромное. В комнате находится 3-5 кроватей. Электричество доступно обычно с 20.00 до 00.00. Туалет находится на улице.
+        {translate({
+          ru: <>В обязанность гида входит организация завтрака в гестхаусе.<br />
+            Завтрак достаточно скромный. Хлеб, яйцо чай. Но по всему маршруту Коры очень много ресторанов/кафе где можно заказать полноценный обед. Китайская и Тибетская кухня.</>,
+          en: <>
+            It is the responsibility of the guide to organize breakfast in the guesthouse.<br />
+            Breakfast is quite modest. Bread, egg tea. But along the entire Cora route there are a lot of restaurants/cafes where you can order a full lunch. Chinese and Tibetan cuisine</>
+        })}
       </Accordion>
       <Accordion
-        title="Можно ли купить в Лхассе снаряжение для Коры?"
+        title={translate({
+          ru: "Дорогая ли еда в Тибете?",
+          en: "Is food expensive in Tibet?",
+        }) as string}
       >
-        В Лхассе огромное количество таких магазинов. Представлены профессиональные бренды:
-        North Face, Vaude, Kailas . Under Armor и тд
+        {translate({
+          ru: "Можно рассчитывать примерно на 200 юаней в день. (хороший обед и ужин)",
+          en: "You can count on about 200 yuan per day. (good lunch and dinner)",
+        })}
       </Accordion>
       <Accordion
-        title="Можно ли взять с собой переносной душ? (для Коры)"
+        title={translate({
+          ru: "Где можно купить сувениры?",
+          en: "Where can you buy souvenirs?"
+        }) as string}
       >
-        Нет смысла в этом
+        {translate({
+          ru: `Barkor supermarket лучшее место для этого. Или район Barkor, но цены там дороже`,
+          en: `Barkor supermarket is the best place for this. Or the Barkor area, but prices are more expensive there`
+        })}
+      </Accordion>
+
+      <Accordion
+        title={translate({
+          ru: "Какие условия проживания на Кайлас коре?",
+          en: "What are the living conditions at Kailash Kor?"
+        }) as string}
+      >
+        {translate({
+          ru: "Проживание в гестхаусе скромное. В комнате находится 3-5 кроватей. Электричество доступно обычно с 20:00 до 00:00. Туалет находится на улице.",
+          en: `Guesthouse accommodation is modest. There are 3-5 beds in the room. Electricity is usually available from 20:00 to 00:00. The toilet is located outside.`
+        })}
       </Accordion>
       <Accordion
-        title="Можно ли привезти в Китай дрон для съемки видео?"
+        title={
+          translate({
+            ru: "Можно ли купить в Лхассе снаряжение для Коры?",
+            en: "Is it possible to buy equipment for Kora in Lhassa?",
+          }) as string
+        }
       >
-        Иностранцам это запрещено, хотя китайцы активно пользуются.
+        {translate({
+          ru: `В Лхассе огромное количество таких магазинов. Представлены профессиональные бренды:
+          North Face, Vaude, Kailas . Under Armor и тд`,
+          en: `There are a huge number of such stores in Lhassa. Professional brands represented: North Face, Vaude, Kailas. Under Armor, etc.`
+        })}
       </Accordion>
       <Accordion
-        title="Можно ли ввозить книги в Тибет?"
+        title={translate({
+          ru: "Можно ли привезти в Китай дрон для съемки видео?",
+          en: "Is it possible to bring a drone to China to shoot video?"
+        }) as string}
       >
-        Можно, но они не должны в себе содержать историю Тибета и изображение Далай Ламы
+        {translate({
+          ru: "Иностранцам это запрещено, хотя китайцы активно пользуются.",
+          en: "Foreigners are prohibited from doing this, although the Chinese actively use it."
+        })}
+
       </Accordion>
       <Accordion
-        title="Можно ли зарегистрировать багаж до Лхассы при перелете из Москвы?"
+        title={translate({
+          ru: "Можно ли брать с собой в Тибет книги?",
+          en: `Can I bring a book with me to Tibet?`
+        }) as string}
       >
-        Нет. Багаж регистрируют только до первого китайского города на маршруте.
-      </Accordion>
-      {/* <Accordion
-        title="Какая норма провоза багажа?"
-      >
-        Проверяйте внимательно билеты.
-      </Accordion> */}
-      <Accordion
-        title="Нужна ли копия пермита для вылета из Москвы?"
-      >
-        Лучше иметь, хотя это на усмотрение а.к.
+        {translate({
+          ru: `Можно, но они не должны в себе содержать историю Тибета и изображение Далай Ламы`,
+          en: `It is possible, but they should not contain the history of Tibet and the image of the Dalai Lama`
+        })}
+
       </Accordion>
       <Accordion
-        title="Когда начинается «горная болезнь» по прилету в Тибет?"
+        title={
+          translate({
+            ru: `Когда начинается «горная болезнь» по прилету в Тибет?`,
+            en: `When does “mountain sickness” begin upon arrival in Tibet?`
+          }) as string
+        }
       >
-        Наиболее острая форма на второй день. По прилету необходимо пить очень много воды с витамином С. И гиды рекомендуют в первый вечер не мочить голову, при приеме душа.
-      </Accordion>
-      <Accordion
-        title="Как готовиться для поездки в Тибет?"
-      >
-        Это лучше начинать на пол года. Более подробная информация в  моем путеводителе.
+        {translate({
+          ru: `Наиболее острая форма на второй день. По прилету необходимо пить очень много воды с витамином С. И гиды рекомендуют в первый вечер не мочить голову, при приеме душа.`,
+          en: `The most acute form is on the second day. Upon arrival, you need to drink a lot of water with vitamin C. And the guides recommend not getting your hair wet on the first evening when taking a shower.`
+        })}
       </Accordion>
     </>
   );
@@ -647,14 +718,21 @@ export const ApplyForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const translate = useTranslateFn()
 
   return (
     <div id={LINK_APPLY_FORM}>
       <div className="flex items-center flex-wrap">
         <div className="w-full md:max-w-[50%]">
           <Header
-            title="Заявка на участие"
-            subtitle="Заполните заявку, и мы свяжемся с вами в ближайшее время"
+            title={translate({
+              ru: "Заявка на участие",
+              en: "Application for participation"
+            }) as string}
+            subtitle={translate({
+              ru: "Заполните заявку, и мы свяжемся с вами в ближайшее время",
+              en: "Fill out the application and we will contact you shortly",
+            }) as string}
           />
         </div>
         <div className="w-full md:max-w-[50%] p-4">
@@ -675,7 +753,10 @@ export const ApplyForm: React.FC = () => {
                   },
                 });
                 alert(
-                  `Спасибо за заявку, ${name}! Мы свяжемся с вами в ближайшее время`
+                  translate({
+                    ru: `Спасибо за заявку, ${name}! Мы свяжемся с вами в ближайшее время`,
+                    en: `Thanks for your submission, ${name}! We will contact you shortly`
+                  })
                 );
                 setName("");
                 setEmail("");
@@ -685,7 +766,10 @@ export const ApplyForm: React.FC = () => {
                 console.log(json);
               } catch (error) {
                 alert(
-                  `${name}, не удалось отправить заявку! Пожалуйста, попробуйте ещё раз или напишите нам на почту info@opentibet.ru`
+                  translate({
+                    ru: `${name}, не удалось отправить заявку! Пожалуйста, попробуйте ещё раз или напишите нам на почту info@opentibet.ru`,
+                    en: `${name}, failed to submit request! Please try again or write to us at info@opentibet.ru`
+                  })
                 );
               }
             }}
@@ -695,7 +779,10 @@ export const ApplyForm: React.FC = () => {
                 htmlFor="first_name"
                 className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
-                Имя
+                {translate({
+                  ru: "Имя",
+                  en: "Your Name"
+                })}
               </label>
               <input
                 type="text"
@@ -714,7 +801,10 @@ export const ApplyForm: React.FC = () => {
                 htmlFor="email"
                 className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
-                Эл. почта
+                {translate({
+                  ru: "Эл. почта",
+                  en: "EMAIL"
+                })}
               </label>
               <input
                 type="email"
@@ -733,7 +823,10 @@ export const ApplyForm: React.FC = () => {
                 htmlFor="tel"
                 className="block mb-1 text-[10px] uppercase tracking-wider font-semibold text-gray-900"
               >
-                Или номер телефона
+                {translate({
+                  ru: "Или номер телефона",
+                  en: "OR PHONE NUMBER"
+                })}
               </label>
               <input
                 type="tel"
@@ -752,7 +845,10 @@ export const ApplyForm: React.FC = () => {
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded flex items-center"
                 type="submit"
               >
-                Отправить
+                {translate({
+                  ru: "Отправить",
+                  en: "Apply"
+                })}
               </button>
             </div>
           </form>
