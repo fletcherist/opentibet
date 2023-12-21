@@ -1445,179 +1445,305 @@ const ContentBuddhaThrone = () => {
     const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/buddha-throne.jpg">
-            <TibetInfoCardTitle>Трон Будды</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Трон Будды",
+                    en: "Buddha Throne"
+                })
+            }</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Прямо за монастырем Гьянгдрак Гомпа возвышается гора Трон Будды (Гуйяганг, Buddha`s Throne). По легенде, с ее вершины Будда проповедовал свое учение царю змеиных божеств.
-                Существует Кора вокруг горы Трон Будды. Это один из моих любимых маршрутов.
-                Его протяженность около 20 км. Начинается Кора в Дарчене. Маршрут проходит через перевал Гева ла 5250 м и перевал Гяндрак 5815 м, после которого идет спуск к одноименному монастырю и возвращение в Дарчен. Перпендикулярно перевалу Гяндрак, расположен перевал Двух озер, который ведет на тропу Нанди-Коры. К сожалению, спуск с этого перевала без специального снаряжения невозможен.
+                {translate({
+                    ru: <>
+                        Прямо за монастырем Гьянгдрак Гомпа возвышается гора Трон Будды (Гуйяганг, Buddha`s Throne). По легенде, с ее вершины Будда проповедовал свое учение царю змеиных божеств.
+                        Существует Кора вокруг горы Трон Будды. Это один из моих любимых маршрутов.
+                        Его протяженность около 20 км. Начинается Кора в Дарчене. Маршрут проходит через перевал Гева ла 5250 м и перевал Гяндрак 5815 м, после которого идет спуск к одноименному монастырю и возвращение в Дарчен. Перпендикулярно перевалу Гяндрак, расположен перевал Двух озер, который ведет на тропу Нанди-Коры. К сожалению, спуск с этого перевала без специального снаряжения невозможен.</>,
+                    en: <>
+                        Right behind the Gyangdrak Gompa monastery rises Buddha's Throne Mountain. According to legend, from its top Buddha preached his teachings to the king of snake deities.
+                        There is a Kora around Buddha's Throne Mountain. This is one of my favorite routes.
+                        Its length is about 20 km. Kora begins in Darchen. The route passes through the Geva la pass 5250 m and the Gyandrak pass 5815 m, after which there is a descent to the monastery of the same name and a return to Darchen. Perpendicular to the Gandrak Pass is the Two Lakes Pass, which leads to the Nandi-Kora trail. Unfortunately, the descent from this pass without special equipment is impossible.</>,
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentTsedang = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/tsedang.jpg">
-            <TibetInfoCardTitle>Цеданг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Цеданг",
+                en: "Tsedang"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Цеданг (Tsedang) находится примерно в 45 км от Миндроллинга по дороге S349 в Ярлунгской долине (Yarlung valley). До него можно доехать по старой дороге S349 или, если вернуться немного назад, переехать мост через Брахмапутру по скоростной автомагистрли G4219.  На въезде в Цеданг стоит КПП (проверка паспортов и пермитов). От него до центра – около 20 мин. В Цеданге надо обязательно зарегистрировать пермит (Public Security Bureau; Gaisang Lu; 9.00–12.30, 15.00–18.00). Процедура обычно занимает от 30 мин до часу.
-                Цеданг, некогда маленький городок, сегодня является одним из центров Китая в Тибете. Здесь проживают около 300 тыс. человек. Большинство населения – китайцы, тибетцы живут в сравнительно неболшом квартале, где сохранились три небольших монастыря.
-                Город расположен между двумя горами: Гонпо Ри (4130 м) и Ярлунг Чедар (4250 м).
+                {translate({
+                    ru: `Цеданг (Tsedang) находится примерно в 45 км от Миндроллинга по дороге S349 в Ярлунгской долине (Yarlung valley). До него можно доехать по старой дороге S349 или, если вернуться немного назад, переехать мост через Брахмапутру по скоростной автомагистрли G4219.  На въезде в Цеданг стоит КПП (проверка паспортов и пермитов). От него до центра – около 20 мин. В Цеданге надо обязательно зарегистрировать пермит (Public Security Bureau; Gaisang Lu; 9.00–12.30, 15.00–18.00). Процедура обычно занимает от 30 мин до часу.
+                    Цеданг, некогда маленький городок, сегодня является одним из центров Китая в Тибете. Здесь проживают около 300 тыс. человек. Большинство населения – китайцы, тибетцы живут в сравнительно неболшом квартале, где сохранились три небольших монастыря.
+                    Город расположен между двумя горами: Гонпо Ри (4130 м) и Ярлунг Чедар (4250 м).`,
+                    en: `Tsedang is located approximately 45 km from Mindrolling on the S349 road in the Yarlung valley. It can be reached along the old road S349 or, if you go back a little, cross the bridge over the Brahmaputra along the G4219 expressway. At the entrance to Tsedang there is a checkpoint (checking passports and permits). From here to the center - about 20 minutes. In Tsedang, you must register a permit (Public Security Bureau; Gaisang Lu; 9.00–12.30, 15.00–18.00). The procedure usually takes from 30 minutes to an hour.
+                    Tsedang, once a small town, is today one of the centers of China in Tibet. About 300 thousand people live here. The majority of the population is Chinese, Tibetans live in a relatively small quarter, where three small monasteries have been preserved.
+                    The city is located between two mountains: Gonpo Ri (4130 m) and Yarlung Chedar (4250 m).`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentLamaling = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/lamaling.jpg">
-            <TibetInfoCardTitle>Ламалинг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: 'Ламалинг',
+                    en: 'Lamaling'
+                })
+            }</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                В переводе с тибетского слово «ламалинг» значит «райский сад для лам». Место заслуживает такого названия – Ламалинг находится в огромном ухоженном парке.
-                <br />
-                <br />
-                Изначально маленький храм был построен в XIII веке на вершине соседней горы (Блистательная Медная гора) и приадлежал школе Кагью.
-                <br />
-                <br />
-                Нынешний храм построили в 1930 году. По просьбе Дуджома Ринпоче (Dudjom Rinpoche) монахи из монастыря Миндроллинг основали здесь обитель школы Ньингма. В 1960-х годах монастырь был разрушен во время Культурной революции. Его восстановление началось в 1989 году дочерью Дуджоме Ринпоче.
-                Главный храм выполнен в форме трехэтажной пагоды и называется Сандок Палри (Sangdok Palri).
-                <br />
-                <br />
-                На первом этаже установлена статуя Падмасабхавы и 16 архатов. На втором – четырехрукий Авалокитешвара, а на третьем – Будда Шакьямуни.
-                Слева от главного храма в 2009 году была построена белая 12-ти метровая ступа. Справа находится храм красного цвета со статуей Будды Шакьямуни, 8-ми бодхисаттв и 16-юархатов, а также статуя основателя храма Дужома Ринпоче.
-                <br />
-                <br />
-                Входной билет стоит 30 юаней.
+                {translate({
+                    ru: <>
+                        В переводе с тибетского слово «ламалинг» значит «райский сад для лам». Место заслуживает такого названия – Ламалинг находится в огромном ухоженном парке.
+                        <br />
+                        <br />
+                        Изначально маленький храм был построен в XIII веке на вершине соседней горы (Блистательная Медная гора) и приадлежал школе Кагью.
+                        <br />
+                        <br />
+                        Нынешний храм построили в 1930 году. По просьбе Дуджома Ринпоче (Dudjom Rinpoche) монахи из монастыря Миндроллинг основали здесь обитель школы Ньингма. В 1960-х годах монастырь был разрушен во время Культурной революции. Его восстановление началось в 1989 году дочерью Дуджоме Ринпоче.
+                        Главный храм выполнен в форме трехэтажной пагоды и называется Сандок Палри (Sangdok Palri).
+                        <br />
+                        <br />
+                        На первом этаже установлена статуя Падмасабхавы и 16 архатов. На втором – четырехрукий Авалокитешвара, а на третьем – Будда Шакьямуни.
+                        Слева от главного храма в 2009 году была построена белая 12-ти метровая ступа. Справа находится храм красного цвета со статуей Будды Шакьямуни, 8-ми бодхисаттв и 16-юархатов, а также статуя основателя храма Дужома Ринпоче.
+                        <br />
+                        <br />
+                        Входной билет стоит 30 юаней.</>,
+                    en: <>
+                        Translated from Tibetan, the word “lamaling” means “Garden of Eden for lamas.” The place deserves such a name - Lamaling is located in a huge, well-kept park.
+                        <br />
+                        <br />
+                        The small temple was originally built in the 13th century on top of a nearby mountain (Brilliant Copper Mountain) and belonged to the Kagyu school.
+                        <br />
+                        <br />
+                        The current temple was built in 1930. At the request of Dudjom Rinpoche, monks from Mindrolling Monastery founded a monastery of the Nyingma school here. In the 1960s, the monastery was destroyed during the Cultural Revolution. Its restoration began in 1989 by Dudjome Rinpoche's daughter.
+                        The main temple is made in the form of a three-story pagoda and is called Sangdok Palri.
+                        <br />
+                        <br />
+                        On the ground floor there is a statue of Padmasabhava and 16 arhats. On the second is the four-armed Avalokiteshvara, and on the third is Shakyamuni Buddha.
+                        To the left of the main temple, a white 12-meter stupa was built in 2009. On the right is a red temple with a statue of Buddha Shakyamuni, 8 bodhisattvas and 16 yuarhats, as well as a statue of the founder of the temple, Dujom Rinpoche.
+                        <br />
+                        <br />
+                        The entrance ticket costs 30 yuan.</>
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentBuchu = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/buchu.jpg">
-            <TibetInfoCardTitle>Бучу</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Бучу",
+                    en: "Buchu"
+                })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Расположен в 27 км от города Ньингчи (Баи). Храм был основан в VII веке по приказу Сангцэна Гампо и является одним из 12, фиксирующих демоницу Тибета, точнее ее левый локоть.
-                Монастырь принадлежит школе Ньингма, недавно его отрестоврировали. В Главном зале по центру установлена статуя Падмасабхавы. Слева – Будда Будущего, справа – Падмасабхава в полный рост. За основным залом расположен храм Черези. Здесь по центру можно увидеть статую одиннадцатиглавого Авалокитешвары, Сонгцэна Гампо, Трисонга Децена и 8 бодхисаттв.
-                На втором этаже храма находится мандала Авалокитешвары и изображения 21 формы Тары.
-                В храме хранится собрание очень много буддистких книг. Основные реликвии монастыря: каменная масляная лампа, принадлежащая Сонгцэну Гампо, и камень с отпечатком ноги Гуру Ринпоче.
-                Входной билет стоит 20 юаней.
+                {translate({
+                    ru: `Расположен в 27 км от города Ньингчи (Баи). Храм был основан в VII веке по приказу Сангцэна Гампо и является одним из 12, фиксирующих демоницу Тибета, точнее ее левый локоть.
+                    Монастырь принадлежит школе Ньингма, недавно его отрестоврировали. В Главном зале по центру установлена статуя Падмасабхавы. Слева – Будда Будущего, справа – Падмасабхава в полный рост. За основным залом расположен храм Черези. Здесь по центру можно увидеть статую одиннадцатиглавого Авалокитешвары, Сонгцэна Гампо, Трисонга Децена и 8 бодхисаттв.
+                    На втором этаже храма находится мандала Авалокитешвары и изображения 21 формы Тары.
+                    В храме хранится собрание очень много буддистких книг. Основные реликвии монастыря: каменная масляная лампа, принадлежащая Сонгцэну Гампо, и камень с отпечатком ноги Гуру Ринпоче.
+                    Входной билет стоит 20 юаней.`,
+                    en: `Located 27 km from the city of Nyingchi (Bai). The temple was founded in the 7th century by order of Sangtsen Gampo and is one of 12 that record the demoness of Tibet, or rather her left elbow.
+                    The monastery belongs to the Nyingma school and has recently been restored. In the Main Hall there is a statue of Padmasabhava in the center. On the left is the Buddha of the Future, on the right is Padmasabhava in full height. Behind the main hall is the Church of Cherezi. Here in the center you can see a statue of the eleven-headed Avalokiteshvara, Songtsen Gampo, Trisong Detsen and 8 bodhisattvas.
+                    On the second floor of the temple there is a mandala of Avalokiteshvara and images of 21 forms of Tara.
+                    The temple houses a collection of many Buddhist books. The main relics of the monastery are a stone oil lamp belonging to Songtsen Gampo and a stone with the footprint of Guru Rinpoche.
+                    The entrance ticket costs 20 yuan.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentBatsumTso = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/batsum-tso.jpg">
-            <TibetInfoCardTitle>Бацум цо</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: 'Бацум цо',
+                en: 'Batsum tso'
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
-                <br />
-                <br />
-                Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
-                <br />
-                <br />
+                {translate({
+                    ru: <>
+                        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+                        <br />
+                        <br />
+                        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.</>,
+                    en: <>
+                        The outer kora of Kailash mandala is a pilgrimage route around Mount Kailash, located in Tibet. The route is about 53 kilometers long and takes about 3-4 days.
+                        <br />
+                        <br />
+                        Mount Kailash is considered sacred in Hinduism, Buddhism and Jainism. It is believed that the mountain is the center of the Universe and the habitat of the gods.</>,
+                })}
             </TibetInfoCardContent>
-        </TibetInfoCard>
+        </TibetInfoCard >
     )
 }
 
 const ContentSamye = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/samye.jpg">
-            <TibetInfoCardTitle>Монастырь Самье</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Самье",
+                en: "Samye Monastery"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Самье – самый первый тибетский буддистский монастырь. С его возникновением связано множество легенд. Согласно самой распространенной из них, Самье был построен при выдающемся правителе Ярлунгской династии Трисонге Децене (VIII в.). Руководил строительством великий буддистский гуру Шантаракшита, приглашенный Трисонгом Деценом из Индии. Однако местные божества, владыки почв, противились укреплению позиций буддизма в Тибете и по ночам с помощью землетрясений разрушали все, что Шантаракшите удавалось построить за день. Кроме того, в стране начался голод и вспыхнули эпидемии. Перепуганный Трисонг Децен попросил Шантаракшиту покинуть Тибет. Перед уходом великий гуру посоветовал царю пригласить Падмасамбхаву (Гуру Ринпоче), другого великого Учителя. Он так и сделал. Вскоре после прибытия Падмасамбхавы в Тибет в недостроенном монастыре Самье в присутствии царя и всей его свиты состоялся религиозный диспут между сторонниками тибетской религии бон и Гуру Ринпоче, в котором последний одержал победу. Трисонг Децен повелел всем бонцам принять буддизм, а монастырь Самье был наконец возведен.
-                Самье стал центром распространения буддизма в Тибете: здесь приглашенные из Индии и Китая монахи переводили на тибетский язык священные тексты; здесь прошел Великий диспут между сторонниками индийской и китайской ветвей буддизма, в котором победили индийцы. За свою историю обитель много раз разрушалась и восстанавливалась. К счастью, сегодня практически все постройки комплекса являют собой образцы старинной тибетской архитектуры и по мере надобности реставрируются.
+                {translate({
+                    ru: `Самье – самый первый тибетский буддистский монастырь. С его возникновением связано множество легенд. Согласно самой распространенной из них, Самье был построен при выдающемся правителе Ярлунгской династии Трисонге Децене (VIII в.). Руководил строительством великий буддистский гуру Шантаракшита, приглашенный Трисонгом Деценом из Индии. Однако местные божества, владыки почв, противились укреплению позиций буддизма в Тибете и по ночам с помощью землетрясений разрушали все, что Шантаракшите удавалось построить за день. Кроме того, в стране начался голод и вспыхнули эпидемии. Перепуганный Трисонг Децен попросил Шантаракшиту покинуть Тибет. Перед уходом великий гуру посоветовал царю пригласить Падмасамбхаву (Гуру Ринпоче), другого великого Учителя. Он так и сделал. Вскоре после прибытия Падмасамбхавы в Тибет в недостроенном монастыре Самье в присутствии царя и всей его свиты состоялся религиозный диспут между сторонниками тибетской религии бон и Гуру Ринпоче, в котором последний одержал победу. Трисонг Децен повелел всем бонцам принять буддизм, а монастырь Самье был наконец возведен.
+                    Самье стал центром распространения буддизма в Тибете: здесь приглашенные из Индии и Китая монахи переводили на тибетский язык священные тексты; здесь прошел Великий диспут между сторонниками индийской и китайской ветвей буддизма, в котором победили индийцы. За свою историю обитель много раз разрушалась и восстанавливалась. К счастью, сегодня практически все постройки комплекса являют собой образцы старинной тибетской архитектуры и по мере надобности реставрируются.`,
+                    en: `Samye is the very first Tibetan Buddhist monastery. Many legends are associated with its occurrence. According to the most common of them, Samye was built under the outstanding ruler of the Yarlung dynasty, Trisong Detsen (8th century). The construction was supervised by the great Buddhist guru Shantarakshita, invited by Trisong Detsen from India. However, the local deities, the lords of the soil, opposed the strengthening of the position of Buddhism in Tibet and at night, with the help of earthquakes, they destroyed everything that Shantarakshita managed to build in a day. In addition, famine began in the country and epidemics broke out. The frightened Trisong Detsen asked Shantarakshita to leave Tibet. Before leaving, the great guru advised the king to invite Padmasambhava (Guru Rinpoche), another great Teacher. He did just that. Soon after Padmasambhava's arrival in Tibet, in the unfinished Samye Monastery, in the presence of the king and his entire retinue, a religious dispute took place between supporters of the Tibetan Bon religion and Guru Rinpoche, in which the latter won. Trisong Detsen ordered all Bon people to accept Buddhism, and Samye Monastery was finally built.
+                    Samye became the center for the spread of Buddhism in Tibet: here monks invited from India and China translated sacred texts into Tibetan; The Great Debate took place here between supporters of the Indian and Chinese branches of Buddhism, in which the Indians won. During its history, the monastery was destroyed and restored many times. Fortunately, today almost all the buildings of the complex are examples of ancient Tibetan architecture and are being restored as needed.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentDorjeDrak = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/dorje-drag.jpg">
-            <TibetInfoCardTitle>Дордже Драк</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Дордже Драк",
+                    en: "Dorje Drak"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Дордже Драк
-                В 45 км от Самье (дорога S205, верстовой столб 459) расположен один из наиболее значимых для школы Ньингма в центральном Тибете монастырь Тхубтен Дордже Драк (Thubten Dorje Drak). Он возник в XVII в., а несколько лет назад его восстановили. Обитель находится у подножия скалы в форме ваджры.
-                Лама – глава монастыря – носит потомственный титул «ригдзин». В монастыре можно увидеть статуи прежних ригдзинов. В процессе восстановления монастыря монахи бережно собирали осколки утвари, части фресок, обломки статуй и колонн. Все это сейчас можно осмотреть в реликварии. Сохранились старинные планы Дордже Драка, которые дают представление о его былом величии.
-                Монастырь по-прежнему сохраняет традицию терма «Северных сокровищ» («Джангтер»), открытую Ригдзином Годемом Нгондрубом Гьялценом (1337–1409). В XVII в., когда молодой Нгаги Вангпо (Дордрак Ригдзин Ченпо III, третье воплощение Ригдзина Годема) и его опекун Джангдак Таши Топгьел подверглись гонениям со стороны царей Тцанга и были вынуждены бежать, монастырь был перенесен (1632 г.) в то место, где находится и поныне.
-                Расцвет Дордже Драка начался во времена четвертого воплощения Ригдзина – Дордрака Ригдзина Ченпо Пема Тринлея (1641–1717), который безвременно погиб от рук монгольских захватчиков из Джунгара. Монастырь был разграблен джунгарами в 1717 г., восстановлен, а затем уничтожен снова в 1960-х гг. Сейчас он постепенно возрождается стараниями нынешнего воплощения Дордрака Ригдзина, проживающего в Лхасе, а также благодаря усилиям Келцанга Чод Жора и местной общины.
-                В зале собраний (цогчене) можно увидеть большое изображение Падмасамбхавы, расположенном на месте, где когда-то находился оригинал, созданный четвертым Ригдзином – Пема Тринлеем. Также здесь есть расписные свитки с изображениями 100 Мирных и Гневных божеств и стенные росписи, изображающие 8 проявлений Падмасамбхавы. В зале установлены три трона: центральный – для самого Дордрака Ригдзина, а два других – для Таклунга Ринпоче (проживает в изгнании в Симле (Shimla) и Ладакхе (Ladakh)) и Чубзанга Ринпоче. В главном святилище храма находится самопроявившийся каменный образ двурукого Авалокитешвары, реликварий и библиотека, в которой хранится Кангьюр и ньингмапинский «Канон Древних Тантр» Гьюдбум.
-                Самый древний храм расположен справа (сюда не допускаются женщины). Когда-то здесь находились изображения Трех Корней (гуру, божество сосредоточения и дакини) традиции Дордже Драк, однако сейчас можно увидеть лишь несколько старинных изображений, копию Канона Гьюдбум, изданного в Дерге, и ряд других священных реликвий: ваджр и колокольчик Четвертого Дордрака Ригдзина Ченпо Пема Тринлея, сундук, где хранилось сокровище-терма (тердром), частицу посоха Миларепы и подробный план монастыря в его первозданном виде. До разрушения джунгарскими войсками Дордже Драк славился огромными колоннами и воротами, расписанными черепами.
+                {translate({
+                    ru: `В 45 км от Самье (дорога S205, верстовой столб 459) расположен один из наиболее значимых для школы Ньингма в центральном Тибете монастырь Тхубтен Дордже Драк (Thubten Dorje Drak). Он возник в XVII в., а несколько лет назад его восстановили. Обитель находится у подножия скалы в форме ваджры.
+                    Лама – глава монастыря – носит потомственный титул «ригдзин». В монастыре можно увидеть статуи прежних ригдзинов. В процессе восстановления монастыря монахи бережно собирали осколки утвари, части фресок, обломки статуй и колонн. Все это сейчас можно осмотреть в реликварии. Сохранились старинные планы Дордже Драка, которые дают представление о его былом величии.
+                    Монастырь по-прежнему сохраняет традицию терма «Северных сокровищ» («Джангтер»), открытую Ригдзином Годемом Нгондрубом Гьялценом (1337–1409). В XVII в., когда молодой Нгаги Вангпо (Дордрак Ригдзин Ченпо III, третье воплощение Ригдзина Годема) и его опекун Джангдак Таши Топгьел подверглись гонениям со стороны царей Тцанга и были вынуждены бежать, монастырь был перенесен (1632 г.) в то место, где находится и поныне.
+                    Расцвет Дордже Драка начался во времена четвертого воплощения Ригдзина – Дордрака Ригдзина Ченпо Пема Тринлея (1641–1717), который безвременно погиб от рук монгольских захватчиков из Джунгара. Монастырь был разграблен джунгарами в 1717 г., восстановлен, а затем уничтожен снова в 1960-х гг. Сейчас он постепенно возрождается стараниями нынешнего воплощения Дордрака Ригдзина, проживающего в Лхасе, а также благодаря усилиям Келцанга Чод Жора и местной общины.
+                    В зале собраний (цогчене) можно увидеть большое изображение Падмасамбхавы, расположенном на месте, где когда-то находился оригинал, созданный четвертым Ригдзином – Пема Тринлеем. Также здесь есть расписные свитки с изображениями 100 Мирных и Гневных божеств и стенные росписи, изображающие 8 проявлений Падмасамбхавы. В зале установлены три трона: центральный – для самого Дордрака Ригдзина, а два других – для Таклунга Ринпоче (проживает в изгнании в Симле (Shimla) и Ладакхе (Ladakh)) и Чубзанга Ринпоче. В главном святилище храма находится самопроявившийся каменный образ двурукого Авалокитешвары, реликварий и библиотека, в которой хранится Кангьюр и ньингмапинский «Канон Древних Тантр» Гьюдбум.
+                    Самый древний храм расположен справа (сюда не допускаются женщины). Когда-то здесь находились изображения Трех Корней (гуру, божество сосредоточения и дакини) традиции Дордже Драк, однако сейчас можно увидеть лишь несколько старинных изображений, копию Канона Гьюдбум, изданного в Дерге, и ряд других священных реликвий: ваджр и колокольчик Четвертого Дордрака Ригдзина Ченпо Пема Тринлея, сундук, где хранилось сокровище-терма (тердром), частицу посоха Миларепы и подробный план монастыря в его первозданном виде. До разрушения джунгарскими войсками Дордже Драк славился огромными колоннами и воротами, расписанными черепами.`,
+                    en: `45 km from Samye (road S205, milepost 459) is located one of the most significant monasteries for the Nyingma school in central Tibet, Thubten Dorje Drak. It dates back to the 17th century and was restored a few years ago. The abode is located at the foot of a rock in the shape of a vajra.
+                    The lama, the head of the monastery, bears the hereditary title “rigdzin”. In the monastery you can see statues of former Rigdzins. During the process of restoring the monastery, the monks carefully collected fragments of utensils, parts of frescoes, fragments of statues and columns. All this can now be examined in the reliquary. Ancient plans of Dorje Drak have been preserved, which give an idea of his former greatness.
+                    The monastery still maintains the tradition of the Northern Treasure (Jangter) terma discovered by Rigdzin Godem Ngondrub Gyaltsen (1337–1409). In the 17th century, when the young Ngagi Wangpo (Dordrak Rigdzin Chenpo III, the third incarnation of Rigdzin Godem) and his guardian Jangdak Tashi Topgyel were persecuted by the Tsang kings and forced to flee, the monastery was moved (1632) to the place where is still there today.
+                    Dorje Drak's heyday began during the time of Rigdzin's fourth incarnation, Dordrak Rigdzin Chenpo Pema Trinley (1641–1717), who met an untimely death at the hands of the Mongol invaders from Dzungar. The monastery was sacked by the Dzungars in 1717, restored, and then destroyed again in the 1960s. Now it is gradually being revived through the efforts of the current incarnation Dordrak Rigdzin, who lives in Lhasa, as well as thanks to the efforts of Keltsang Chod Zhor and the local community.
+                    In the assembly hall (tsogchen) you can see a large image of Padmasambhava, located on the site where the original was once located, created by the fourth Rigdzin - Pema Trinlay. There are also painted scrolls depicting 100 Peaceful and Wrathful deities and wall paintings depicting the 8 manifestations of Padmasambhava. There are three thrones in the hall: the central one is for Dordrak Rigdzin himself, and the other two are for Taklung Rinpoche (lives in exile in Shimla and Ladakh) and Chubzang Rinpoche. In the main sanctuary of the temple there is a self-manifested stone image of the two-armed Avalokiteshvara, a reliquary and a library containing the Kangyur and the Nyingma “Canon of Ancient Tantras” Gyudbum.
+                    The oldest temple is located on the right (women are not allowed here). Once there were images of the Three Roots (guru, concentration deity and dakini) of the Dorje Drak tradition, but now you can only see a few ancient images, a copy of the Gyudbum Canon published in Derge, and a number of other sacred relics: vajras and the bell of the Fourth Dordrak Rigdzin Chenpo Pema Trinleya, the chest containing the terma treasure (terdrome), a piece of Milarepa's staff and a detailed plan of the monastery in its original form. Before its destruction by the Dzungar troops, Dorje Drak was famous for its huge columns and gates painted with skulls.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentMidroling = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/midroling.jpg">
-            <TibetInfoCardTitle>Мидролинг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Мидролинг",
+                    en: "Midrolling"
+                })
+            }</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                монастырь Миндроллинг (Mindrolling) – самый большой в центральном Тибете. Это один из 6 основных монастырей школы Ньингма. Комплекс окружен четырьмя горами. Входной билет стоит 35 юаней.
-                Монастырь расположен в 8 км восточнее города Дрананг (Dranang), в 147 км от Лхасы. На этом месте еще с X в. существовал небольшой монастырь. В 1670-х гг. выдающийся ученый лама Тертон Тердак Лингпа (1646–1714) возвел огромный монастырский комплекс. Он же стал первым Минлинг Триченом (держателем трона Минлинг) – титул, который передавался по наследству от отца к сыну. Ученики Тердак Лингпы считали его пятым Далай-ламой. Комплекс серьеёзно пострадал в XVIII в. из-за нашествия монголов-джунгар и в годы Культурной революции. Сейчас активно ведутся восстановительные и реставрационные работы.
-                Во внутренний двор можно пройти через ворота с северо- и юго-восточной сторон. Здесь привлекает внимание главный храм (Цуклакханг) с фасадом из коричневого камня. На трех его этажах находятся несколько часовен с многочисленными реликвиями (ковчеги с мощами, частицы мощей, старинные священные книги, мандалы, статуи и т.д.) и усыпальницами. Архитектурное убранство, стенные росписи, статуи, тексты, ступы сохранились в целости. В часовнях третьего этажа можно увидеть портрет основателя комплекса с позолоченными отпечатками его ладоней и стоп, а также старинные фрески с изображением всех традиций школы Ньингма.
-                Главные статуи храма — это изображение Будды Шакьямуни высотой 4 метра, его учеников и 8 бодхисатв. В соседнеим храме установлена статуя Гуру Ринпоче.
-                В храме Сангок Подранг (Sangok Podrang) в северной части внутреннего двора сохранилась знаменитая «говорящая» фреска. Согласно легенде, изображенный на ней основатель школы Ньингма Юнгдрунг Тонгдрол – Падмасамбхава – обратился к Тердаку Лингпе с просьбой оставаться в мире для помощи живым существам. В этом же храме хранится старинная большая тханка, которую открывают для поклонения раз в году.
+                {translate({
+                    ru: `Монастырь Миндроллинг (Mindrolling) – самый большой в центральном Тибете. Это один из 6 основных монастырей школы Ньингма. Комплекс окружен четырьмя горами. Входной билет стоит 35 юаней.
+                    Монастырь расположен в 8 км восточнее города Дрананг (Dranang), в 147 км от Лхасы. На этом месте еще с X в. существовал небольшой монастырь. В 1670-х гг. выдающийся ученый лама Тертон Тердак Лингпа (1646–1714) возвел огромный монастырский комплекс. Он же стал первым Минлинг Триченом (держателем трона Минлинг) – титул, который передавался по наследству от отца к сыну. Ученики Тердак Лингпы считали его пятым Далай-ламой. Комплекс серьеёзно пострадал в XVIII в. из-за нашествия монголов-джунгар и в годы Культурной революции. Сейчас активно ведутся восстановительные и реставрационные работы.
+                    Во внутренний двор можно пройти через ворота с северо- и юго-восточной сторон. Здесь привлекает внимание главный храм (Цуклакханг) с фасадом из коричневого камня. На трех его этажах находятся несколько часовен с многочисленными реликвиями (ковчеги с мощами, частицы мощей, старинные священные книги, мандалы, статуи и т.д.) и усыпальницами. Архитектурное убранство, стенные росписи, статуи, тексты, ступы сохранились в целости. В часовнях третьего этажа можно увидеть портрет основателя комплекса с позолоченными отпечатками его ладоней и стоп, а также старинные фрески с изображением всех традиций школы Ньингма.
+                    Главные статуи храма — это изображение Будды Шакьямуни высотой 4 метра, его учеников и 8 бодхисатв. В соседнеим храме установлена статуя Гуру Ринпоче.
+                    В храме Сангок Подранг (Sangok Podrang) в северной части внутреннего двора сохранилась знаменитая «говорящая» фреска. Согласно легенде, изображенный на ней основатель школы Ньингма Юнгдрунг Тонгдрол – Падмасамбхава – обратился к Тердаку Лингпе с просьбой оставаться в мире для помощи живым существам. В этом же храме хранится старинная большая тханка, которую открывают для поклонения раз в году.`,
+                    en: `Mindrolling Monastery is the largest in central Tibet. This is one of the 6 main monasteries of the Nyingma school. The complex is surrounded by four mountains. The entrance ticket costs 35 yuan.
+                    The monastery is located 8 km east of the city of Dranang, 147 km from Lhasa. In this place since the 10th century. there was a small monastery. In the 1670s. The outstanding scientist Lama Terton Terdak Lingpa (1646–1714) built a huge monastery complex. He also became the first Minling Trichen (holder of the Minling throne) - a title that was inherited from father to son. Terdak Lingpa's disciples considered him the fifth Dalai Lama. The complex was seriously damaged in the 18th century. due to the invasion of the Dzungar Mongols and during the Cultural Revolution. Restoration and restoration work is currently underway.
+                    The courtyard can be accessed through gates on the north and southeast sides. The main temple (Tsuklakhang) with its brown stone facade attracts attention here. On its three floors there are several chapels with numerous relics (arks with relics, particles of relics, ancient sacred books, mandalas, statues, etc.) and tombs. Architectural decoration, wall paintings, statues, texts, stupas have been preserved intact. In the third floor chapels you can see a portrait of the founder of the complex with gilded prints of his palms and feet, as well as ancient frescoes depicting all the traditions of the Nyingma school.
+                    The main statues of the temple are a 4-meter-high image of Shakyamuni Buddha, his disciples and 8 bodhisattvas. There is a statue of Guru Rinpoche in a nearby temple.
+                    In the Sangok Podrang Temple, in the northern part of the courtyard, the famous “talking” fresco has been preserved. According to legend, the founder of the Nyingma school Yungdrung Tongdrol, Padmasambhava, depicted on it, asked Terdak Lingpa to remain in the world to help living beings. The same temple houses an ancient large thangka, which is opened for worship once a year.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentYumbulakhang = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://www.wondersoftibet.com/wp-content/uploads/2018/03/View-on-Yumbulakhang-from-the-hill.jpg">
-            <TibetInfoCardTitle>Ямбулаканг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Ямбулаканг",
+                en: "Yambulakang"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Южнее Цеданга в Ярлунгской долине есть еще несколько средневековых монастырей. Но главной достопримечательностью для туристов, без сомнения, является крепость Юмбулаганг (Yumbulagang, 13 км к югу от Цеданга; входной билет 30 юаней) на вершине высокого холма, ныне превращенная в монастырь. Предание гласит, что мощная крепость (намного больше, чем современная) здесь была воздвигнута еще первым правителем Ярлунгской династии Ньятри Цэнпо. Именно в Юмбулаганге, бывшим тогда царским дворцом, на голову царю Лхатхатхори (V в.) упала шкатулка с многочисленными буддистскими текстами. Это событие, как и другие легенды Тибета, отражено на старинных фресках в храме Юмбулаганга. В годы Культурной революции дворец-крепость был уничтожен, а в 1982 г. полностью восстановлен практически в оригинальном виде.
-                Башня Юмбулаганга высотой всего 11 м, но она доминирует над долиной, и с нее открывается прекрасный вид на окрестности.
+                {translate({
+                    ru: `Южнее Цеданга в Ярлунгской долине есть еще несколько средневековых монастырей. Но главной достопримечательностью для туристов, без сомнения, является крепость Юмбулаганг (Yumbulagang, 13 км к югу от Цеданга; входной билет 30 юаней) на вершине высокого холма, ныне превращенная в монастырь. Предание гласит, что мощная крепость (намного больше, чем современная) здесь была воздвигнута еще первым правителем Ярлунгской династии Ньятри Цэнпо. Именно в Юмбулаганге, бывшим тогда царским дворцом, на голову царю Лхатхатхори (V в.) упала шкатулка с многочисленными буддистскими текстами. Это событие, как и другие легенды Тибета, отражено на старинных фресках в храме Юмбулаганга. В годы Культурной революции дворец-крепость был уничтожен, а в 1982 г. полностью восстановлен практически в оригинальном виде.
+                    Башня Юмбулаганга высотой всего 11 м, но она доминирует над долиной, и с нее открывается прекрасный вид на окрестности.`,
+                    en: `South of Tsedang in the Yarlung Valley there are several more medieval monasteries. But the main attraction for tourists, without a doubt, is the Yumbulagang fortress (Yumbulagang, 13 km south of Tsedang; entrance fee 30 yuan) on the top of a high hill, now converted into a monastery. Tradition says that a powerful fortress (much larger than the modern one) was erected here by the first ruler of the Yarlung dynasty, Nyatri Tsenpo. It was in Yumbulangga, which was then the royal palace, that a box with numerous Buddhist texts fell on the head of King Lhathatthori (5th century). This event, like other legends of Tibet, is reflected in ancient frescoes in the Yumbulaganga Temple. During the Cultural Revolution, the palace-fortress was destroyed, and in 1982 it was completely restored almost to its original form.
+                    Yumbulaganga Tower is only 11m high, but it dominates the valley and offers wonderful views of the surrounding area.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentChongye = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/chongye.jpg">
-            <TibetInfoCardTitle>Чонгье</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Чонгье",
+                en: "Chongye"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Курганный комплекс Чонгье (Chon-gue, 26 км от Цеданга; входной билет 35 юаней). По преданию, здесь захоронены такие выдающиеся правители Ярлунгской династии, как Сонгцэн Гампо, который перенес столицу Тибета из Юмбулаганга в Лхасу, и Трисонг Децен (VII-VIII вв.). При них буддизм в Тибете окончательно стал государственной религией. Здесь же в 2021 году был отреставрирован монастырь Риво Дечен (Riwo Dechen). Рядом с ним находятся руины замка Чингва Тагце (Qingwa Tagdze), в котором родился пятый Далай-лама.
+                {translate({
+                    ru: `Курганный комплекс Чонгье (Chon-gue, 26 км от Цеданга; входной билет 35 юаней). По преданию, здесь захоронены такие выдающиеся правители Ярлунгской династии, как Сонгцэн Гампо, который перенес столицу Тибета из Юмбулаганга в Лхасу, и Трисонг Децен (VII-VIII вв.). При них буддизм в Тибете окончательно стал государственной религией. Здесь же в 2021 году был отреставрирован монастырь Риво Дечен (Riwo Dechen). Рядом с ним находятся руины замка Чингва Тагце (Qingwa Tagdze), в котором родился пятый Далай-лама.`,
+                    en: `Chongye Mound Complex (Chon-gue, 26 km from Tsedang; entrance ticket 35 yuan). According to legend, such outstanding rulers of the Yarlung dynasty as Songtsen Gampo, who moved the capital of Tibet from Yumbulagang to Lhasa, and Trisong Detsen (VII-VIII centuries) are buried here. Under them, Buddhism in Tibet finally became the state religion. Here, in 2021, the Riwo Dechen monastery was restored. Nearby are the ruins of Qingwa Tagdze Castle, where the fifth Dalai Lama was born.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
-const ContentBonri = () => {
-    return (
-        <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri.jpg">
-            <TibetInfoCardTitle>Гора Бон Ри</TibetInfoCardTitle>
-            <TibetInfoCardContent>
-                Одно из самых примечательных мест восточного Тибета – это священная гора Бон Ри, особенно для последователей религии бон. Кора вокруг Бон Ри – это важная традиция в их жизни. Бон Ри является горным массивом, в который входит сама Бон Ри с четырьмя вершинами (наивысшая 4600 м )и гора Му Ри с девятью вершинами. Протяженность Коры составляет 72 км и занимает 2 дня. Перевал, через который проходят паломники, высотой около 4000 метров. Кору открыл и прошел первым в 1330 году Рива Дукши (Riwa Duksi), один из мастеров бон.
-                Легенда о возникновении Бон Ри гласит, что, когда основатель бон Шераб Мивоче (Sherab Miwoche) пришел на восток Тибета, его пытался остановить злой дух этих мест. Он создал огромную черную гору на пути Мастера. Шераб же в ответ с помощью мантр и заклинаний сотворил гору большего размера, которая и получила название Бон Ри. На ней находится 4 пещеры для медитаций, расположенные по сторонам света и одна пещера в центре массива. Каждую из них охраняет дух-защитник.
-                Вокруг горы было построено 8 монастырей. Они были разрушены в годы Культурной революции.
-                Сейчас восстановлены только 6.
-            </TibetInfoCardContent>
-        </TibetInfoCard>
-    )
-}
+// const ContentBonri = () => {
+//     return (
+//         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri.jpg">
+//             <TibetInfoCardTitle>Гора Бон Ри</TibetInfoCardTitle>
+//             <TibetInfoCardContent>
+//                 Одно из самых примечательных мест восточного Тибета – это священная гора Бон Ри, особенно для последователей религии бон. Кора вокруг Бон Ри – это важная традиция в их жизни. Бон Ри является горным массивом, в который входит сама Бон Ри с четырьмя вершинами (наивысшая 4600 м )и гора Му Ри с девятью вершинами. Протяженность Коры составляет 72 км и занимает 2 дня. Перевал, через который проходят паломники, высотой около 4000 метров. Кору открыл и прошел первым в 1330 году Рива Дукши (Riwa Duksi), один из мастеров бон.
+//                 Легенда о возникновении Бон Ри гласит, что, когда основатель бон Шераб Мивоче (Sherab Miwoche) пришел на восток Тибета, его пытался остановить злой дух этих мест. Он создал огромную черную гору на пути Мастера. Шераб же в ответ с помощью мантр и заклинаний сотворил гору большего размера, которая и получила название Бон Ри. На ней находится 4 пещеры для медитаций, расположенные по сторонам света и одна пещера в центре массива. Каждую из них охраняет дух-защитник.
+//                 Вокруг горы было построено 8 монастырей. Они были разрушены в годы Культурной революции.
+//                 Сейчас восстановлены только 6.
+//             </TibetInfoCardContent>
+//         </TibetInfoCard>
+//     )
+// }
 
 const ContentKading = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/kading.jpg">
-            <TibetInfoCardTitle>Долина Кадинг</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Долина Кадинг",
+                en: "Kading Valley"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
-                <br />
-                <br />
-                Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.
-                <br />
-                <br />
+                {translate({
+                    ru: <>
+                        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
+                        <br />
+                        <br />
+                        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.</>,
+                    en: <>
+                        The outer kora of Kailash mandala is a pilgrimage route around Mount Kailash, located in Tibet. The route is about 53 kilometers long and takes about 3-4 days.
+                        <br />
+                        <br />
+                        Mount Kailash is considered sacred in Hinduism, Buddhism and Jainism. It is believed that the mountain is the center of the Universe and the habitat of the gods.</>,
+                })}
             </TibetInfoCardContent>
-        </TibetInfoCard>
+        </TibetInfoCard >
     );
 }
 
@@ -1638,95 +1764,167 @@ const ContentGangutso = () => {
 }
 
 const ContentBonriTemple = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/bonri-temple.jpg">
-            <TibetInfoCardTitle>Бонри Гомпа</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Бонри Гомпа",
+                    en: "Bonri Gompa"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Руины монастыря Бонри Гомпа (Bonri Gompa) находятся вдали от озера, в 5,5 км по другую сторону от шоссе G318 (верстовой столб 3928 км), у подножия той самой горы Бон-ри (Bon Ri), которую Миларепа отдал последователям религии бон взамен выигранного у них Кайласа.
+                {translate({
+                    ru: "Руины монастыря Бонри Гомпа (Bonri Gompa) находятся вдали от озера, в 5,5 км по другую сторону от шоссе G318 (верстовой столб 3928 км), у подножия той самой горы Бон-ри (Bon Ri), которую Миларепа отдал последователям религии бон взамен выигранного у них Кайласа.",
+                    en: "The ruins of the Bonri Gompa monastery are located far from the lake, 5.5 km on the other side of the G318 highway (milestone 3928 km), at the foot of the same Bon Ri mountain that Milarepa gave to the followers of the Bon religion in return for Kailash won from them."
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentGosul = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/gosul.jpg">
-            <TibetInfoCardTitle>Монастырь Госул</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Монастырь Госул",
+                    en: "Gosul Monastery"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Госул (высота 4551 м над уровнем моря) является символом юго-западной части Манасаровар-Коры. Он построена чуть правее пещеры, в которой великий Атиша проходил семидневную медитацию. С площадки перед монастырем открывается потрясающая панорама Кайласа и озера. Именно отсюда индусы обычно начинают свою Манасаровар-Кору.
-                Внутри обители находится еще одна пещера, где в XIII в. святой Гоцампа из школы Кагью готовился к восхождению на Кайлас. Он первым прошел Манасаровар-Кору, после чего три месяца медитировал в пещере на берегу озера, а затем совершил Внешнюю Кору вокруг священной горы Кайлас. Маршрутом Гоцампы вокруг озера сейчас идут миллионы людей.
-                Монастырь на этом месте появился в XVII в. Подняться к нему можно по выбитым в скале ступеням. Главной святыней храма является статуя Будды Шакьямуни. Здесь хранится множество драгоценных объектов: Кангьюр (собрание прямых слов Будды), серебряные ступы, статуи Авалокитешвары и ученика Гампопы Дусума Кхьенпы (1110–1193), достигшего Просветления в 50 лет. Особый интерес представляет второй этаж храма: в одной из комнат есть каменная стена с разнообразными глиняными пластинками, представляющими тантрические божества. Это все, что осталось от старого монастыря. В нижнем ряду можно увидеть хранителей шести миров буддизма, в верхнем – изображения священной горы Кайлас.
+                {translate({
+                    ru: `Монастырь Госул (высота 4551 м над уровнем моря) является символом юго-западной части Манасаровар-Коры. Он построена чуть правее пещеры, в которой великий Атиша проходил семидневную медитацию. С площадки перед монастырем открывается потрясающая панорама Кайласа и озера. Именно отсюда индусы обычно начинают свою Манасаровар-Кору.
+                    Внутри обители находится еще одна пещера, где в XIII в. святой Гоцампа из школы Кагью готовился к восхождению на Кайлас. Он первым прошел Манасаровар-Кору, после чего три месяца медитировал в пещере на берегу озера, а затем совершил Внешнюю Кору вокруг священной горы Кайлас. Маршрутом Гоцампы вокруг озера сейчас идут миллионы людей.
+                    Монастырь на этом месте появился в XVII в. Подняться к нему можно по выбитым в скале ступеням. Главной святыней храма является статуя Будды Шакьямуни. Здесь хранится множество драгоценных объектов: Кангьюр (собрание прямых слов Будды), серебряные ступы, статуи Авалокитешвары и ученика Гампопы Дусума Кхьенпы (1110–1193), достигшего Просветления в 50 лет. Особый интерес представляет второй этаж храма: в одной из комнат есть каменная стена с разнообразными глиняными пластинками, представляющими тантрические божества. Это все, что осталось от старого монастыря. В нижнем ряду можно увидеть хранителей шести миров буддизма, в верхнем – изображения священной горы Кайлас.`,
+                    en: `Gosul Monastery (altitude 4551 m above sea level) is a symbol of the southwestern part of Manasarovar Kora. It was built just to the right of the cave in which the great Atisha underwent seven-day meditation. From the platform in front of the monastery there is a stunning panorama of Kailash and the lake. This is where Hindus usually start their Manasarovar Kora.
+                    Inside the monastery there is another cave, where in the 13th century. Saint Gotsampa of the Kagyu school was preparing to climb Mount Kailash. He was the first to complete the Manasarovar Kora, after which he meditated for three months in a cave on the shore of a lake, and then completed the Outer Kora around the sacred Mount Kailash. Millions of people now follow the Gotsampa route around the lake.
+                    The monastery on this site appeared in the 17th century. You can climb to it via steps carved into the rock. The main shrine of the temple is the statue of Buddha Shakyamuni. Many precious objects are kept here: the Kangyur (a collection of direct words of the Buddha), silver stupas, statues of Avalokiteshvara and Gampopa's disciple Dusuma Khyenpa (1110–1193), who achieved Enlightenment at the age of 50. The second floor of the temple is of particular interest: in one of the rooms there is a stone wall with various clay plates representing tantric deities. This is all that remains of the old monastery. In the bottom row you can see the guardians of the six worlds of Buddhism, in the top row - images of the sacred Mount Kailash.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentLangpona = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/langpona.jpg">
-            <TibetInfoCardTitle>Монастырь Лангпона Гомпа</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: `Монастырь Лангпона Гомпа`,
+                    en: `Langpon Gompa Monastery`
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Лангпона Гомпа (Langpona Gompa) – северные ворота Манасаровара. Он стоит на горе, напоминающей по форме хобот слона, отсюда и название (langpona – «хобот слона»). Восстановлен в 1986 г. Рядом протекает река Гьяма Лунг (Gyama Lung).
-                Храм построил учитель школы Кагью Самдеин Пунгког, который очень чтил эти места. В здании монастыря было 36 комнат, шестиколонный зал. Раньше здесь жили 17 монахов, сейчас – 6. Считается, что настоятелем обители являлся сам Будда Чомденте с небольшой статуэткой XII в. Дордже Памо (духовная жена будды Чакрасамвары) на груди, поэтому его образ находится в главном алтаре. Основные святыни – статуи Будды Шакьямуни и Падмасамбхавы. Среди реликвий в храме есть священный бубен, появившийся из Манасаровара, и камень в форме горы Кайлас. При входе во внутренний двор за дверью справа находится зал собраний с изображением Будды Амитабхи.
+                {translate({
+                    ru: `Монастырь Лангпона Гомпа (Langpona Gompa) – северные ворота Манасаровара. Он стоит на горе, напоминающей по форме хобот слона, отсюда и название (langpona – «хобот слона»). Восстановлен в 1986 г. Рядом протекает река Гьяма Лунг (Gyama Lung).
+                    Храм построил учитель школы Кагью Самдеин Пунгког, который очень чтил эти места. В здании монастыря было 36 комнат, шестиколонный зал. Раньше здесь жили 17 монахов, сейчас – 6. Считается, что настоятелем обители являлся сам Будда Чомденте с небольшой статуэткой XII в. Дордже Памо (духовная жена будды Чакрасамвары) на груди, поэтому его образ находится в главном алтаре. Основные святыни – статуи Будды Шакьямуни и Падмасамбхавы. Среди реликвий в храме есть священный бубен, появившийся из Манасаровара, и камень в форме горы Кайлас. При входе во внутренний двор за дверью справа находится зал собраний с изображением Будды Амитабхи.`,
+                    en: `Langpona Gompa Monastery is the northern gate of Manasarovar. It stands on a mountain shaped like an elephant's trunk, hence the name (langpona - “elephant trunk”). Restored in 1986. The Gyama Lung River flows nearby.
+                    The temple was built by the Kagyu school teacher Samdein Phungkog, who greatly revered these places. The monastery building had 36 rooms and a six-column hall. Previously, 17 monks lived here, now - 6. It is believed that the abbot of the monastery was Buddha Chomdente himself with a small figurine of the 12th century. Dorje Pamo (spiritual wife of Buddha Chakrasamvara) is on the chest, so his image is in the main altar. The main shrines are statues of Buddha Shakyamuni and Padmasambhava. Among the relics in the temple is a sacred drum that originated from Manasarovar and a stone in the shape of Mount Kailash. Upon entering the courtyard, behind the door on the right is an assembly hall with an image of Amitabha Buddha.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentManosarovar = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/manosarovar-2.jpg">
-            <TibetInfoCardTitle>Озеро Манасаровар</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Озеро Манасаровар",
+                    en: "Lake Manasarovar"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Озеро Манасаровар – один из самых фантастических природных памятников западного Тибета и одна из главных святынь буддизма в мире наряду с заповедной горой Кайлас. Оно находится на высоте 4590 м. Его площадь – около 500 км2, максимальная глубина 82 м. По размерам Манасаровар можно сравнить с самыми большими высокогорными озерами нашей планеты, но по степени почитаемости и символическому значению равных ему нет. Для представителей сразу четырех религий (буддистов, индуистов, джайнистов и последователей бон) именно здесь, у Кайласа и Манасаровара, бьется сердце Вселенной, проходит ось Земли.
-                Приближение к мандале Кайласа рекомендуется начинать с Манасаровар-Коры, ритуального обхода озера, как бы преддверия Кайлас-Коры. Паломник сначала совершает омовение в Манасароваре и только потом – обход священной горы.
-                В соответствии с индуистской теологией, Брахма – творец Вселенной – создал это озеро из своего ума. На санскрите mana значит «разум», а sarovar – «озеро». По легенде, на рассвете боги нисходят с небес, чтобы принять омовение или испить благодати Манасаровара. Отсюда еще одно его название – Озеро богов. Однако – и в этом сила данного места – пройти путем богов здесь может каждый. Каждый, кто дотронется до заветной воды или выпьет ее, сделает шаг к небесам Шивы. Манасаровар очистит карму от плохой энергии и омрачений, полученных за множество перерождений. Поверхность озера считается символом активной творческой силы Шивы, которая ассоциируется с его супругой Шакти, а в более широком смысле – с женской созидательной мощью Вселенной. Для буддистов Манасаровар – это священное озеро Анаватапта, где, по легенде, королева Майя зачала Будду. Для тибетцев гора символизирует мужской аспект мира, а озеро – женский: Манасаровар-Кора призвана гармонизировать внутренние энергии паломника.
-                Во время своих путешествий я досконально исследовал путь Коры: фотографировал, фиксировал километражи, описывал руины и населенные пункты, беседовал с местными жителями и монахами. Протяженность Коры вокруг озера по береговой линии составляет 91-98 км. Столь большой диапазон вызван трудностями точного исчисления на пересеченной местности, ведь на всем протяжении Коры едва наберется десяток километровых указателей. Как обычно в Тибете, каждый топоним имеет минимум три варианта, пишется на английском, китайском и тибетском языках. Одних только названий Манасаровара насчитывается до полутора десятков!
-                Говорят, что отсчет километража Коры ведется от монастыря Чиу Гомпа (Chiu Gompa). Его особая популярность объясняется не столько близостью к Дарчену (главному центру цивилизации в этих местах), сколько тем, что Чиу – священное место для буддистов. Именно отсюда великий Падмасамбхава ушел в тонкие миры. Хотя по моим наблюдениям, этим местом должны быть руины монастыря Черким Гомпа.
-                Чаще всего для входа (въезда) на маршрут Манасаровар-Коры используют дорогу, начинающуюся около места первого простирания Чакцалкханг (Сhak tsal khang, Ta-ko-cheng) на северо-восточном крае озера. От трассы G318 грунтовая дорога ведет к современному инфоцентру.
-                В информационно-туристическом комплексе, построенном в 2013 году, нужно купить два билета (на одного человека): один для подхода к озеру (150 юаней), второй – для Манасаровар-Коры (110 юаней). Стоянка муниципального транспорта находится слева от ворот. Рядом – длинное двухэтажное здание с сувенирным магазином и туалетом.
-                Приезжающие обычно лишь в туристический сезон европейские туристы крайне редко обходят озеро пешком, предпочитая путешествовать на автобусах или джипах. Паломники совершают Кору только пешком. Для туристов озеро и его побережье – лишь очередная достопримечательность, для паломников – одна из главных святынь Тибета.
-                Пешком Манасаровар-Кора может занимать до четырёх дней, на машине – 3-6 часов.
-                Кора вокруг озера не будет полной без посещения монастырей на его берегах. Изначально вокруг Манасаровара насчитывалось восемь монастырей, соответственно основным и промежуточным сторонам света. Все они были разрушены во время Культурной революции. С середины 1980-х гг. их постепенно начали восстанавливать, но не все и не всегда на тех же местах.
+                {translate({
+                    ru: `Озеро Манасаровар – один из самых фантастических природных памятников западного Тибета и одна из главных святынь буддизма в мире наряду с заповедной горой Кайлас. Оно находится на высоте 4590 м. Его площадь – около 500 км2, максимальная глубина 82 м. По размерам Манасаровар можно сравнить с самыми большими высокогорными озерами нашей планеты, но по степени почитаемости и символическому значению равных ему нет. Для представителей сразу четырех религий (буддистов, индуистов, джайнистов и последователей бон) именно здесь, у Кайласа и Манасаровара, бьется сердце Вселенной, проходит ось Земли.
+                    Приближение к мандале Кайласа рекомендуется начинать с Манасаровар-Коры, ритуального обхода озера, как бы преддверия Кайлас-Коры. Паломник сначала совершает омовение в Манасароваре и только потом – обход священной горы.
+                    В соответствии с индуистской теологией, Брахма – творец Вселенной – создал это озеро из своего ума. На санскрите mana значит «разум», а sarovar – «озеро». По легенде, на рассвете боги нисходят с небес, чтобы принять омовение или испить благодати Манасаровара. Отсюда еще одно его название – Озеро богов. Однако – и в этом сила данного места – пройти путем богов здесь может каждый. Каждый, кто дотронется до заветной воды или выпьет ее, сделает шаг к небесам Шивы. Манасаровар очистит карму от плохой энергии и омрачений, полученных за множество перерождений. Поверхность озера считается символом активной творческой силы Шивы, которая ассоциируется с его супругой Шакти, а в более широком смысле – с женской созидательной мощью Вселенной. Для буддистов Манасаровар – это священное озеро Анаватапта, где, по легенде, королева Майя зачала Будду. Для тибетцев гора символизирует мужской аспект мира, а озеро – женский: Манасаровар-Кора призвана гармонизировать внутренние энергии паломника.
+                    Во время своих путешествий я досконально исследовал путь Коры: фотографировал, фиксировал километражи, описывал руины и населенные пункты, беседовал с местными жителями и монахами. Протяженность Коры вокруг озера по береговой линии составляет 91-98 км. Столь большой диапазон вызван трудностями точного исчисления на пересеченной местности, ведь на всем протяжении Коры едва наберется десяток километровых указателей. Как обычно в Тибете, каждый топоним имеет минимум три варианта, пишется на английском, китайском и тибетском языках. Одних только названий Манасаровара насчитывается до полутора десятков!
+                    Говорят, что отсчет километража Коры ведется от монастыря Чиу Гомпа (Chiu Gompa). Его особая популярность объясняется не столько близостью к Дарчену (главному центру цивилизации в этих местах), сколько тем, что Чиу – священное место для буддистов. Именно отсюда великий Падмасамбхава ушел в тонкие миры. Хотя по моим наблюдениям, этим местом должны быть руины монастыря Черким Гомпа.
+                    Чаще всего для входа (въезда) на маршрут Манасаровар-Коры используют дорогу, начинающуюся около места первого простирания Чакцалкханг (Сhak tsal khang, Ta-ko-cheng) на северо-восточном крае озера. От трассы G318 грунтовая дорога ведет к современному инфоцентру.
+                    В информационно-туристическом комплексе, построенном в 2013 году, нужно купить два билета (на одного человека): один для подхода к озеру (150 юаней), второй – для Манасаровар-Коры (110 юаней). Стоянка муниципального транспорта находится слева от ворот. Рядом – длинное двухэтажное здание с сувенирным магазином и туалетом.
+                    Приезжающие обычно лишь в туристический сезон европейские туристы крайне редко обходят озеро пешком, предпочитая путешествовать на автобусах или джипах. Паломники совершают Кору только пешком. Для туристов озеро и его побережье – лишь очередная достопримечательность, для паломников – одна из главных святынь Тибета.
+                    Пешком Манасаровар-Кора может занимать до четырёх дней, на машине – 3-6 часов.
+                    Кора вокруг озера не будет полной без посещения монастырей на его берегах. Изначально вокруг Манасаровара насчитывалось восемь монастырей, соответственно основным и промежуточным сторонам света. Все они были разрушены во время Культурной революции. С середины 1980-х гг. их постепенно начали восстанавливать, но не все и не всегда на тех же местах.`,
+                    en: `Lake Manasarovar is one of the most fantastic natural monuments of western Tibet and one of the main shrines of Buddhism in the world, along with the protected Mount Kailash. It is located at an altitude of 4590 m. Its area is about 500 km2, the maximum depth is 82 m. In terms of size, Manasarovar can be compared with the largest alpine lakes on our planet, but in terms of the degree of reverence and symbolic significance it has no equal. For representatives of four religions at once (Buddhists, Hindus, Jains and Bon followers), it is here, near Kailash and Manasarovar, that the heart of the Universe beats and the Earth’s axis passes.
+                    It is recommended to start approaching the Kailash mandala from Manasarovar-Kora, a ritual circumambulation of the lake, as if on the threshold of Kailash-Kora. The pilgrim first takes a bath in Manasarovar and only then circumambulates the sacred mountain.
+                    According to Hindu theology, Brahma - the creator of the Universe - created this lake from his mind. In Sanskrit mana means "mind" and sarovar means "lake". According to legend, at dawn the gods descend from heaven to take a bath or drink the grace of Manasarovar. Hence its another name - Lake of the Gods. However - and this is the strength of this place - everyone can follow the path of the gods here. Everyone who touches or drinks the treasured water will take a step towards the heaven of Shiva. Manasarovar will clear karma of bad energy and obscurations received over many rebirths. The surface of the lake is considered a symbol of the active creative power of Shiva, which is associated with his wife Shakti, and in a broader sense - with the feminine creative power of the Universe. For Buddhists, Manasarovar is the sacred Lake Anavatapta, where, according to legend, Queen Maya conceived Buddha. For Tibetans, the mountain symbolizes the male aspect of the world, and the lake - the female: Manasarovar-Kora is designed to harmonize the internal energies of the pilgrim.
+                    During my travels, I thoroughly explored the path of Kora: I took photographs, recorded kilometers, described ruins and settlements, talked with local residents and monks. The length of Kora around the lake along the coastline is 91-98 km. Such a large range is due to the difficulties of accurate calculation on rough terrain, because along the entire length of the Kora there are barely a dozen kilometer markers. As usual in Tibet, each toponym has at least three variants, written in English, Chinese and Tibetan. There are up to one and a half dozen names of Manasarovar alone!
+                    They say that Kora's mileage is counted from the Chiu Gompa monastery. Its particular popularity is explained not so much by its proximity to Darchen (the main center of civilization in these places), but by the fact that Chiu is a sacred place for Buddhists. It was from here that the great Padmasambhava went into the subtle worlds. Although, according to my observations, this place should be the ruins of the Cherkim Gompa monastery.
+                    Most often, to enter the Manasarovar-Kory route, they use the road starting near the place of the first stretch of Chaktsalkhang (Chak tsal khang, Ta-ko-cheng) on the northeastern edge of the lake. From the G318 highway, a dirt road leads to the modern information center.
+                    At the tourist information complex, built in 2013, you need to buy two tickets (per person): one for approaching the lake (150 yuan), the second for Manasarovar Kora (110 yuan). The municipal transport parking lot is located to the left of the gate. Nearby is a long two-story building with a souvenir shop and toilet.
+                    European tourists who usually come only during the tourist season rarely go around the lake on foot, preferring to travel by bus or jeep. Pilgrims make Kora only on foot. For tourists, the lake and its coast are just another attraction; for pilgrims, it is one of the main shrines of Tibet.
+                    Walking to Manasarovar-Kora can take up to four days, by car – 3-6 hours.
+                    The crust around the lake would not be complete without visiting the monasteries on its shores. Initially, there were eight monasteries around Manasarovar, corresponding to the main and intermediate cardinal points. All of them were destroyed during the Cultural Revolution. Since the mid-1980s. they gradually began to be restored, but not all and not always in the same places.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentNjego = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/njego.jpg">
-            <TibetInfoCardTitle>Монастырь Ньего Гомпа</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{
+                translate({
+                    ru: "Монастырь Ньего Гомпа",
+                    en: "Nyego Gompa Monastery"
+                })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Ньего Гомпа (49-й км Манасаровар-Коры), от него сохранились только руины. В 1042 г. здесь проходил путь знаменитого буддистского проповедника, мыслителя и переводчика Атиши Дипанкары Шриджняны (982–1054). Он настолько проникся священной аурой этого места, что задержался в нем на семь дней, посвятив все время буддистским церемониям и медитациям. Он изготавливал жертвенные фигурки из глины. (Эти фигурки называются «цаца» и служат символами божественных качеств ума, необходимых на пути к Просветлению.) Атиша соорудил над своим жертвенником маленькое святилище. Позднее там медитировал святой Нгорчен Кунга Лхундроп. В одном из видений ему явился Падмасамбхава, призвавший святого построить на этом месте монастырь.
+                {translate({
+                    ru: "Монастырь Ньего Гомпа (49-й км Манасаровар-Коры), от него сохранились только руины. В 1042 г. здесь проходил путь знаменитого буддистского проповедника, мыслителя и переводчика Атиши Дипанкары Шриджняны (982–1054). Он настолько проникся священной аурой этого места, что задержался в нем на семь дней, посвятив все время буддистским церемониям и медитациям. Он изготавливал жертвенные фигурки из глины. (Эти фигурки называются «цаца» и служат символами божественных качеств ума, необходимых на пути к Просветлению.) Атиша соорудил над своим жертвенником маленькое святилище. Позднее там медитировал святой Нгорчен Кунга Лхундроп. В одном из видений ему явился Падмасамбхава, призвавший святого построить на этом месте монастырь.",
+                    en: "Nyego Gompa Monastery (49th km of Manasarovar-Kora), only ruins have survived from it. In 1042, the famous Buddhist preacher, thinker and translator Atisha Dipankara Srijnana (982–1054) passed here. He was so imbued with the sacred aura of this place that he stayed there for seven days, devoting all the time to Buddhist ceremonies and meditation. He made sacrificial figurines from clay. (These figures are called “tsatsa” and serve as symbols of the divine qualities of the mind necessary on the path to Enlightenment.) Atisha built a small shrine over his altar. Later, Saint Ngorchen Kunga Lhundrop meditated there. In one of his visions, Padmasambhava appeared to him, calling on the saint to build a monastery on this site."
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentRakshastal = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc={imagesSrc.rakshastal}>
-            <TibetInfoCardTitle>Озеро Ракшастал</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Озеро Ракшастал",
+                en: "Lake Rakshastal"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Озеро Ракшастал (Ланга-Цо; Rakshas Tal, Langa Tso) расположено слева от Манасаровара на высоте 4575 м. Длина его береговой линии составляет примерно 125 км, площадь – 360 км2. Другое название озера Равана Храда связано с правнуком Брахмы Раваной, царем демонов (ракшасов). По одной из легенд, Равана простоял в Ракшастале на одной ноге 1000 лет, поклоняясь Шиве, после чего получил от него сверхсилы (сиддхи). По другой, Равана совершал здесь ягью (огненное подношение) Шиве, причем приносимой жертвой служила его собственная голова. Шива был настолько поражен его самоотречением, что подарил Раване неуязвимость и бессмертие.
-                Манасаровар и Ракшастал образуют как бы союз противоположностей, единство живой и мертвой воды. Формы озер и свойства их поверхностей также указывают на разделение добра и зла, божественного и демонического начал.
-                На озере есть четыре острова: Топсерма, Дола, Лачато и Дошарба. В северо-западной части, примерно в 800 м от берега, находятся руины небольшого монастыря Цепгье (Tsepgye, Chepgye).
-                Канал Ганга-чу (Ganga Chu)
-                Манасаровар и Ракшастал связаны извилистым каналом, вода в котором время от времени иссякает. Тибетцы убеждены, что высыхание Ганга-чу – это предзнаменование трагических событий, что подтверждается многими историческими примерами.
+                {translate({
+                    ru: `Озеро Ракшастал (Ланга-Цо; Rakshas Tal, Langa Tso) расположено слева от Манасаровара на высоте 4575 м. Длина его береговой линии составляет примерно 125 км, площадь – 360 км2. Другое название озера Равана Храда связано с правнуком Брахмы Раваной, царем демонов (ракшасов). По одной из легенд, Равана простоял в Ракшастале на одной ноге 1000 лет, поклоняясь Шиве, после чего получил от него сверхсилы (сиддхи). По другой, Равана совершал здесь ягью (огненное подношение) Шиве, причем приносимой жертвой служила его собственная голова. Шива был настолько поражен его самоотречением, что подарил Раване неуязвимость и бессмертие.
+                    Манасаровар и Ракшастал образуют как бы союз противоположностей, единство живой и мертвой воды. Формы озер и свойства их поверхностей также указывают на разделение добра и зла, божественного и демонического начал.
+                    На озере есть четыре острова: Топсерма, Дола, Лачато и Дошарба. В северо-западной части, примерно в 800 м от берега, находятся руины небольшого монастыря Цепгье (Tsepgye, Chepgye).
+                    Канал Ганга-чу (Ganga Chu)
+                    Манасаровар и Ракшастал связаны извилистым каналом, вода в котором время от времени иссякает. Тибетцы убеждены, что высыхание Ганга-чу – это предзнаменование трагических событий, что подтверждается многими историческими примерами.`,
+                    en: `Lake Rakshastal (Langa Tso; Rakshas Tal, Langa Tso) is located to the left of Manasarovar at an altitude of 4575 m. The length of its coastline is approximately 125 km, area - 360 km2. Another name for Lake Ravana Hrada is associated with Brahma's great-grandson Ravana, the king of demons (rakshasas). According to one legend, Ravana stood in Rakshasthala on one leg for 1000 years, worshiping Shiva, after which he received superpowers (siddhis) from him. According to another, Ravana performed a yajna (fire offering) to Shiva here, and his own head served as the sacrifice. Shiva was so impressed by his self-denial that he gave Ravana invulnerability and immortality.
+                    Manasarovar and Rakshastal form, as it were, a union of opposites, a unity of living and dead water. The shapes of lakes and the properties of their surfaces also indicate the division of good and evil, divine and demonic principles.
+                    There are four islands on the lake: Topserma, Dola, Lachato and Dosharba. In the northwestern part, about 800 m from the coast, there are the ruins of the small monastery of Tsepgye (Chepgye).
+                    Ganga Chu Channel
+                    Manasarovar and Rakshastal are connected by a winding canal, the water in which dries up from time to time. Tibetans are convinced that the drying up of the Ganga-chu is an omen of tragic events, which is confirmed by many historical examples.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentSeralung = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/seralung.jpg">
-            <TibetInfoCardTitle>Монастырь Сералунг Гомпа</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Сералунг Гомпа",
+                en: "Seralung Gompa Monastery"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Сералунг Гомпа (28 км Маносаровар-Коры) Это восточные ворота озера. «Монастырь терновой долины» основан в XI в., восстановлен в 1984 г. Он расположен в защищенном от стихий месте, но так близко к озеру, что приезжие сначала видят лишь небольшой бело-красный чортен и только потом сам небольшой монастырский комплекс. Раньше Сералунг Гомпа стоял в стороне от озера, в глубине долины. Новое место для него нашли с помощью предсказаний. Если раньше от монастыря просматривалась лишь тонкая полоска озера, то теперь перед наблюдателем открывается превосходная панорама.
-                Основание монастыря связано с просветленным мастером Гонджо из линии Дрикунг школы Кагью, которому его Драгоценный учитель повелел: «У восточных ворот омовений на озере Цо Мапам, в подобной раскрывшемуся цветку лотоса земле золотых лепестков вод Джамбу есть горы, которые соответствуют аспектам трех защитников: Авалокитешваре, Манджушри и Ваджрапани. Там создай место для уединения».
-                В монастыре можно увидеть статую Авалокитешвары, скульптурное изображение Будды Шакьямуни, четыре буддистских реликвии Самбхавы, рукопись великого переводчика Байруо Зана, подушку Дабу Раджа, волосы проявленного бодхисаттвы Седьмого Брахмана, мастера Дунджи из линии Кадампа и проявленного бодхисаттвы, мастера Куджи Пункога. Когда-то в Сералунг Гомпа было 24 помещения и колонный зал, в котором содержались священные рукописи. Во времена расцвета здесь находились от 42 до 50 монахов. Восстановленная в 1984году  обитель состояла из одного здания. За последнее время монастырь стал гораздо больше. Построили еще один храм, посвященный Падмасабхаве.
+                {translate({
+                    ru: `Монастырь Сералунг Гомпа (28 км Маносаровар-Коры) Это восточные ворота озера. «Монастырь терновой долины» основан в XI в., восстановлен в 1984 г. Он расположен в защищенном от стихий месте, но так близко к озеру, что приезжие сначала видят лишь небольшой бело-красный чортен и только потом сам небольшой монастырский комплекс. Раньше Сералунг Гомпа стоял в стороне от озера, в глубине долины. Новое место для него нашли с помощью предсказаний. Если раньше от монастыря просматривалась лишь тонкая полоска озера, то теперь перед наблюдателем открывается превосходная панорама.
+                    Основание монастыря связано с просветленным мастером Гонджо из линии Дрикунг школы Кагью, которому его Драгоценный учитель повелел: «У восточных ворот омовений на озере Цо Мапам, в подобной раскрывшемуся цветку лотоса земле золотых лепестков вод Джамбу есть горы, которые соответствуют аспектам трех защитников: Авалокитешваре, Манджушри и Ваджрапани. Там создай место для уединения».
+                    В монастыре можно увидеть статую Авалокитешвары, скульптурное изображение Будды Шакьямуни, четыре буддистских реликвии Самбхавы, рукопись великого переводчика Байруо Зана, подушку Дабу Раджа, волосы проявленного бодхисаттвы Седьмого Брахмана, мастера Дунджи из линии Кадампа и проявленного бодхисаттвы, мастера Куджи Пункога. Когда-то в Сералунг Гомпа было 24 помещения и колонный зал, в котором содержались священные рукописи. Во времена расцвета здесь находились от 42 до 50 монахов. Восстановленная в 1984году  обитель состояла из одного здания. За последнее время монастырь стал гораздо больше. Построили еще один храм, посвященный Падмасабхаве.`,
+                    en: `Seralung Gompa Monastery (28 km Manosarovar Kora) This is the eastern gate of the lake. “Monastery of the Valley of Thorns” was founded in the 11th century, restored in 1984. It is located in a place protected from the elements, but so close to the lake that visitors first see only a small white and red chorten and only then the small monastic complex itself. Previously, Seralung Gompa stood away from the lake, in the depths of the valley. A new place for him was found with the help of predictions. If previously only a thin strip of the lake was visible from the monastery, now an excellent panorama opens up before the observer.
+                    The foundation of the monastery is associated with the enlightened master Gonjo of the Drikung lineage of the Kagyu school, who was commanded by his Precious teacher: “At the eastern gate of ablutions on Lake Tso Mapam, in the open lotus flower-like land of the golden petals of the waters of Jambu, there are mountains that correspond to the aspects of the three protectors: Avalokiteshvara, Manjushri and Vajrapani. Create a place for privacy there.”
+                    In the monastery you can see a statue of Avalokiteshvara, a sculpture of Buddha Shakyamuni, four Buddhist relics of Sambhava, a manuscript of the great translator Bairuo Zan, the pillow of Dabu Raja, the hair of the manifested bodhisattva of the Seventh Brahman, master Dunji of the Kadampa lineage and the manifested bodhisattva, master Kuji Punkog. Seralung Gompa once had 24 rooms and a pillared hall that contained sacred manuscripts. During its heyday, there were from 42 to 50 monks here. The monastery, restored in 1984, consisted of one building. Recently the monastery has become much larger. They built another temple dedicated to Padmasabhava.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
@@ -1734,27 +1932,46 @@ const ContentSeralung = () => {
 
 
 const ContentTrugo = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/trugo.jpg">
-            <TibetInfoCardTitle>Монастырь Тхуголхо</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Тхуголхо",
+                en: "Thugolho Monastery"
+            })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Тхуголхо (Thugolho); еще одно название Труго Гомпа, (Trugo Gompa). Он находится прямо на берегу Манасаровара, у подножия горы Гурла-Мандхата. «Тху» переводится как омовение, «го» – голова, «лхо» – юг. Омовение головы у южных ворот Манасаровара является с духовной точки зрения исключительно благословенным действом, поскольку в пророчествах сказано: кто здесь предастся омовению головы, переродится богом. Для паломников, желающих омыть голову, устроены специальные мостки.
-                Обители насчитывается около 900 лет. Это одно из самых больших и хорошо сохранившихся культовых сооружений у Манасаровара.
-                История монастыря началась с маленькой хижины, которая могла вместить двух человек. Она была построена для монахов школы Кагью мастером той же школы Джиеввой. Со временем хижина превратилась в небольшое четыреёхколонное пространство, а затем – в большой зал.
-                Когда у власти был седьмой Далай-лама Келсанг Гьяцо (1708–1757), настоятели окрестных монастырей постоянно спорили по поводу права на выморочное имущество крестьянских хозяйств и лугов в этом районе. Дело дошло до того, что пришлось вмешаться Верховному государственному совету (кашаг). Он и принял решение, по которому весь район отошел к монастырю Труго Гомпа. Со временем в обители построили 18 помещений и 12-колонный главный зал. Когда-то тут жили 8 монахов, хранилось золотое изображение воина-спутника Будды и две керамические фигуры – Будды Шакьямуни и Дзамбалы. Монастырь частично пострадал в годы Культурной революции, но был полностью восстановлен в 1984 г. Сейчас здесь можно увидеть статуи богини Тары, Будд прошлого, настоящего и будущего, а также Авалокитешвары, Манджушри и Ваджрапани.
+                {translate({
+                    ru: `Монастырь Тхуголхо (Thugolho); еще одно название Труго Гомпа, (Trugo Gompa). Он находится прямо на берегу Манасаровара, у подножия горы Гурла-Мандхата. «Тху» переводится как омовение, «го» – голова, «лхо» – юг. Омовение головы у южных ворот Манасаровара является с духовной точки зрения исключительно благословенным действом, поскольку в пророчествах сказано: кто здесь предастся омовению головы, переродится богом. Для паломников, желающих омыть голову, устроены специальные мостки.
+                    Обители насчитывается около 900 лет. Это одно из самых больших и хорошо сохранившихся культовых сооружений у Манасаровара.
+                    История монастыря началась с маленькой хижины, которая могла вместить двух человек. Она была построена для монахов школы Кагью мастером той же школы Джиеввой. Со временем хижина превратилась в небольшое четыреёхколонное пространство, а затем – в большой зал.
+                    Когда у власти был седьмой Далай-лама Келсанг Гьяцо (1708–1757), настоятели окрестных монастырей постоянно спорили по поводу права на выморочное имущество крестьянских хозяйств и лугов в этом районе. Дело дошло до того, что пришлось вмешаться Верховному государственному совету (кашаг). Он и принял решение, по которому весь район отошел к монастырю Труго Гомпа. Со временем в обители построили 18 помещений и 12-колонный главный зал. Когда-то тут жили 8 монахов, хранилось золотое изображение воина-спутника Будды и две керамические фигуры – Будды Шакьямуни и Дзамбалы. Монастырь частично пострадал в годы Культурной революции, но был полностью восстановлен в 1984 г. Сейчас здесь можно увидеть статуи богини Тары, Будд прошлого, настоящего и будущего, а также Авалокитешвары, Манджушри и Ваджрапани.`,
+                    en: `Thugolho Monastery; another name for Trugo Gompa. It is located right on the banks of Manasarovar, at the foot of the Gurla Mandhata mountain. “Thu” is translated as ablution, “go” means head, “lho” means south. Washing the head at the southern gate of Manasarovar is an extremely blessed act from a spiritual point of view, since the prophecies say: whoever indulges in washing the head here will be reborn as a god. There are special bridges for pilgrims who want to wash their heads.
+                    The monastery is about 900 years old. This is one of the largest and best preserved religious buildings near Manasarovar.
+                    The history of the monastery began with a small hut that could accommodate two people. It was built for the monks of the Kagyu school by the master of the same school, Jievva. Over time, the hut turned into a small four-column space, and then into a large hall.
+                    When the seventh Dalai Lama Kelsang Gyatso (1708–1757) was in power, the abbots of the surrounding monasteries constantly argued over the right to escheat the property of peasant farms and meadows in the area. Things got to the point where the Supreme State Council (kashag) had to intervene. He made a decision according to which the entire area went to the Trugo Gompa monastery. Over time, 18 rooms and a 12-column main hall were built in the monastery. Once upon a time, 8 monks lived here, a golden image of Buddha’s warrior companion and two ceramic figures – Shakyamuni Buddha and Dzambhala – were kept here. The monastery was partially damaged during the Cultural Revolution, but was completely restored in 1984. Now here you can see statues of the goddess Tara, Buddhas of the past, present and future, as well as Avalokiteshvara, Manjushri and Vajrapani.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
 }
 
 const ContentCherkip = () => {
+    const translate = useTranslateFn()
     return (
         <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/cherkip.jpg">
-            <TibetInfoCardTitle>Монастырь Черкип Гомпа</TibetInfoCardTitle>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Черкип Гомпа",
+                en: "Cherkip Gompa Monastery"
+            })} </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Черкип Гомпа (Cherkip Gompa) – самой маленькой из восьми обителей на берегах Манасаровара, до сих пор не восстановленной.
-                Рядом с руинами монастыря можно увидеть несколько пещер для медитаций, которыми пользуются и до сих пор. Они находятся на отвесных скалах, смотрящих на озеро.
-                Хотя мне говорили, что Кора начинается от монастыря Чиу, но обнаруженные рядом с Черким Гомпа нескольких верстовых камней говорят о том, что Кора начиналась именно от этого монастыря.
+                {translate({
+                    ru: `Монастырь Черкип Гомпа (Cherkip Gompa) – самой маленькой из восьми обителей на берегах Манасаровара, до сих пор не восстановленной.
+                    Рядом с руинами монастыря можно увидеть несколько пещер для медитаций, которыми пользуются и до сих пор. Они находятся на отвесных скалах, смотрящих на озеро.
+                    Хотя мне говорили, что Кора начинается от монастыря Чиу, но обнаруженные рядом с Черким Гомпа нескольких верстовых камней говорят о том, что Кора начиналась именно от этого монастыря.`,
+                    en: `Cherkip Gompa Monastery is the smallest of the eight monasteries on the banks of Manasarovar, which has not yet been restored.
+                    Near the ruins of the monastery you can see several caves for meditation, which are still used today. They are on steep cliffs overlooking the lake.
+                    Although I was told that Kora begins from the Chiu monastery, several milestone stones discovered near Cherkiy Gompa indicate that Kora began precisely from this monastery.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )
@@ -1765,12 +1982,20 @@ const ContentChiu = () => {
     return (
         <TibetInfoCard imageSrc={imagesSrc.chiu}>
             <TibetInfoCardTitle>
-                Монастырь Чиу Гомпа
+                {translate({
+                    ru: "Монастырь Чиу Гомпа",
+                    en: "Chiu Gompa Monastery"
+                })}
             </TibetInfoCardTitle>
             <TibetInfoCardContent>
-                Монастырь Чиу Гомпа - единственная обитель, где взимают плату за вход (25 юаней). Впрочем, многие туристы ограничиваются посещением лишь этого монастыря.
-                Название Чиу Гомпа (Chiu Gompa) переводится как «птичий монастырь», что вполне оправданно: культовое сооружение, подобно птичьему гнезду, словно прилеплено к высокой каменной пирамиде. Изначально Чиу Гомпа был построен на горе овальной формы Сангдуо Байре («Медная гора»). Центральное Место Силы здесь – пещера VIII в., в которой медитировал Падмасамбхава. Здесь он провел последние семь дней своей земной жизни. Легенды говорят, что, победив местных жрецов и обязав их исповедовать буддизм в Тибете, Падмасамбхава покинул страну на белом коне и взошел на небо по радуге. Он отправился на остров к югу от Джамбудвипы (один из четырех материков в мировом океане, которые, согласно буддийской космологии, располагаются по четырем сторонам граням центральной горы мироздания Меру), где удалился в трехступенчатый храм на вершине горы. Окружность острова одновременно является и окружностью мандалы, с четырьмя воротами и четырьмя охраняющими ее стражами.
-                Монахи традиции Дрикунг школы Кагью возвели точную копию «славного, цвета меди рая на горе». Три чортена в Чиу Гомпа напоминают о «чистой земле» Падмасамбхавы, куда стремится попасть для перерождения каждый буддист.
+                {translate({
+                    ru: `Монастырь Чиу Гомпа - единственная обитель, где взимают плату за вход (25 юаней). Впрочем, многие туристы ограничиваются посещением лишь этого монастыря.
+                    Название Чиу Гомпа (Chiu Gompa) переводится как «птичий монастырь», что вполне оправданно: культовое сооружение, подобно птичьему гнезду, словно прилеплено к высокой каменной пирамиде. Изначально Чиу Гомпа был построен на горе овальной формы Сангдуо Байре («Медная гора»). Центральное Место Силы здесь – пещера VIII в., в которой медитировал Падмасамбхава. Здесь он провел последние семь дней своей земной жизни. Легенды говорят, что, победив местных жрецов и обязав их исповедовать буддизм в Тибете, Падмасамбхава покинул страну на белом коне и взошел на небо по радуге. Он отправился на остров к югу от Джамбудвипы (один из четырех материков в мировом океане, которые, согласно буддийской космологии, располагаются по четырем сторонам граням центральной горы мироздания Меру), где удалился в трехступенчатый храм на вершине горы. Окружность острова одновременно является и окружностью мандалы, с четырьмя воротами и четырьмя охраняющими ее стражами.
+                    Монахи традиции Дрикунг школы Кагью возвели точную копию «славного, цвета меди рая на горе». Три чортена в Чиу Гомпа напоминают о «чистой земле» Падмасамбхавы, куда стремится попасть для перерождения каждый буддист.`,
+                    en: `Chiu Gompa Monastery is the only monastery that charges an entrance fee (25 yuan). However, many tourists limit themselves to visiting only this monastery.
+                    The name Chiu Gompa is translated as “bird monastery,” which is quite justified: the religious building, like a bird’s nest, seems to be stuck to a high stone pyramid. Chiu Gompa was originally built on the oval-shaped mountain Sangduo Baire (“Copper Mountain”). The central Place of Power here is the 8th century cave in which Padmasambhava meditated. Here he spent the last seven days of his earthly life. Legends say that, having defeated the local priests and obliged them to practice Buddhism in Tibet, Padmasambhava left the country on a white horse and ascended to heaven along the rainbow. He went to an island south of Jambudvipa (one of the four continents in the world's oceans, which, according to Buddhist cosmology, are located on the four sides of the central mountain of the universe, Meru), where he retired to a three-tiered temple on the top of the mountain. The circumference of the island is also the circumference of the mandala, with four gates and four guards guarding it.
+                    Monks of the Drikung Kagyu tradition built a replica of the “glorious, copper-colored heaven on the mountain.” The three chortens in Chiu Gompa are reminiscent of Padmasambhava’s “pure land”, where every Buddhist strives to go for rebirth.`
+                })}
             </TibetInfoCardContent>
         </TibetInfoCard>
     )

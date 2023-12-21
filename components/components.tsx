@@ -977,7 +977,13 @@ export const Navbar = () => {
                   }}
                   className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0 cursor-pointer"
                 >
-                  {language === 'ru' ? 'En' : 'Ru'}
+                  <div className="flex items-center relative">
+                    {language === 'ru' ? 'En' : 'Ru'}
+                    <span className="text-3xl absolute left-8">
+                      {language === 'ru' ? '🇺🇸' : '🇷🇺'}
+
+                    </span>
+                  </div>
                 </a>
               </li>
             </ul>
