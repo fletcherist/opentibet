@@ -2,6 +2,7 @@ import { Navbar } from '@/components/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Unbounded } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Unbounded({ subsets: ['cyrillic', 'latin'] })
 
@@ -23,14 +24,16 @@ export default function RootLayout({
       <body className={inter.className} id='google_translate_element'>
         {children}
       </body>
-      {/* <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      <script async type="text/javascript" dangerouslySetInnerHTML={{
-        __html: `function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'ru' }, 'google_translate_element');
-}
-`
-      }}>
-      </script> */}
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-H4YQQCN7MK" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-H4YQQCN7MK');
+        `}
+      </Script>
     </html>
   )
 }
