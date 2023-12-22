@@ -1,6 +1,6 @@
 
 
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableButton } from "@/components/components";
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TourButton } from "@/components/components";
 import { TourBasicTimetable } from "@/components/ToursTimetable";
 import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
 
@@ -85,7 +85,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             Всё, что нужно паломнику
                         </p>
                     </div>
-                    <TimetableButton
+                    <TourButton
                         title={`${translationsMap[month].charAt(0).toUpperCase()}${translationsMap[month].slice(1)}`}
                         subtitle={`2—19 ${translationsMap[month]}`}
                         days={15}

@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## [https://opentibet.ru](https://opentibet.ru)
 
-## Getting Started
+## есть 2 варианта, как делать изменения
 
-First, run the development server:
+1. Открыть [https://jubilant-spoon-g4rprq9w95xhp9rr.github.dev/](https://jubilant-spoon-g4rprq9w95xhp9rr.github.dev/) в браузере и редактировать файлы в веб-интерфейсе, после чего закоммитить изменения в репозиторий, после чего они автоматически раскидаются на 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Склонировать репозиторий к себе на компьютер и редактировать файлы в любом текстовом редакторе
+поставить [NodeJS](https://nodejs.org/en), в папке с проектом написать
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. `npm install` для установки зависимостей
+2. `npm run dev` для запуска локального сервера
+3. открыть в браузере [http://localhost:3000](http://localhost:3000)
+4. изменения в коде будут автоматически сразу отображаться в браузере
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Как добавить новую программу
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Создать файл в папке `/app/tours/[название_тура]/page.tsx`
+2. Скопировать туда всё из файла `/app/tours/tibet-isoki/page.tsx`
+3. После этого нужно скопировать [шаблон](https://github.com/fletcherist/opentibet/blob/490731efa13ce75c6430c5e872628560b8a9f2bf/components/ToursTimetable.tsx#L188) экслюзивного тура на июнь и поменять в нём тексты и картинки
+4. `[название_тура]` соответствует названию тура в ссылке, например, если ссылка на тур `https://opentibet.ru/tours/tibet-isoki`, то `[название_тура]` будет `tibet-isoki`
+5. После того, как страница готова, можно добавить на неё ссылку в эксклюзивных программах в файле `/app/page.tsx` [в этом месте](https://github.com/fletcherist/opentibet/blob/490731efa13ce75c6430c5e872628560b8a9f2bf/app/page.tsx#L1498)
+6. После того, как вы закоммитите изменения, они автоматически появятся на сайте

@@ -599,7 +599,7 @@ const getNoun = (n: number, one: string, two: string, five: string) => {
   return five;
 };
 
-export const TimetableButton: React.FC<{
+export const TourButton: React.FC<{
   title: string;
   subtitle: string;
   days: number;

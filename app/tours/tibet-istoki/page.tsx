@@ -1,6 +1,6 @@
 
 
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableButton } from "@/components/components";
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TourButton } from "@/components/components";
 import { TourBasicTimetable, TourExclusiveTimetable } from "@/components/ToursTimetable";
 import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
 
@@ -59,7 +59,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             Авторский маршрут Алексея Перчукова
                         </p>
                     </div>
-                    <TimetableButton
+                    <TourButton
                         title="Июнь"
                         subtitle="2—21 июня"
                         days={24}

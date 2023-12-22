@@ -11,7 +11,7 @@ import {
   ActionButton,
   IconArrowDown,
   IconArrowClose,
-  TimetableButton,
+  TourButton,
   BackgroundSlider,
   ButtonWithContent,
   Header,
@@ -1415,7 +1415,7 @@ const ToursTabs = () => {
           </p>
           <div>
             <Link href={"/tours/tibet-may-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title={translate({
                   ru: "Май",
                   en: "May"
@@ -1428,7 +1428,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-june-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Июнь"
                 subtitle="6—19 июня"
                 days={14}
@@ -1438,7 +1438,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-july-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Июль"
                 subtitle="1—23 июля"
                 days={14}
@@ -1448,7 +1448,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-august-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Август"
                 subtitle="2—19 августа"
                 days={14}
@@ -1458,7 +1458,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-september-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Сентябрь"
                 subtitle="2—21 сентября"
                 days={14}
@@ -1468,7 +1468,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-october-2024"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Октябрь"
                 subtitle="2—23 октября"
                 days={14}
@@ -1495,7 +1495,7 @@ const ToursTabs = () => {
           </p>
           <div>
             <Link href={"/tours/tibet-istoki"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Май"
                 subtitle="2—19 мая"
                 days={20}
@@ -1508,7 +1508,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-istoki"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Июнь"
                 subtitle="2—21 июнь"
                 days={20}
@@ -1521,7 +1521,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-istoki"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Сентябрь"
                 subtitle="2—23 сентября"
                 days={21}
@@ -1534,7 +1534,7 @@ const ToursTabs = () => {
               />
             </Link>
             <Link href={"/tours/tibet-istoki"} target="_blank">
-              <TimetableButton
+              <TourButton
                 title="Октябрь"
                 subtitle="2—23 октября"
                 days={21}
