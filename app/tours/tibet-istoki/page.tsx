@@ -61,7 +61,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                     </div>
                     <TimetableButton
                         title="Июнь"
-                        subtitle="2—19 мая"
+                        subtitle="2—21 июня"
                         days={24}
                         price={3600}
                         bgColor="yellow-500"
