@@ -525,7 +525,12 @@ export const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
         <>
             <TimetableDay accentColor={accentColor} title="1 день">
                 {translate({
-                    ru: "Тут текст первого дня",
+                    ru: <>
+                        <div>
+                            <b>Тут текст первого дня</b>
+                            <TimetablePhoto src={imagesSrc.jokang} title="Монастырь Джоканг" />
+                        </div>
+                    </>,
                     en: "Text for day 1"
                 })}
             </TimetableDay>

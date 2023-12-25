@@ -19,7 +19,7 @@ import {
 import Link from "next/link";
 import { TimetableFactoid } from "./ToursTimetable";
 import { imagesSrc } from "./TibetInfo";
-import { useLanguage, useSetLanguage, useTranslateFn } from "@/lib/language";
+import { Language, LanguageProvider, useLanguage, useSetLanguage, useTranslateFn } from "@/lib/language";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -1075,5 +1075,21 @@ export const LinkTours: React.FC = () => {
         </svg>
       </div>
     </Link>
+  )
+}
+
+export const WithLanguageProvider: React.FC<{
+  children: React.ReactNode
+}> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('ru')
+  return (
+    <LanguageProvider value={{
+      language: language,
+      setLanguage: (language) => {
+        setLanguage(language)
+      }
+    }}>
+      {children}
+    </LanguageProvider>
   )
 }

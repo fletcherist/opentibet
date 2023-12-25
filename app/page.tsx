@@ -18,6 +18,7 @@ import {
   ApplyForm,
   Navbar,
   Footer,
+  WithLanguageProvider,
 } from "../components/components";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -33,19 +34,12 @@ import {
 } from "@/utils/constants";
 import Link from "next/link";
 import { Language, LanguageProvider, useLanguage, useTranslate, useTranslateFn, useTranslateMap } from "@/lib/language";
-import { useState } from "react";
 
 export default function Page() {
-  const [language, setLanguage] = useState<Language>('ru')
   return (
-    <LanguageProvider value={{
-      language: language,
-      setLanguage: (language) => {
-        setLanguage(language)
-      }
-    }}>
+    <WithLanguageProvider>
       <Home />
-    </LanguageProvider>
+    </WithLanguageProvider>
   )
 }
 
