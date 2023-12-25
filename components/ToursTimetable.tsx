@@ -1,4 +1,5 @@
 "use client";
+import { useTranslateFn } from "@/lib/language";
 import { imagesSrc } from "./TibetInfo";
 import { TimetableDay, TimetablePhoto, TimetablePhotoDouble } from "./components";
 
@@ -519,13 +520,20 @@ export const TourExclusiveMay = ({ accentColor = "blue-500" }) => {
 }
 
 export const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
+    const translate = useTranslateFn()
     return (
         <>
             <TimetableDay accentColor={accentColor} title="1 день">
-                Тут текст первого дня
+                {translate({
+                    ru: "Тут текст первого дня",
+                    en: "Text for day 1"
+                })}
             </TimetableDay>
             <TimetableDay accentColor={accentColor} title="2 день">
-                Текст с картинкой
+                {translate({
+                    ru: "Текст с картинкой",
+                    en: "text with picture"
+                })}
                 <TimetablePhoto src={imagesSrc.jokang} title="Монастырь Джоканг" />
             </TimetableDay>
         </>
