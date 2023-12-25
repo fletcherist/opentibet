@@ -1,8 +1,8 @@
 
 
 import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TourButton } from "@/components/components";
-import { TourBasicTimetable, TourExclusiveMay } from "@/components/ToursTimetable";
-import { LINK_APPLY_FORM, LINK_OFFERS, Month, getTourPriceForMonth } from "@/utils/constants";
+import { TourBasicTimetable, TourExclusiveJune } from "@/components/ToursTimetable";
+import { LINK_APPLY_FORM, LINK_OFFERS, Month } from "@/utils/constants";
 
 export default function ({ params }: { params: { tibet: string } }) {
     return (
@@ -35,10 +35,6 @@ export default function ({ params }: { params: { tibet: string } }) {
                         </div>
                         <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
                             Эксклюзивный маршрут в июне 2024
-                            {/* Большинство паломников, приезжающих в Тибет, осматривают лишь самые популярные туристические места.
-                            <br />
-                            У вас есть уникальная возможность оказаться там, куда обычному туристу не попасть.
-                            <br /> */}
                         </div>
                         <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
                             <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
@@ -75,7 +71,7 @@ export default function ({ params }: { params: { tibet: string } }) {
             </div>
             <div className="pt-10" />
             <div className="max-w-4xl">
-                <TourExclusiveMay />
+                <TourExclusiveJune />
                 <ApplyForm />
             </div>
             <div className="pt-20" />

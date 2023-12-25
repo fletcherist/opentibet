@@ -185,7 +185,7 @@ export const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
     );
 };
 
-export const TourExclusiveTimetable = ({ accentColor = "blue-500" }) => {
+export const TourExclusiveMay = ({ accentColor = "blue-500" }) => {
     return (
         <>
             <TimetableDay accentColor={accentColor} title="1 день">
@@ -513,6 +513,20 @@ export const TourExclusiveTimetable = ({ accentColor = "blue-500" }) => {
             </TimetableDay>
             <TimetableDay accentColor={accentColor} title="21 день">
                 Авиаперелет <b>Лхаса-Ченду</b>
+            </TimetableDay>
+        </>
+    );
+}
+
+export const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
+    return (
+        <>
+            <TimetableDay accentColor={accentColor} title="1 день">
+                Тут текст первого дня
+            </TimetableDay>
+            <TimetableDay accentColor={accentColor} title="2 день">
+                Текст с картинкой
+                <TimetablePhoto src={imagesSrc.jokang} title="Монастырь Джоканг" />
             </TimetableDay>
         </>
     );

@@ -1507,10 +1507,10 @@ const ToursTabs = () => {
                 withBorder
               />
             </Link>
-            <Link href={"/tours/tibet-istoki"} target="_blank">
+            <Link href={"/tours/tibet-istoki-june"} target="_blank">
               <TourButton
                 title="Июнь"
-                subtitle="2—21 июнь"
+                subtitle="2—21 июня"
                 days={20}
                 price={3600}
                 bgColor="yellow-500"
