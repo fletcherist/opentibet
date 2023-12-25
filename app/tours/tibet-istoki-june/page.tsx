@@ -1,5 +1,8 @@
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TourButton, WithLanguageProvider } from "@/components/components";
-import { TourBasicTimetable, TourExclusiveJune } from "@/components/ToursTimetable";
+"use client"
+
+import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableDay, TimetablePhoto, TourButton, WithLanguageProvider } from "@/components/components";
+import { imagesSrc } from "@/components/TibetInfo";
+import { useTranslateFn } from "@/lib/language";
 import { LINK_APPLY_FORM, LINK_OFFERS, Month } from "@/utils/constants";
 
 export default function ({ params }: { params: { tibet: string } }) {
@@ -78,4 +81,30 @@ export default function ({ params }: { params: { tibet: string } }) {
             </main>
         </WithLanguageProvider>
     )
+}
+
+const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
+    const translate = useTranslateFn()
+    return (
+        <>
+            <TimetableDay accentColor={accentColor} title="1 день">
+                {translate({
+                    ru: <>
+                        <div>
+                            <b>Тут текст первого дня</b>
+                            <TimetablePhoto src={imagesSrc.jokang} title="Монастырь Джоканг" />
+                        </div>
+                    </>,
+                    en: "Text for day 1"
+                })}
+            </TimetableDay>
+            <TimetableDay accentColor={accentColor} title="2 день">
+                {translate({
+                    ru: "Текст с картинкой",
+                    en: "text with picture"
+                })}
+                <TimetablePhoto src={imagesSrc.jokang} title="Монастырь Джоканг" />
+            </TimetableDay>
+        </>
+    );
 }
