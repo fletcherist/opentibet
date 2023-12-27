@@ -1488,7 +1488,7 @@ const ToursTabs = () => {
             })}
           </p>
           <div>
-            <Link href={"/tours/tibet-istoki-may-2024"} target="_blank">
+            <Link href={"/tours/tibet-alex-may-2024"} target="_blank">
               <TourButton
                 title="Май"
                 subtitle="3—23 мая"
