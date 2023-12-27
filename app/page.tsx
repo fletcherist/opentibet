@@ -1488,12 +1488,12 @@ const ToursTabs = () => {
             })}
           </p>
           <div>
-            <Link href={"/tours/tibet-istoki"} target="_blank">
+            <Link href={"/tours/tibet-istoki-may-2024"} target="_blank">
               <TourButton
                 title="Май"
-                subtitle="2—19 мая"
-                days={20}
-                price={3600}
+                subtitle="3—23 мая"
+                days={21}
+                price={"от 3800"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
@@ -1504,8 +1504,8 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-istoki-june"} target="_blank">
               <TourButton
                 title="Июнь"
-                subtitle="2—21 июня"
-                days={20}
+                subtitle="2—22 июня"
+                days={21}
                 price={"от 4500"}
                 bgColor="yellow-500"
                 fgColor="black"
