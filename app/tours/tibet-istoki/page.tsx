@@ -1,4 +1,4 @@
-
+"use client"
 
 import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableDay, TimetablePhoto, TimetablePhotoDouble, TourButton, WithLanguageProvider } from "@/components/components";
 import { imagesSrc } from "@/components/TibetInfo";
