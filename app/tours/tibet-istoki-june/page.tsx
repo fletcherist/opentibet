@@ -1,9 +1,8 @@
 "use client"
 
-import { AbstractButton, ActionButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableDay, TimetablePhoto, TimetablePhotoDouble, TourButton, WithLanguageProvider } from "@/components/components";
-import { imagesSrc } from "@/components/TibetInfo";
+import { AbstractButton, ApplyForm, BackgroundSlider, Footer, LinkTours, Navbar, TimetableDay, TimetablePhoto, TimetablePhotoDouble, TourButton, WithLanguageProvider } from "@/components/components";
 import { useTranslateFn } from "@/lib/language";
-import { LINK_APPLY_FORM, LINK_OFFERS, Month } from "@/utils/constants";
+import { LINK_APPLY_FORM } from "@/utils/constants";
 
 export default function ({ params }: { params: { tibet: string } }) {
     return (
