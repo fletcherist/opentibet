@@ -618,7 +618,7 @@ function Home() {
           <ButtonWithContent
             title={
               translate({
-                ru: "Личный опыт Алексея&nbsp;Перчукова",
+                ru: "Личный опыт Алексея Перчукова",
                 en: "Personal experience of Alexey Perchukov"
               }) as string
             }

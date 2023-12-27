@@ -541,7 +541,7 @@ export const TimetableDay: React.FC<{
 
 export const TimetablePhoto: React.FC<{
   src: string;
-  title: string;
+  title?: string;
   maxHeight?: number
 }> = ({ src, title, maxHeight }) => {
   return (
@@ -603,7 +603,7 @@ export const TourButton: React.FC<{
   title: string;
   subtitle: string;
   days: number;
-  price: number;
+  price: number | string;
   bgColor?: string;
   fgColor?: string;
   accentColor?: string;
