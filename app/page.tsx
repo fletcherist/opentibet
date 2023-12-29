@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import tibet from "./tibet.module.css";
@@ -33,18 +33,25 @@ import {
   getTourPriceForMonth,
 } from "@/utils/constants";
 import Link from "next/link";
-import { Language, LanguageProvider, useLanguage, useTranslate, useTranslateFn, useTranslateMap } from "@/lib/language";
+import {
+  Language,
+  LanguageProvider,
+  useLanguage,
+  useTranslate,
+  useTranslateFn,
+  useTranslateMap,
+} from "@/lib/language";
 
 export default function Page() {
   return (
     <WithLanguageProvider>
       <Home />
     </WithLanguageProvider>
-  )
+  );
 }
 
 function Home() {
-  const translate = useTranslateFn()
+  const translate = useTranslateFn();
   return (
     <main
       lang="ru"
@@ -90,14 +97,40 @@ function Home() {
               }}
             >
               {translate({
-                ru: <>Откройте<br />для&nbsp;себя<br />Тибет</>,
-                en: <>Discover<br />Tibet</>
+                ru: (
+                  <>
+                    Откройте
+                    <br />
+                    для&nbsp;себя
+                    <br />
+                    Тибет
+                  </>
+                ),
+                en: (
+                  <>
+                    Discover
+                    <br />
+                    Tibet
+                  </>
+                ),
               })}
             </div>
             <div className="text-white py-2 pr-6 text-base md:text-xl">
               {translate({
-                ru: <>Маршруты по доступным ценам<br />Пакетные туры от 1900 $</>,
-                en: <>Routes at affordable prices<br />Package tours from $1900</>
+                ru: (
+                  <>
+                    Маршруты по доступным ценам
+                    <br />
+                    Пакетные туры от 1900 $
+                  </>
+                ),
+                en: (
+                  <>
+                    Routes at affordable prices
+                    <br />
+                    Package tours from $1900
+                  </>
+                ),
               })}
             </div>
             <div className="py-4">
@@ -133,10 +166,75 @@ function Home() {
         </div>
       </div>
 
+      <div
+        className="bg-green-900 text-white max-w-3xl mt-2 mb-10 mx-auto w-[95%] p-10 border-8 border-yellow-400"
+        style={{
+          backgroundImage: 'url("/trees.jpg")',
+          backgroundSize: "300px",
+          backgroundBlendMode: "multiply",
+        }}
+      >
+        <p className="mb-4 text-yellow-400 font-bold uppercase tracking-wider">
+          2023 — год, превзошедший все мои ожидания и планы.
+        </p>
+        <p className="mb-4">
+          Три года пост-пандемии я ждал, когда же наконец откроют границы
+          Тибета. И все это время я планировал маршруты, разрабатывал программы,
+          поддерживал контакты с местными партнерами. И время пришло!
+        </p>
+        <p className="mb-4">
+          2023 год подарил мне гораздо больше, чем я мог себе представить.
+          Я и мечтать не мог о том, сколько всего мне удастся совершить.
+          Но Тибет, Кайлас — обитель Шивы, поддерживают тех, кто предан и верит.
+          Как иначе объяснить это:
+        </p>
+        <p className="mb-4">
+          — С мая по октябрь 2023 я совершил около 30 кор. Вдумайтесь, друзья!
+          Большинство паломников делают одну-две за всю жизнь!
+        </p>
+        <p className="mb-4">
+          Ради этого стоило ждать столько времени. Но это не всё.
+        </p>
+        <p className="mb-4">
+          — За время поездок в Тибет в этом году я смог создать договоренности
+          с правительством Тибета о специальных условиях для русскоговорящих
+          туристов. И совместно с аккредитованной при правительстве турфирмой
+          открыл международный проект OPEN TIBET.
+        </p>
+        <p className="mb-4">
+          Он во многом «самый-самый». Самые бюджетные цены, самые комфортные
+          отели и трансферы, самые компетентные гиды.
+        </p>
+        <p className="mb-4">
+          — И как вишенка на торте, в завершение великолепного сезона, я написал
+          новый, дополненный путеводитель по Тибету. Совсем скоро выйдет
+          в печать. Издательство «Эксмо», серия «Оранжевый гид».
+        </p>
+        <p className="mb-4">
+          Я повторюсь — Тибет, Кайлас — дают помощь всем, кто предан и верит.
+        </p>
+        <p className="mb-4">
+          Посмотрите, какие программы и предложения мы подготовили для вас. Если
+          вы уже бывали в Тибете — найдете новые программы для себя. Если едете
+          первый раз — получите самое выгодное предложение и убедитесь, что
+          лучше нас организатора туров просто нет.
+        </p>
+        <p className="mb-16">
+          До встречи в Тибете, друзья.
+          <br />
+          И с наступающим новым годом!
+        </p>
+        <p className="mb-4">
+          Алексей Перчуков,
+          <br />
+          основатель проекта OPEN TIBET
+        </p>
+      </div>
+
       <h2 className="text-3xl font-semibold text-center max-w-4xl mx-auto mb-10 mt-5">
         {translate({
           ru: "Мы делаем Тибет доступнее для вас",
-          en: "We make Tibet more accessible to you"
+          en: "We make Tibet more accessible to you",
         })}
       </h2>
 
@@ -144,8 +242,12 @@ function Home() {
         <div className="p-4 pt-0">
           <p className="text-xl leading-9 text-center">
             {translate({
-              ru: <>Путешествия с <b>OPEN TIBET</b> &mdash; это:</>,
-              en: <>Travel with OPEN TIBET is:</>
+              ru: (
+                <>
+                  Путешествия с <b>OPEN TIBET</b> &mdash; это:
+                </>
+              ),
+              en: <>Travel with OPEN TIBET is:</>,
             })}
           </p>
           <ul className="py-4 mt-3 max-w-md text-xl w-fit mx-auto space-y-3 list-inside">
@@ -153,28 +255,28 @@ function Home() {
               <IconMark />
               {translate({
                 ru: "Размещение в хороших отелях",
-                en: "Accommodation in good hotels"
+                en: "Accommodation in good hotels",
               })}
             </li>
             <li className="flex items-center">
               <IconMark />
               {translate({
                 ru: "Качественный транспорт",
-                en: "Quality transport"
+                en: "Quality transport",
               })}
             </li>
             <li className="flex items-center">
               <IconMark />
               {translate({
                 ru: "Квалифицированные гиды",
-                en: "Qualified guides"
+                en: "Qualified guides",
               })}
             </li>
             <li className="flex items-center">
               <IconMark />
               {translate({
                 ru: "Самые доступные цены",
-                en: "The most affordable prices"
+                en: "The most affordable prices",
               })}
             </li>
           </ul>
@@ -186,7 +288,7 @@ function Home() {
           ru: `Мы много трудились над каждым элементом путешествий и получили
                 всестороннюю поддержку правительства Тибета, чтобы обеспечить самые
                 лучшие предложения для паломников.`,
-          en: "We have worked hard on every element of the travel experience and have received the full support of the Tibetan government to ensure the best possible offerings for pilgrims."
+          en: "We have worked hard on every element of the travel experience and have received the full support of the Tibetan government to ensure the best possible offerings for pilgrims.",
         })}
       </p>
 
@@ -194,14 +296,14 @@ function Home() {
         {translate({
           ru: `Это стало возможно благодаря партнёрству трёх агентств, имеющих годы
           опыта и высочайший профессионализм.`,
-          en: "This became possible thanks to the partnership of three agencies with years of experience and the highest professionalism."
+          en: "This became possible thanks to the partnership of three agencies with years of experience and the highest professionalism.",
         })}
       </p>
 
       <h3 className="uppercase tracking-[.4em] mt-4 mb-3 font-semibold text-sm">
         {translate({
           ru: "Организаторы",
-          en: "ORGANIZERS"
+          en: "ORGANIZERS",
         })}
       </h3>
       <ul className="mx-auto w-fit mb-4 px-4 flex-col flex justify-center">
@@ -219,13 +321,14 @@ function Home() {
             <span className="font-semibold">
               {translate({
                 ru: "Тибетский туристический офис",
-                en: "Tibetan Tourism Office"
+                en: "Tibetan Tourism Office",
               })}
             </span>
-            <br /> <span>
+            <br />{" "}
+            <span>
               {translate({
                 ru: "правительство Тибета",
-                en: "Government of Tibet"
+                en: "Government of Tibet",
               })}
             </span>
           </div>
@@ -244,13 +347,13 @@ function Home() {
             <span className="font-semibold">
               {translate({
                 ru: "Турагентство Kailash Explorer",
-                en: "Travel agency Kailash Explorer"
+                en: "Travel agency Kailash Explorer",
               })}
             </span>
             <br />
             {translate({
               ru: "Россия, Санкт Петербург",
-              en: "Russia, St. Petersburg"
+              en: "Russia, St. Petersburg",
             })}
           </div>
         </li>
@@ -268,13 +371,13 @@ function Home() {
             <span className="font-semibold">
               {translate({
                 ru: "Турагентство Tashi Delek",
-                en: "Tashi Delek Travel Agency"
+                en: "Tashi Delek Travel Agency",
               })}
             </span>
             <br />
             {translate({
               ru: "Тибет, Лхаса",
-              en: "Tibet, Lhasa"
+              en: "Tibet, Lhasa",
             })}
           </div>
           {/* (<a href="https://www.tibettour.travel" className='text-sm font-semibold text-blue-500 hover:text-blue-700' target='_blank'>https://www.tibettour.travel</a>) */}
@@ -330,14 +433,14 @@ function Home() {
             <div className="text-3xl font-semibold text-center w-full px-4 mt-5 mb-5">
               {translate({
                 ru: "Тибет меняет жизнь. Проверьте и вы",
-                en: "Tibet changes lives. Check it out too"
+                en: "Tibet changes lives. Check it out too",
               })}
             </div>
             <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
               {translate({
                 ru: `Мы знаем и любим Тибет. Мы хотим, чтобы как можно больше людей
                 открывали для себя эту священную землю.`,
-                en: "We know and love Tibet. We want as many people as possible to discover this sacred land."
+                en: "We know and love Tibet. We want as many people as possible to discover this sacred land.",
               })}
               <br />
               <br />
@@ -347,7 +450,7 @@ function Home() {
               <h2 className="text-2xl font-light mt-3 leading-8">
                 {translate({
                   ru: `от 1900 $ за 14 дней`,
-                  en: "from 1900 $ for 14 days"
+                  en: "from 1900 $ for 14 days",
                 })}
               </h2>
             </div>
@@ -359,14 +462,18 @@ function Home() {
         <div className="max-w-4xl mt-6 mx-auto">
           <div className="w-full pt-8">
             <Header
-              title={translate({
-                ru: "Посмотрите фильм о Тибете",
-                en: "Watch a film about Tibet"
-              }) as string}
-              subtitle={translate({
-                ru: "снятый Виктором Щербаковым и Алексеем Перчуковым",
-                en: "filmed by Viktor Shcherbakov and Alexey Perchukov"
-              }) as string}
+              title={
+                translate({
+                  ru: "Посмотрите фильм о Тибете",
+                  en: "Watch a film about Tibet",
+                }) as string
+              }
+              subtitle={
+                translate({
+                  ru: "снятый Виктором Щербаковым и Алексеем Перчуковым",
+                  en: "filmed by Viktor Shcherbakov and Alexey Perchukov",
+                }) as string
+              }
             />
             <div className="px-4 py-2">
               <p className="py-4 pb-0 leading-7 hyphens-auto">
@@ -375,7 +482,7 @@ function Home() {
                   программе. В фильме показана одна из наших программ. Оцените
                   красоты местных монастырей и природы, силу и энергию тибетской
                   земли:`,
-                  en: "We organize regular monthly tours to Tibet according to a unique program. The film shows one of our programs. Appreciate the beauty of local monasteries and nature, the strength and energy of the Tibetan land:"
+                  en: "We organize regular monthly tours to Tibet according to a unique program. The film shows one of our programs. Appreciate the beauty of local monasteries and nature, the strength and energy of the Tibetan land:",
                 })}
               </p>
             </div>
@@ -406,13 +513,13 @@ function Home() {
                   <div className="text-xl">
                     {translate({
                       ru: `Алексей Перчуков`,
-                      en: "Alexey Perchukov"
+                      en: "Alexey Perchukov",
                     })}
                   </div>
                   <div className="text-sm font-semibold">
                     {translate({
                       ru: `Координатор проекта OPEN TIBET`,
-                      en: "Project Coordinator OPEN TIBET"
+                      en: "Project Coordinator OPEN TIBET",
                     })}
                   </div>
                   <a
@@ -427,9 +534,18 @@ function Home() {
             </div>
             <div className="p-4 leading-7 hyphens-auto">
               {translate({
-                ru: <>Алексей &mdash; автор нескольких профессиональных путеводителей по
-                  Тибету на русском языке, со-автор фильма{" "}</>,
-                en: <>Alexey is the author of several professional guides to Tibet in Russian, co-author of the film{" "}</>
+                ru: (
+                  <>
+                    Алексей &mdash; автор нескольких профессиональных
+                    путеводителей по Тибету на русском языке, со-автор фильма{" "}
+                  </>
+                ),
+                en: (
+                  <>
+                    Alexey is the author of several professional guides to Tibet
+                    in Russian, co-author of the film{" "}
+                  </>
+                ),
               })}
 
               <a
@@ -439,13 +555,22 @@ function Home() {
               >
                 {translate({
                   ru: "«Тибет, место которое меняет жизнь»",
-                  en: "“Tibet, a place that changes your life”"
+                  en: "“Tibet, a place that changes your life”",
                 })}
               </a>
               {translate({
-                ru: <>. Докладчик многочисленных международных конференции, посвященных
-                  Кайласу. Автор статьи{" "}</>,
-                en: <>Speaker of numerous international conferences dedicated to Kailash. The author of the article{" "}</>
+                ru: (
+                  <>
+                    . Докладчик многочисленных международных конференции,
+                    посвященных Кайласу. Автор статьи{" "}
+                  </>
+                ),
+                en: (
+                  <>
+                    Speaker of numerous international conferences dedicated to
+                    Kailash. The author of the article{" "}
+                  </>
+                ),
               })}
               <a
                 className="text-yellow-600"
@@ -459,7 +584,7 @@ function Home() {
               {translate({
                 ru: `, исследователь , который поднялся на все плечи Кайласа и посетил
                 все священные долины Мандалы Кайласа.`,
-                en: `, a researcher who climbed all the shoulders of Kailash and visited all the sacred valleys of the Kailash Mandala.`
+                en: `, a researcher who climbed all the shoulders of Kailash and visited all the sacred valleys of the Kailash Mandala.`,
               })}
             </div>
             <div className="flex justify-center">
@@ -567,8 +692,8 @@ function Home() {
             <div className="text-center p-4">
               <p className="text-gray-400 text-sm">
                 {translate({
-                  ru: <>Больше фото в{" "}</>,
-                  en: <>More photos on{" "}</>
+                  ru: <>Больше фото в </>,
+                  en: <>More photos on </>,
                 })}
                 <a
                   href="https://www.instagram.com/kailash_explorer/"
@@ -586,17 +711,20 @@ function Home() {
       <div className="pt-10" />
       <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
         <div>
-          <Header title={
-            translate({
-              ru: "Подготовка к поездке",
-              en: "Preparing for the trip"
-            }) as string
-          } subtitle="" />
+          <Header
+            title={
+              translate({
+                ru: "Подготовка к поездке",
+                en: "Preparing for the trip",
+              }) as string
+            }
+            subtitle=""
+          />
           <p className="mx-4">
             {translate({
               ru: `Поездка в Тибет требует тщательной подготовки. Мы собрали для вас
               сведения, которые помогут вам подготовиться духовно и физически.`,
-              en: `A trip to Tibet requires careful preparation. We have collected information for you that will help you prepare spiritually and physically.`
+              en: `A trip to Tibet requires careful preparation. We have collected information for you that will help you prepare spiritually and physically.`,
             })}
           </p>
         </div>
@@ -619,7 +747,7 @@ function Home() {
             title={
               translate({
                 ru: "Личный опыт Алексея Перчукова",
-                en: "Personal experience of Alexey Perchukov"
+                en: "Personal experience of Alexey Perchukov",
               }) as string
             }
           >
@@ -629,7 +757,7 @@ function Home() {
                   ru: `Хочу поделиться своим опытом, благодаря которому мне удалось
               достичь уникальных результатов без использования медицинских
               препаратов.`,
-                  en: `I want to share my experience, thanks to which I was able to achieve unique results without the use of medications.`
+                  en: `I want to share my experience, thanks to which I was able to achieve unique results without the use of medications.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -642,7 +770,7 @@ function Home() {
                   Кору за три дня, то после двух лет практики сухих голоданий (3,
                   5, 7, 9 и 11 дней; каждый квартал я добавлял по два дня), мне не
                   составило труда обойти священную гору за 9 часов.`,
-                  en: `Dry fasting helped me best prepare for the trip to Tibet. This method is good because it results in a comprehensive restructuring of the activities of all body systems. Natural healing processes are launched in it. If in 2007 I walked through the usual Kora in three days with great difficulty, then after two years of practicing dry fasting (3, 5, 7, 9 and 11 days; I added two days every quarter), it was not difficult for me to walk around the sacred mountain in 9 hours.`
+                  en: `Dry fasting helped me best prepare for the trip to Tibet. This method is good because it results in a comprehensive restructuring of the activities of all body systems. Natural healing processes are launched in it. If in 2007 I walked through the usual Kora in three days with great difficulty, then after two years of practicing dry fasting (3, 5, 7, 9 and 11 days; I added two days every quarter), it was not difficult for me to walk around the sacred mountain in 9 hours.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -656,7 +784,7 @@ function Home() {
                   то лучше соблюдать как экадаши, так и прадош (13-й лунный день
                   на растущую и убывающую луну) – считается, что постящийся в эти
                   дни получает особое благословение Шивы.`,
-                  en: `Before you start fasting, be sure to consult your doctor. I recommend starting by observing Ekadashi twice a month (11th day after the full moon and new moon). Every quarter you can carry out long-term (3 days or more) dry fasting, that is, complete exclusion of food and water, or fasting on water. If you feel a direct connection with Kailash, then it is better to observe both Ekadashi and Pradosh (the 13th lunar day on the waxing and waning moon) - it is believed that the person fasting on these days receives a special blessing from Shiva.`
+                  en: `Before you start fasting, be sure to consult your doctor. I recommend starting by observing Ekadashi twice a month (11th day after the full moon and new moon). Every quarter you can carry out long-term (3 days or more) dry fasting, that is, complete exclusion of food and water, or fasting on water. If you feel a direct connection with Kailash, then it is better to observe both Ekadashi and Pradosh (the 13th lunar day on the waxing and waning moon) - it is believed that the person fasting on these days receives a special blessing from Shiva.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -666,14 +794,14 @@ function Home() {
                   вибраций, в которой не могут выжить вредные микроорганизмы,
                   увеличивает вибрацию всех клеток организма, из-за чего
                   повышается иммунитет и кардинально улучшается самочувствие.`,
-                  en: `The most important thing is to get out of fasting. The use of high-frequency food, that is, products with a high frequency of vibrations in which harmful microorganisms cannot survive, increases the vibration of all cells of the body, which increases immunity and radically improves well-being.`
+                  en: `The most important thing is to get out of fasting. The use of high-frequency food, that is, products with a high frequency of vibrations in which harmful microorganisms cannot survive, increases the vibration of all cells of the body, which increases immunity and radically improves well-being.`,
                 })}
               </p>
               <p className="my-4 leading-8">
                 {translate({
                   ru: `После нескольких месяцев подобных практик вы легко перейдете к
                   вегетарианству, а затем и к раздельному питанию.`,
-                  en: `After several months of such practices, you will easily switch to vegetarianism, and then to separate meals.`
+                  en: `After several months of such practices, you will easily switch to vegetarianism, and then to separate meals.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -684,7 +812,7 @@ function Home() {
                   говорить о моем опыте, то после голоданий я по-новому, более
                   глубоко стал понимать Махабхарату , Пураны , а также увлекся
                   учением Г. И. Гурджиева.`,
-                  en: `But that is not all. Changes will occur at the mental level - there will be a need for spiritual (high-frequency) information. It can be found in Vedic literature. If we talk about my experience, then after fasting I began to understand the Mahabharata, Puranas in a new, more profound way, and also became interested in the teachings of G.I. Gurdjieff.`
+                  en: `But that is not all. Changes will occur at the mental level - there will be a need for spiritual (high-frequency) information. It can be found in Vedic literature. If we talk about my experience, then after fasting I began to understand the Mahabharata, Puranas in a new, more profound way, and also became interested in the teachings of G.I. Gurdjieff.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -696,7 +824,7 @@ function Home() {
                   изменение сознания. Я думаю, что этого можно достичь и с помощью
                   произнесения мантр или чтения молитв, однако такой путь займет
                   много времени, а самое главное – для него нужна сильная вера.`,
-                  en: `Ascetic practices allow you to attune your body to the energy fields of Tibet and soften their impact during the trip, which is often destructive for an unprepared person. The ultimate goal of such practices is undoubtedly a change in consciousness. I think this can be achieved by chanting mantras or reciting prayers, but this path will take a lot of time, and most importantly, it requires strong faith.`
+                  en: `Ascetic practices allow you to attune your body to the energy fields of Tibet and soften their impact during the trip, which is often destructive for an unprepared person. The ultimate goal of such practices is undoubtedly a change in consciousness. I think this can be achieved by chanting mantras or reciting prayers, but this path will take a lot of time, and most importantly, it requires strong faith.`,
                 })}
               </p>
               <p className="my-4 leading-8">
@@ -705,20 +833,21 @@ function Home() {
                   упражнений, связанных с задержкой дыхания. Вызывание
                   искусственной гипоксии в обычных условиях ускоряет начало
                   долговременной высотной адаптации в горах`,
-                  en: `Along with fasting, I regularly performed a set of exercises involving holding my breath. Inducing artificial hypoxia under normal conditions accelerates the onset of long-term altitude adaptation in the mountains`
+                  en: `Along with fasting, I regularly performed a set of exercises involving holding my breath. Inducing artificial hypoxia under normal conditions accelerates the onset of long-term altitude adaptation in the mountains`,
                 })}
-
               </p>
             </div>
           </ButtonWithContent>
         </div>
         <div>
-          <ButtonWithContent title={
-            translate({
-              ru: "Высотная болезнь",
-              en: "Altitude sickness",
-            }) as string
-          } >
+          <ButtonWithContent
+            title={
+              translate({
+                ru: "Высотная болезнь",
+                en: "Altitude sickness",
+              }) as string
+            }
+          >
             <div className="p-4 leading-8">
               {translate({
                 ru: `Это главная опасность, подстерегающая путешественников в горах.
@@ -757,12 +886,14 @@ function Home() {
               })}
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title={
-            translate({
-              ru: "Акклиматизация и адаптация",
-              en: "Acclimatization and adaptation",
-            }) as string
-          } >
+          <ButtonWithContent
+            title={
+              translate({
+                ru: "Акклиматизация и адаптация",
+                en: "Acclimatization and adaptation",
+              }) as string
+            }
+          >
             <div className="p-4 leading-8">
               Различают краткосрочную и долгосрочную высотные адаптации.
               <br />
@@ -818,12 +949,14 @@ function Home() {
               действовать гравитация.
             </div>
           </ButtonWithContent>
-          <ButtonWithContent title={
-            translate({
-              ru: "Ночевки в горах",
-              en: "Overnight in the mountains",
-            }) as string
-          }>
+          <ButtonWithContent
+            title={
+              translate({
+                ru: "Ночевки в горах",
+                en: "Overnight in the mountains",
+              }) as string
+            }
+          >
             <div className="p-4 leading-8">
               Наибольшую опасность для неподготовленных путешественников
               представляют ночевки в горах, когда во время сна контроль сознания
@@ -1065,14 +1198,16 @@ function Home() {
       <div className="w-full bg-blue-500 text-white py-12">
         <div className="max-w-4xl w-full mx-auto">
           <Header
-            title={translate({
-              ru: "Знаковые места Тибета",
-              en: "Iconic places of Tibet",
-            }) as string}
+            title={
+              translate({
+                ru: "Знаковые места Тибета",
+                en: "Iconic places of Tibet",
+              }) as string
+            }
             subtitle={
               translate({
                 ru: "Перечень достопримечательностей по регионам",
-                en: "List of attractions by region"
+                en: "List of attractions by region",
               }) as string
             }
           />
@@ -1083,14 +1218,18 @@ function Home() {
       <div className="pt-10" />
       <div className="max-w-4xl w-full">
         <Header
-          title={translate({
-            ru: "Фото с прошлых туров",
-            en: "Photos from past tours"
-          }) as string}
-          subtitle={translate({
-            ru: "Нажмите на фото, чтобы открыть галерею",
-            en: "Click on the photo to open the gallery"
-          }) as string}
+          title={
+            translate({
+              ru: "Фото с прошлых туров",
+              en: "Photos from past tours",
+            }) as string
+          }
+          subtitle={
+            translate({
+              ru: "Нажмите на фото, чтобы открыть галерею",
+              en: "Click on the photo to open the gallery",
+            }) as string
+          }
           id={LINK_PHOTO_GALLERY}
         />
       </div>
@@ -1125,12 +1264,15 @@ function Home() {
       </div> */}
 
       <div className="max-w-4xl w-full">
-        <Header title={
-          translate({
-            ru: "Часто задаваемые вопросы",
-            en: "FAQ",
-          }) as string
-        } subtitle="" />
+        <Header
+          title={
+            translate({
+              ru: "Часто задаваемые вопросы",
+              en: "FAQ",
+            }) as string
+          }
+          subtitle=""
+        />
         <FAQ />
       </div>
 
@@ -1138,14 +1280,16 @@ function Home() {
       <div className="max-w-4xl w-full">
         <ApplyForm />
         <Header
-          title={translate({
-            ru: "Контакты",
-            en: "Contacts"
-          }) as string}
+          title={
+            translate({
+              ru: "Контакты",
+              en: "Contacts",
+            }) as string
+          }
           subtitle={
             translate({
               ru: "Алексей Перчуков",
-              en: "Alexey Perchukov"
+              en: "Alexey Perchukov",
             }) as string
           }
           id={LINK_CONTACTS}
@@ -1161,7 +1305,7 @@ function Home() {
             <div className="text-[10px] uppercase tracking-wider font-bold">
               {translate({
                 ru: "Россия",
-                en: "RUSSIA"
+                en: "RUSSIA",
               })}
             </div>
           </div>
@@ -1175,7 +1319,7 @@ function Home() {
             <div className="text-[10px] uppercase tracking-wider font-bold">
               {translate({
                 ru: "Китай",
-                en: "CHINA"
+                en: "CHINA",
               })}
             </div>
           </div>
@@ -1243,66 +1387,75 @@ const IconMark = () => {
 // };
 
 const WhyGoTibetWithUs = () => {
-  const translate = useTranslateFn()
+  const translate = useTranslateFn();
   return (
     <>
       <div className="text-black font-semibold text-3xl py-2 px-4">
         {translate({
           ru: "Почему стоит ехать в Тибет с нами?",
-          en: "Why is it worth going to Tibet with us?"
+          en: "Why is it worth going to Tibet with us?",
         })}
       </div>
 
-      <WhyGoTibetWithUsStatement title={translate({
-        ru: "Глубокое знание Тибета",
-        en: "Deep knowledge of Tibet"
-      }) as string}>
+      <WhyGoTibetWithUsStatement
+        title={
+          translate({
+            ru: "Глубокое знание Тибета",
+            en: "Deep knowledge of Tibet",
+          }) as string
+        }
+      >
         {translate({
           ru: `Приезжая в место исключительной силы, хочется узнать как можно больше
           обо всех его традициях, истоках. Мы действительно понимаем Тибет. Наши
           гиды — местные эксперты с огромным опытом, и они помогут вам раскрыть
           все тайны и красоту этой уникальной земли.`,
-          en: `Coming to a place of exceptional power, you want to learn as much as possible about all its traditions and origins. We truly understand Tibet. Our guides are local experts with extensive experience and will help you discover all the secrets and beauty of this unique land.`
+          en: `Coming to a place of exceptional power, you want to learn as much as possible about all its traditions and origins. We truly understand Tibet. Our guides are local experts with extensive experience and will help you discover all the secrets and beauty of this unique land.`,
         })}
-
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title={
-        translate({
-          ru: "Эксклюзивные маршруты",
-          en: "Exclusive routes"
-        }) as string
-      }>
+      <WhyGoTibetWithUsStatement
+        title={
+          translate({
+            ru: "Эксклюзивные маршруты",
+            en: "Exclusive routes",
+          }) as string
+        }
+      >
         {translate({
           ru: `Мы предлагаем эксклюзивные маршруты, которые недоступны большинству
           туристов. Вы увидите Тибет изнутри, открыв его магию и аутентичность.`,
-          en: `We offer exclusive routes that are inaccessible to most tourists. You will see Tibet from the inside, discovering its magic and authenticity.`
+          en: `We offer exclusive routes that are inaccessible to most tourists. You will see Tibet from the inside, discovering its magic and authenticity.`,
         })}
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title={
-        translate({
-          ru: "Индивидуальный подход",
-          en: "Individual approach"
-        }) as string
-      }>
+      <WhyGoTibetWithUsStatement
+        title={
+          translate({
+            ru: "Индивидуальный подход",
+            en: "Individual approach",
+          }) as string
+        }
+      >
         {translate({
           ru: `Мы понимаем, что каждый клиент уникален. Мы создадим маршрут, который
           соответствует вашим интересам и пожеланиям, обеспечивая максимальный
           комфорт и удовлетворение.`,
-          en: `We understand that every client is unique. We will create an itinerary that suits your interests and wishes, ensuring maximum comfort and satisfaction.`
+          en: `We understand that every client is unique. We will create an itinerary that suits your interests and wishes, ensuring maximum comfort and satisfaction.`,
         })}
       </WhyGoTibetWithUsStatement>
-      <WhyGoTibetWithUsStatement title={
-        translate({
-          ru: "Высокое качество услуг",
-          en: "High quality services"
-        }) as string
-      }>
+      <WhyGoTibetWithUsStatement
+        title={
+          translate({
+            ru: "Высокое качество услуг",
+            en: "High quality services",
+          }) as string
+        }
+      >
         {translate({
           ru: `Мы позаботимся обо всем, чтобы вы получили незабываемые впечатления, не
           переплачивая. Авторские маршруты, достойные отели, заботливые и
           компетентные гиды, хороший сервис. Ваше удовольствие и безопасность
           &mdash; наша главная задача.`,
-          en: `We will take care of everything so that you get an unforgettable experience without overpaying. Author's routes, decent hotels, caring and competent guides, good service. Your pleasure and safety are our main concern.`
+          en: `We will take care of everything so that you get an unforgettable experience without overpaying. Author's routes, decent hotels, caring and competent guides, good service. Your pleasure and safety are our main concern.`,
         })}
       </WhyGoTibetWithUsStatement>
     </>
@@ -1340,23 +1493,26 @@ const WhyGoTibetWithUsStatement: React.FC<{
 };
 
 const ToursTabs = () => {
-  const translate = useTranslateFn()
+  const translate = useTranslateFn();
   return (
     <div
       className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
       id={LINK_OFFERS}
     >
-      <Header title={
-        translate({
-          ru: "Программы на 2024",
-          en: "Programs for 2024",
-        }) as string
-      } subtitle="" />
+      <Header
+        title={
+          translate({
+            ru: "Программы на 2024",
+            en: "Programs for 2024",
+          }) as string
+        }
+        subtitle=""
+      />
       <p className="mx-4 mb-6">
         {translate({
           ru: `Мы предлагаем как регулярные пакетные туры, так и эксклюзивные
           авторские маршруты.`,
-          en: `We offer both regular package tours and exclusive signature routes.`
+          en: `We offer both regular package tours and exclusive signature routes.`,
         })}
       </p>
       <Tabs defaultValue="reg" className="w-full px-4">
@@ -1368,8 +1524,18 @@ const ToursTabs = () => {
           >
             <h3 className="px-2 md:px-6 font-bold uppercase leading-4 tracking-wide md:tracking-widest text-sm md:text-lg">
               {translate({
-                ru: <>Пакетные <br className="md:hidden" />туры</>,
-                en: <>Package <br className="md:hidden" />tours</>,
+                ru: (
+                  <>
+                    Пакетные <br className="md:hidden" />
+                    туры
+                  </>
+                ),
+                en: (
+                  <>
+                    Package <br className="md:hidden" />
+                    tours
+                  </>
+                ),
               })}
             </h3>
           </TabsTrigger>
@@ -1384,17 +1550,24 @@ const ToursTabs = () => {
                 ★
               </span>{" "}
               {translate({
-                ru: <>Эксклюзивные <br className="md:hidden" />туры</>,
-                en: <>Exclusive <br className="md:hidden" />tours</>,
+                ru: (
+                  <>
+                    Эксклюзивные <br className="md:hidden" />
+                    туры
+                  </>
+                ),
+                en: (
+                  <>
+                    Exclusive <br className="md:hidden" />
+                    tours
+                  </>
+                ),
               })}
             </h3>
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent
-          className="bg-gray-200 mt-4 -mx-3 rounded-sm"
-          value="reg"
-        >
+        <TabsContent className="bg-gray-200 mt-4 -mx-3 rounded-sm" value="reg">
           <h4 className="font-bold mx-3 pt-3 mt-2 leading-5 text-xl text-blue-500">
             {translate({
               ru: "Пакетные туры OPEN TIBET",
@@ -1410,10 +1583,12 @@ const ToursTabs = () => {
           <div>
             <Link href={"/tours/tibet-may-2024"} target="_blank">
               <TourButton
-                title={translate({
-                  ru: "Май",
-                  en: "May"
-                }) as string}
+                title={
+                  translate({
+                    ru: "Май",
+                    en: "May",
+                  }) as string
+                }
                 subtitle="2—21 мая"
                 days={14}
                 price={getTourPriceForMonth("may")}
@@ -1544,5 +1719,5 @@ const ToursTabs = () => {
         </TabsContent>
       </Tabs>
     </div>
-  )
-}
+  );
+};
