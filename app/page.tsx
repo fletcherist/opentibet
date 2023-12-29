@@ -167,7 +167,7 @@ function Home() {
       </div>
 
       <div
-        className="bg-yellow-400 p-4 max-w-3xl mt-2 mb-10 mx-auto w-[95%]"
+        className="bg-yellow-400 p-4 max-w-6xl mt-2 mb-10 mx-auto"
         style={{
           backgroundImage: 'url("/trees.jpg")',
           backgroundSize: "300px",
