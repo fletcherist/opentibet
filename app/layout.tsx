@@ -22,10 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={inter.className}>
-        {children}
-      </body>
-      <Head>
+      <head>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-H4YQQCN7MK" />
         <Script id="google-analytics">
           {`
@@ -52,7 +49,10 @@ export default function RootLayout({
             />
           </div>
         </noscript>
-      </Head>
+      </head>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }
