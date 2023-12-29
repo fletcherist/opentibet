@@ -602,7 +602,7 @@ function Home() {
             <div className="flex justify-center">
               <div className="flex max-w-lg gap-5 mb-4 mt-3">
                 <Image
-                  src="/putevoditel-india.jpg"
+                  src="/tibet-putevoditel-2.jpg"
                   alt=""
                   width={120}
                   height={90}
