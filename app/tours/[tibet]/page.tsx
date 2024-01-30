@@ -32,7 +32,7 @@ export default function ({ params }: { params: { tibet: string } }) {
         'august': 'август',
         'september': 'сентябрь',
         'october': 'октябрь',
-        'day': 'день',
+
     }
 
     return (
@@ -119,13 +119,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 	return (
     
         <>
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>1 день
-        </>,
-        en: <>1 day
-        </>   
-    })}
-    >
+            <TimetableDay accentColor={accentColor} title="1 день">
 			  {translate({
                 ru: <>
                 Перелет Ченду-Лхаса.  08.15 – 14.00 аэропорт Гонкар (3550м). Трансфер в Лхасу (3600м)
@@ -144,12 +138,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
             </TimetableDay>
 
 			
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>2 день
-        </>,
-        en: <>2 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="2 день">
 			{translate({
                     ru: <>
                 Посещение <b>Дворца Потала</b>, храма Джокханг и туристического района Баркор.
@@ -193,12 +182,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 </> })}
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>3 день
-        </>,
-        en: <>3 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="3 день">
 			{translate({
                 ru: <>
                 
@@ -231,12 +215,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>4 день
-        </>,
-        en: <>4 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="4 день">
 			{translate({
                 ru: <>
                 Переезд Лхаса (3550 м)– Шигадзе (3950 м) (350км 5 часов)
@@ -270,12 +249,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
                 </> })}
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>5 день
-        </>,
-        en: <>5 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="5 день">
 			{translate({
                     ru: <>
                 
@@ -310,12 +284,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
                 </> })}
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>6 день
-        </>,
-        en: <>6 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="6 день">
 			{translate({
                     ru: <>
                 
@@ -356,12 +325,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>7 день
-        </>,
-        en: <>7 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="7 день">
 			{translate({
                 ru: <>
                 
@@ -402,12 +366,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>8 день
-        </>,
-        en: <>8 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="8 день">
 			{translate({
                     ru: <>
                 
@@ -455,12 +414,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>9 день
-        </>,
-        en: <>9 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="9 день">
 			{translate({
                     ru: <>
                 
@@ -498,12 +452,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 </> })}				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>10 день
-        </>,
-        en: <>10 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="10 день">
 			{translate({
                 ru: <>
                 
@@ -540,12 +489,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 </> })}		
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>11 день
-        </>,
-        en: <>11 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="11 день">
 			{translate({
                 ru: <>
                 
@@ -573,12 +517,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 </> })}
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>12 день
-        </>,
-        en: <>12 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="12 день">
 			{translate({
                 ru: <>
                 
@@ -623,12 +562,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
 				
             </TimetableDay>
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>13 день
-        </>,
-        en: <>13 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="13 день">
 			{translate({
                 ru: <>
                 
@@ -646,12 +580,7 @@ const TourBasicTimetable = ({ accentColor = "blue-500" }) => {
             </TimetableDay>
 
 
-            <TimetableDay accentColor={accentColor} title={translate({
-        ru: <>14 день
-        </>,
-        en: <>14 day
-        </>   
-    })}>
+            <TimetableDay accentColor={accentColor} title="14 день">
 			{translate({
                 ru: <>
                 Возвращение, авиаперелет в Ченду.
