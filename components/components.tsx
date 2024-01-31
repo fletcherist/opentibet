@@ -764,6 +764,9 @@ export const ApplyForm: React.FC = () => {
                 console.log(resp);
                 const json = await resp.json();
                 console.log(json);
+                if (window && (window as any).ym !== undefined) {
+                  (window as any).ym('95954530', 'reachGoal', 'FORM_SUBMIT')
+                }
               } catch (error) {
                 alert(
                   translate({
