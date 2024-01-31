@@ -600,14 +600,14 @@ function Home() {
               })}
             </div>
             <div className="flex justify-center">
-              <div className="flex max-w-lg gap-5 mb-4 mt-3">
+              <div className="flex max-w-xl gap-5 mb-4 mt-3">
                 <Image
                   src="/tibet-putevoditel-2.jpg"
                   alt=""
-                  width={120}
-                  height={90}
-                  quality={90}
-                  className="w-full cursor-pointer"
+                  width={600}
+                  height={400}
+                  quality={100}
+                  className="w-full cursor-pointer max-w-sm"
                 />
                 <Image
                   src="/putevoditel-tibet.jpg"
