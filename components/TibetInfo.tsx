@@ -230,6 +230,8 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentYumbulakhang />
                                 <ContentChongye />
                                 <ContentKading />
+                                <ContentSeling />
+                                <ContentDrikungTil />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -1731,16 +1733,69 @@ const ContentKading = () => {
             })}</TibetInfoCardTitle>
             <TibetInfoCardContent>
                 {translate({
-                    ru: <>
-                        Внешняя кора мандалы Кайлас — это паломнический маршрут вокруг горы Кайлас, расположенной в Тибете. Маршрут имеет длину около 53 километров и занимает около 3-4 дней.
-                        <br />
-                        <br />
-                        Гора Кайлас считается священной в индуизме, буддизме и джайнизме. Считается, что гора является центром Вселенной и местом обитания богов.</>,
+                    ru: <></>,
+                    en: <></>,
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard >
+    );
+}
+
+const ContentDrikungTil = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/drikung-til.jpg">
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Дрикунг Тил",
+                en: "Drikung Til Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: <>Монастырь расположен в 130 км от Лхасы и является основной резиденцией школы Дрикунг.
+
+                        Он был основан в 1179 г. Джинтен Сумгон Ринчен Пелжором (Jigten Sumgon Renchen Peljor), очень известным мастером школы Дрикунг, который был учеником Пагмо Друпы.
+
+                        По легенде, мастер шел за самкой яка «дри» и в месте, где она остановилась, решил основать монастырь.
+
+                        В XIII в. Дрикунг Тил был важным политическим центром и главным конкурентом школы Сакья.
+
+                        В наши дни в монастыре проживают чуть более 200 монахов.
+
+                        Одним из самых важных сооружений монастыря была 5-этажная ступа из золота и бронзы, в которой находилось 2800 священных статуй. Рядом с монастырем находится очень популярное в Тибете действующее до сих пор плато «небесных похорон».
+
+                        В монастыре есть зал, где находятся статуи всех учителей школы Кагью.
+
+                        Основные скульптуры монастыря это изображения: Будды Шакьямуни, Будды Медицины, Джинтена Сумгона (Джопа Ренпоч) и защитница школы Кагью: Абчи Чуду.
+
+                        Стоит пройти кору вокруг монастыря и насладиться завораживающими видами на долину. Прогулка займет всего час.
+
+                        Во время тура в Тибет, стоит посетить священный монастырь Дрикунг Тил и уникальные места рядом с ним.</>,
                     en: <>
-                        The outer kora of Kailash mandala is a pilgrimage route around Mount Kailash, located in Tibet. The route is about 53 kilometers long and takes about 3-4 days.
-                        <br />
-                        <br />
-                        Mount Kailash is considered sacred in Hinduism, Buddhism and Jainism. It is believed that the mountain is the center of the Universe and the habitat of the gods.</>,
+                        The monastery is located 130 km from Lhasa and is the main residence of the Drikung school.
+
+                        It was founded in 1179 by Jinten Sumgon Rinchen Peljor, a very famous master of the Drikung school, who was a student of Pagmo Drupa.
+                    </>,
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard >
+    );
+}
+
+const ContentSeling = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc="https://storage.googleapis.com/opentibet/seling.jpg">
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Селинг",
+                en: "Seling Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: <>
+                        В нескольких километрах от Таклунга на склоне одноимённой горы находится монастырь Селинг. Селинг означает Лев и гора напоминает по форме льва. Монастырь был основан в 12 веке основателем Туклунга- Тонгпой Ташибе. И так же принадлежал школе Кагью. Он основан на месте пещеры где великий Мастер медитировал 12 лет.
+                        Этот монастырь был главным местом для ретритов школы Кагью. Место очень энергетически активное.
+                    </>,
+                    en: <></>,
                 })}
             </TibetInfoCardContent>
         </TibetInfoCard >
