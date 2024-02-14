@@ -91,7 +91,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                         <TourButton
                             title={`${translationsMap[month].charAt(0).toUpperCase()}${translationsMap[month].slice(1)}`}
                             subtitle={`2—19 ${translationsMap[month]}`}
-                            days={15}
+                            days={14}
                             price={getTourPriceForMonth(month)}
                         />
                     </div>

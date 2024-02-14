@@ -1601,7 +1601,7 @@ const ToursTabs = () => {
                     en: "May",
                   }) as string
                 }
-                subtitle="2—21 мая"
+                subtitle="2—15 мая"
                 days={14}
                 price={getTourPriceForMonth("may")}
                 withIcon
@@ -1631,7 +1631,7 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-august-2024"} target="_blank">
               <TourButton
                 title="Август"
-                subtitle="2—19 августа"
+                subtitle="2—15 августа"
                 days={14}
                 price={getTourPriceForMonth("august")}
                 withIcon
@@ -1641,7 +1641,7 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-september-2024"} target="_blank">
               <TourButton
                 title="Сентябрь"
-                subtitle="2—21 сентября"
+                subtitle="2—15 сентября"
                 days={14}
                 price={getTourPriceForMonth("september")}
                 withIcon
@@ -1651,7 +1651,7 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-october-2024"} target="_blank">
               <TourButton
                 title="Октябрь"
-                subtitle="2—23 октября"
+                subtitle="2—15 октября"
                 days={14}
                 price={getTourPriceForMonth("october")}
                 withIcon
