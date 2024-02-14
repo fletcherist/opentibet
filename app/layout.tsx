@@ -5,7 +5,7 @@ import { Unbounded } from 'next/font/google'
 import Script from 'next/script'
 import Head from 'next/head'
 
-const inter = Unbounded({ subsets: ['cyrillic', 'latin'] })
+const font = Unbounded({ subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
   title: 'Open Tibet — Эксклюзивные маршруты по доступным ценам',
@@ -50,7 +50,7 @@ export default function RootLayout({
           </div>
         </noscript>
       </head>
-      <body className={inter.className}>
+      <body className={font.className}>
         {children}
       </body>
     </html>
