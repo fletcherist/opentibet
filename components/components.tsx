@@ -216,6 +216,15 @@ export const PhotoGallery = () => {
             className={imgClassName}
           />
         </PhotoView>
+        
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-1.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-1.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>		
+		
       </div>
     </PhotoProvider>
   );
