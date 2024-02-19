@@ -224,7 +224,69 @@ export const PhotoGallery = () => {
             className={imgClassName}
           />
         </PhotoView>		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-2.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-2.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>		
 		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-3.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-3.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>				
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>	
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>				
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-5.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-5.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>		
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-6.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-6.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>				
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-7.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-7.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>								
+		
+		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-8.jpg">
+          <img
+            src="https://img.opentibet.ru/gallery/gallery-tibet-8.jpg"
+            alt=""
+            className={imgClassName}
+          />
+        </PhotoView>												
       </div>
     </PhotoProvider>
   );
