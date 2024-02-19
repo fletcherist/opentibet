@@ -3,6 +3,7 @@ const nextConfig = {
     images: {
         domains: [
             'storage.googleapis.com',
+			'img.opentibet.ru',
         ],
         imageSizes: [16, 20, 32, 40, 64, 128, 256, 512, 1024],
         deviceSizes: [1280, 1366, 1600, 1920],
