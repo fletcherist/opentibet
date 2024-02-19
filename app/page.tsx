@@ -621,36 +621,11 @@ function Home() {
             </div>
             <div className="pt-10 flex justify-center">
               <div className="flex flex-col gap-1 max-w-2xl">
-                <div className="grid gap-1">
-                  <Image
-                    src="https://storage.googleapis.com/opentibet/alex-2.jpg"
-                    alt=""
-                    width={750}
-                    height={500}
-                    quality={90}
-                    className="w-full col-start-1 col-end-3 cursor-pointer"
-                  />
-                  {/* <AspectRatio ratio={16 / 9} className="bg-muted">
+
+			<div className="flex gap-1">
+                  <div className="bg-blue max-w-[50%] w-full h-full">
                     <Image
-                      src="https://storage.googleapis.com/opentibet/alex-10.jpg"
-                      alt="Photo by Drew Beamer"
-                      fill
-                      className="rounded-md object-cover"
-                    />
-                  </AspectRatio> */}
-                  <Image
-                    src="https://storage.googleapis.com/opentibet/alex-10.jpg"
-                    alt=""
-                    width={375}
-                    height={250}
-                    quality={75}
-                    className="h-full object-cover w-full col-start-3 col-end-4 cursor-pointer"
-                  />
-                </div>
-                <div className="flex gap-1">
-                  <div className="bg-blue max-w-[40%] w-full h-full">
-                    <Image
-                      src="https://storage.googleapis.com/opentibet/alex-12.jpeg"
+                      src="https://img.opentibet.ru/logo/tibet-group-1.jpg"
                       alt=""
                       width={375}
                       height={250}
@@ -658,10 +633,10 @@ function Home() {
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div className="bg-blue max-w-[60%] w-full h-full">
+                  <div className="bg-blue max-w-[50%] w-full h-full">
                     <Image
-                      src="https://storage.googleapis.com/opentibet/alex-13.jpg"
-                      alt="Фото Алексея Перчукова"
+                      src="https://img.opentibet.ru/logo/tibet-group-2.jpg"
+                      alt=""
                       width={375}
                       height={250}
                       quality={75}
@@ -669,6 +644,30 @@ function Home() {
                     />
                   </div>
                 </div>
+				
+			<div className="flex gap-1">
+                  <div className="bg-blue max-w-[50%] w-full h-full">
+                    <Image
+                      src="https://img.opentibet.ru/logo/tibet-group-3.jpg"
+                      alt="Фото Алексея Перчукова"
+                      width={375}
+                      height={250}
+                      quality={75}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="bg-blue max-w-[50%] w-full h-full">
+                    <Image
+                      src="https://img.opentibet.ru/logo/tibet-group-4.jpg"
+                      alt=""
+                      width={375}
+                      height={250}
+                      quality={75}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>				
+                          
                 <div className="flex gap-1">
                   <div className="bg-blue max-w-[50%] w-full h-full">
                     <Image
