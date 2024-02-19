@@ -248,14 +248,6 @@ export const PhotoGallery = () => {
           />
         </PhotoView>	
 		
-		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg">
-          <img
-            src="https://img.opentibet.ru/gallery/gallery-tibet-4.jpg"
-            alt=""
-            className={imgClassName}
-          />
-        </PhotoView>				
-		
 		<PhotoView src="https://img.opentibet.ru/gallery/gallery-tibet-5.jpg">
           <img
             src="https://img.opentibet.ru/gallery/gallery-tibet-5.jpg"
