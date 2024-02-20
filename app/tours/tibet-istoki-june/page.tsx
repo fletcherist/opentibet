@@ -58,7 +58,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                         </div>
                         <TourButton
                             title="Июнь"
-                            subtitle="2—22 июня"
+                            subtitle="2—15 июня"
                             days={21}
                             price={"от 4500"}
                             bgColor="yellow-500"

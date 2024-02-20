@@ -1620,7 +1620,7 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-july-2024"} target="_blank">
               <TourButton
                 title="Июль"
-                subtitle="1—23 июля"
+                subtitle="2—15 июля"
                 days={14}
                 price={getTourPriceForMonth("july")}
                 withIcon
