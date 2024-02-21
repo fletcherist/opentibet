@@ -1323,7 +1323,7 @@ function Home() {
           <div className="py-2">
             <input
               type="tel"
-              value="+86 173 8999 5190"
+              value="+86 153 4891 9180"
               className="text-3xl max-w-full"
               readOnly
             />
