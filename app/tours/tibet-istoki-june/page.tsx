@@ -40,7 +40,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
                                 <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
                                 <h2 className="text-2xl font-light mt-3 leading-8">
-                                    3600$ за 21 день
+                                     
                                 </h2>
                             </div>
                         </div>
