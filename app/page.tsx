@@ -1690,7 +1690,7 @@ const ToursTabs = () => {
             <Link href={"/tours/tibet-istoki-june"} target="_blank">
               <TourButton
                 title="Июнь"
-                subtitle="15 июня - 4 августа"
+                subtitle="15 июня - 5 июля"
                 days={21}
                 price={"от 4000"}
                 bgColor="yellow-500"
