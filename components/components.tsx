@@ -20,6 +20,16 @@ import Link from "next/link";
 import { TimetableFactoid } from "./ToursTimetable";
 import { imagesSrc } from "./TibetInfo";
 import { Language, LanguageProvider, useLanguage, useSetLanguage, useTranslateFn } from "@/lib/language";
+import { Button } from "./ui/button";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+
+import { toast } from "sonner"
+
+import cn from 'classnames'
+
+import { CircleCheck } from "lucide-react";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -737,7 +747,6 @@ export const TourButton: React.FC<{
       </div>
     );
   };
-
 
 export const ButtonWithContent: React.FC<{
   title: string;
@@ -1587,6 +1596,296 @@ export const PreparingForTrip = () => {
         </ButtonWithContent>
       </div>
     </div>
+  )
+}
+
+
+type BuyBookDialogState = 'booking' | 'success' | 'error'
+interface BuyBookData {
+  name: string;
+  email: string;
+  phone: string;
+}
+
+export const BuyBookButton: React.FC<{
+  onUpdateData: (data: BuyBookData) => void;
+  onSubmitData: () => Promise<void>
+
+  data: BuyBookData;
+
+  state: BuyBookDialogState
+}> = ({ data, onUpdateData, onSubmitData, state }) => {
+
+  const [buttonLoading, setButtonLoading] = useState<boolean>(false)
+
+  const translate = useTranslateFn()
+
+
+  const labelClassName = "block mb-1 text-[11px] text-gray-900"
+  const renderState = () => {
+    if (state === 'booking') {
+      return (
+        <><DialogHeader>
+          <DialogTitle>
+            Заказать путеводитель
+          </DialogTitle>
+          <DialogDescription>
+            Книга "Путеводитель по Тибету" придёт с автографом Алексея Перчукова
+          </DialogDescription>
+        </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div>
+              <Label
+                htmlFor="first_name"
+                className={labelClassName}
+              >
+                {translate({
+                  ru: "Как вас зовут",
+                  en: "Your Name"
+                })}
+              </Label>
+              <Input
+                type="text"
+                id="first_name"
+                placeholder=""
+                required
+                value={data.name}
+                onChange={(event) => {
+                  onUpdateData({ ...data, name: event.target.value })
+                }}
+              />
+            </div>
+            <div>
+              <Label
+                htmlFor="email"
+                className={labelClassName}
+              >
+                {translate({
+                  ru: "Email",
+                  en: "Email"
+                })}
+              </Label>
+              <Input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+                value={data.email}
+                onChange={(event) => {
+                  onUpdateData({ ...data, email: event.target.value })
+                }}
+              />
+            </div>
+            <div>
+              <Label
+                htmlFor="tel"
+                className={labelClassName}
+              >
+                {translate({
+                  ru: "Или номер телефона",
+                  en: "Or Phone Number"
+                })}
+              </Label>
+              <Input
+                type="tel"
+                id="tel"
+                placeholder="+79995141213"
+                required
+                value={data.phone}
+                onChange={(event) => {
+                  onUpdateData({ ...data, phone: event.target.value })
+                }}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button className="w-48 bg-blue-500 hover:bg-blue-700" type="submit" onClick={async () => {
+              if (data.name === '') {
+                toast(translate({
+                  en: "Please enter your name",
+                  ru: "Пожалуйста укажите ваше имя"
+                }))
+                return
+              }
+              if (data.email === '') {
+                toast(translate({
+                  en: "Please enter your email",
+                  ru: "Пожалуйста, введите ваш адрес электронной почты"
+                }))
+                return
+              }
+              if (data.phone === '') {
+                toast(translate({
+                  en: "Please enter your phone number",
+                  ru: "Пожалуйста, укажите номер телефона для связи"
+                }))
+                return
+              }
+              toast(translate({
+                en: "Submitting your application for book",
+                ru: "Отправка заявки на Путеводитель по Тибету"
+              }))
+              setButtonLoading(true)
+              await onSubmitData()
+              setButtonLoading(false)
+            }}>
+              {buttonLoading ? <LoadingSpinner /> : translate({
+                en: "Book Retreat",
+                ru: "Заказать"
+              })}
+            </Button>
+          </DialogFooter></>
+      )
+    } else if (state === 'success') {
+      return (
+        <DialogHeader>
+          <DialogTitle className="leading-7">
+            {translate({
+              en: "Your booking request for the Tibet Guide has been successfully sent!",
+              ru: "Заявка на Путеводитель по Тибету успешно отправлена!"
+            })}
+          </DialogTitle>
+          <DialogDescription>
+            {translate({
+              en: "We will contact you in a few hours to confirm your booking.",
+              ru: "Мы свяжемся с вами в течение нескольких часов."
+            })}
+            <div className="flex align-center justify-center p-10">
+              <CircleCheck className="w-16 h-16 text-green-400" />
+            </div>
+            <DialogClose asChild>
+              <Button className="w-full" variant={"secondary"} onClick={() => {
+                toast(translate({
+                  en: "Thank you for ordering the Tibet Guide. We will contact you shortly",
+                  ru: "Спасибо за заказ путеводителя по Тибету. Мы свяжемся с вами в ближайшее время"
+                }))
+              }}>{translate({
+                en: "OK. Close",
+                ru: "OK. Закрыть"
+              })}</Button>
+            </DialogClose>
+          </DialogDescription>
+        </DialogHeader>
+      )
+    } else if (state === 'error') {
+      return (
+        <DialogHeader>
+          <DialogTitle>
+            {translate({
+              en: "Error occurred while sending the booking request",
+              ru: "Произошла ошибка при отправке заявки на бронирование путеводителя"
+            })}
+          </DialogTitle>
+          <DialogDescription>
+            {translate({
+              en: "Error occurred while sending. Please try again later",
+              ru: "Ошибка во время отправки. Пожалуйста, попробуйте позже"
+            })}
+          </DialogDescription>
+        </DialogHeader>
+      )
+    }
+  }
+
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button className='w-full bg-blue-500 hover:bg-blue-700'>
+          Заказать путеводитель
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        {renderState()}
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+export const BuyBookButtonStory = () => {
+  const defaultData: BuyBookData = {
+    name: '',
+    email: '',
+    phone: '',
+  }
+  const [data, setData] = useState<BuyBookData>(defaultData)
+  const [dialogState, setDialogState] = useState<BuyBookDialogState>('booking')
+
+  return (
+    <BuyBookButton data={data} state={dialogState} onUpdateData={newData => {
+      setData(newData)
+    }} onSubmitData={async () => {
+      console.log(data)
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setData(defaultData)
+      setDialogState('success')
+    }} />
+  )
+}
+
+export const BuyBookButtonContainer: React.FC = ({ }) => {
+  const defaultData: BuyBookData = {
+    name: '',
+    email: '',
+    phone: '',
+  }
+  const [data, setData] = useState<BuyBookData>(defaultData)
+  const [dialogState, setDialogState] = useState<BuyBookDialogState>('booking')
+
+  return (
+    <BuyBookButton data={data} state={dialogState} onUpdateData={newData => {
+      setData(newData)
+    }} onSubmitData={async () => {
+      console.log(data)
+
+      try {
+        const body = {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+        };
+        const resp = await fetch("/api/tibet-guide", {
+          method: "POST",
+          body: JSON.stringify(body),
+          headers: {
+            "content-type": "application/json",
+          },
+        });
+        console.log(resp);
+        const json = await resp.json();
+
+        setDialogState('success')
+
+        console.log(json);
+        if (window && (window as any).ym !== undefined) {
+          (window as any).ym('95954530', 'reachGoal', 'FORM_SUBMIT')
+        }
+      } catch (error) {
+        setDialogState('error')
+      }
+
+      setData(defaultData)
+    }} />
+  )
+}
+
+export const LoadingSpinner: React.FC<{
+  className?: string
+}> = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn("animate-spin", className)}
+    >
+      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+    </svg>
   )
 }
 

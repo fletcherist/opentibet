@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { Unbounded } from 'next/font/google'
 import Script from 'next/script'
 import Head from 'next/head'
+import { Toaster } from "@/components/ui/sonner"
+
 
 const font = Unbounded({ subsets: ['cyrillic', 'latin'] })
 
@@ -52,6 +54,7 @@ export default function RootLayout({
       </head>
       <body className={font.className}>
         {children}
+        <Toaster />
       </body>
     </html>
   )
