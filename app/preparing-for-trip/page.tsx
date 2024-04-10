@@ -1,6 +1,16 @@
 import { Footer, Navbar, PreparingForTrip } from '@/components/components'
 import React from 'react'
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Open Tibet — Подготовка к поездке',
+    description: 'Как подготовиться к путешествию в Тибет',
+    openGraph: {
+        description: 'Как подготовиться к путешествию в Тибет',
+    }
+}
+
 export default function () {
     return (
         <main
