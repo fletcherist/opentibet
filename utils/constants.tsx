@@ -11,7 +11,7 @@ export const getTourPriceForMonth = (month: Month): number => {
         may: 1900,
         june: 2000,
         july: 2100,
-        august: 2200,
+        august: 2000,
         september: 2300,
         october: 1900,
     }
