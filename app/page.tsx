@@ -1188,12 +1188,12 @@ const ToursTabs = () => {
                 withBorder
               />
             </Link>
-            <Link href={"/tours/tibet-istoki"} target="_blank">
+            <Link href={"/tours/tibet-alex-sep-2024"} target="_blank">
               <TourButton
                 title="Сентябрь"
                 subtitle="2—23 сентября"
                 days={21}
-                price={3600}
+                price={"от 3800"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
