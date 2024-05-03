@@ -114,7 +114,7 @@ export const PhotoGallery = () => {
   // const photo3src = "https://storage.googleapis.com/opentibet/topor.jpg";
   // const photo4src = "https://storage.googleapis.com/opentibet/background-7.jpg"; // replace with actual photos
   // const photo5src = "https://storage.googleapis.com/opentibet/background-8.jpg";
-  const photo6src = "https://media.discordapp.net/attachments/1182687528613064777/1182705035767992360/azwj9jLfIEWJV9xS-6qHn9-0p4rChwLNdPupTzFdU-Jf8A2qMsFAEPhDNGW652PuiunrNjQU8Rjo9D6kUh1VWw3D3D.png?ex=6585aae6&is=657335e6&hm=b2be063f0e9cdd128ff6e1454682108195f21173308ae2aa314fb7c7f0d4a3c5&=&format=webp&quality=lossless&width=1522&height=1142";
+  const photo6src = "https://storage.googleapis.com/opentibet/1182705035767992360.png";
 
   const imgClassName = "cursor-pointer w-48 bg-cover"
 

@@ -738,30 +738,6 @@ function Home() {
 
       <div className="pt-10" />
 
-      {/* <div className="pt-10" />
-      <div className="max-w-4xl">
-        <div className="pb-5">
-          <Header title="Отзывы участников" subtitle="" />
-        </div>
-        <div className="grid mb-8 rounded-lg md:mb-12 md:grid-cols-2">
-          <Review
-            name="Людмила К."
-            subtitle="Участница экспедиции 2021"
-            text="Спасибо за возможность познакомиться с Тибетом так близко и интимно. Это было невероятное путешествие в мире медитаций и красоты природы. Ваша компания сделала это возможным, и я вам очень благодарна."
-          />
-          <Review
-            name="Марк и Сара"
-            subtitle="Участники экспедиции 2019"
-            text="Это было наше первое путешествие в Тибет, и мы в восторге! Опыт был духовно поднимающим и вдохновляющим. Организация маршрута и качество услуг были выше всяких похвал. Мы обязательно вернемся снова!"
-          />
-          <Review
-            name="Джон С"
-            subtitle="Экспедиция 2022"
-            text="Моя поездка в Тибет с этой компанией оказалась невероятным приключением! Горы, монастыри и доброжелательные люди сделали это путешествие незабываемым. Организация была на высшем уровне, и я чувствовал себя в надежных руках на протяжении всей поездки."
-          />
-        </div>
-      </div> */}
-
       <div className="max-w-4xl w-full">
         <Header
           title={
@@ -825,18 +801,6 @@ function Home() {
         </div>
       </div>
 
-      {/* <div className='relative pt-1 w-full max-w-4xl'>
-        <div className='absolute inset-0' style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))' }} />
-        <div className='absolute h-full w-full'>
-          <div className='flex h-full items-center justify-center'>
-            <div className='text-gray-200 font-bold text-3xl md:text-4xl p-8'>
-              До втречи в Тибете.
-            </div>
-          </div>
-        </div>
-        <video src='https://storage.googleapis.com/opentibet/doors-2.mp4' autoPlay muted loop playsInline className='w-full'></video>
-      </div> */}
-
       <Footer />
     </main>
   );
@@ -870,20 +834,6 @@ const Review: React.FC<{
 const IconMark = () => {
   return <div className="w-2 h-2 rounded-full bg-yellow-600 mr-2" />;
 };
-
-// const IconBookmark = () => {
-//   return (
-//     <svg
-//       className="w-4 h-4 text-gray-300 mr-4"
-//       aria-hidden="true"
-//       xmlns="http://www.w3.org/2000/svg"
-//       fill="currentColor"
-//       viewBox="0 0 14 20"
-//     >
-//       <path d="M13 20a1 1 0 0 1-.64-.231L7 15.3l-5.36 4.469A1 1 0 0 1 0 19V2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v17a1 1 0 0 1-1 1Z" />
-//     </svg>
-//   );
-// };
 
 const WhyGoTibetWithUs = () => {
   const translate = useTranslateFn();
