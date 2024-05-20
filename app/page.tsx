@@ -798,14 +798,11 @@ function Home() {
               })}
             </div>
           </div>
-		  
-		            <div className="py-2">
-            <input
-              type="tel"
-              value="https://t.me/gurutibet"
-              className="text-3xl max-w-full"
-              readOnly
-            />
+
+          <div className="py-2">
+            <Link href="https://t.me/gurutibet" target="_blank" className="text-3xl max-w-full text-blue-500">
+              https://t.me/gurutibet
+            </Link>
             <div className="text-[10px] uppercase tracking-wider font-bold">
               {translate({
                 ru: "Telegram канал",
