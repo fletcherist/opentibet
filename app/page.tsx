@@ -798,6 +798,22 @@ function Home() {
               })}
             </div>
           </div>
+		  
+		            <div className="py-2">
+            <input
+              type="tel"
+              value="https://t.me/gurutibet"
+              className="text-3xl max-w-full"
+              readOnly
+            />
+            <div className="text-[10px] uppercase tracking-wider font-bold">
+              {translate({
+                ru: "Telegram канал",
+                en: "Telegram channel",
+              })}
+            </div>
+          </div>
+
         </div>
       </div>
 
