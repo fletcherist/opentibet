@@ -1155,7 +1155,7 @@ const ToursTabs = () => {
               <TourButton
                 title="Сентябрь"
                 subtitle="3—24 сентября"
-                days={21}
+                days={22}
                 price={"от 4000"}
                 bgColor="yellow-500"
                 fgColor="black"

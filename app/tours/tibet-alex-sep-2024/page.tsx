@@ -41,7 +41,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
                                 <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
                                 <h2 className="text-2xl font-light mt-3 leading-8">
-                                    от 4000$ за 21 день
+                                    от 4000$ за 22 дня
                                 </h2>
                             </div>
                         </div>
@@ -216,6 +216,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 <br />День отдыха 
 <br />Подход к Северному Лицу
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image19.jpg"  />
+
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="14 день">
