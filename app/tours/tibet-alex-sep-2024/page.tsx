@@ -61,7 +61,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             title="Сентябрь"
                             subtitle="03—24 сентября"
                             days={21}
-                            price={"от 400"}
+                            price={"от 4000"}
                             bgColor="yellow-500"
                             fgColor="black"
                             accentColor="white"
