@@ -41,7 +41,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                             <div className="flex max-w-[800px] mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
                                 <AbstractButton label="Оставить заявку" anchor={LINK_APPLY_FORM} />
                                 <h2 className="text-2xl font-light mt-3 leading-8">
-                                    от 4000$ за 22 дня
+                                    от 4000$ за 21 дня
                                 </h2>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export default function ({ params }: { params: { tibet: string } }) {
                         <TourButton
                             title="Сентябрь"
                             subtitle="03—24 сентября"
-                            days={21}
+                            days={22}
                             price={"от 4000"}
                             bgColor="yellow-500"
                             fgColor="black"
