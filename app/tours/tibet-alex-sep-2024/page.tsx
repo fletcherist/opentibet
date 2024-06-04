@@ -92,7 +92,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
         </div>
         <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image01.jpg"  />
 		
-		<ul style="list-style:disc;margin:10px; text-align: justify;">
+		<ul style={{list-style:"disc";margin:"10px"; text-align:" justify";}}>
 		    <li> Обитель Шивы - священная гора Кайлас, место от которого Брахма создавал землю - озеро Манасаровар. Парикарма (Кора).</li>
     <li> Настоящие места силы, где великие учителя прошлого совершали свои аскезы. Пещеры и монастыри, где практиковали Падмасамбхава,
 	Миларепа и многие другие Махасидхи (великие души) прошлого и современности.</li>
