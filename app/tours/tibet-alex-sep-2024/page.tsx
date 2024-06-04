@@ -92,7 +92,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
         </div>
         <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image01.jpg"  />
 		
-		<ul >
+		<ul style={{list-style:"disc",margin:"10px",text-align:"justify"}}>
 		    <li> Обитель Шивы - священная гора Кайлас, место от которого Брахма создавал землю - озеро Манасаровар. Парикарма (Кора).</li>
     <li> Настоящие места силы, где великие учителя прошлого совершали свои аскезы. Пещеры и монастыри, где практиковали Падмасамбхава,
 	Миларепа и многие другие Махасидхи (великие души) прошлого и современности.</li>
@@ -105,17 +105,17 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 <br />Программа тура:
 <TimetableDay accentColor={accentColor} title="1 день">
 <b>Москва -Ченду</b>
-<br />Перелет Москва-Ченду рейсом а/к 
+<br /><br />Перелет Москва-Ченду рейсом а/к 
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="2 день">
 <b>Перелет Ченду-Лхаса. Прибытие в аэропорт Гонкар в 19.00-(3550м) –Переезд в Лхасу (3600м)</b>
-<br />Ночь в Лхасе Tibet hotel
+<br /><br />Ночь в Лхасе Tibet hotel
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="3 день">
 <b>Лхаса</b>
-<br />Монастырь Пабонка.
+<br /><br />Монастырь Пабонка.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image02.jpg"  />
 Страя Лхасса квартал Баркор
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image03.jpg"  />
@@ -124,18 +124,19 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="4 день">
 <b>Лхаса</b>
-<br />Экскурсии в монастырь Цурпу в окрестностях Лхасы.
+<br /><br />Экскурсии в монастырь Цурпу в окрестностях Лхасы.
 <br />
 <br />Один из центров традиции Кармапа школы Кагью («черношапочники») расположен в 70 км западнее Лхасы на высоте 4480 м. Он был основан создателем традиции
- учеником Гампопы Дусум Кхьенпой (1110–1193) достигшим Просветления в 50 лет. Резиденция кармапы — ламы-тулку данной традиции. После смерти первого кармапы Кхьенпы Цурпу (Tsurpu) стал 
- главным монастырем традиции. Когда-то здесь проживали свыше 1000 монахов сегодня их насчитывается около 300. 17-й кармапа принявший этот титул в 1992 г. сейчас живет в Индии.
+ учеником Гампопы Дусум Кхьенпой (1110–1193) достигшим Просветления в 50 лет. Резиденция кармапы — ламы-тулку данной традиции.
+<br /> <br />После смерти первого кармапы Кхьенпы Цурпу (Tsurpu) стал  главным монастырем традиции. Когда-то здесь проживали свыше 1000 монахов сегодня их насчитывается около 300.
+<br /> <br />17-й кармапа принявший этот титул в 1992 г. сейчас живет в Индии.
   Статуи всех 16 кармап представлены в большом здании бывшей резиденции этих лам-тулку.
   <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image04.jpg"  />  
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="5 день">
     <b>   Лхаса (3550 м)– Шигадзе (3950 м) Бон Монастырь Менрм-Ладзе</b>
-<br />Ночь в Ладзе Viena hotel
+<br /><br />Ночь в Ладзе Viena hotel
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="6 день">
@@ -145,10 +146,10 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="7 день">
     <b>Парьянг (4500м) – Манасаровар (4500 м.) (350 км 7 часов)-Дарчен</b>
-<br />Преодоление первых перевалов высотой более 5000 метров первые виды на священный Кайлас.
-<br />Осмотр монастыря Чиу ("Птичий монастырь"). С вершины монастыря открывается великолепные вид на озера Ракшас Тал и Манасаровар а также на заснеженную вершину Кайлаша. 
+<br /><br />Преодоление первых перевалов высотой более 5000 метров первые виды на священный Кайлас.
+<br /><br />Осмотр монастыря Чиу ("Птичий монастырь"). С вершины монастыря открывается великолепные вид на озера Ракшас Тал и Манасаровар а также на заснеженную вершину Кайлаша. 
 Посещение пещеры Падмасамбхавы где он практиковал последние 7 дней прежде чем ушёл из этого мира.
-<br />Монастырь Госсул (Gossul Gompa) построен чуть правее пещеры в которой великий Атиш́а проходил семидневную медитацию. С площадки перед монастырём открывается потрясающая
+<br /><br />Монастырь Госсул (Gossul Gompa) построен чуть правее пещеры в которой великий Атиш́а проходил семидневную медитацию. С площадки перед монастырём открывается потрясающая
 панорама Кайласа и озера. 
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image05.jpg"  />
 Отсюда индусы обычно начинают свою Манасаровар-Кору. Внутри обители находится ещё одна пещера где в XIII в. св. Гоцампа из школы Кагью.
@@ -158,7 +159,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="8 день">
   <b> Дарчен (4600) - Цапаранг (3700). (350км около 6ч)</b>
-<br />Посещение монастыря боннского Гурген на въезде в Долину Гаруды столицу древнего королевства Шанг Шунг.
+<br /><br />Посещение монастыря боннского Гурген на въезде в Долину Гаруды столицу древнего королевства Шанг Шунг.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image07.jpg"  />
 Переезд в Цапаранг.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image10.jpg"  />
@@ -170,7 +171,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 <TimetableDay accentColor={accentColor} title="9 день">
 <b>Пещерные города королевства Гуге (3800 м) Dungar и Payang или Каменный лес (Tower Earth Forest)</b>
 
-<br />Посещение Королевств Гуге.
+<br /><br />Посещение Королевств Гуге.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image11.jpg"  />
 <br />Ночь в Цапаранге Gangadish Hotel.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image12.jpg"  />
@@ -189,14 +190,14 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="11 день">
  <b> Первый день коры: (4920 м)</b>
-<br />Переход до монастыря Дирапук (4910 м) 20 км около 6-7 часов ходьбы. Вы начинаете путь от Тарпоче мимо ступ по пути мы увидим небесное кладбище связанное с 84 махасидхами (йогинами) из Индии пройдем через Ворота Богов Смерти мимо льющихся каскадов ручьев водопадов и западного лица Кайласа монастыря Чукку.
+<br /><br />Переход до монастыря Дирапук (4910 м) 20 км около 6-7 часов ходьбы. Вы начинаете путь от Тарпоче мимо ступ по пути мы увидим небесное кладбище связанное с 84 махасидхами (йогинами) из Индии пройдем через Ворота Богов Смерти мимо льющихся каскадов ручьев водопадов и западного лица Кайласа монастыря Чукку.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image15.jpg"  />
 Далее мы доходим до монастыря Дирапук и останавливаемся на ночлег в гостевом домике напротив северного лица Кайласа.
-<br /><b>Возможны 2 опции:</b>
+<br /><br /><b>Возможны 2 опции:</b>
 <br /><br />- Подъем на плато перед Западным лицом (5300м) продолжительность около 6 часов.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image16.jpg"  />
 - Возможен радиальный выход к северному лицу Кайласа.
-<br />Ночь в гестхаузе рядом с монастырем Дхрира Пхук.
+<br /><br />Ночь в гестхаузе рядом с монастырем Дхрира Пхук.
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="12 день">
@@ -219,14 +220,17 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="14 день">
    <b>Четвертый день коры: (5600 - 4800 м)</b>
-<br />Вы пересечете перевал Дролма-Ла (5600 м) который поразит Вас своей энергетикой. Здесь Вы возрождаетесь так как все грехи прощаются благодаря состраданию Дролмы богини Милосердия. 
+<br /><br />
+Вы пересечете перевал Дролма-Ла (5600 м) который поразит Вас своей энергетикой. Здесь Вы возрождаетесь так как все грехи прощаются благодаря состраданию Дролмы богини Милосердия. 
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image20.png"  />
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image21.jpg"  />
 Далее Вас ждет спуск вниз к монастырю Зутулпук (4790 м). По дороге Вы будете лицезреть: пики потоки водопады горные пещеры. Также Вы сможете посетить монастырь Зутур Пхук.
 <br /><br />Для тех кто уже был в Тибете и проходил Внешнюю Кору будет возможность пройти альтернативным маршрутом через перевал <b>Кхандро Санглам (5675 м)</b> так называемую Внутреннюю Кору.
 <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image22.jpg"  />
 Ночь у монастыря Зутур Пхук (4800м). Посещение Пещеры Магических Сил. Обитель принадлежит линии Дрикунг школы Кагью. Гора над ней называется След Учителя Будды (5924 м).
-<br />Главная святыня монастыря – пещера где медитировал великий йогин Миларепа. Здесь же находится его статуя. На чёрном потолке – отпечатки рук и головы Миларепы. 
+<br />
+<br />
+Главная святыня монастыря – пещера где медитировал великий йогин Миларепа. Здесь же находится его статуя. На чёрном потолке – отпечатки рук и головы Миларепы. 
 Снаружи монастыря в нескольких метрах на юг вертикально стоит огромная шестигранная глыба окружённая каменной стеной.
 <br />Ночь в Гест Хаус Zutur Phuk
 </TimetableDay>
@@ -252,14 +256,14 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="17 день">
     <br /><b>Седьмой день Коры. </b>
-    <br />День отдыха выход к монастырю Гяндрак.
+ <br />   <br />День отдыха выход к монастырю Гяндрак.
     <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image27.jpg"  />
 </TimetableDay>
 
 
 <TimetableDay accentColor={accentColor} title="18 день">
 <b>Восьмой день Коры. </b>
-    <br />Выход к Долине Нанди
+    <br /><br />Выход к Долине Нанди
     <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image28.jpg"  />
 </TimetableDay>
 
@@ -267,17 +271,17 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="19 день">
 <b>Дарчен (4600) – Сага (4500) – Ладзе (4000)</b>
-<br />Ночь в Ладзе в отеле Viena.
+<br /><br />Ночь в Ладзе в отеле Viena.
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="20 день">
 <b>Переезд Ладзе (4000) – Шигадзе (3900)–Лхаса (3600) </b>
-<br />Переезд. Ночь в Tibet hotel.
+<br /><br />Переезд. Ночь в Tibet hotel.
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="21 день">
 <b>Свободный день в Лхасе.</b>
-<br /><b>Ночь в Tibet hotel.</b>
+<br /><br /><b>Ночь в Tibet hotel.</b>
 </TimetableDay>
 
 <TimetableDay accentColor={accentColor} title="22 день">
@@ -285,8 +289,8 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 </TimetableDay>
 
 <br />Информация для подготовки к путешествию в высокогорье
-<br />Список вещей, аптечка для поездки в Тибет : <a href="https://kailash-explorer.com/2017/06/06/tour_poject_tibet/">Список вещей</a>
-<br />Часто задаваемые вопросы: <a href="https://kailash-explorer.com/faqs/">https://kailash-explorer.com/faqs/</a>
+<br /><br />Список вещей, аптечка для поездки в Тибет : <a href="https://kailash-explorer.com/2017/06/06/tour_poject_tibet/">https://kailash-explorer.com/2017/06/06/tour_poject_tibet/</a>
+<br /><br />Часто задаваемые вопросы: <a href="https://kailash-explorer.com/faqs/">https://kailash-explorer.com/faqs/</a>
 
         </>
     );
