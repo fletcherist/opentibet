@@ -1083,7 +1083,7 @@ const ToursTabs = () => {
                 title="Август"
                 subtitle="2—15 августа"
                 days={14}
-                price={getTourPriceForMonth("august")}
+                price={"2200 (от 6 человек)"}
                 withIcon
                 withBorder
               />
