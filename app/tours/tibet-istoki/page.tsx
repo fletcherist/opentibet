@@ -31,11 +31,11 @@ export default function ({ params }: { params: { tibet: string } }) {
                     <div className="text-white h-full flex flex-col justify-center items-center px-4 md:px-20 py-10 md:py-40 relative z-100">
                         <div className="max-w-5xl w-full">
                             <div className="text-3xl font-semibold text-center w-full px-4 mt-5 mb-5">
-                                Истоки четырех священных рек и<br /> исследование мандалы Кайласа.
+                            Глубокое  погружение в Манлалу Кайласа.
                                 <br />
                             </div>
                             <div className="text-xl font-light w-9/12 mx-auto text-center leading-7">
-                                Эксклюзивный маршрут в июне 2024
+                                Эксклюзивный маршрут в сентябре 2024
                                 {/* Большинство паломников, приезжающих в Тибет, осматривают лишь самые популярные туристические места.
                             <br />
                             У вас есть уникальная возможность оказаться там, куда обычному туристу не попасть.
