@@ -1143,7 +1143,7 @@ const ToursTabs = () => {
                 title="Июнь"
                 subtitle="15 июня - 5 июля"
                 days={21}
-                price={"от 4000"}
+                price={"от 4500"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
