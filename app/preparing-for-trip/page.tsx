@@ -1,17 +1,20 @@
-import { Footer, Navbar, PreparingForTrip } from '@/components/components'
+"use client";
+
+import { Footer, Navbar, PreparingForTrip, WithLanguageProvider } from '@/components/components'
 import React from 'react'
 
-import { Metadata } from "next";
+import { useTranslateFn } from '@/lib/language';
 
-export const metadata: Metadata = {
-    title: 'Open Tibet — Подготовка к поездке',
-    description: 'Как подготовиться к путешествию в Тибет',
-    openGraph: {
-        description: 'Как подготовиться к путешествию в Тибет',
-    }
+export default function Page() {
+    return (
+        <WithLanguageProvider>
+            <PreparingForTripPage />
+        </WithLanguageProvider>
+    );
 }
 
-export default function () {
+const PreparingForTripPage = () => {
+    const translate = useTranslateFn();
     return (
         <main
             lang="ru"
@@ -26,3 +29,4 @@ export default function () {
         </main>
     )
 }
+
