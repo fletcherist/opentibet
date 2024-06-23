@@ -607,10 +607,10 @@ export const ActionButton = () => {
 
   return <AbstractButton label={
     translate({
-      ru: "Смотреть программы",
-      en: "View programs"
+      ru: "Получить консультацию",
+      en: "Get a consultation"
     }) as string
-  } anchor={LINK_OFFERS} />;
+  } anchor={LINK_APPLY_FORM} />;
 };
 
 export const TimetableDay: React.FC<{
