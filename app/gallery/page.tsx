@@ -2,6 +2,7 @@
 
 import { Footer, Header, Navbar, NavbarHeightCompensation, PageBreadcrumbs, PhotoGallery, WithLanguageProvider } from '@/components/components';
 import { useTranslateFn } from '@/lib/language';
+import { classNameMobilePaddingX } from '@/utils/constants';
 import React from 'react'
 
 export default function Page() {
@@ -22,7 +23,7 @@ const PhotoGalleryPage = () => {
             <Navbar />
             <NavbarHeightCompensation />
 
-            <div className="max-w-4xl w-full">
+            <div className={`max-w-4xl w-full ${classNameMobilePaddingX}`}>
                 <PageBreadcrumbs title={translate({
                     ru: "Фотогалерея",
                     en: "Photo Gallery",

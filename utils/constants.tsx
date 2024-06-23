@@ -3,6 +3,11 @@ export const LINK_OFFERS = "offers";
 export const LINK_WELCOME_SCREEN = "welcome";
 export const LINK_TIBET_PREPARATION = "tibet_preparation";
 export const LINK_APPLY_FORM = 'apply_form'
+export const LINK_ABOUT_US = '/about-us'
+export const LINK_PREPARING_FOR_TRIP = '/preparing-for-trip'
+export const LINK_GURUTIBET = '/gurutibet'
+export const LINK_PHOTO_GALLERY = '/gallery'
+
 export const LINK_TELEGRAM = 'https://t.me/gurutibet'
 export const LINK_WHATSAPP = 'https://wa.me/79119274114'
 
@@ -18,3 +23,5 @@ export const getTourPriceForMonth = (month: Month): number => {
     }
     return prices[month] || 0
 }
+
+export const classNameMobilePaddingX = 'px-1 md:px-0'

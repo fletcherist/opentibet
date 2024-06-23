@@ -6,6 +6,7 @@ import React from 'react'
 import Image from 'next/image';
 
 import tibetCss from "../tibet.module.css";
+import { classNameMobilePaddingX } from '@/utils/constants';
 
 export default function Page() {
     return (
@@ -27,7 +28,7 @@ const GuruTibet = () => {
 
 
             <div className="w-full bg-gray-800 text-white pb-12">
-                <div className="max-w-4xl mx-auto">
+                <div className={`max-w-4xl mx-auto ${classNameMobilePaddingX}`}>
                     <PageBreadcrumbs title={translate({
                         ru: "GuruTibet",
                         en: "GuruTibet",

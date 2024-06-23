@@ -16,6 +16,10 @@ import {
   LINK_APPLY_FORM,
   LINK_TELEGRAM,
   LINK_WHATSAPP,
+  LINK_ABOUT_US,
+  LINK_PREPARING_FOR_TRIP,
+  LINK_GURUTIBET,
+  LINK_PHOTO_GALLERY,
 } from "@/utils/constants";
 import Link from "next/link";
 import { TimetableFactoid } from "./ToursTimetable";
@@ -32,8 +36,10 @@ import { toast } from "sonner"
 
 import cn from 'classnames'
 
-import { CircleCheck } from "lucide-react";
+import { AlignJustifyIcon, CircleCheck } from "lucide-react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "./ui/breadcrumb";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -1007,34 +1013,17 @@ export const Navbar = () => {
               }}
             />
           </Link>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:text-yellow focus:outline-none focus:text-yellow-500"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+
+          <div className="block md:hidden">
+            <NavbarHamburger />
+          </div>
+
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border items-center border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
-                <Link href={`/about-us`}
+                <Link href={LINK_ABOUT_US}
                   className={cn(linkClassName, {
-                    [linkActiveClassName]: isActive('/about-us')
+                    [linkActiveClassName]: isActive(LINK_ABOUT_US)
                   })}>
                   {translate({
                     ru: 'О нас',
@@ -1060,9 +1049,9 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href={`/preparing-for-trip`}
+                  href={LINK_PREPARING_FOR_TRIP}
                   className={cn(linkClassName, {
-                    [linkActiveClassName]: isActive(`/preparing-for-trip`)
+                    [linkActiveClassName]: isActive(LINK_PREPARING_FOR_TRIP)
                   })}
                 >
                   {translate({
@@ -1073,9 +1062,9 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href={`/gurutibet`}
+                  href={LINK_GURUTIBET}
                   className={cn(linkClassName, {
-                    [linkActiveClassName]: isActive(`/gurutibet`)
+                    [linkActiveClassName]: isActive(LINK_GURUTIBET)
                   })}
                 >
                   {translate({
@@ -1087,9 +1076,9 @@ export const Navbar = () => {
 
               <li>
                 <Link
-                  href={`/gallery`}
+                  href={LINK_PHOTO_GALLERY}
                   className={cn(linkClassName, {
-                    [linkActiveClassName]: isActive(`/gallery`)
+                    [linkActiveClassName]: isActive(LINK_PHOTO_GALLERY)
                   })}
                 >
                   {translate({
@@ -1150,6 +1139,101 @@ export const Navbar = () => {
 
 export const NavbarHeightCompensation = () => {
   return <div style={{ height: NAVBAR_HEIGHT + 80 }} />;
+}
+
+export const NavbarHamburger: React.FC = () => {
+  const translate = useTranslateFn()
+  return (
+    <div>
+
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <div className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white rounded-lg transition active:bg-slate-100">
+            <AlignJustifyIcon />
+          </div>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>
+            {translate({
+              ru: 'Меню',
+              en: 'Menu'
+            })}
+          </DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <Link href={LINK_ABOUT_US}>
+            <DropdownMenuItem>
+              {translate({
+                ru: 'О нас',
+                en: 'About Us'
+              })}
+
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={`/#${LINK_OFFERS}`}>
+            <DropdownMenuItem>
+              {translate({
+                ru: 'Программы',
+                en: 'Tours'
+              })}
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={LINK_PREPARING_FOR_TRIP}>
+            <DropdownMenuItem>
+              {translate({
+                ru: 'Подготовка к поздке',
+                en: 'Preparing for the trip'
+              })}
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={LINK_GURUTIBET}>
+            <DropdownMenuItem>
+              GuruTibet
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={LINK_PHOTO_GALLERY}>
+            <DropdownMenuItem>
+              {translate({
+                ru: 'Фотогалерея',
+                en: 'Photo Gallery'
+              })}
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={`/#${LINK_CONTACTS}`}>
+            <DropdownMenuItem>
+              {translate({
+                ru: 'Контакты',
+                en: 'Contacts'
+              })}
+            </DropdownMenuItem>
+          </Link>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      {/* <svg
+        className="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          strokeWidth="2"
+          d="M1 1h15M1 7h15M1 13h15"
+        />
+      </svg> */}
+    </div >
+  )
+}
+
+export const NavbarHamburgerStory: React.FC = () => {
+  return (
+    <NavbarHamburger />
+  )
 }
 
 export const Footer = () => {

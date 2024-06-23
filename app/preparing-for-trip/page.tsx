@@ -4,6 +4,7 @@ import { Footer, Navbar, NavbarHeightCompensation, PageBreadcrumbs, PreparingFor
 import React from 'react'
 
 import { useTranslateFn } from '@/lib/language';
+import { classNameMobilePaddingX } from '@/utils/constants';
 
 export default function Page() {
     return (
@@ -23,7 +24,7 @@ const PreparingForTripPage = () => {
             <Navbar />
             <NavbarHeightCompensation />
 
-            <div className="max-w-4xl w-full">
+            <div className={`max-w-4xl w-full ${classNameMobilePaddingX}`}>
                 <PageBreadcrumbs title={translate({
                     ru: "Подготовка к поездке",
                     en: "Preparing for the trip",

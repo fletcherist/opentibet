@@ -308,7 +308,7 @@ function Home() {
           </div>
 
           <div className="py-2">
-            <Link href={LINK_TELEGRAM} target="_blank" className="text-3xl max-w-full text-blue-500">
+            <Link href={LINK_TELEGRAM} target="_blank" className="text-2xl max-w-full text-blue-500">
               {LINK_TELEGRAM}
             </Link>
             <div className="text-[10px] uppercase tracking-wider font-bold">

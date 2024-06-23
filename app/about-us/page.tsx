@@ -4,6 +4,7 @@ import { Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider
 import { useTranslateFn } from '@/lib/language';
 import React from 'react'
 import Image from 'next/image';
+import { classNameMobilePaddingX } from '@/utils/constants';
 
 export default function Page() {
     return (
@@ -23,7 +24,7 @@ const AbousUs = () => {
             <Navbar />
             <NavbarHeightCompensation />
 
-            <div className="max-w-4xl">
+            <div className={`max-w-4xl ${classNameMobilePaddingX}`}>
                 <PageBreadcrumbs title={translate({
                     ru: "О нас",
                     en: "Abous Us",
