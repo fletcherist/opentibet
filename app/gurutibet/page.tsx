@@ -1,6 +1,6 @@
 "use client";
 
-import { BuyBookButtonContainer, Header, Navbar, NavbarHeightCompensation, WithLanguageProvider } from '@/components/components';
+import { BuyBookButtonContainer, Header, Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider } from '@/components/components';
 import { useTranslateFn } from '@/lib/language';
 import React from 'react'
 import Image from 'next/image';
@@ -20,14 +20,19 @@ const GuruTibet = () => {
     return (
         <main
             lang="ru"
-            className="flex min-h-screen flex-col items-center justify-between bg-gray-800"
+            className="flex min-h-screen flex-col items-center bg-gray-800"
         >
             <Navbar />
             <NavbarHeightCompensation />
 
+
             <div className="w-full bg-gray-800 text-white pb-12">
-                <div className="max-w-4xl mt-6 mx-auto">
-                    <div className="w-full pt-8">
+                <div className="max-w-4xl mx-auto">
+                    <PageBreadcrumbs title={translate({
+                        ru: "GuruTibet",
+                        en: "GuruTibet",
+                    }) as string} theme='dark' />
+                    <div className="w-full">
                         <Header
                             title={
                                 translate({
@@ -42,7 +47,7 @@ const GuruTibet = () => {
                                 }) as string
                             }
                         />
-                        <div className="px-4 py-2">
+                        <div className="py-2">
                             <p className="py-4 pb-0 leading-7 hyphens-auto">
                                 {translate({
                                     ru: `Мы организуем регулярные ежемесячные туры в Тибет по уникальной

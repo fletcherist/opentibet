@@ -11,7 +11,7 @@ const font = Unbounded({ subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
   title: 'Open Tibet — Эксклюзивные маршруты по доступным ценам',
-  description: 'Откройте для себя Тибет',
+  description: 'Открой для себя Тибет',
   openGraph: {
     description: 'Эксклюзивные маршруты в Тибет по доступным ценам',
   }

@@ -30,7 +30,6 @@ import {
   LINK_CONTACTS,
   LINK_WELCOME_SCREEN,
   LINK_OFFERS,
-  LINK_TIBET_PREPARATION,
   getTourPriceForMonth,
   LINK_TELEGRAM,
 } from "@/utils/constants";
@@ -58,7 +57,7 @@ function Home() {
   return (
     <main
       lang="ru"
-      className="flex min-h-screen flex-col items-center justify-between"
+      className="flex min-h-screen flex-col items-center"
     >
       <Navbar />
       <div
@@ -102,7 +101,7 @@ function Home() {
               {translate({
                 ru: (
                   <>
-                    Откройте
+                    Открой
                     <br />
                     для&nbsp;себя
                     <br />

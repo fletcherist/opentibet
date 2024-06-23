@@ -33,6 +33,7 @@ import { toast } from "sonner"
 import cn from 'classnames'
 
 import { CircleCheck } from "lucide-react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "./ui/breadcrumb";
 
 export const BackgroundSlider = () => {
   const images = [
@@ -960,7 +961,7 @@ export const Header: React.FC<{
   id?: string;
 }> = ({ title, subtitle, id = undefined }) => {
   return (
-    <div className="px-4" id={id}>
+    <div id={id}>
       <div className="text-black-500 font-semibold text-3xl pt-2">{title}</div>
       <div className="py-1 text-black-500 font-bold">{subtitle}</div>
     </div>
@@ -977,8 +978,8 @@ export const Navbar = () => {
   // Function to check if the link is active
   const isActive = (activePathname: string): boolean => activePathname === pathname;
 
-  const linkClassName = "block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-600 md:p-0"
-  const linkActiveClassName = "text-red-500"
+  const linkClassName = "block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-gray-400 md:p-0"
+  const linkActiveClassName = "text-gray-400"
 
   return (
     <nav className="bg-black/60 text-white backdrop-blur-md w-[100vw] fixed z-50">
@@ -1029,7 +1030,7 @@ export const Navbar = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
+            <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 mr-4 border items-center border-gray-100 md:flex-row md:space-x-5 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
                 <Link href={`/about-us`}
                   className={cn(linkClassName, {
@@ -1130,12 +1131,10 @@ export const Navbar = () => {
                     console.log(language, newLanguage)
                     setLanguage(newLanguage)
                   }}
-                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:hover:text-red-500 md:p-0 cursor-pointer"
+                  className="block py-2 px-3 rounded text-xs md:text-base md:border-0 md:p-0 cursor-pointer"
                 >
                   <div className="flex items-center relative">
-                    <span className="text-3xl absolute left-0" style={{
-                      top: -4
-                    }}>
+                    <span className="text-3xl absolute left-0">
                       {language === 'ru' ? '🇺🇸' : '🇷🇺'}
                     </span>
                   </div>
@@ -1150,7 +1149,7 @@ export const Navbar = () => {
 };
 
 export const NavbarHeightCompensation = () => {
-  return <div style={{ height: NAVBAR_HEIGHT + 60 }} />;
+  return <div style={{ height: NAVBAR_HEIGHT + 80 }} />;
 }
 
 export const Footer = () => {
@@ -1192,10 +1191,38 @@ export const Footer = () => {
   )
 }
 
+export const PageBreadcrumbs: React.FC<{
+  title: string
+  theme?: 'light' | 'dark'
+}> = ({ title, theme }) => {
+  const translate = useTranslateFn();
+  return (
+    <Breadcrumb className="pb-4">
+      <BreadcrumbList>
+        <BreadcrumbItem >
+          <BreadcrumbLink className={cn("text-sm md:text-md", {
+            "text-white": theme === 'dark',
+            "hover:text-gray-400": theme === 'dark',
+          })} href="/">{translate({
+            ru: "Главная",
+            en: "Home",
+          })}</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage className={cn("text-sm md:text-md", {
+            "text-gray-200": theme === 'dark',
+          })} >{title}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
+  )
+}
+
 export const PreparingForTrip = () => {
   const translate = useTranslateFn();
   return (
-    <div className="max-w-4xl w-full" id={LINK_TIBET_PREPARATION}>
+    <div id={LINK_TIBET_PREPARATION}>
       <div>
         <Header
           title={
@@ -1206,7 +1233,7 @@ export const PreparingForTrip = () => {
           }
           subtitle=""
         />
-        <p className="mx-4">
+        <p>
           {translate({
             ru: `Поездка в Тибет требует тщательной подготовки. Мы собрали для вас
               сведения, которые помогут вам подготовиться духовно и физически.`,

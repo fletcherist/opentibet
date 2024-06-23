@@ -1,6 +1,6 @@
 "use client";
 
-import { Header, Navbar, NavbarHeightCompensation, PhotoGallery, WithLanguageProvider } from '@/components/components';
+import { Footer, Header, Navbar, NavbarHeightCompensation, PageBreadcrumbs, PhotoGallery, WithLanguageProvider } from '@/components/components';
 import { useTranslateFn } from '@/lib/language';
 import React from 'react'
 
@@ -17,35 +17,36 @@ const PhotoGalleryPage = () => {
     return (
         <main
             lang="ru"
-            className="flex min-h-screen flex-col items-center justify-between"
+            className="flex min-h-screen flex-col items-center"
         >
             <Navbar />
             <NavbarHeightCompensation />
 
-            <div>
-                <div className="max-w-4xl w-full">
-                    <Header
-                        title={
-                            translate({
-                                ru: "Фото с прошлых туров",
-                                en: "Photos from past tours",
-                            }) as string
-                        }
-                        subtitle={
-                            translate({
-                                ru: "Нажмите на фото, чтобы открыть галерею",
-                                en: "Click on the photo to open the gallery",
-                            }) as string
-                        }
-                    />
-                </div>
-                <div className="max-w-6xl pt-6">
-                    <PhotoGallery />
-                </div>
+            <div className="max-w-4xl w-full">
+                <PageBreadcrumbs title={translate({
+                    ru: "Фотогалерея",
+                    en: "Photo Gallery",
+                }) as string} />
+
+                <Header
+                    title={
+                        translate({
+                            ru: "Фото с прошлых туров",
+                            en: "Photos from past tours",
+                        }) as string
+                    }
+                    subtitle={
+                        translate({
+                            ru: "Нажмите на фото, чтобы открыть галерею",
+                            en: "Click on the photo to open the gallery",
+                        }) as string
+                    }
+                />
             </div>
-
-
-            <div className="pt-10" />
+            <div className="max-w-6xl pt-6">
+                <PhotoGallery />
+            </div>
+            <Footer />
         </main>
     );
 }

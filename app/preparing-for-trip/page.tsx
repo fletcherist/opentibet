@@ -1,6 +1,6 @@
 "use client";
 
-import { Footer, Navbar, PreparingForTrip, WithLanguageProvider } from '@/components/components'
+import { Footer, Navbar, NavbarHeightCompensation, PageBreadcrumbs, PreparingForTrip, WithLanguageProvider } from '@/components/components'
 import React from 'react'
 
 import { useTranslateFn } from '@/lib/language';
@@ -18,12 +18,18 @@ const PreparingForTripPage = () => {
     return (
         <main
             lang="ru"
-            className="flex min-h-screen flex-col items-center justify-between"
+            className="flex min-h-screen flex-col items-center"
         >
             <Navbar />
+            <NavbarHeightCompensation />
 
-            <div className="pt-32" />
-            <PreparingForTrip />
+            <div className="max-w-4xl w-full">
+                <PageBreadcrumbs title={translate({
+                    ru: "Подготовка к поездке",
+                    en: "Preparing for the trip",
+                }) as string} />
+                <PreparingForTrip />
+            </div>
 
             <Footer />
         </main>
