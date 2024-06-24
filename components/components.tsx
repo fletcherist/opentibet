@@ -2086,16 +2086,22 @@ export const LoadingSpinner: React.FC<{
 
 const Copyright: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const translate = useTranslateFn()
+
   return (
     <div className="text-center text-xs text-gray-500 py-4">
-      &copy; {currentYear}, OPEN TIBET
-      {/*<br />
-      <span className="text-[9px]">
-        Дизайн:{" "}
-        <a href="https://k60.in" className="hover:text-red-500">
-          k60.in
-        </a>
-  </span>*/}
+      &copy; {currentYear}, OPEN TIBET © {translate({
+        ru: 'Все права защищены',
+        en: 'All rights reserved'
+      })}
+      <div className="flex items-center justify-center pt-4">
+        <Link href={LINK_TELEGRAM} target="_blank">
+          <TelegramIcon className="w-8 h-8 mx-1 cursor-pointer" />
+        </Link>
+        <Link href={LINK_WHATSAPP} target="_blank">
+          <WhatsAppIcon className="w-8 h-8 mx-1 cursor-pointer" />
+        </Link>
+      </div>
     </div>
   );
 };

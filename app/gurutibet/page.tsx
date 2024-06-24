@@ -1,6 +1,6 @@
 "use client";
 
-import { BuyBookButtonContainer, Header, Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider } from '@/components/components';
+import { BuyBookButtonContainer, Footer, Header, Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider } from '@/components/components';
 import { useTranslateFn } from '@/lib/language';
 import React from 'react'
 import Image from 'next/image';
@@ -325,6 +325,8 @@ const GuruTibet = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </main>
     );
 }

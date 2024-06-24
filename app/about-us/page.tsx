@@ -1,6 +1,6 @@
 "use client";
 
-import { Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider } from '@/components/components';
+import { Footer, Navbar, NavbarHeightCompensation, PageBreadcrumbs, WithLanguageProvider } from '@/components/components';
 import { useTranslateFn } from '@/lib/language';
 import React from 'react'
 import Image from 'next/image';
@@ -209,6 +209,8 @@ const AbousUs = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </main>
     );
 }
