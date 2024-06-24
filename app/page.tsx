@@ -20,7 +20,8 @@ import {
   Footer,
   PreparingForTrip,
   WithLanguageProvider,
-  BuyBookButtonContainer
+  BuyBookButtonContainer,
+  GuruTibetBanner
 } from "../components/components";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -216,14 +217,17 @@ function Home() {
         </div>
       </div>
 
-
       <div className="max-w-4xl mt-4 mb-12 pt-4 md:pt-14 w-full">
         <WhyGoTibetWithUs />
       </div>
 
-
       <ToursTabs />
       <div className="pt-10" />
+
+      <div className="max-w-4xl w-full flex justify-center pb-8">
+        <GuruTibetBanner />
+      </div>
+
       <div className="w-full bg-blue-500 text-white py-12">
         <div className="max-w-4xl w-full mx-auto">
           <div className="px-2 md:px-0">

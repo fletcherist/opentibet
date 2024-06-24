@@ -11,3 +11,4 @@
 - ✅ add footer to /gurutibet page
 - ✅ add telegram/whatsapp icons to footer
 - add metadata to all pages
+- add instagram icon to gurutibet
