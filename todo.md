@@ -4,7 +4,7 @@
 - ✅ add active link (current route) in header
 - ✅ add telegra/whatsapp icon to navigation bar
 - change title from "Откройте для себя Тибет" to "Открой для себя Тибет"
-- mobile hamburger menu (use shadcn/ui component)
+- ✅ mobile hamburger menu (use shadcn/ui component)
 - ✅ add breadcrumbs for all pages (exclude main page)
 - ✅ rename button "Смотреть программы" to "Получить консультацию"
-
+- ✅ add telegram/whatsapp icons to mobile hamburger

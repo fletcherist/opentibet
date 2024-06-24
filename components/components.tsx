@@ -785,8 +785,8 @@ export const ButtonWithContent: React.FC<{
   return (
     <div className={`mx-1 my-0 bg-gray-100`}>
       <div
-        className={`h-[72px] sticky top-[60px] md:top-[64px] bg-blue-500 hover:bg-blue-800 text-white
-        border-b-[1px] border-b-white/20`}
+        className="h-[72px] sticky top-[60px] md:top-[64px] bg-blue-500 hover:bg-blue-800 text-white
+        border-b-[1px] border-b-white/20"
       >
         <div
           className="py-3 px-4 cursor-pointer flex items-center justify-between"
@@ -802,7 +802,7 @@ export const ButtonWithContent: React.FC<{
           }}
         >
           <div>
-            <div className="font-semibold text-2xl leading-5">{title}</div>
+            <div className="font-semibold text-md md:text-2xl leading-5">{title}</div>
           </div>
           <div className="p-4">
             {isOpened ? <IconArrowClose /> : <IconArrowDown />}
@@ -1138,17 +1138,16 @@ export const Navbar = () => {
 };
 
 export const NavbarHeightCompensation = () => {
-  return <div style={{ height: NAVBAR_HEIGHT + 80 }} />;
+  return <div className="h-20 md:h-32" />;
 }
 
 export const NavbarHamburger: React.FC = () => {
   const translate = useTranslateFn()
   return (
     <div>
-
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <div className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white rounded-lg transition active:bg-slate-100">
+          <div className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white rounded-lg transition focus:bg-slate-100 active:bg-slate-100">
             <AlignJustifyIcon />
           </div>
         </DropdownMenuTrigger>
@@ -1211,21 +1210,22 @@ export const NavbarHamburger: React.FC = () => {
               })}
             </DropdownMenuItem>
           </Link>
+          <DropdownMenuSeparator />
+          <Link href={LINK_TELEGRAM} target="_blank">
+            <DropdownMenuItem className="flex gap-2">
+              <span>Telegram</span>
+              <TelegramIcon className="w-6 h-6" />
+            </DropdownMenuItem>
+          </Link>
+          <DropdownMenuSeparator />
+          <Link href={LINK_WHATSAPP} target="_blank">
+            <DropdownMenuItem className="flex gap-2">
+              <span>WhatsApp</span>
+              <WhatsAppIcon className="w-6 h-6" />
+            </DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
-      {/* <svg
-        className="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
-      >
-        <path
-          stroke="currentColor"
-          strokeWidth="2"
-          d="M1 1h15M1 7h15M1 13h15"
-        />
-      </svg> */}
     </div >
   )
 }
