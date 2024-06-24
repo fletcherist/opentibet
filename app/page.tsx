@@ -32,6 +32,7 @@ import {
   LINK_OFFERS,
   getTourPriceForMonth,
   LINK_TELEGRAM,
+  LINK_APPLY_FORM,
 } from "@/utils/constants";
 import Link from "next/link";
 import {
@@ -406,6 +407,15 @@ const WhyGoTibetWithUs = () => {
           en: `We will take care of everything so that you get an unforgettable experience without overpaying. Author's routes, decent hotels, caring and competent guides, good service. Your pleasure and safety are our main concern.`,
         })}
       </WhyGoTibetWithUsStatement>
+      <div className="w-full flex justify-center p-4">
+        <AbstractButton label={
+          translate({
+            ru: "Оставить заявку",
+            en: "Apply Now"
+          }) as string
+        } anchor={LINK_APPLY_FORM} />
+      </div>
+
     </>
   );
 };
