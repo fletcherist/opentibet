@@ -8,3 +8,4 @@
 - ✅ add breadcrumbs for all pages (exclude main page)
 - ✅ rename button "Смотреть программы" to "Получить консультацию"
 - ✅ add telegram/whatsapp icons to mobile hamburger
+- Программы поднимаем под блок «Почему стоит ехать в Тибет с нами», добавляем кнопку “Оставить заявку”

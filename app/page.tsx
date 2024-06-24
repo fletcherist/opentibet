@@ -145,7 +145,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full text-white pb-14">
+      <div className="w-full text-white">
         <div className="h-[45vh] relative">
           <div
             className="w-full -z-10 h-full top-0 object-cover"
@@ -168,14 +168,8 @@ function Home() {
         </div>
       </div>
 
-
-
-      <div className="max-w-4xl mt-4 mb-12 w-full">
-        <WhyGoTibetWithUs />
-      </div>
-
       <div
-        className="w-full text-white relative mt-8"
+        className="w-full text-white relative"
         style={{
           backgroundImage:
             'url("https://storage.googleapis.com/opentibet/kailash_alt.jpg")',
@@ -222,24 +216,31 @@ function Home() {
       </div>
 
 
+      <div className="max-w-4xl mt-4 mb-12 pt-4 md:pt-14 w-full">
+        <WhyGoTibetWithUs />
+      </div>
+
+
       <ToursTabs />
       <div className="pt-10" />
       <div className="w-full bg-blue-500 text-white py-12">
         <div className="max-w-4xl w-full mx-auto">
-          <Header
-            title={
-              translate({
-                ru: "Знаковые места Тибета",
-                en: "Iconic places of Tibet",
-              }) as string
-            }
-            subtitle={
-              translate({
-                ru: "Перечень достопримечательностей по регионам",
-                en: "List of attractions by region",
-              }) as string
-            }
-          />
+          <div className="px-2 md:px-0">
+            <Header
+              title={
+                translate({
+                  ru: "Знаковые места Тибета",
+                  en: "Iconic places of Tibet",
+                }) as string
+              }
+              subtitle={
+                translate({
+                  ru: "Перечень достопримечательностей по регионам",
+                  en: "List of attractions by region",
+                }) as string
+              }
+            />
+          </div>
           <TibetInfo />
         </div>
       </div>
@@ -247,36 +248,40 @@ function Home() {
       <div className="pt-10" />
 
       <div className="max-w-4xl w-full">
-        <Header
-          title={
-            translate({
-              ru: "Часто задаваемые вопросы",
-              en: "FAQ",
-            }) as string
-          }
-          subtitle=""
-        />
+        <div className="px-2 md:px-0">
+          <Header
+            title={
+              translate({
+                ru: "Часто задаваемые вопросы",
+                en: "FAQ",
+              }) as string
+            }
+            subtitle=""
+          />
+        </div>
         <FAQ />
       </div>
 
       <div className="pt-10" />
       <div className="max-w-4xl w-full">
         <ApplyForm />
-        <Header
-          title={
-            translate({
-              ru: "Контакты",
-              en: "Contacts",
-            }) as string
-          }
-          subtitle={
-            translate({
-              ru: "Алексей Перчуков",
-              en: "Alexey Perchukov",
-            }) as string
-          }
-          id={LINK_CONTACTS}
-        />
+        <div className="px-2 md:px-0">
+          <Header
+            title={
+              translate({
+                ru: "Контакты",
+                en: "Contacts",
+              }) as string
+            }
+            subtitle={
+              translate({
+                ru: "Алексей Перчуков",
+                en: "Alexey Perchukov",
+              }) as string
+            }
+            id={LINK_CONTACTS}
+          />
+        </div>
         <div className="p-4 pt-0">
           <div className="py-2">
             <input
@@ -333,7 +338,7 @@ const WhyGoTibetWithUs = () => {
   const translate = useTranslateFn();
   return (
     <>
-      <div className="text-black font-semibold text-3xl py-2 px-4">
+      <div className="text-black font-semibold text-2xl md:text-3xl py-2 px-4">
         {translate({
           ru: "Почему стоит ехать в Тибет с нами?",
           en: "Why is it worth going to Tibet with us?",
@@ -442,15 +447,17 @@ const ToursTabs = () => {
       className="mt-12 max-w-4xl w-full scroll-m-[60px] md:scroll-m-[64px]"
       id={LINK_OFFERS}
     >
-      <Header
-        title={
-          translate({
-            ru: "Программы на 2024",
-            en: "Programs for 2024",
-          }) as string
-        }
-        subtitle=""
-      />
+      <div className="px-2 md:px-0">
+        <Header
+          title={
+            translate({
+              ru: "Программы на 2024",
+              en: "Programs for 2024",
+            }) as string
+          }
+          subtitle=""
+        />
+      </div>
       <p className="mx-4 mb-6">
         {translate({
           ru: `Мы предлагаем как регулярные пакетные туры, так и эксклюзивные

@@ -823,7 +823,7 @@ export const ApplyForm: React.FC = () => {
   return (
     <div id={LINK_APPLY_FORM}>
       <div className="flex items-center flex-wrap">
-        <div className="w-full md:max-w-[50%]">
+        <div className="w-full md:max-w-[50%] px-2 md:px-0">
           <Header
             title={translate({
               ru: "Заявка на участие",
@@ -968,7 +968,7 @@ export const Header: React.FC<{
 }> = ({ title, subtitle, id = undefined }) => {
   return (
     <div id={id}>
-      <div className="text-black-500 font-semibold text-3xl pt-2">{title}</div>
+      <div className="text-black-500 font-semibold text-2xl md:text-3xl pt-2">{title}</div>
       <div className="py-1 text-black-500 font-bold">{subtitle}</div>
     </div>
   );
