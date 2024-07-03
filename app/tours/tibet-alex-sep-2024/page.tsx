@@ -264,7 +264,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
 <TimetableDay accentColor={accentColor} title="18 день">
 <b>Восьмой день Коры. </b>
-    <br /><br />Выход к Долине Нанди
+    <br /><br />Выход к Долине Гяндрак
     <TimetablePhoto src="https://img.opentibet.ru/TourTibetExlusiveSep2024/image28.jpg"  />
 </TimetableDay>
 
