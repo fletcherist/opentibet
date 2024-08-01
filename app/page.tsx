@@ -204,7 +204,7 @@ function Home() {
               <br />
               <br />
             </div>
-            <div className="flex max-w-[800px] text-center mx-auto items-baseline flex-wrap justify-around pt-8 mb-12">
+            <div className="w-full flex justify-center p-4">
               <ActionButton />
               <h2 className="text-2xl font-light mt-3 leading-8">
                 {translate({
