@@ -1238,18 +1238,18 @@ export const NavbarHamburgerStory: React.FC = () => {
 
 export const GuruTibetBanner: React.FC = () => {
   return (
-    <div className="relative max-w-sm w-full h-[400px] z-50">
+    <div className="relative max-w-sm w-full h-[400px] z-100">
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute h-full w-full z-10">
         <div className="flex flex-col justify-between h-full">
           <div className="text-2xl md:text-4xl font-semibold p-4 cursor-default">
-            GuruTibet
+            
           </div>
           <div className="text-lg md:text-2xl text-gray-200 cursor-default px-4">
             Авторские туры по Тибету вместе с Алексеем Перчуковым
           </div>
           <div className="text-gray-200 text-sm md:text-sm cursor-default px-4 pt-8">
-            истоки священных рек, Кайлас, Маносарвар Кора, погружение на высоту
+          Первое знакомcтво с Тибетом, все самое лучшее в Тибете,  истоки четырех священных рек, исследование мандалы Кайласа
           </div>
           <div className="p-4">
             <Link href="https://gurutibet.com" target="_blank">
