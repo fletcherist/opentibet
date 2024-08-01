@@ -234,7 +234,7 @@ function Home() {
             <Header
               title={
                 translate({
-                  ru: "Знаковые места Тибета",
+                  ru: "Достопримечательности Тибета по регионам",
                   en: "Iconic places of Tibet",
                 }) as string
               }
