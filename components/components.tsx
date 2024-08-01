@@ -1303,9 +1303,9 @@ export const Footer = () => {
           </div>
 
         </div>
-        <Copyright />          
       
       </div>
+      <Copyright />          
 
     </div>
   )
