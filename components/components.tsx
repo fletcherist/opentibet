@@ -1238,7 +1238,7 @@ export const NavbarHamburgerStory: React.FC = () => {
 
 export const GuruTibetBanner: React.FC = () => {
   return (
-    <div className="relative max-w-sm w-full h-[650px] z-100">
+    <div className="relative max-w-sm w-full h-[680px] z-100">
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute h-full w-full z-10">
         <div className="flex flex-col justify-between h-full">
