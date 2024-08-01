@@ -1301,6 +1301,7 @@ export const Footer = () => {
               className="object-contain w-28 h-16 brightness-0 saturate-0 "
             />
           </div>
+          <br />
           <Copyright />          
         </div>
       
