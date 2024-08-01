@@ -208,8 +208,8 @@ function Home() {
               <ActionButton />
               <h2 className="text-2xl font-light mt-3 leading-8">
                 {translate({
-                  ru: `от 1900 $ за 14 дней`,
-                  en: "from 1900 $ for 14 days",
+                  ru: ``,
+                  en: "",
                 })}
               </h2>
             </div>
