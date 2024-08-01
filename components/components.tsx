@@ -1245,7 +1245,7 @@ export const GuruTibetBanner: React.FC = () => {
           <div className="text-2xl md:text-4xl font-semibold p-4 cursor-default">
             
           </div>
-          <div className="text-lg md:text-2xl text-gray-200 cursor-default px-4">
+          <div className="text-lg md:text-2xl text-gray-200 cursor-default px-4 pt-20">
             Авторские туры по Тибету вместе с Алексеем Перчуковым
           </div>
           <div className="text-gray-200 text-sm md:text-sm cursor-default px-4 pt-8">
