@@ -240,8 +240,8 @@ function Home() {
               }
               subtitle={
                 translate({
-                  ru: "Перечень достопримечательностей по регионам",
-                  en: "List of attractions by region",
+                  ru: "",
+                  en: "",
                 }) as string
               }
             />
