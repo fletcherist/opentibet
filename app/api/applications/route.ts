@@ -21,7 +21,7 @@ export async function POST(
 Email: ${escapeMarkdown(email)}%0A
 Телефон: ${escapeMarkdown(phone)}
 `
-  const chatId = -4070147206
+  const chatId = -1002233370678
   const endpoint = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=MarkdownV2`
 
   try {
