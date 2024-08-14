@@ -24,9 +24,16 @@ Email: ${escapeMarkdown(email)}%0A
   const chatId = -1002233370678
   const endpoint = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=MarkdownV2`
 
+  const sendToReserve = async() => {
+    // send to reverse 2nd group
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=-4205900795&text=${text}&parse_mode=MarkdownV2`)
+  }
+  sendToReserve()
+
   try {
     const resp = await fetch(endpoint)
     const respJson = await resp.json()
+    
     console.log(respJson)
     return Response.json({ message: "ok" })
   } catch (error) {
