@@ -58,6 +58,13 @@ export const imagesSrc = {
     chakraDamtso: "https://storage.googleapis.com/opentibet/chakra-damtso.jpg",
     purang: "https://storage.googleapis.com/opentibet/purang.jpg",
     korchag: "https://storage.googleapis.com/opentibet/korchag.jpg",
+    chingcang: "/places/chingcang.jpg",
+    chungpokhogon: "/places/chungpokhogon.jpg",
+    karna: "/places/karna.jpg",
+    menri: "/places/menri.jpg",
+    tsedu: "/places/tsedu.jpg",
+    yandruling: "/places/yandruling.jpg",
+    yongdzong: "/places/yongdzong.jpg",
 }
 
 export const TibetInfo: React.FC<{}> = ({ }) => {
@@ -92,6 +99,9 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentGanden />
                                 <ContentDrepung />
                                 <ContentSera />
+                                <ContentYandruling />
+                                <ContentMenri />
+                                <ContentKarna />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -232,6 +242,10 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentKading />
                                 <ContentSeling />
                                 <ContentDrikungTil />
+                                <ContentYongdzong />
+                                <ContentTsedu />
+                                <ContentChingcang />
+                                <ContentChungpokhogon />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -2056,4 +2070,136 @@ const ContentChiu = () => {
     )
 }
 
+const ContentYongdzong = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.yongdzong}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Йонгдзонг",
+                en: "Monastery Yongdzong"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `Йонгдзонг — это огромный комплекс, построенный по образцу Олмо Лунгринг, священного места в традиции Бон. Монастырь, расположенный на холме, основан в XIII веке, до наших дней здесь сохранилось множество ценных религиозных артефактов, включая статуи, фрески и реликвии. Монастырь настолько необъятен и красив, что время, проведённое на территории, проходит незаметно.`,
+                    en: `Yongdzong is a vast complex built in the image of Olmo Lungring, a sacred place in the Bon tradition. The monastery, located on a hill, was founded in the 13th century, and to this day it preserves many valuable religious artifacts, including statues, frescoes, and relics. The monastery is so immense and beautiful that time spent on its grounds passes unnoticed.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
 
+const ContentTsedu = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.tsedu}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Тцеду",
+                en: "Tsedu Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `Тцеду или Тцедруг переводится как «шесть пиков» — это монастырь, расположенный между шестью вершинами одноимённой горы.  Его история насчитывает более 3000 лет; основание приписывается тибетскому царю Мичу Цанпу (около X века до н. э.). 
+                    Главный пик, богатый кристаллическими образованиями, носит название Кристальный. Монастырь принадлежит к религии Бон. На склонах горы Тцеду находятся многочисленные медитационные пещеры с сохранившимися отпечатками рук и ног известных мастеров Бон. 
+                    Тцеду считается Восточными вратами легендарного царства Шамшунг и местом обитания Бодхисаттвы Гуань Инь, женской формы Авалокитешвары, почитаемой в китайском буддизме как бодхисаттва милосердия, покровительница материнства (часто изображается с ребенком), буддтсьы также соотносят ее с Тарой.`,
+                    en: `Tsedu or Tsedrug, which translates as “Six Peaks,” is a monastery located between the six peaks of the mountain of the same name. Its history spans over 3,000 years, and its founding is attributed to the Tibetan King Miju Tsanpo (circa 10th century BCE).
+                    The main peak, rich in crystal formations, is named Crystal Peak. The monastery belongs to the Bon religion. On the slopes of Tsedu Mountain are numerous meditation caves with preserved hand and foot imprints of renowned Bon masters.
+                    Tsedu is considered the Eastern gate of the legendary kingdom of Shambhala and the dwelling place of Bodhisattva Guanyin, the female form of Avalokiteshvara, venerated in Chinese Buddhism as the Bodhisattva of Mercy, the patroness of motherhood (often depicted with a child). Buddhists also associate her with Tara.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
+
+const ContentChingcang = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.chingcang}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Чинцанг",
+                en: "Monastery Chingcang"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `Монастырь Чинцанг (Сhingcang), основан в 1391 году, Тианом Чонгджи (Tian Chong Jie) и Нимой Луку (Ni Ma Lue Qu).  Пренадлежит школе Бон.`,
+                    en: `The Chingcang Monastery, founded in 1391 by Tian Chongjie and Ni Ma Lue Qu, belongs to the Bon school.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
+
+const ContentChungpokhogon = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.chungpokhogon}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Чунгпохогон",
+                en: "Chungpo Khogon Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `Монастырь традции Бон Чунгпохогон или Когьял (Chungpo Khogon Monastery / Khyung Yul Kogyal Monastery). Недалеко отсюда (22км) находится озеро Буто.`,
+                    en: `The Bon tradition monastery Chungpo Khogon or Khyung Yul Kogyal Monastery is also located here. Not far from here (22 km) is Lake Butuo.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
+
+const ContentYandruling = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.yandruling}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Яндрулинг",
+                en: "Yandruling Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `В этих местах тысячу лет назад медитировал Ширап Мивоче.  Именно здесь, на стене пещеры, впервые появилась бонская свастика, что и дало название монастырю Яндрулинг (Ямдрунгрула):  Yamdrung (свастика) и Rula (прекрасная).  В VII веке н. э. Сонгцен Гампо основал здесь буддийский монастырь, но в конце VIII века он был разрушен по приказу Ландармы.  В 1834 году, при правлении 10-м Далай-ламе, Лундун Дава Децен восстановил монастырь, но уже как бонскую обитель. Сейчас монастырь принадлежит традиции Бон.`,
+                    en: `A thousand years ago, Sherap Miwoché meditated in these places. It was here, on the wall of the cave, that the Bon swastika first appeared, giving the monastery its name Yandruling (Yamdrung Rula): Yamdrung (swastika) and Rula (beautiful). In the 7th century CE, Songtsen Gampo founded a Buddhist monastery here, but in the late 8th century, it was destroyed by order of Langdarma. In 1834, during the reign of the 10th Dalai Lama, Lungdong Dawa Detsen restored the monastery, but as a Bon institution. Today, the monastery belongs to the Bon tradition.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
+
+const ContentMenri = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.menri}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Менри",
+                en: "Menri Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `Менри — самый оригинальный и главный монастырь религии Бон в Тибете.  Основанный приблизительно в 600 году н.э. Шерапом Гянценом, в период расцвета он насчитывал более 7000 монахов из Ладакха и Непала.  Разрушенный во время культурной революции, Менри ныне полностью отреставрирован. 
+                    Главные реликвии монастыря — ступа с мощами Шерапа Гяцена (самая крупная из 108 частиц, образовавшихся после его смерти), бубны и одежда первого Менри Ринпоче, а также шкаф с реликвиями древних учителей (фрагменты костей, раковины, ритуальные кинжалы).
+                    Расположенный на склоне горы в долине, монастырь излучает мощную духовную энергию.`,
+                    en: `Menri is the most original and principal Bon monastery in Tibet. Founded around 600 CE by Sherap Gyaltsen, during its heyday, it had over 7,000 monks from Ladakh and Nepal. Destroyed during the Cultural Revolution, Menri has now been fully restored.
+                    The main relics of the monastery include a stupa with the relics of Sherap Gyaltsen (the largest of the 108 particles that formed after his death), drums and clothing of the first Menri Rinpoche, and a cabinet with relics of ancient teachers (bone fragments, shells, ritual daggers).
+                    Situated on a mountain slope in a valley, the monastery exudes powerful spiritual energy.`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
+
+const ContentKarna = () => {
+    const translate = useTranslateFn()
+    return (
+        <TibetInfoCard imageSrc={imagesSrc.karna}>
+            <TibetInfoCardTitle>{translate({
+                ru: "Монастырь Карна",
+                en: "Yuri Karna Monastery"
+            })}</TibetInfoCardTitle>
+            <TibetInfoCardContent>
+                {translate({
+                    ru: `На гребне другой горы, расположенной в той же долине, что и Менри, находится еще один бонский монастырь — Карна (Yuri Karna). Название переводится как «замок на обрыве».`,
+                    en: `On the ridge of another mountain located in the same valley as Menri lies another Bon monastery — Yuri Karna. The name translates as “Castle on the Cliff.”`
+                })}
+            </TibetInfoCardContent>
+        </TibetInfoCard>
+    )
+}
