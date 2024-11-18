@@ -99,9 +99,6 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentGanden />
                                 <ContentDrepung />
                                 <ContentSera />
-                                <ContentYandruling />
-                                <ContentMenri />
-                                <ContentKarna />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
@@ -242,10 +239,23 @@ export const TibetInfo: React.FC<{}> = ({ }) => {
                                 <ContentKading />
                                 <ContentSeling />
                                 <ContentDrikungTil />
+                            </Slick>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-10">
+                        <AccordionTrigger>{groupTitle(translate({
+                            ru: 'Бон',
+                            en: 'Bon'
+                        }) as string)}</AccordionTrigger>
+                        <AccordionContent>
+                            <Slick step={cardWidth}>
                                 <ContentYongdzong />
                                 <ContentTsedu />
                                 <ContentChingcang />
                                 <ContentChungpokhogon />
+                                <ContentYandruling />
+                                <ContentMenri />
+                                <ContentKarna />
                             </Slick>
                         </AccordionContent>
                     </AccordionItem>
