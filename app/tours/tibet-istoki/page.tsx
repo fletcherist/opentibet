@@ -309,7 +309,7 @@ const TourExclusiveMay = ({ accentColor = "blue-500" }) => {
                 Посещение священного озера Ваджравархи и завершение Манджушари Коры.
 
                 Ночь в <b>New guest North Face</b>
-            </TimetableDay>
+                </TimetableDay>
             <TimetableDay accentColor={accentColor} title="14 день">
                 <b>Второй день коры. Manjushri Kora</b>
                 <br />

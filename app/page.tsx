@@ -465,8 +465,8 @@ const ToursTabs = () => {
         <Header
           title={
             translate({
-              ru: "Программы на 2024",
-              en: "Programs for 2024",
+              ru: "Программы на 2025",
+              en: "Programs for 2025",
             }) as string
           }
           subtitle=""
@@ -627,12 +627,12 @@ const ToursTabs = () => {
             })}
           </p>
           <div>
-            <Link href={"/tours/tibet-alex-may-2024"} target="_blank">
+            <Link href={"/tours/2025/may"} target="_blank">
               <TourButton
                 title="Май"
-                subtitle="3—23 мая"
+                subtitle="3—21 мая"
                 days={21}
-                price={"от 3800"}
+                price={"от 3500"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
@@ -640,12 +640,12 @@ const ToursTabs = () => {
                 withBorder
               />
             </Link>
-            <Link href={"/tours/tibet-istoki-june"} target="_blank">
+            <Link href={"/tours/2025/june"} target="_blank">
               <TourButton
                 title="Июнь"
-                subtitle="15 июня - 5 июля"
+                subtitle="15 июня - 3 июля"
                 days={21}
-                price={"от 4500"}
+                price={"от 3000"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
@@ -653,12 +653,12 @@ const ToursTabs = () => {
                 withBorder
               />
             </Link>
-            <Link href={"/tours/tibet-alex-sep-2024"} target="_blank">
+            <Link href={"/tours/2025/september"} target="_blank">
               <TourButton
                 title="Сентябрь"
-                subtitle="3—24 сентября"
+                subtitle="3—22 сентября"
                 days={22}
-                price={"от 4000"}
+                price={"от 2500"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
@@ -666,12 +666,12 @@ const ToursTabs = () => {
                 withBorder
               />
             </Link>
-            <Link href={"/tours/tibet-istoki"} target="_blank">
+            <Link href={"/tours/2025/october"} target="_blank">
               <TourButton
                 title="Октябрь"
-                subtitle="2—23 октября"
+                subtitle="10—28 октября"
                 days={21}
-                price={3600}
+                price={"от 2500"}
                 bgColor="yellow-500"
                 fgColor="black"
                 accentColor="white"
