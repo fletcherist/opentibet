@@ -340,7 +340,7 @@ const TourExclusiveJune = ({ accentColor = "blue-500" }) => {
 
             <TimetableDay accentColor={accentColor} title="18 день">
                 <b> Свободный день в Лхасе.</b>
-                <TimetablePhoto src="https://img.opentibet.ru/2025/june/june-2025-24.jpg" />
+                <br />
 
                 <br /> <b> Ночь в Лхасе.</b>
             </TimetableDay>
